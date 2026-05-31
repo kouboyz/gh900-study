@@ -98,5 +98,155 @@
     ],
     "tags": ["permissions", "roles", "security"],
     "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D6-005",
+    "domainId": "D6",
+    "questionType": "single-choice",
+    "difficulty": "basic",
+    "question": "GitHub へのアクセスに使用できる認証方法として正しいものはどれですか？",
+    "choices": [
+      { "id": "A", "text": "パスワードのみ（他の認証手段は存在しない）" },
+      { "id": "B", "text": "パスワード・Personal Access Token（PAT）・SSH キー・パスキーなど複数の方法がある" },
+      { "id": "C", "text": "GitHub は生体認証のみをサポートしている" },
+      { "id": "D", "text": "API のみ利用可能で、ブラウザからのログインはできない" }
+    ],
+    "correctChoiceIds": ["B"],
+    "explanation": "GitHub への認証方法には、Webブラウザ（パスワード＋2FA）・Personal Access Token（PAT）・SSH キー・GitHub Apps・OAuth アプリ・パスキーなどがあります。コマンドラインや API アクセスには PAT や SSH キーがよく使われます。",
+    "references": [
+      {
+        "title": "GitHub への認証について",
+        "url": "https://docs.github.com/ja/authentication/keeping-your-account-and-data-secure/about-authentication-to-github",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["authentication", "security", "pat", "ssh"],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D6-006",
+    "domainId": "D6",
+    "questionType": "single-choice",
+    "difficulty": "standard",
+    "question": "Organization のロール（役割）のうち、メンバーの追加・削除やリポジトリの作成・設定変更など最も広い権限を持つのはどれですか？",
+    "choices": [
+      { "id": "A", "text": "Member（メンバー）" },
+      { "id": "B", "text": "Owner（オーナー）" },
+      { "id": "C", "text": "Billing Manager（支払いマネージャー）" },
+      { "id": "D", "text": "Security Manager（セキュリティマネージャー）" }
+    ],
+    "correctChoiceIds": ["B"],
+    "explanation": "Organization の Owner はすべての管理権限を持ちます。メンバーの招待・削除・ロール変更、リポジトリ作成・設定変更、支払い設定、Organization 自体の削除なども可能です。最小権限の原則に従い Owner は最小人数に限定することが推奨されます。",
+    "references": [
+      {
+        "title": "組織の役割",
+        "url": "https://docs.github.com/ja/organizations/managing-peoples-access-to-your-organization-with-roles/roles-in-an-organization",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["organization", "roles", "security"],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D6-007",
+    "domainId": "D6",
+    "questionType": "single-choice",
+    "difficulty": "standard",
+    "question": "GitHub の Secret scanning（シークレットスキャン）の主な目的はどれですか？",
+    "choices": [
+      { "id": "A", "text": "リポジトリ内のコードに含まれるバグを自動的に修正する" },
+      { "id": "B", "text": "コードやコミット履歴に誤ってコミットされた APIキー・トークン・パスワードなどを検出する" },
+      { "id": "C", "text": "不審なユーザーのアカウントを自動停止する" },
+      { "id": "D", "text": "リポジトリへの不正アクセスをリアルタイムに遮断する" }
+    ],
+    "correctChoiceIds": ["B"],
+    "explanation": "Secret scanning はコードやコミット履歴に含まれる APIキー・トークン・資格情報などのシークレットを自動検出する機能です。検出された場合はアラートを発し、サービスプロバイダーへの自動通知（partner pattern）も行います。誤コミットによる認証情報漏洩を防ぎます。",
+    "references": [
+      {
+        "title": "シークレット スキャンについて",
+        "url": "https://docs.github.com/ja/code-security/secret-scanning/introduction/about-secret-scanning",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["secret-scanning", "security"],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D6-008",
+    "domainId": "D6",
+    "questionType": "single-choice",
+    "difficulty": "advanced",
+    "question": "Organization 全体で GitHub Copilot のポリシーを管理できるプランはどれですか？",
+    "choices": [
+      { "id": "A", "text": "GitHub Copilot Individual のみ" },
+      { "id": "B", "text": "GitHub Copilot Business または Enterprise" },
+      { "id": "C", "text": "GitHub Free プランに含まれている" },
+      { "id": "D", "text": "GitHub Pro プランのみ" }
+    ],
+    "correctChoiceIds": ["B"],
+    "explanation": "GitHub Copilot Business および Enterprise では、Organization または Enterprise のオーナーが Copilot の利用ポリシー（有効化・無効化・提案のマッチング除外など）を一元管理できます。Individual はユーザー個人が設定するためポリシー管理機能がありません。",
+    "references": [
+      {
+        "title": "GitHub Copilot の計画",
+        "url": "https://docs.github.com/ja/copilot/about-github-copilot/subscription-plans-for-github-copilot",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["copilot", "organization", "security"],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D6-009",
+    "domainId": "D6",
+    "questionType": "single-choice",
+    "difficulty": "advanced",
+    "question": "パスキー（Passkey）の説明として最も適切なものはどれですか？",
+    "choices": [
+      { "id": "A", "text": "Personal Access Token の別名で、APIアクセスに使う長い文字列" },
+      { "id": "B", "text": "パスワードの代わりに生体認証やデバイスPINで認証できるフィッシング耐性の高い認証情報" },
+      { "id": "C", "text": "リポジトリへのアクセスに使うSSHの公開鍵" },
+      { "id": "D", "text": "2FAアプリが生成するワンタイムコード" }
+    ],
+    "correctChoiceIds": ["B"],
+    "explanation": "パスキーは FIDO2/WebAuthn 標準に基づく認証情報で、デバイスの生体認証（指紋・顔認証）や PIN を使ってログインできます。フィッシングサイトでは機能しない設計のため、従来のパスワード＋2FA より高いセキュリティを提供します。GitHub では2FA の代替としても利用可能です。",
+    "references": [
+      {
+        "title": "2 要素認証について",
+        "url": "https://docs.github.com/ja/authentication/securing-your-account-with-two-factor-authentication-2fa/about-two-factor-authentication",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["passkey", "authentication", "security"],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D6-010",
+    "domainId": "D6",
+    "questionType": "single-choice",
+    "difficulty": "standard",
+    "question": "リポジトリの可視性を Internal に設定すると、誰がアクセスできますか？",
+    "choices": [
+      { "id": "A", "text": "インターネット上の誰でもアクセスできる" },
+      { "id": "B", "text": "同じ GitHub Enterprise 内のすべての認証済みメンバー" },
+      { "id": "C", "text": "リポジトリに招待された特定のユーザーのみ" },
+      { "id": "D", "text": "Organization のオーナーのみ" }
+    ],
+    "correctChoiceIds": ["B"],
+    "explanation": "Internal リポジトリは GitHub Enterprise Cloud 限定の可視性設定で、同じ Enterprise に属するすべての認証済みメンバーがアクセスできます。Public（誰でも）と Private（招待者のみ）の中間にあたり、社内 InnerSource の実践に適しています。",
+    "references": [
+      {
+        "title": "リポジトリの可視性を設定する",
+        "url": "https://docs.github.com/ja/repositories/managing-your-repositorys-settings-and-features/managing-repository-settings/setting-repository-visibility",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["repository", "visibility", "enterprise", "security"],
+    "updatedAt": "2026-05-31"
   }
 ]

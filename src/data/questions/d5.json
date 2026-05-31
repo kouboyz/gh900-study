@@ -48,5 +48,105 @@
     ],
     "tags": ["milestones", "project-management"],
     "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D5-003",
+    "domainId": "D5",
+    "questionType": "single-choice",
+    "difficulty": "basic",
+    "question": "GitHub Projects で利用できるビュー（レイアウト）の組み合わせとして正しいものはどれですか？",
+    "choices": [
+      { "id": "A", "text": "リスト・カレンダー・マップ" },
+      { "id": "B", "text": "テーブル・ボード（カンバン）・ロードマップ" },
+      { "id": "C", "text": "ガントチャート・バーンダウン・スプレッドシート" },
+      { "id": "D", "text": "タイムライン・フロー・ツリー" }
+    ],
+    "correctChoiceIds": ["B"],
+    "explanation": "GitHub Projects は テーブル（スプレッドシート形式）・ボード（カンバン形式）・ロードマップ（タイムライン形式）の3つのレイアウトを提供しています。同じプロジェクトデータを目的に応じて切り替えて表示できます。",
+    "references": [
+      {
+        "title": "ビューのレイアウトを変更する",
+        "url": "https://docs.github.com/ja/issues/planning-and-tracking-with-projects/customizing-views-in-your-project/changing-the-layout-of-a-view",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["projects", "board", "roadmap"],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D5-004",
+    "domainId": "D5",
+    "questionType": "single-choice",
+    "difficulty": "standard",
+    "question": "GitHub Projects の組み込み自動化（Built-in automations）の説明として最も適切なものはどれですか？",
+    "choices": [
+      { "id": "A", "text": "Issue を自動的に削除するルールを設定できる" },
+      { "id": "B", "text": "Issue や PR のステータスをイベント（オープン・クローズ・マージなど）に応じて自動更新できる" },
+      { "id": "C", "text": "GitHub Actions と連携してコードを自動デプロイする" },
+      { "id": "D", "text": "プロジェクトの期限が来たら Issue を自動クローズする" }
+    ],
+    "correctChoiceIds": ["B"],
+    "explanation": "Projects の組み込み自動化は、Issue や PR のステータスフィールドをイベントに応じて自動更新する機能です。たとえば「Issue がオープンされたら Status を Todo にする」「PR がマージされたら Done にする」などのルールを設定できます。",
+    "references": [
+      {
+        "title": "組み込みの自動化機能を使用する",
+        "url": "https://docs.github.com/ja/issues/planning-and-tracking-with-projects/automating-your-project/using-the-built-in-automations",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["projects", "automation"],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D5-005",
+    "domainId": "D5",
+    "questionType": "single-choice",
+    "difficulty": "advanced",
+    "question": "GitHub Projects のカスタムフィールドを使う主な目的はどれですか？",
+    "choices": [
+      { "id": "A", "text": "Issue にコードスニペットを埋め込むため" },
+      { "id": "B", "text": "優先度・見積もり・スプリント番号など、デフォルトにない情報をアイテムに追加して管理するため" },
+      { "id": "C", "text": "チームメンバーのコード貢献量をグラフ表示するため" },
+      { "id": "D", "text": "Pull Request のレビュアーを自動でアサインするため" }
+    ],
+    "correctChoiceIds": ["B"],
+    "explanation": "カスタムフィールドにはテキスト・数値・日付・単一選択・反復（Iteration）などの型があり、プロジェクト固有の情報（優先度・ストーリーポイント・担当チームなど）を自由に追加できます。フィールドでのグループ化・フィルタリング・ソートも可能です。",
+    "references": [
+      {
+        "title": "Projects について",
+        "url": "https://docs.github.com/ja/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["projects", "custom-fields"],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D5-006",
+    "domainId": "D5",
+    "questionType": "single-choice",
+    "difficulty": "standard",
+    "question": "Issue に担当者（Assignee）を設定する主な目的はどれですか？",
+    "choices": [
+      { "id": "A", "text": "担当者のみがその Issue にコメントできるようにするため" },
+      { "id": "B", "text": "その Issue の対応責任者を明示してチームの作業分担を可視化するため" },
+      { "id": "C", "text": "担当者の GitHub アカウントに課金するため" },
+      { "id": "D", "text": "担当者が Issue をクローズした際に自動マージを行うため" }
+    ],
+    "correctChoiceIds": ["B"],
+    "explanation": "担当者（Assignee）を設定することで、誰がその Issue に責任を持つかをチームに示せます。担当者は自分に割り当てられた Issue を GitHub のプロフィールやプロジェクトのフィルタリングで確認できます。",
+    "references": [
+      {
+        "title": "問題について",
+        "url": "https://docs.github.com/ja/issues/tracking-your-work-with-issues/about-issues",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["issues", "assignee", "project-management"],
+    "updatedAt": "2026-05-31"
   }
 ]

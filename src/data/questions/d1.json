@@ -123,5 +123,330 @@
     ],
     "tags": ["markdown"],
     "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D1-006",
+    "domainId": "D1",
+    "questionType": "single-choice",
+    "difficulty": "basic",
+    "question": "Git と GitHub の違いとして最も適切な説明はどれですか？",
+    "choices": [
+      { "id": "A", "text": "Git はクラウドサービスで、GitHub はローカルで動くバージョン管理ツールである" },
+      { "id": "B", "text": "Git はバージョン管理システムそのもので、GitHub は Git リポジトリをホスティングするクラウドプラットフォームである" },
+      { "id": "C", "text": "Git と GitHub は同じ製品の異なる名称である" },
+      { "id": "D", "text": "Git は GitHub が開発したツールで、GitHub 以外では使えない" }
+    ],
+    "correctChoiceIds": ["B"],
+    "explanation": "Git は Linus Torvalds が開発したオープンソースの分散型バージョン管理システムです。GitHub は Git リポジトリをクラウド上でホスティングし、Pull Request・Issues・Actions などのコラボレーション機能を提供するプラットフォームです。Git は GitHub なしでも使えますが、GitHub は Git を前提として成り立っています。",
+    "references": [
+      {
+        "title": "GitHub と Git について",
+        "url": "https://docs.github.com/ja/get-started/start-your-journey/about-github-and-git",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["git", "github"],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D1-007",
+    "domainId": "D1",
+    "questionType": "single-choice",
+    "difficulty": "basic",
+    "question": "GitHub のアカウント・プランの種類として正しい組み合わせはどれですか？",
+    "choices": [
+      { "id": "A", "text": "Personal（個人）・Organization（組織）・Enterprise（企業）" },
+      { "id": "B", "text": "Free・Basic・Premium" },
+      { "id": "C", "text": "Individual・Team・Corporate" },
+      { "id": "D", "text": "Standard・Pro・Ultimate" }
+    ],
+    "correctChoiceIds": ["A"],
+    "explanation": "GitHub のアカウントには Personal（個人ユーザーアカウント）・Organization（チームや企業が複数リポジトリを管理するアカウント）・Enterprise（複数の Organization を一元管理するアカウント）の3種類があります。それぞれ目的と管理範囲が異なります。",
+    "references": [
+      {
+        "title": "GitHub アカウントの種類",
+        "url": "https://docs.github.com/ja/get-started/learning-about-github/types-of-github-accounts",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["github", "account", "organization", "enterprise"],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D1-008",
+    "domainId": "D1",
+    "questionType": "single-choice",
+    "difficulty": "basic",
+    "question": "GitHub Desktop の主な用途として最も適切なものはどれですか？",
+    "choices": [
+      { "id": "A", "text": "スマートフォンから Issue や Pull Request を確認・コメントするため" },
+      { "id": "B", "text": "ブラウザを使わずにデスクトップから GUI で Git 操作（コミット・プッシュ・PR など）を行うため" },
+      { "id": "C", "text": "GitHub Actions のワークフローを GUI 上で実行するため" },
+      { "id": "D", "text": "GitHub Pages のデプロイ状況をモニタリングするため" }
+    ],
+    "correctChoiceIds": ["B"],
+    "explanation": "GitHub Desktop はデスクトップ向けの GUI アプリで、コマンドラインを使わずにコミット・プッシュ・ブランチ操作・Pull Request の作成などの Git 操作を行えます。スマートフォンから Issue や通知を管理するのは GitHub Mobile の役割です。",
+    "references": [
+      {
+        "title": "GitHub Desktop について",
+        "url": "https://docs.github.com/ja/desktop/overview/about-github-desktop",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["github-desktop", "github-mobile"],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D1-009",
+    "domainId": "D1",
+    "questionType": "single-choice",
+    "difficulty": "basic",
+    "question": "バージョン管理システムを使う主な利点として最も適切なものはどれですか？",
+    "choices": [
+      { "id": "A", "text": "コードのファイルサイズを自動的に圧縮できる" },
+      { "id": "B", "text": "変更履歴を記録し、過去の状態への復元や変更の追跡・共同作業を可能にする" },
+      { "id": "C", "text": "コードのバグを自動的に修正する" },
+      { "id": "D", "text": "プログラムのビルドとデプロイを自動化する" }
+    ],
+    "correctChoiceIds": ["B"],
+    "explanation": "バージョン管理システムは変更履歴をすべて記録するため、誰が・いつ・何を変更したかを追跡でき、問題が発生した際に以前の状態へ戻すことができます。また、複数人が同時に作業してもマージにより統合できるため、チーム開発に不可欠です。",
+    "references": [
+      {
+        "title": "GitHub と Git について",
+        "url": "https://docs.github.com/ja/get-started/start-your-journey/about-github-and-git",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["git", "version-control"],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D1-010",
+    "domainId": "D1",
+    "questionType": "single-choice",
+    "difficulty": "basic",
+    "question": "GitHub においてリポジトリ（repository）とは何ですか？",
+    "choices": [
+      { "id": "A", "text": "GitHub のユーザーアカウントのこと" },
+      { "id": "B", "text": "プロジェクトのすべてのファイル・フォルダ・変更履歴を格納する場所" },
+      { "id": "C", "text": "Pull Request のコメント履歴を保存するデータベース" },
+      { "id": "D", "text": "GitHub Actions のジョブ実行ログの保存先" }
+    ],
+    "correctChoiceIds": ["B"],
+    "explanation": "リポジトリはプロジェクトの全ファイル・ディレクトリ・コミット履歴を含む保管場所です。ローカルリポジトリ（手元のPC）とリモートリポジトリ（GitHub上）があり、git push / pull でやり取りします。Public と Private の可視性設定が可能です。",
+    "references": [
+      {
+        "title": "リポジトリについて",
+        "url": "https://docs.github.com/ja/repositories/creating-and-managing-repositories/about-repositories",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["git", "repository"],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D1-011",
+    "domainId": "D1",
+    "questionType": "single-choice",
+    "difficulty": "standard",
+    "question": "git fetch と git pull の違いとして最も適切な説明はどれですか？",
+    "choices": [
+      { "id": "A", "text": "git fetch はリモートの変更を取得してローカルブランチに自動マージし、git pull は取得のみ行う" },
+      { "id": "B", "text": "git fetch はリモートの変更を取得するだけでマージしない。git pull は取得とマージを一度に行う" },
+      { "id": "C", "text": "git fetch はローカルの変更をリモートに送信し、git pull はリモートを削除する" },
+      { "id": "D", "text": "git fetch と git pull は同じ動作で、名称が異なるだけである" }
+    ],
+    "correctChoiceIds": ["B"],
+    "explanation": "git fetch はリモートの最新情報をローカルに取得しますが、ワーキングツリーは変更しません。git pull は fetch + merge（または rebase）を一度に行い、ローカルブランチを最新にします。fetch で内容を確認してからマージしたい場合に fetch を使います。",
+    "references": [
+      {
+        "title": "リポジトリについて",
+        "url": "https://docs.github.com/ja/repositories/creating-and-managing-repositories/about-repositories",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["git", "fetch", "pull"],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D1-012",
+    "domainId": "D1",
+    "questionType": "single-choice",
+    "difficulty": "standard",
+    "question": "Markdownで見出しレベル2（H2）を記述する正しい構文はどれですか？",
+    "choices": [
+      { "id": "A", "text": "## 見出し" },
+      { "id": "B", "text": "** 見出し **" },
+      { "id": "C", "text": "== 見出し ==" },
+      { "id": "D", "text": "<h2>見出し</h2>" }
+    ],
+    "correctChoiceIds": ["A"],
+    "explanation": "Markdownでは行頭に # を付けることで見出しを表現します。# の数がレベルに対応し、## がH2、### がH3です。GitHub上では最大H6まで対応しています。",
+    "references": [
+      {
+        "title": "基本的な書き込みと書式設定の構文",
+        "url": "https://docs.github.com/ja/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["markdown"],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D1-013",
+    "domainId": "D1",
+    "questionType": "single-choice",
+    "difficulty": "standard",
+    "question": "GitHub Mobile の主な用途として最も適切なものはどれですか？",
+    "choices": [
+      { "id": "A", "text": "スマートフォンから Issue・Pull Request・通知を確認・操作するため" },
+      { "id": "B", "text": "スマートフォンのカメラで QR コードをスキャンしてリポジトリにアクセスするため" },
+      { "id": "C", "text": "スマートフォンからコードをコンパイル・ビルドするため" },
+      { "id": "D", "text": "スマートフォンに GitHub Pages のサイトをキャッシュするため" }
+    ],
+    "correctChoiceIds": ["A"],
+    "explanation": "GitHub Mobile（iOS / Android）は外出先でも Issue やPull Requestへのコメント・レビュー・マージ、通知の確認・管理などができるアプリです。コードの編集には github.dev や Codespaces が適しています。",
+    "references": [
+      {
+        "title": "GitHub Mobile",
+        "url": "https://docs.github.com/ja/get-started/using-github/github-mobile",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["github-mobile"],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D1-014",
+    "domainId": "D1",
+    "questionType": "single-choice",
+    "difficulty": "standard",
+    "question": "GitHub Flow において main ブランチに求められる条件として最も適切なものはどれですか？",
+    "choices": [
+      { "id": "A", "text": "すべての開発者が直接コミットできる唯一のブランチであること" },
+      { "id": "B", "text": "常にデプロイ可能な状態を保ち、直接プッシュは行わないこと" },
+      { "id": "C", "text": "週次リリース時のみコミットが許可されるブランチであること" },
+      { "id": "D", "text": "README.md のみを管理する専用ブランチであること" }
+    ],
+    "correctChoiceIds": ["B"],
+    "explanation": "GitHub Flow では main ブランチは常にデプロイ可能な状態を保つことが原則です。新しい作業はすべてトピックブランチで行い、Pull Request を経てレビュー・CI が通った後にのみ main へマージします。main への直接プッシュは行いません。",
+    "references": [
+      {
+        "title": "GitHub フロー",
+        "url": "https://docs.github.com/ja/get-started/using-github/github-flow",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["github-flow", "branch"],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D1-015",
+    "domainId": "D1",
+    "questionType": "single-choice",
+    "difficulty": "standard",
+    "question": "リポジトリの可視性として GitHub が提供するオプションの組み合わせはどれですか？",
+    "choices": [
+      { "id": "A", "text": "Public・Private・Internal" },
+      { "id": "B", "text": "Open・Closed・Restricted" },
+      { "id": "C", "text": "Public・Protected・Hidden" },
+      { "id": "D", "text": "Shared・Personal・Enterprise" }
+    ],
+    "correctChoiceIds": ["A"],
+    "explanation": "GitHub のリポジトリ可視性は Public（誰でも閲覧可能）・Private（招待されたユーザーのみ）・Internal（同じ Enterprise 内のメンバーのみ）の3種類です。Internal は GitHub Enterprise Cloud でのみ利用できます。",
+    "references": [
+      {
+        "title": "リポジトリの可視性を設定する",
+        "url": "https://docs.github.com/ja/repositories/managing-your-repositorys-settings-and-features/managing-repository-settings/setting-repository-visibility",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["repository", "visibility"],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D1-016",
+    "domainId": "D1",
+    "questionType": "single-choice",
+    "difficulty": "standard",
+    "question": "GitHub のリリース（Release）の説明として最も適切なものはどれですか？",
+    "choices": [
+      { "id": "A", "text": "Pull Request を main ブランチにマージする操作のこと" },
+      { "id": "B", "text": "Git タグに基づいてソフトウェアのバイナリやソースコードをパッケージ化して配布する機能" },
+      { "id": "C", "text": "GitHub Pages でサイトを公開するための設定画面" },
+      { "id": "D", "text": "Codespaces の開発環境をチームに共有する機能" }
+    ],
+    "correctChoiceIds": ["B"],
+    "explanation": "GitHub Releases は Git タグと紐づけてソフトウェアのバイナリファイルやソースコードのアーカイブを配布できる機能です。リリースノートを添えることでユーザーに変更内容を伝えられ、ダウンロード数の確認も可能です。",
+    "references": [
+      {
+        "title": "リリースについて",
+        "url": "https://docs.github.com/ja/repositories/releasing-projects-on-github/about-releases",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["release", "tags"],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D1-017",
+    "domainId": "D1",
+    "questionType": "single-choice",
+    "difficulty": "advanced",
+    "question": "分散型バージョン管理システム（DVCS）の特徴として最も適切なものはどれですか？",
+    "choices": [
+      { "id": "A", "text": "中央サーバーのみにリポジトリが存在し、オフラインでは作業できない" },
+      { "id": "B", "text": "各開発者がリポジトリの完全なコピーをローカルに持つため、オフラインでも履歴参照やコミットができる" },
+      { "id": "C", "text": "1人の管理者だけがコミット権限を持ち、他のメンバーは閲覧のみ可能" },
+      { "id": "D", "text": "すべての変更が自動的にすべてのメンバーのローカル環境に反映される" }
+    ],
+    "correctChoiceIds": ["B"],
+    "explanation": "Git は分散型VCSであり、各開発者がリポジトリの完全なコピー（フルヒストリー）をローカルに保持します。これによりオフラインでもコミット・ブランチ作成・履歴参照が可能です。中央サーバー（GitHub）はリポジトリを共有するための1つのリモートに過ぎません。",
+    "references": [
+      {
+        "title": "GitHub と Git について",
+        "url": "https://docs.github.com/ja/get-started/start-your-journey/about-github-and-git",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["git", "dvcs", "version-control"],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D1-018",
+    "domainId": "D1",
+    "questionType": "single-choice",
+    "difficulty": "advanced",
+    "question": "GitHub Enterprise の主な特徴として最も適切なものはどれですか？",
+    "choices": [
+      { "id": "A", "text": "個人開発者向けの無料プランで、プライベートリポジトリを無制限に作成できる" },
+      { "id": "B", "text": "複数の Organization を一元管理し、セキュリティポリシーや請求を統合管理できる" },
+      { "id": "C", "text": "GitHub Actions の実行時間が無制限になる個人向けアドオン" },
+      { "id": "D", "text": "GitHub Marketplace のアプリを優先的にインストールできる法人向け特典" }
+    ],
+    "correctChoiceIds": ["B"],
+    "explanation": "GitHub Enterprise は複数の Organization をまとめて管理できるアカウント種別です。企業全体のセキュリティポリシーの適用・SAML SSO・SCIM によるユーザー管理・監査ログ・請求の一元管理などが可能です。Enterprise Managed Users（EMU）もこのレベルで利用できます。",
+    "references": [
+      {
+        "title": "GitHub アカウントの種類",
+        "url": "https://docs.github.com/ja/get-started/learning-about-github/types-of-github-accounts",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["enterprise", "organization"],
+    "updatedAt": "2026-05-31"
   }
 ]

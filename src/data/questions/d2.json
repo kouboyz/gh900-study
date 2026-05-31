@@ -73,5 +73,130 @@
     ],
     "tags": ["insights", "repository"],
     "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D2-004",
+    "domainId": "D2",
+    "questionType": "single-choice",
+    "difficulty": "basic",
+    "question": "オープンソースリポジトリに LICENSE ファイルを置く主な目的はどれですか？",
+    "choices": [
+      { "id": "A", "text": "リポジトリの有料化を宣言するため" },
+      { "id": "B", "text": "第三者がコードをどのように使用・配布・改変できるかを明示するため" },
+      { "id": "C", "text": "GitHub が自動的にコードのセキュリティスキャンを行うようにするため" },
+      { "id": "D", "text": "リポジトリのデフォルトブランチを保護するため" }
+    ],
+    "correctChoiceIds": ["B"],
+    "explanation": "LICENSE ファイルはコードの利用条件を明示します。MIT・Apache 2.0・GPL などのライセンスにより、他者がコードを使用・複製・改変・配布する際の条件が定まります。ライセンスがないコードは著作権法上すべての権利が留保されます。",
+    "references": [
+      {
+        "title": "リポジトリのライセンス",
+        "url": "https://docs.github.com/ja/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["license", "repository", "open-source"],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D2-005",
+    "domainId": "D2",
+    "questionType": "single-choice",
+    "difficulty": "basic",
+    "question": "CONTRIBUTING.md ファイルの主な役割として最も適切なものはどれですか？",
+    "choices": [
+      { "id": "A", "text": "リポジトリの自動デプロイ設定を定義する" },
+      { "id": "B", "text": "外部コントリビューターに対してプロジェクトへの貢献方法・ルールを説明する" },
+      { "id": "C", "text": "コードの依存パッケージ一覧を管理する" },
+      { "id": "D", "text": "CI/CD パイプラインのステップを定義する" }
+    ],
+    "correctChoiceIds": ["B"],
+    "explanation": "CONTRIBUTING.md は外部コントリビューターに向けて、Issue の書き方・Pull Request のルール・コーディング規約・開発環境のセットアップ方法などを説明するファイルです。GitHub は Pull Request 作成時にこのファイルが存在すればリンクを表示します。",
+    "references": [
+      {
+        "title": "リポジトリの README ファイルについて",
+        "url": "https://docs.github.com/ja/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["contributing", "repository"],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D2-006",
+    "domainId": "D2",
+    "questionType": "single-choice",
+    "difficulty": "standard",
+    "question": "SECURITY.md ファイルをリポジトリに置く主な目的はどれですか？",
+    "choices": [
+      { "id": "A", "text": "リポジトリの2FA設定を自動的に有効にするため" },
+      { "id": "B", "text": "セキュリティ脆弱性を発見した際の報告方法をコントリビューターに伝えるため" },
+      { "id": "C", "text": "リポジトリへのアクセス権限をファイルで管理するため" },
+      { "id": "D", "text": "GitHub Advanced Security の機能を有効化するため" }
+    ],
+    "correctChoiceIds": ["B"],
+    "explanation": "SECURITY.md（またはセキュリティポリシー）はセキュリティ脆弱性の責任ある開示（Responsible Disclosure）のプロセスを説明します。脆弱性を発見した人に対して、どの方法・どのアドレスに報告すべきかを案内し、公開前に修正する時間を確保します。",
+    "references": [
+      {
+        "title": "コードオーナーについて",
+        "url": "https://docs.github.com/ja/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["security", "repository"],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D2-007",
+    "domainId": "D2",
+    "questionType": "single-choice",
+    "difficulty": "standard",
+    "question": "リポジトリのテンプレート（Template repository）機能の説明として最も適切なものはどれですか？",
+    "choices": [
+      { "id": "A", "text": "リポジトリを Fork して別アカウントに複製する機能" },
+      { "id": "B", "text": "リポジトリの構造・ファイル・設定を雛形として新しいリポジトリを素早く作成できる機能" },
+      { "id": "C", "text": "GitHub Actions のワークフローを他のリポジトリで再利用する機能" },
+      { "id": "D", "text": "README のテンプレートを自動生成する AI 機能" }
+    ],
+    "correctChoiceIds": ["B"],
+    "explanation": "テンプレートリポジトリとして設定されたリポジトリは「Use this template」ボタンから複製できます。Fork との違いはコミット履歴を引き継がず、新しいリポジトリとして独立したスタートが切れる点です。プロジェクトの標準構成を組織内で共有する際に役立ちます。",
+    "references": [
+      {
+        "title": "リポジトリについて",
+        "url": "https://docs.github.com/ja/repositories/creating-and-managing-repositories/about-repositories",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["template", "repository"],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D2-008",
+    "domainId": "D2",
+    "questionType": "single-choice",
+    "difficulty": "advanced",
+    "question": "Git Large File Storage（Git LFS）を使う主な目的はどれですか？",
+    "choices": [
+      { "id": "A", "text": "リポジトリのコミット履歴を圧縮して容量を削減するため" },
+      { "id": "B", "text": "動画・デザインファイルなど大容量バイナリファイルを Git リポジトリで効率的に管理するため" },
+      { "id": "C", "text": "複数リポジトリのデータを1か所に統合して管理するため" },
+      { "id": "D", "text": "ブランチを別のリポジトリに移動するため" }
+    ],
+    "correctChoiceIds": ["B"],
+    "explanation": "Git LFS は大容量バイナリファイル（動画・音声・画像・デザインファイルなど）をリポジトリに直接格納せず、ポインタファイルだけをコミットして実データを別ストレージで管理します。これによりリポジトリのクローンが高速になり、通常の Git の容量制限を超えるファイルを扱えます。",
+    "references": [
+      {
+        "title": "Git Large File Storage について",
+        "url": "https://docs.github.com/ja/repositories/working-with-files/managing-large-files/about-git-large-file-storage",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["git-lfs", "repository"],
+    "updatedAt": "2026-05-31"
   }
 ]

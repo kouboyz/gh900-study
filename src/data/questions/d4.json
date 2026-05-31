@@ -6,22 +6,39 @@
     "difficulty": "basic",
     "question": "GitHub Actionsのワークフロー（workflow）ファイルの正しい保存場所はどれですか？",
     "choices": [
-      { "id": "A", "text": "リポジトリのルートにある actions.json" },
-      { "id": "B", "text": ".github/workflows/ ディレクトリ内のYAMLファイル" },
-      { "id": "C", "text": ".git/config ファイル内" },
-      { "id": "D", "text": "GitHub の Settings 画面でのみ定義できる" }
+      {
+        "id": "A",
+        "text": "リポジトリのルートにある actions.json"
+      },
+      {
+        "id": "B",
+        "text": ".github/workflows/ ディレクトリ内のYAMLファイル"
+      },
+      {
+        "id": "C",
+        "text": ".git/config ファイル内"
+      },
+      {
+        "id": "D",
+        "text": "GitHub の Settings 画面でのみ定義できる"
+      }
     ],
-    "correctChoiceIds": ["B"],
+    "correctChoiceIds": [
+      "B"
+    ],
     "explanation": "GitHub Actionsのワークフローは .github/workflows/ ディレクトリ内に .yml または .yaml 形式で定義します。ファイル名は任意ですが、on:（トリガー）と jobs:（実行内容）の記述が必須です。",
     "references": [
       {
         "title": "GitHub Actions について",
-        "url": "https://docs.github.com/ja/actions/learn-github-actions/understanding-github-actions",
+        "url": "https://docs.github.com/ja/actions/about-github-actions/understanding-github-actions",
         "source": "GitHub Docs",
         "checkedAt": "2026-05-31"
       }
     ],
-    "tags": ["actions", "workflow"],
+    "tags": [
+      "actions",
+      "workflow"
+    ],
     "updatedAt": "2026-05-31"
   },
   {
@@ -31,12 +48,26 @@
     "difficulty": "standard",
     "question": "GitHub Codespaces の説明として最も適切なものはどれですか？",
     "choices": [
-      { "id": "A", "text": "GitHubが提供するクラウドベースの開発環境で、ブラウザやVS Codeからアクセスできる" },
-      { "id": "B", "text": "リポジトリのコードを静的解析するセキュリティスキャナー" },
-      { "id": "C", "text": "Pull Requestのコードレビューを自動で行うAIツール" },
-      { "id": "D", "text": "GitHub Pagesのビルドパイプラインの名称" }
+      {
+        "id": "A",
+        "text": "GitHubが提供するクラウドベースの開発環境で、ブラウザやVS Codeからアクセスできる"
+      },
+      {
+        "id": "B",
+        "text": "リポジトリのコードを静的解析するセキュリティスキャナー"
+      },
+      {
+        "id": "C",
+        "text": "Pull Requestのコードレビューを自動で行うAIツール"
+      },
+      {
+        "id": "D",
+        "text": "GitHub Pagesのビルドパイプラインの名称"
+      }
     ],
-    "correctChoiceIds": ["A"],
+    "correctChoiceIds": [
+      "A"
+    ],
     "explanation": "CodespacesはGitHub上でホストされるクラウド開発環境（CDE）です。リポジトリをクリックするだけでVS Codeライクな環境が起動し、ローカル環境のセットアップなしに開発を始められます。devcontainer.jsonで環境を定義・共有できます。",
     "references": [
       {
@@ -46,7 +77,9 @@
         "checkedAt": "2026-05-31"
       }
     ],
-    "tags": ["codespaces"],
+    "tags": [
+      "codespaces"
+    ],
     "updatedAt": "2026-05-31"
   },
   {
@@ -56,12 +89,26 @@
     "difficulty": "basic",
     "question": "GitHub Copilot の基本的な機能として最も適切な説明はどれですか？",
     "choices": [
-      { "id": "A", "text": "リポジトリのバックアップを自動的に取得するツール" },
-      { "id": "B", "text": "AIがコードの補完・生成・説明・レビューを支援するツール" },
-      { "id": "C", "text": "Organizationのアクセス権限を自動設定するツール" },
-      { "id": "D", "text": "GitHub Pagesのデザインを自動生成するツール" }
+      {
+        "id": "A",
+        "text": "リポジトリのバックアップを自動的に取得するツール"
+      },
+      {
+        "id": "B",
+        "text": "AIがコードの補完・生成・説明・レビューを支援するツール"
+      },
+      {
+        "id": "C",
+        "text": "Organizationのアクセス権限を自動設定するツール"
+      },
+      {
+        "id": "D",
+        "text": "GitHub Pagesのデザインを自動生成するツール"
+      }
     ],
-    "correctChoiceIds": ["B"],
+    "correctChoiceIds": [
+      "B"
+    ],
     "explanation": "GitHub CopilotはAI駆動のコーディングアシスタントです。コードの自動補完に加え、チャットでの質問への回答・コードの説明・バグ修正提案・テスト生成などを提供します。2026年時点ではAgent Mode・マルチモデル対応など機能が大幅に拡張されています。",
     "references": [
       {
@@ -71,7 +118,10 @@
         "checkedAt": "2026-05-31"
       }
     ],
-    "tags": ["copilot", "ai"],
+    "tags": [
+      "copilot",
+      "ai"
+    ],
     "updatedAt": "2026-05-31"
   },
   {
@@ -81,12 +131,26 @@
     "difficulty": "standard",
     "question": "GitHub Copilot のライセンス体系として正しいものはどれですか？",
     "choices": [
-      { "id": "A", "text": "Copilot Freeのみが存在し、全ユーザーに無制限で提供される" },
-      { "id": "B", "text": "Individual・Business・Enterpriseのプランがあり、機能と管理範囲が異なる" },
-      { "id": "C", "text": "GitHub Actionsと同じプランに含まれており、追加費用は不要" },
-      { "id": "D", "text": "Organization単位では購入できず、個人単位のみ購入できる" }
+      {
+        "id": "A",
+        "text": "Copilot Freeのみが存在し、全ユーザーに無制限で提供される"
+      },
+      {
+        "id": "B",
+        "text": "Individual・Business・Enterpriseのプランがあり、機能と管理範囲が異なる"
+      },
+      {
+        "id": "C",
+        "text": "GitHub Actionsと同じプランに含まれており、追加費用は不要"
+      },
+      {
+        "id": "D",
+        "text": "Organization単位では購入できず、個人単位のみ購入できる"
+      }
     ],
-    "correctChoiceIds": ["B"],
+    "correctChoiceIds": [
+      "B"
+    ],
     "explanation": "GitHub CopilotはIndividual（個人向け）・Business（チーム向け・ポリシー管理機能あり）・Enterprise（大企業向け・カスタマイズ・ナレッジベース連携あり）の3プランで提供されています。Businessは組織全体のポリシー設定が可能です。",
     "references": [
       {
@@ -96,7 +160,10 @@
         "checkedAt": "2026-05-31"
       }
     ],
-    "tags": ["copilot", "plans"],
+    "tags": [
+      "copilot",
+      "plans"
+    ],
     "updatedAt": "2026-05-31"
   },
   {
@@ -106,12 +173,26 @@
     "difficulty": "standard",
     "question": "github.dev エディタの説明として最も適切なものはどれですか？",
     "choices": [
-      { "id": "A", "text": "コードの実行やターミナル操作が可能なフル開発環境" },
-      { "id": "B", "text": "ブラウザ上で素早くファイルを閲覧・編集できる軽量エディタ（実行環境なし）" },
-      { "id": "C", "text": "GitHub Mobileアプリの別名" },
-      { "id": "D", "text": "GitHub Actionsのワークフローを視覚的に編集するツール" }
+      {
+        "id": "A",
+        "text": "コードの実行やターミナル操作が可能なフル開発環境"
+      },
+      {
+        "id": "B",
+        "text": "ブラウザ上で素早くファイルを閲覧・編集できる軽量エディタ（実行環境なし）"
+      },
+      {
+        "id": "C",
+        "text": "GitHub Mobileアプリの別名"
+      },
+      {
+        "id": "D",
+        "text": "GitHub Actionsのワークフローを視覚的に編集するツール"
+      }
     ],
-    "correctChoiceIds": ["B"],
+    "correctChoiceIds": [
+      "B"
+    ],
     "explanation": "github.dev（.キーで起動）はブラウザ上でVS Codeライクな編集体験を提供しますが、コンピューティングリソースを使わない軽量エディタです。コードの実行・ターミナル・Copilotフルサポートが必要な場合はCodespacesを使います。",
     "references": [
       {
@@ -121,7 +202,306 @@
         "checkedAt": "2026-05-31"
       }
     ],
-    "tags": ["github-dev", "editor"],
+    "tags": [
+      "github-dev",
+      "editor"
+    ],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D4-006",
+    "domainId": "D4",
+    "questionType": "single-choice",
+    "difficulty": "basic",
+    "question": "GitHub Actions の主な用途として最も適切なものはどれですか？",
+    "choices": [
+      {
+        "id": "A",
+        "text": "GitHub のユーザー認証を管理するサービス"
+      },
+      {
+        "id": "B",
+        "text": "リポジトリでのイベント（push・PR など）をトリガーにビルド・テスト・デプロイを自動化するCI/CDプラットフォーム"
+      },
+      {
+        "id": "C",
+        "text": "リポジトリの Issue を自動でトリアージするAIツール"
+      },
+      {
+        "id": "D",
+        "text": "コードのバグを自動修正してコミットするサービス"
+      }
+    ],
+    "correctChoiceIds": [
+      "B"
+    ],
+    "explanation": "GitHub Actions は push・Pull Request・スケジュールなどのイベントをトリガーにワークフローを自動実行するCI/CDプラットフォームです。テスト実行・ビルド・デプロイ・リリース作成など様々な自動化が可能です。",
+    "references": [
+      {
+        "title": "GitHub Actions について",
+        "url": "https://docs.github.com/ja/actions/about-github-actions/understanding-github-actions",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": [
+      "actions",
+      "ci-cd"
+    ],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D4-007",
+    "domainId": "D4",
+    "questionType": "single-choice",
+    "difficulty": "standard",
+    "question": "devcontainer.json の主な役割として最も適切なものはどれですか？",
+    "choices": [
+      {
+        "id": "A",
+        "text": "GitHub Actions のランナー環境を定義するファイル"
+      },
+      {
+        "id": "B",
+        "text": "Codespaces や VS Code Dev Containers の開発環境（ツール・拡張機能・設定）をコードで定義するファイル"
+      },
+      {
+        "id": "C",
+        "text": "Docker イメージのビルド手順を定義する Dockerfile の別名"
+      },
+      {
+        "id": "D",
+        "text": "npm パッケージの依存関係を定義するファイル"
+      }
+    ],
+    "correctChoiceIds": [
+      "B"
+    ],
+    "explanation": "devcontainer.json は開発コンテナの設定ファイルで、使用するDockerイメージ・インストールするツール・VS Code の拡張機能・ポートフォワード設定などを定義します。これによりチーム全員が同一の開発環境を即座に起動できます。",
+    "references": [
+      {
+        "title": "GitHub Codespaces とは",
+        "url": "https://docs.github.com/ja/codespaces/overview",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": [
+      "codespaces",
+      "devcontainer"
+    ],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D4-008",
+    "domainId": "D4",
+    "questionType": "single-choice",
+    "difficulty": "standard",
+    "question": "GitHub Copilot の Agent Mode の説明として最も適切なものはどれですか？",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Copilot がコードを1行ずつ提案するインライン補完モード"
+      },
+      {
+        "id": "B",
+        "text": "Copilot が複数ファイルにまたがる複雑なタスクを自律的に計画・実行するモード"
+      },
+      {
+        "id": "C",
+        "text": "Copilot がチームメンバーの代わりに Pull Request をレビューするモード"
+      },
+      {
+        "id": "D",
+        "text": "Copilot がセキュリティ脆弱性を自動修正してコミットするモード"
+      }
+    ],
+    "correctChoiceIds": [
+      "B"
+    ],
+    "explanation": "Agent Mode では Copilot が自然言語の指示に基づいてコードベースを分析し、複数ファイルにわたる変更・テスト実行・エラー修正などを自律的に繰り返します。単純な補完を超えた複雑なタスクの自動化が可能です。",
+    "references": [
+      {
+        "title": "GitHub Copilot とは",
+        "url": "https://docs.github.com/ja/copilot/about-github-copilot/what-is-github-copilot",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": [
+      "copilot",
+      "agent-mode"
+    ],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D4-009",
+    "domainId": "D4",
+    "questionType": "single-choice",
+    "difficulty": "advanced",
+    "question": "GitHub Actions のランナー（runner）の説明として最も適切なものはどれですか？",
+    "choices": [
+      {
+        "id": "A",
+        "text": "GitHub Actions のワークフローファイルを編集するWebエディタ"
+      },
+      {
+        "id": "B",
+        "text": "ワークフローのジョブを実行するサーバー。GitHub ホスト型とセルフホスト型がある"
+      },
+      {
+        "id": "C",
+        "text": "Pull Request のマージを自動承認するボット"
+      },
+      {
+        "id": "D",
+        "text": "GitHub Actions の課金単位となる実行回数のカウンター"
+      }
+    ],
+    "correctChoiceIds": [
+      "B"
+    ],
+    "explanation": "ランナーはジョブを実際に実行するマシンです。GitHub が管理する GitHub ホスト型ランナー（ubuntu-latest・windows-latest・macos-latest など）と、自社インフラで動かすセルフホスト型ランナーがあります。セルフホストはより細かい環境制御や社内ネットワークアクセスに適しています。",
+    "references": [
+      {
+        "title": "GitHub Actions について",
+        "url": "https://docs.github.com/ja/actions/about-github-actions/understanding-github-actions",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": [
+      "actions",
+      "runner"
+    ],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D4-010",
+    "domainId": "D4",
+    "questionType": "single-choice",
+    "difficulty": "advanced",
+    "question": "Codespaces と github.dev の使い分けとして最も適切なものはどれですか？",
+    "choices": [
+      {
+        "id": "A",
+        "text": "どちらも全く同じ機能を持ち、どちらを使っても結果は変わらない"
+      },
+      {
+        "id": "B",
+        "text": "コードを実行したりターミナルを使う場合は Codespaces、素早くファイルを閲覧・編集するだけなら github.dev が適している"
+      },
+      {
+        "id": "C",
+        "text": "github.dev は有料ユーザー専用で、Codespaces は無料で使える"
+      },
+      {
+        "id": "D",
+        "text": "Codespaces はモバイルのみ対応で、github.dev はデスクトップのみ対応している"
+      }
+    ],
+    "correctChoiceIds": [
+      "B"
+    ],
+    "explanation": "github.dev はコンピューティングリソースを持たない軽量エディタのため、コードの実行・ターミナル操作・拡張機能のフル利用はできません。テストを実行したり開発サーバーを起動する必要がある場合は Codespaces を使います。",
+    "references": [
+      {
+        "title": "github.dev Web ベース エディター",
+        "url": "https://docs.github.com/ja/codespaces/the-githubdev-web-based-editor",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": [
+      "codespaces",
+      "github-dev"
+    ],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D4-011",
+    "domainId": "D4",
+    "questionType": "single-choice",
+    "difficulty": "standard",
+    "question": "GitHub Actions のワークフローをトリガーするイベントとして正しいものはどれですか？",
+    "choices": [
+      {
+        "id": "A",
+        "text": "push・pull_request・schedule・workflow_dispatch など多数のイベントでトリガーできる"
+      },
+      {
+        "id": "B",
+        "text": "push イベントのみがワークフローをトリガーできる"
+      },
+      {
+        "id": "C",
+        "text": "手動実行（workflow_dispatch）のみがサポートされている"
+      },
+      {
+        "id": "D",
+        "text": "外部 API からのみトリガーできる"
+      }
+    ],
+    "correctChoiceIds": [
+      "A"
+    ],
+    "explanation": "GitHub Actions は push・pull_request・issues・schedule（cron）・workflow_dispatch（手動）・repository_dispatch（外部API）など多数のイベントでトリガーできます。複数のイベントを組み合わせることも可能です。",
+    "references": [
+      {
+        "title": "ワークフローをトリガーするイベント",
+        "url": "https://docs.github.com/ja/actions/writing-workflows/choosing-when-your-workflow-runs/events-that-trigger-workflows",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": [
+      "actions",
+      "workflow",
+      "trigger"
+    ],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D4-012",
+    "domainId": "D4",
+    "questionType": "single-choice",
+    "difficulty": "advanced",
+    "question": "GitHub Actions の再利用可能なワークフロー（Reusable workflows）の説明として最も適切なものはどれですか？",
+    "choices": [
+      {
+        "id": "A",
+        "text": "同じリポジトリ内でしか再利用できないワークフロー"
+      },
+      {
+        "id": "B",
+        "text": "別のワークフローから呼び出して共通処理を再利用できるワークフロー。別リポジトリからの呼び出しも可能"
+      },
+      {
+        "id": "C",
+        "text": "GitHub Marketplace に公開されたアクションのこと"
+      },
+      {
+        "id": "D",
+        "text": "スケジュール実行に対応したワークフローの呼称"
+      }
+    ],
+    "correctChoiceIds": [
+      "B"
+    ],
+    "explanation": "再利用可能なワークフローは `on: workflow_call:` を定義したワークフローファイルで、他のワークフローから `uses:` キーワードで呼び出せます。同一リポジトリだけでなく別リポジトリのワークフローからも呼び出せます。共通のCI手順を集約して重複を排除できます。",
+    "references": [
+      {
+        "title": "ワークフローを再利用する",
+        "url": "https://docs.github.com/ja/actions/sharing-automations/reusing-workflows",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": [
+      "actions",
+      "workflow",
+      "reusable"
+    ],
     "updatedAt": "2026-05-31"
   }
 ]
