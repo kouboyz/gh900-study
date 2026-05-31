@@ -1,0 +1,95 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "question.schema.json",
+  "title": "Question",
+  "description": "GH-900 Trainer の問題データスキーマ",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": ["id", "domainId", "questionType", "difficulty", "question", "choices", "correctChoiceIds", "explanation", "references", "updatedAt"],
+    "additionalProperties": false,
+    "properties": {
+      "id": {
+        "type": "string",
+        "pattern": "^D[1-7]-\\d{3}$",
+        "description": "例: D1-001"
+      },
+      "domainId": {
+        "type": "string",
+        "enum": ["D1", "D2", "D3", "D4", "D5", "D6", "D7"]
+      },
+      "questionType": {
+        "type": "string",
+        "enum": ["single-choice"]
+      },
+      "difficulty": {
+        "type": "string",
+        "enum": ["basic", "standard", "advanced"]
+      },
+      "question": {
+        "type": "string",
+        "minLength": 1
+      },
+      "choices": {
+        "type": "array",
+        "minItems": 4,
+        "maxItems": 4,
+        "items": {
+          "type": "object",
+          "required": ["id", "text"],
+          "additionalProperties": false,
+          "properties": {
+            "id": {
+              "type": "string",
+              "enum": ["A", "B", "C", "D"]
+            },
+            "text": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        }
+      },
+      "correctChoiceIds": {
+        "type": "array",
+        "minItems": 1,
+        "maxItems": 1,
+        "items": {
+          "type": "string",
+          "enum": ["A", "B", "C", "D"]
+        }
+      },
+      "explanation": {
+        "type": "string",
+        "minLength": 1
+      },
+      "references": {
+        "type": "array",
+        "minItems": 1,
+        "items": {
+          "type": "object",
+          "required": ["title", "url", "source", "checkedAt"],
+          "additionalProperties": false,
+          "properties": {
+            "title": { "type": "string", "minLength": 1 },
+            "url": { "type": "string", "format": "uri" },
+            "source": { "type": "string", "minLength": 1 },
+            "checkedAt": {
+              "type": "string",
+              "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+              "description": "例: 2026-05-31"
+            }
+          }
+        }
+      },
+      "tags": {
+        "type": "array",
+        "items": { "type": "string" }
+      },
+      "updatedAt": {
+        "type": "string",
+        "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+      }
+    }
+  }
+}

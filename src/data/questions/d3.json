@@ -1,0 +1,77 @@
+[
+  {
+    "id": "D3-001",
+    "domainId": "D3",
+    "questionType": "single-choice",
+    "difficulty": "basic",
+    "question": "Pull Requestの主な目的として最も適切なものはどれですか？",
+    "choices": [
+      { "id": "A", "text": "リポジトリの請求情報を管理するため" },
+      { "id": "B", "text": "変更を提案し、レビューと議論を経てマージするため" },
+      { "id": "C", "text": "GitHub Pagesの独自ドメインを購入するため" },
+      { "id": "D", "text": "Organizationの所有者を自動変更するため" }
+    ],
+    "correctChoiceIds": ["B"],
+    "explanation": "Pull Requestは、プロジェクトに変更を取り込む前に変更内容を議論しレビューするためのGitHubの中心的な協働機能です。コードレビュー・コメント・承認フローを通じてチームで安全に変更をマージでき、変更の意図を記録として残すことができます。",
+    "references": [
+      {
+        "title": "pull requests について",
+        "url": "https://docs.github.com/ja/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["pull-request", "collaboration"],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D3-002",
+    "domainId": "D3",
+    "questionType": "single-choice",
+    "difficulty": "basic",
+    "question": "GitHub Issues の説明として最も適切なものはどれですか？",
+    "choices": [
+      { "id": "A", "text": "コードの差分をリアルタイムに比較するツール" },
+      { "id": "B", "text": "バグ報告・機能要望・タスク管理など、プロジェクト内の作業アイテムを追跡する機能" },
+      { "id": "C", "text": "リポジトリを別アカウントにコピーする機能" },
+      { "id": "D", "text": "GitHub Actionsのジョブ実行ログを保管する機能" }
+    ],
+    "correctChoiceIds": ["B"],
+    "explanation": "IssuesはGitHubのタスク・バグ・フィーチャー管理機能です。ラベル・マイルストーン・担当者・プロジェクトとの連携が可能で、Pull Requestとリンクさせることで「なぜその変更をしたか」のコンテキストを残せます。",
+    "references": [
+      {
+        "title": "問題について",
+        "url": "https://docs.github.com/ja/issues/tracking-your-work-with-issues/about-issues",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["issues", "collaboration"],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D3-003",
+    "domainId": "D3",
+    "questionType": "single-choice",
+    "difficulty": "standard",
+    "question": "GitHub Discussions と Issues の違いとして最も適切な説明はどれですか？",
+    "choices": [
+      { "id": "A", "text": "DiscussionsはOSSのみ、IssuesはPrivateリポジトリのみで使える" },
+      { "id": "B", "text": "Discussionsはオープンエンドな会話や質問向け、Issuesは具体的なタスクや作業項目のトラッキング向け" },
+      { "id": "C", "text": "Discussionsは有料プランのみ利用可能で、Issuesは無料プランでも使える" },
+      { "id": "D", "text": "機能に差はなく、どちらを使っても同じ結果になる" }
+    ],
+    "correctChoiceIds": ["B"],
+    "explanation": "Discussionsはコミュニティとのオープンな対話（Q&A・アイデア共有・お知らせなど）に適しており、特定のコード変更に直結しない会話に向いています。一方Issuesは具体的なバグ修正や機能実装など、完了できるタスクのトラッキングに使います。",
+    "references": [
+      {
+        "title": "ディスカッションについて",
+        "url": "https://docs.github.com/ja/discussions/collaborating-with-your-community-using-discussions/about-discussions",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["discussions", "issues", "collaboration"],
+    "updatedAt": "2026-05-31"
+  }
+]

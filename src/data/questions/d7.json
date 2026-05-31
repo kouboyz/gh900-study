@@ -1,0 +1,52 @@
+[
+  {
+    "id": "D7-001",
+    "domainId": "D7",
+    "questionType": "single-choice",
+    "difficulty": "standard",
+    "question": "GitHubのFork（フォーク）の主な目的として最も適切なものはどれですか？",
+    "choices": [
+      { "id": "A", "text": "他のユーザーのリポジトリを自分のアカウントにコピーし、独立して変更を加えるため" },
+      { "id": "B", "text": "リポジトリを完全に削除するため" },
+      { "id": "C", "text": "リポジトリの可視性をプライベートに変更するため" },
+      { "id": "D", "text": "GitHubのサブスクリプションをアップグレードするため" }
+    ],
+    "correctChoiceIds": ["A"],
+    "explanation": "Forkは他ユーザーのリポジトリのコピーを自分のGitHubアカウント上に作成する機能です。Forkしたリポジトリで自由に変更を加え、元のリポジトリにPull Requestを送ることでOSSへの貢献が可能になります。",
+    "references": [
+      {
+        "title": "リポジトリをフォークする",
+        "url": "https://docs.github.com/ja/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["fork", "open-source"],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D7-002",
+    "domainId": "D7",
+    "questionType": "single-choice",
+    "difficulty": "standard",
+    "question": "InnerSource の説明として最も適切なものはどれですか？",
+    "choices": [
+      { "id": "A", "text": "Organizationのプライベートリポジトリを外部に公開する機能" },
+      { "id": "B", "text": "企業内部でOSSの開発手法（Pull Request・Issues・透明な貢献）を取り入れる実践" },
+      { "id": "C", "text": "GitHub Marketplaceでアプリを購入する仕組み" },
+      { "id": "D", "text": "GitHub Copilotのコード補完をチーム全体で共有する機能" }
+    ],
+    "correctChoiceIds": ["B"],
+    "explanation": "InnerSourceはOSS開発の慣行（オープンな貢献・Pull Requestレビュー・Issues管理・ドキュメント文化）を企業内部のプロジェクトに適用する手法です。組織横断的なコラボレーションと知識共有を促進します。",
+    "references": [
+      {
+        "title": "An introduction to innersource",
+        "url": "https://resources.github.com/innersource/fundamentals/",
+        "source": "GitHub Resources",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["innersource", "open-source"],
+    "updatedAt": "2026-05-31"
+  }
+]

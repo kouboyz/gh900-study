@@ -1,0 +1,77 @@
+[
+  {
+    "id": "D2-001",
+    "domainId": "D2",
+    "questionType": "single-choice",
+    "difficulty": "basic",
+    "question": "CODEOWNERSファイルの主な役割として最も適切なものはどれですか？",
+    "choices": [
+      { "id": "A", "text": "リポジトリの料金プランを管理する" },
+      { "id": "B", "text": "特定のファイルやディレクトリへの変更時に自動的にレビュアーを割り当てる" },
+      { "id": "C", "text": "GitHubアカウントのオーナーを変更する" },
+      { "id": "D", "text": "GitHub Actionsのワークフロー権限を定義する" }
+    ],
+    "correctChoiceIds": ["B"],
+    "explanation": "CODEOWNERSファイルは、リポジトリ内の特定のコードやファイルに責任を持つ人やチームを定義します。Pull Requestで対象ファイルが変更された際、指定されたレビュアーが自動的にレビューリクエストに追加されます。",
+    "references": [
+      {
+        "title": "コードオーナーについて",
+        "url": "https://docs.github.com/ja/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["codeowners", "repository"],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D2-002",
+    "domainId": "D2",
+    "questionType": "single-choice",
+    "difficulty": "basic",
+    "question": "README.md の主な役割として最も適切なものはどれですか？",
+    "choices": [
+      { "id": "A", "text": "リポジトリのビルド設定を定義する" },
+      { "id": "B", "text": "リポジトリのトップページに表示され、プロジェクトの概要・使い方・貢献方法を伝える" },
+      { "id": "C", "text": "コードの著作権情報だけを記載する" },
+      { "id": "D", "text": "テストの実行結果を自動記録する" }
+    ],
+    "correctChoiceIds": ["B"],
+    "explanation": "README.mdはリポジトリのフロントページとして機能し、プロジェクトの目的・インストール方法・使い方・ライセンス・貢献方法などを説明します。Markdownで記述し、GitHub上でHTMLとしてレンダリングされます。",
+    "references": [
+      {
+        "title": "リポジトリの README ファイルについて",
+        "url": "https://docs.github.com/ja/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["readme", "repository"],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D2-003",
+    "domainId": "D2",
+    "questionType": "single-choice",
+    "difficulty": "standard",
+    "question": "GitHub Insights の説明として最も適切なものはどれですか？",
+    "choices": [
+      { "id": "A", "text": "GitHub Actionsのジョブ失敗を通知するアラート機能" },
+      { "id": "B", "text": "リポジトリのコミット・貢献者・コード頻度・ネットワークなどの統計情報を可視化する機能" },
+      { "id": "C", "text": "Pull Requestのレビューを自動承認する機能" },
+      { "id": "D", "text": "リポジトリをプライベートに変更する操作" }
+    ],
+    "correctChoiceIds": ["B"],
+    "explanation": "GitHub Insightsはリポジトリの活動状況を可視化する機能です。貢献者グラフ・コミット頻度・コード変更量・依存関係グラフ・トラフィックなどのデータを確認でき、プロジェクトの健康状態の把握に役立ちます。",
+    "references": [
+      {
+        "title": "リポジトリ間の接続を理解する",
+        "url": "https://docs.github.com/ja/repositories/viewing-activity-and-data-for-your-repository/understanding-connections-between-repositories",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["insights", "repository"],
+    "updatedAt": "2026-05-31"
+  }
+]

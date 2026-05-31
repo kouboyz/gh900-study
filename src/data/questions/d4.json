@@ -1,0 +1,127 @@
+[
+  {
+    "id": "D4-001",
+    "domainId": "D4",
+    "questionType": "single-choice",
+    "difficulty": "basic",
+    "question": "GitHub Actionsのワークフロー（workflow）ファイルの正しい保存場所はどれですか？",
+    "choices": [
+      { "id": "A", "text": "リポジトリのルートにある actions.json" },
+      { "id": "B", "text": ".github/workflows/ ディレクトリ内のYAMLファイル" },
+      { "id": "C", "text": ".git/config ファイル内" },
+      { "id": "D", "text": "GitHub の Settings 画面でのみ定義できる" }
+    ],
+    "correctChoiceIds": ["B"],
+    "explanation": "GitHub Actionsのワークフローは .github/workflows/ ディレクトリ内に .yml または .yaml 形式で定義します。ファイル名は任意ですが、on:（トリガー）と jobs:（実行内容）の記述が必須です。",
+    "references": [
+      {
+        "title": "GitHub Actions について",
+        "url": "https://docs.github.com/ja/actions/learn-github-actions/understanding-github-actions",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["actions", "workflow"],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D4-002",
+    "domainId": "D4",
+    "questionType": "single-choice",
+    "difficulty": "standard",
+    "question": "GitHub Codespaces の説明として最も適切なものはどれですか？",
+    "choices": [
+      { "id": "A", "text": "GitHubが提供するクラウドベースの開発環境で、ブラウザやVS Codeからアクセスできる" },
+      { "id": "B", "text": "リポジトリのコードを静的解析するセキュリティスキャナー" },
+      { "id": "C", "text": "Pull Requestのコードレビューを自動で行うAIツール" },
+      { "id": "D", "text": "GitHub Pagesのビルドパイプラインの名称" }
+    ],
+    "correctChoiceIds": ["A"],
+    "explanation": "CodespacesはGitHub上でホストされるクラウド開発環境（CDE）です。リポジトリをクリックするだけでVS Codeライクな環境が起動し、ローカル環境のセットアップなしに開発を始められます。devcontainer.jsonで環境を定義・共有できます。",
+    "references": [
+      {
+        "title": "GitHub Codespaces とは",
+        "url": "https://docs.github.com/ja/codespaces/overview",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["codespaces"],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D4-003",
+    "domainId": "D4",
+    "questionType": "single-choice",
+    "difficulty": "basic",
+    "question": "GitHub Copilot の基本的な機能として最も適切な説明はどれですか？",
+    "choices": [
+      { "id": "A", "text": "リポジトリのバックアップを自動的に取得するツール" },
+      { "id": "B", "text": "AIがコードの補完・生成・説明・レビューを支援するツール" },
+      { "id": "C", "text": "Organizationのアクセス権限を自動設定するツール" },
+      { "id": "D", "text": "GitHub Pagesのデザインを自動生成するツール" }
+    ],
+    "correctChoiceIds": ["B"],
+    "explanation": "GitHub CopilotはAI駆動のコーディングアシスタントです。コードの自動補完に加え、チャットでの質問への回答・コードの説明・バグ修正提案・テスト生成などを提供します。2026年時点ではAgent Mode・マルチモデル対応など機能が大幅に拡張されています。",
+    "references": [
+      {
+        "title": "GitHub Copilot とは",
+        "url": "https://docs.github.com/ja/copilot/about-github-copilot/what-is-github-copilot",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["copilot", "ai"],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D4-004",
+    "domainId": "D4",
+    "questionType": "single-choice",
+    "difficulty": "standard",
+    "question": "GitHub Copilot のライセンス体系として正しいものはどれですか？",
+    "choices": [
+      { "id": "A", "text": "Copilot Freeのみが存在し、全ユーザーに無制限で提供される" },
+      { "id": "B", "text": "Individual・Business・Enterpriseのプランがあり、機能と管理範囲が異なる" },
+      { "id": "C", "text": "GitHub Actionsと同じプランに含まれており、追加費用は不要" },
+      { "id": "D", "text": "Organization単位では購入できず、個人単位のみ購入できる" }
+    ],
+    "correctChoiceIds": ["B"],
+    "explanation": "GitHub CopilotはIndividual（個人向け）・Business（チーム向け・ポリシー管理機能あり）・Enterprise（大企業向け・カスタマイズ・ナレッジベース連携あり）の3プランで提供されています。Businessは組織全体のポリシー設定が可能です。",
+    "references": [
+      {
+        "title": "GitHub Copilot の計画",
+        "url": "https://docs.github.com/ja/copilot/about-github-copilot/subscription-plans-for-github-copilot",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["copilot", "plans"],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D4-005",
+    "domainId": "D4",
+    "questionType": "single-choice",
+    "difficulty": "standard",
+    "question": "github.dev エディタの説明として最も適切なものはどれですか？",
+    "choices": [
+      { "id": "A", "text": "コードの実行やターミナル操作が可能なフル開発環境" },
+      { "id": "B", "text": "ブラウザ上で素早くファイルを閲覧・編集できる軽量エディタ（実行環境なし）" },
+      { "id": "C", "text": "GitHub Mobileアプリの別名" },
+      { "id": "D", "text": "GitHub Actionsのワークフローを視覚的に編集するツール" }
+    ],
+    "correctChoiceIds": ["B"],
+    "explanation": "github.dev（.キーで起動）はブラウザ上でVS Codeライクな編集体験を提供しますが、コンピューティングリソースを使わない軽量エディタです。コードの実行・ターミナル・Copilotフルサポートが必要な場合はCodespacesを使います。",
+    "references": [
+      {
+        "title": "github.dev Web ベース エディター",
+        "url": "https://docs.github.com/ja/codespaces/the-githubdev-web-based-editor",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["github-dev", "editor"],
+    "updatedAt": "2026-05-31"
+  }
+]

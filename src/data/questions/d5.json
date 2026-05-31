@@ -1,0 +1,52 @@
+[
+  {
+    "id": "D5-001",
+    "domainId": "D5",
+    "questionType": "single-choice",
+    "difficulty": "basic",
+    "question": "GitHub Projects の主な用途として最も適切なものはどれですか？",
+    "choices": [
+      { "id": "A", "text": "GitHubへのSSH接続を設定する" },
+      { "id": "B", "text": "IssueやPull Requestをカンバンボードやテーブルで可視化・管理する" },
+      { "id": "C", "text": "リポジトリのバックアップを自動作成する" },
+      { "id": "D", "text": "GitHub Copilotのモデルを選択する" }
+    ],
+    "correctChoiceIds": ["B"],
+    "explanation": "GitHub Projectsは、IssueやPull Requestをカンバンボード・テーブル・ロードマップビューで整理・管理するプロジェクト管理機能です。カスタムフィールド・フィルタリング・自動化（Automation）を組み合わせて、チームのワークフローを柔軟に構築できます。",
+    "references": [
+      {
+        "title": "Projects について",
+        "url": "https://docs.github.com/ja/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["projects", "project-management"],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D5-002",
+    "domainId": "D5",
+    "questionType": "single-choice",
+    "difficulty": "standard",
+    "question": "GitHub Projects のマイルストーン（milestone）の主な用途として正しいものはどれですか？",
+    "choices": [
+      { "id": "A", "text": "コードのバージョンタグを作成する" },
+      { "id": "B", "text": "期限付きのゴールに向けて複数のIssueやPull Requestをグルーピングして進捗を追跡する" },
+      { "id": "C", "text": "GitHub Actionsのスケジュール実行を設定する" },
+      { "id": "D", "text": "リポジトリのリリースを自動作成する" }
+    ],
+    "correctChoiceIds": ["B"],
+    "explanation": "マイルストーンはリリースやスプリントなど期限のある目標に向けてIssueやPull Requestをまとめる機能です。進捗率・期限・クローズ済み件数をひと目で確認でき、プロジェクトの達成状況の可視化に役立ちます。",
+    "references": [
+      {
+        "title": "マイルストーンについて",
+        "url": "https://docs.github.com/ja/issues/using-labels-and-milestones-to-track-work/about-milestones",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["milestones", "project-management"],
+    "updatedAt": "2026-05-31"
+  }
+]

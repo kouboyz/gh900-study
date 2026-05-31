@@ -1,0 +1,102 @@
+[
+  {
+    "id": "D6-001",
+    "domainId": "D6",
+    "questionType": "single-choice",
+    "difficulty": "basic",
+    "question": "2要素認証（2FA）を有効にする主な目的はどれですか？",
+    "choices": [
+      { "id": "A", "text": "リポジトリのストレージ容量を増やすため" },
+      { "id": "B", "text": "パスワードだけでは不正アクセスできないように追加の認証を要求するため" },
+      { "id": "C", "text": "Pull Requestのマージを自動化するため" },
+      { "id": "D", "text": "GitHub Copilotを有効化するため" }
+    ],
+    "correctChoiceIds": ["B"],
+    "explanation": "2FAはパスワードに加えて認証アプリのワンタイムコードやセキュリティキーなど第二の認証要素を要求します。パスワードが漏洩しても、第二要素がなければアカウントにアクセスできないため、アカウント保護に効果的です。",
+    "references": [
+      {
+        "title": "2 要素認証について",
+        "url": "https://docs.github.com/ja/authentication/securing-your-account-with-two-factor-authentication-2fa/about-two-factor-authentication",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["2fa", "security"],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D6-002",
+    "domainId": "D6",
+    "questionType": "single-choice",
+    "difficulty": "standard",
+    "question": "ブランチ保護ルール（Branch protection rules）で設定できる内容として正しいものはどれですか？",
+    "choices": [
+      { "id": "A", "text": "GitHub Pagesの公開設定" },
+      { "id": "B", "text": "マージ前にCI/CDの通過や特定ユーザーによるレビュー承認を必須にする" },
+      { "id": "C", "text": "リポジトリの可視性をPrivateに変更する" },
+      { "id": "D", "text": "GitHub Copilotのコード補完を無効にする" }
+    ],
+    "correctChoiceIds": ["B"],
+    "explanation": "ブランチ保護ルールでは「ステータスチェック（CI）の通過を必須にする」「一定数のレビュー承認を必須にする」「force pushを禁止する」「ブランチの削除を禁止する」などを設定できます。重要なブランチへの品質基準を強制するための機能です。",
+    "references": [
+      {
+        "title": "保護されたブランチについて",
+        "url": "https://docs.github.com/ja/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/about-protected-branches",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["branch-protection", "security"],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D6-003",
+    "domainId": "D6",
+    "questionType": "single-choice",
+    "difficulty": "standard",
+    "question": "Enterprise Managed Users（EMU）の説明として最も適切なものはどれですか？",
+    "choices": [
+      { "id": "A", "text": "GitHub.comの全ユーザーに適用されるデフォルトの認証方式" },
+      { "id": "B", "text": "企業のIDプロバイダー（IdP）でGitHubユーザーのライフサイクルを一元管理するEnterpriseアカウント機能" },
+      { "id": "C", "text": "Organizationの全リポジトリをバックアップする有料サービス" },
+      { "id": "D", "text": "GitHub Actionsのセルフホストランナーを管理する機能" }
+    ],
+    "correctChoiceIds": ["B"],
+    "explanation": "EMUはEnterpriseアカウントにおいて、IDプロバイダー（OktaやAzure ADなど）とSCIMを使ってGitHubユーザーのプロビジョニング・デプロビジョニングを自動化する機能です。ユーザーはIdP経由のSSO経由でのみGitHubにアクセスでき、企業外のリポジトリへのアクセスが制限されます。",
+    "references": [
+      {
+        "title": "Enterprise Managed Users について",
+        "url": "https://docs.github.com/ja/enterprise-cloud@latest/admin/identity-and-access-management/understanding-iam-for-enterprises/about-enterprise-managed-users",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["emu", "enterprise", "security"],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D6-004",
+    "domainId": "D6",
+    "questionType": "single-choice",
+    "difficulty": "basic",
+    "question": "GitHubのリポジトリ権限ロール（role）について、外部コラボレーターに付与できる最小権限はどれですか？",
+    "choices": [
+      { "id": "A", "text": "Owner" },
+      { "id": "B", "text": "Read（読み取り）" },
+      { "id": "C", "text": "Admin" },
+      { "id": "D", "text": "Maintain" }
+    ],
+    "correctChoiceIds": ["B"],
+    "explanation": "リポジトリの権限ロールはRead・Triage・Write・Maintain・Adminの5段階です。外部コラボレーターには最小権限の原則に従い、必要最小限のReadから付与するのが基本です。Ownerはリポジトリを持つOrganizationの管理者ロールであり、コラボレーターに付与するものではありません。",
+    "references": [
+      {
+        "title": "Organization のリポジトリロール",
+        "url": "https://docs.github.com/ja/organizations/managing-user-access-to-your-organizations-repositories/managing-repository-roles/repository-roles-for-an-organization",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["permissions", "roles", "security"],
+    "updatedAt": "2026-05-31"
+  }
+]

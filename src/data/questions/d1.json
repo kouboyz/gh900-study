@@ -1,0 +1,127 @@
+[
+  {
+    "id": "D1-001",
+    "domainId": "D1",
+    "questionType": "single-choice",
+    "difficulty": "basic",
+    "question": "Gitにおける「コミット（commit）」の説明として最も適切なものはどれですか？",
+    "choices": [
+      { "id": "A", "text": "ブランチを削除する操作" },
+      { "id": "B", "text": "その時点のファイル変更のスナップショットをリポジトリに記録する操作" },
+      { "id": "C", "text": "リモートリポジトリからローカルへ変更を取り込む操作" },
+      { "id": "D", "text": "Pull Requestをマージする操作" }
+    ],
+    "correctChoiceIds": ["B"],
+    "explanation": "コミットはリポジトリの変更履歴の最小単位であり、「誰が・いつ・どんな変更をしたか」を記録したスナップショットです。各コミットにはユニークなSHA-1ハッシュが付与され、履歴をさかのぼったり特定の状態に戻すことができます。",
+    "references": [
+      {
+        "title": "コミットについて",
+        "url": "https://docs.github.com/ja/pull-requests/committing-changes-to-your-project/creating-and-editing-commits/about-commits",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["git", "commit"],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D1-002",
+    "domainId": "D1",
+    "questionType": "single-choice",
+    "difficulty": "basic",
+    "question": "ブランチ（branch）の主な目的として最も適切なものはどれですか？",
+    "choices": [
+      { "id": "A", "text": "リポジトリを外部に公開するため" },
+      { "id": "B", "text": "メインのコードに影響を与えずに独立した作業を並行して進めるため" },
+      { "id": "C", "text": "Organizationのメンバーを管理するため" },
+      { "id": "D", "text": "GitHub Pagesのカスタムドメインを設定するため" }
+    ],
+    "correctChoiceIds": ["B"],
+    "explanation": "ブランチはコミット履歴のポインタであり、メインブランチ（main / master）から分岐して独立した作業空間を作ります。機能開発やバグ修正をブランチ上で進め、レビュー後にマージすることで安全なリリースが可能になります。",
+    "references": [
+      {
+        "title": "ブランチの概要",
+        "url": "https://docs.github.com/ja/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-branches",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["git", "branch"],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D1-003",
+    "domainId": "D1",
+    "questionType": "single-choice",
+    "difficulty": "standard",
+    "question": "GitHub Flow の基本的なステップの順序として正しいものはどれですか？",
+    "choices": [
+      { "id": "A", "text": "ブランチ作成 → コミット → Pull Request → レビュー → マージ" },
+      { "id": "B", "text": "Fork → Pull Request → ブランチ作成 → マージ" },
+      { "id": "C", "text": "タグ作成 → コミット → ブランチ作成 → マージ" },
+      { "id": "D", "text": "リリース → ブランチ作成 → コミット → クローズ" }
+    ],
+    "correctChoiceIds": ["A"],
+    "explanation": "GitHub Flow は「ブランチを切る → コミットを積む → Pull Request を開く → レビュー・議論 → main にマージ → デプロイ」というシンプルなサイクルです。mainブランチは常にデプロイ可能な状態を保つことが前提です。",
+    "references": [
+      {
+        "title": "GitHub フロー",
+        "url": "https://docs.github.com/ja/get-started/using-github/github-flow",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["github-flow", "workflow"],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D1-004",
+    "domainId": "D1",
+    "questionType": "single-choice",
+    "difficulty": "basic",
+    "question": "git clone コマンドの説明として最も適切なものはどれですか？",
+    "choices": [
+      { "id": "A", "text": "ローカルリポジトリの変更をリモートに送信する" },
+      { "id": "B", "text": "リモートリポジトリをローカルマシンにコピーして作業できるようにする" },
+      { "id": "C", "text": "リモートリポジトリの変更のみをローカルに取得する（マージは行わない）" },
+      { "id": "D", "text": "新しいブランチを作成してチェックアウトする" }
+    ],
+    "correctChoiceIds": ["B"],
+    "explanation": "git clone はリモートリポジトリのすべての履歴・ブランチ・タグを含む完全なコピーをローカルに作成します。クローン後は自動的にリモートが origin として登録されます。",
+    "references": [
+      {
+        "title": "リポジトリをクローンする",
+        "url": "https://docs.github.com/ja/repositories/creating-and-managing-repositories/cloning-a-repository",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["git", "clone"],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D1-005",
+    "domainId": "D1",
+    "questionType": "single-choice",
+    "difficulty": "basic",
+    "question": "Markdownでコードブロックを記述する正しい構文はどれですか？",
+    "choices": [
+      { "id": "A", "text": "<code>コード</code>" },
+      { "id": "B", "text": "``` で囲む（バッククォート3つ）" },
+      { "id": "C", "text": "// コード" },
+      { "id": "D", "text": "--- コード ---" }
+    ],
+    "correctChoiceIds": ["B"],
+    "explanation": "GitHubのMarkdownではバッククォート3つ（```）でコードブロックを囲みます。開始の ``` の後に言語名（python、jsなど）を指定するとシンタックスハイライトが有効になります。インラインコードはバッククォート1つで囲みます。",
+    "references": [
+      {
+        "title": "基本的な書き込みと書式設定の構文",
+        "url": "https://docs.github.com/ja/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["markdown"],
+    "updatedAt": "2026-05-31"
+  }
+]
