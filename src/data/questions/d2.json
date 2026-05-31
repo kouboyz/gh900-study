@@ -65,8 +65,8 @@
     "explanation": "GitHub Insightsはリポジトリの活動状況を可視化する機能です。貢献者グラフ・コミット頻度・コード変更量・依存関係グラフ・トラフィックなどのデータを確認でき、プロジェクトの健康状態の把握に役立ちます。",
     "references": [
       {
-        "title": "リポジトリ間の接続を理解する",
-        "url": "https://docs.github.com/ja/repositories/viewing-activity-and-data-for-your-repository/understanding-connections-between-repositories",
+        "title": "リポジトリ グラフについて",
+        "url": "https://docs.github.com/ja/repositories/viewing-activity-and-data-for-your-repository/about-repository-graphs",
         "source": "GitHub Docs",
         "checkedAt": "2026-05-31"
       }
@@ -115,8 +115,8 @@
     "explanation": "CONTRIBUTING.md は外部コントリビューターに向けて、Issue の書き方・Pull Request のルール・コーディング規約・開発環境のセットアップ方法などを説明するファイルです。GitHub は Pull Request 作成時にこのファイルが存在すればリンクを表示します。",
     "references": [
       {
-        "title": "リポジトリの README ファイルについて",
-        "url": "https://docs.github.com/ja/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes",
+        "title": "リポジトリ コントリビューターのためのガイドラインを定める",
+        "url": "https://docs.github.com/ja/communities/setting-up-your-project-for-healthy-contributions/setting-guidelines-for-repository-contributors",
         "source": "GitHub Docs",
         "checkedAt": "2026-05-31"
       }
@@ -140,8 +140,8 @@
     "explanation": "SECURITY.md（またはセキュリティポリシー）はセキュリティ脆弱性の責任ある開示（Responsible Disclosure）のプロセスを説明します。脆弱性を発見した人に対して、どの方法・どのアドレスに報告すべきかを案内し、公開前に修正する時間を確保します。",
     "references": [
       {
-        "title": "コードオーナーについて",
-        "url": "https://docs.github.com/ja/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners",
+        "title": "リポジトリへのセキュリティ ポリシーの追加",
+        "url": "https://docs.github.com/ja/code-security/getting-started/adding-a-security-policy-to-your-repository",
         "source": "GitHub Docs",
         "checkedAt": "2026-05-31"
       }
@@ -165,8 +165,8 @@
     "explanation": "テンプレートリポジトリとして設定されたリポジトリは「Use this template」ボタンから複製できます。Fork との違いはコミット履歴を引き継がず、新しいリポジトリとして独立したスタートが切れる点です。プロジェクトの標準構成を組織内で共有する際に役立ちます。",
     "references": [
       {
-        "title": "リポジトリについて",
-        "url": "https://docs.github.com/ja/repositories/creating-and-managing-repositories/about-repositories",
+        "title": "テンプレート リポジトリを作成する",
+        "url": "https://docs.github.com/ja/repositories/creating-and-managing-repositories/creating-a-template-repository",
         "source": "GitHub Docs",
         "checkedAt": "2026-05-31"
       }
@@ -197,6 +197,574 @@
       }
     ],
     "tags": ["git-lfs", "repository"],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D2-009",
+    "domainId": "D2",
+    "questionType": "single-choice",
+    "difficulty": "basic",
+    "question": "GitHub の Web UI で新しいリポジトリを作成するとき、初期化オプションとして選択できる組み合わせとして最も適切なものはどれですか？",
+    "choices": [
+      { "id": "A", "text": "Organization の請求先、2FA、SSO をまとめて設定する" },
+      { "id": "B", "text": "既存のすべての Issue と Pull Request を自動生成する" },
+      { "id": "C", "text": "GitHub Actions の実行履歴を最初のコミットとして作成する" },
+      { "id": "D", "text": "README、.gitignore、ライセンスなどを追加する" }
+    ],
+    "correctChoiceIds": ["D"],
+    "explanation": "新しいリポジトリ作成時には、必要に応じて README、.gitignore、ライセンスなどを追加して初期化できます。これらはプロジェクトの説明、無視するファイル、利用条件を早い段階で共有するために役立ちます。",
+    "references": [
+      {
+        "title": "新しいリポジトリの作成",
+        "url": "https://docs.github.com/ja/repositories/creating-and-managing-repositories/creating-a-new-repository",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["repository", "create", "initialization"],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D2-010",
+    "domainId": "D2",
+    "questionType": "single-choice",
+    "difficulty": "standard",
+    "question": "GitHub Importer の説明として最も適切なものはどれですか？",
+    "choices": [
+      { "id": "A", "text": "外部サービスの Issue、Pull Request、レビューコメントを完全に移行するツール" },
+      { "id": "B", "text": "Git 以外のすべてのバージョン管理システムを GitHub 上で直接実行する機能" },
+      { "id": "C", "text": "外部の Git ベースホスティングサービスからソースコードとコミット履歴を GitHub に移行するツール" },
+      { "id": "D", "text": "リポジトリの可視性を private から public に自動変更する機能" }
+    ],
+    "correctChoiceIds": ["C"],
+    "explanation": "GitHub Importer は、他の Git ベースのホスティングサービスから GitHub.com にリポジトリのソースコードとコミット履歴をインポートするためのツールです。Issue や Pull Request などの関連データは対象外です。",
+    "references": [
+      {
+        "title": "GitHub Importer について",
+        "url": "https://docs.github.com/ja/migrations/importing-source-code/using-github-importer/about-github-importer",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["import", "migration", "repository"],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D2-011",
+    "domainId": "D2",
+    "questionType": "single-choice",
+    "difficulty": "standard",
+    "question": "テンプレートリポジトリから新しいリポジトリを作成するときの「すべてのブランチを含める」オプションの説明として最も適切なものはどれですか？",
+    "choices": [
+      { "id": "A", "text": "元リポジトリの Issue と Pull Request をすべてコピーする" },
+      { "id": "B", "text": "既定ブランチだけでなく、テンプレート内の他のブランチも新しいリポジトリに含める" },
+      { "id": "C", "text": "作成後のリポジトリを常に public に固定する" },
+      { "id": "D", "text": "新しいリポジトリを自動的にフォークネットワークへ参加させる" }
+    ],
+    "correctChoiceIds": ["B"],
+    "explanation": "テンプレートから作成する際は、既定ブランチだけを使うか、すべてのブランチを含めるかを選択できます。プロジェクトの雛形に複数ブランチの構成を含めたい場合に有効です。",
+    "references": [
+      {
+        "title": "テンプレートからリポジトリを作成する",
+        "url": "https://docs.github.com/ja/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["template", "fork", "repository"],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D2-012",
+    "domainId": "D2",
+    "questionType": "single-choice",
+    "difficulty": "basic",
+    "question": ".gitignore ファイルをリポジトリにコミットする主な目的はどれですか？",
+    "choices": [
+      { "id": "A", "text": "リポジトリの既定ブランチ名を変更するため" },
+      { "id": "B", "text": "GitHub にアクセスできるユーザーを制御するため" },
+      { "id": "C", "text": "コミット対象から除外したいファイルやディレクトリのルールを共同作業者と共有するため" },
+      { "id": "D", "text": "リリースに添付するバイナリアセットを暗号化するため" }
+    ],
+    "correctChoiceIds": ["C"],
+    "explanation": ".gitignore は、ビルド成果物、依存パッケージ、エディターの一時ファイルなど、通常コミットすべきでないファイルを Git が無視するためのルールを定義します。コミットすれば、そのルールをリポジトリの利用者と共有できます。",
+    "references": [
+      {
+        "title": "ファイルを無視する",
+        "url": "https://docs.github.com/ja/get-started/getting-started-with-git/ignoring-files",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["gitignore", "files", "git"],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D2-013",
+    "domainId": "D2",
+    "questionType": "single-choice",
+    "difficulty": "standard",
+    "question": "GitHub のコミュニティプロフィールで確認されるファイルの例として最も適切なものはどれですか？",
+    "choices": [
+      { "id": "A", "text": "README、LICENSE、CONTRIBUTING、CODE_OF_CONDUCT など" },
+      { "id": "B", "text": "node_modules、dist、coverage、.cache など" },
+      { "id": "C", "text": "個人アクセストークン、SSH 秘密鍵、環境変数ファイルなど" },
+      { "id": "D", "text": "ブラウザー履歴、Cookie、ローカル通知設定など" }
+    ],
+    "correctChoiceIds": ["A"],
+    "explanation": "コミュニティプロフィールは、README、CODE_OF_CONDUCT、LICENSE、CONTRIBUTING など、プロジェクトの健全な参加を助ける推奨ファイルが存在するかを確認します。これらは利用者やコントリビューターへの案内になります。",
+    "references": [
+      {
+        "title": "パブリックリポジトリのコミュニティプロフィールについて",
+        "url": "https://docs.github.com/ja/communities/setting-up-your-project-for-healthy-contributions/about-community-profiles-for-public-repositories",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["community-profile", "repository-health", "contributing"],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D2-014",
+    "domainId": "D2",
+    "questionType": "single-choice",
+    "difficulty": "basic",
+    "question": "CITATION.cff ファイルをリポジトリに追加する主な目的はどれですか？",
+    "choices": [
+      { "id": "A", "text": "依存パッケージの脆弱性を自動修正するため" },
+      { "id": "B", "text": "リポジトリのソーシャルプレビュー画像を指定するため" },
+      { "id": "C", "text": "リポジトリを GitHub Marketplace に公開するため" },
+      { "id": "D", "text": "研究ソフトウェアや成果物の正しい引用方法を利用者に示すため" }
+    ],
+    "correctChoiceIds": ["D"],
+    "explanation": "CITATION.cff は、人間と機械が読める形式で著者、タイトル、バージョン、DOI などを記述し、利用者がそのリポジトリの成果物を正しく引用できるようにします。",
+    "references": [
+      {
+        "title": "CITATION ファイルについて",
+        "url": "https://docs.github.com/ja/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-citation-files",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["citation", "community-files", "metadata"],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D2-015",
+    "domainId": "D2",
+    "questionType": "single-choice",
+    "difficulty": "advanced",
+    "question": "パブリックリポジトリを private に変更する前に確認すべき影響として最も適切なものはどれですか？",
+    "choices": [
+      { "id": "A", "text": "既存の public fork は自動的にすべて private fork に変換される" },
+      { "id": "B", "text": "GitHub Pages や一部のセキュリティ機能など、プランや設定によって利用状況が変わる機能がある" },
+      { "id": "C", "text": "すべてのタグとリリースが自動的に削除される" },
+      { "id": "D", "text": "リポジトリ名が必ず変更され、古い URL は無効になる" }
+    ],
+    "correctChoiceIds": ["B"],
+    "explanation": "可視性の変更は、フォーク、GitHub Pages、Advanced Security 関連機能などに影響する場合があります。特に public から private への変更では、利用中のプランや公開済み Pages への影響を事前に確認する必要があります。",
+    "references": [
+      {
+        "title": "リポジトリの可視性を設定する",
+        "url": "https://docs.github.com/ja/repositories/managing-your-repositorys-settings-and-features/managing-repository-settings/setting-repository-visibility",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["visibility", "public", "private"],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D2-016",
+    "domainId": "D2",
+    "questionType": "single-choice",
+    "difficulty": "basic",
+    "question": "リポジトリにトピックを追加する主な利点はどれですか？",
+    "choices": [
+      { "id": "A", "text": "コミット履歴を暗号化し、管理者以外から見えないようにする" },
+      { "id": "B", "text": "リポジトリの既定ブランチを自動で保護する" },
+      { "id": "C", "text": "Git LFS のストレージ使用量をゼロにする" },
+      { "id": "D", "text": "リポジトリを検索・発見しやすくし、目的や技術領域で分類できる" }
+    ],
+    "correctChoiceIds": ["D"],
+    "explanation": "トピックは、プロジェクトの目的、主題、言語、コミュニティなどを示すラベルとして機能します。関連するリポジトリを探すユーザーに見つけてもらいやすくするために使います。",
+    "references": [
+      {
+        "title": "トピックでリポジトリを分類する",
+        "url": "https://docs.github.com/ja/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/classifying-your-repository-with-topics",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["topics", "discoverability", "metadata"],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D2-017",
+    "domainId": "D2",
+    "questionType": "single-choice",
+    "difficulty": "standard",
+    "question": "リポジトリのソーシャルメディア向けプレビュー画像を設定する目的として最も適切なものはどれですか？",
+    "choices": [
+      { "id": "A", "text": "リポジトリのすべての画像ファイルを Git LFS に移動するため" },
+      { "id": "B", "text": "リンクが共有されたときに表示される画像をカスタマイズし、プロジェクトを認識しやすくするため" },
+      { "id": "C", "text": "README に含まれる画像を自動的に圧縮するため" },
+      { "id": "D", "text": "Issue や Pull Request のテンプレート画像を一括生成するため" }
+    ],
+    "correctChoiceIds": ["B"],
+    "explanation": "ソーシャルプレビューを設定すると、リポジトリへのリンクがソーシャルメディアなどで共有されたときに表示される画像をカスタマイズできます。プロジェクトの見つけやすさや印象を高めるためのメタデータです。",
+    "references": [
+      {
+        "title": "リポジトリのソーシャルメディア向けプレビューをカスタマイズする",
+        "url": "https://docs.github.com/ja/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/customizing-your-repositorys-social-media-preview",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["social-preview", "repository-settings", "metadata"],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D2-018",
+    "domainId": "D2",
+    "questionType": "single-choice",
+    "difficulty": "basic",
+    "question": "GitHub リポジトリのデフォルトブランチの説明として最も適切なものはどれですか？",
+    "choices": [
+      { "id": "A", "text": "リポジトリで最初に削除される一時ブランチ" },
+      { "id": "B", "text": "GitHub Actions のログだけを保存する専用ブランチ" },
+      { "id": "C", "text": "Pull Request やコードのコミットを行う基点として使われるブランチ" },
+      { "id": "D", "text": "フォークしたリポジトリでは存在しないブランチ" }
+    ],
+    "correctChoiceIds": ["C"],
+    "explanation": "デフォルトブランチは、リポジトリで通常表示され、Pull Request やコミットの基点となるブランチです。リポジトリに複数のブランチがある場合、管理者は任意のブランチをデフォルトとして設定できます。",
+    "references": [
+      {
+        "title": "デフォルトブランチを変更する",
+        "url": "https://docs.github.com/ja/repositories/configuring-branches-and-merges-in-your-repository/managing-branches-in-your-repository/changing-the-default-branch",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["default-branch", "branches", "repository"],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D2-019",
+    "domainId": "D2",
+    "questionType": "single-choice",
+    "difficulty": "standard",
+    "question": "GitHub 上でリポジトリ内に新しいブランチを作成できる条件として最も適切なものはどれですか？",
+    "choices": [
+      { "id": "A", "text": "リポジトリへのプッシュアクセス権があること" },
+      { "id": "B", "text": "GitHub Enterprise Cloud の請求管理者であること" },
+      { "id": "C", "text": "リポジトリが必ず public であること" },
+      { "id": "D", "text": "既存のすべての Pull Request がクローズ済みであること" }
+    ],
+    "correctChoiceIds": ["A"],
+    "explanation": "GitHub 上でブランチを作成するには、そのリポジトリに対するプッシュアクセス権が必要です。ブランチは既存のブランチや、フォークの場合はフォークまたはアップストリームのブランチをソースとして作成できます。",
+    "references": [
+      {
+        "title": "リポジトリ内でブランチを作成および削除する",
+        "url": "https://docs.github.com/ja/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-and-deleting-branches-within-your-repository",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["branches", "create", "permissions"],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D2-020",
+    "domainId": "D2",
+    "questionType": "single-choice",
+    "difficulty": "advanced",
+    "question": "GitHub.com でブランチ名を変更した場合の影響として正しいものはどれですか？",
+    "choices": [
+      { "id": "A", "text": "古いブランチ名を含む URL は、対応する新しいブランチ名の URL に自動的にリダイレクトされる" },
+      { "id": "B", "text": "すべてのコミット SHA が再生成され、履歴は別物になる" },
+      { "id": "C", "text": "ブランチ保護ルールとオープンな Pull Request のベースブランチは必ず削除される" },
+      { "id": "D", "text": "GitHub Actions ワークフロー参照は常に自動修正されるため影響を受けない" }
+    ],
+    "correctChoiceIds": ["A"],
+    "explanation": "ブランチ名を変更すると、古いブランチ名を含む URL は新しいブランチ名へリダイレクトされます。ブランチ保護ポリシーやオープンな Pull Request のベースブランチなども更新されますが、GitHub Actions の参照などは注意が必要です。",
+    "references": [
+      {
+        "title": "ブランチの名前を変更する",
+        "url": "https://docs.github.com/ja/repositories/configuring-branches-and-merges-in-your-repository/managing-branches-in-your-repository/renaming-a-branch",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["branches", "rename", "repository"],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D2-021",
+    "domainId": "D2",
+    "questionType": "single-choice",
+    "difficulty": "standard",
+    "question": "ブランチ保護ルールの目的として最も適切なものはどれですか？",
+    "choices": [
+      { "id": "A", "text": "リポジトリの説明文とトピックを自動生成すること" },
+      { "id": "B", "text": "大容量ファイルを Git LFS に自動移行すること" },
+      { "id": "C", "text": "重要なブランチへのプッシュやマージに、レビューやステータスチェックなどの要件を適用すること" },
+      { "id": "D", "text": "すべてのフォークを削除して上流リポジトリだけを残すこと" }
+    ],
+    "correctChoiceIds": ["C"],
+    "explanation": "ブランチ保護ルールは、重要なブランチに対して強制プッシュや削除を制限したり、Pull Request レビュー、ステータスチェック、直線状の履歴などの要件を課したりするために使います。",
+    "references": [
+      {
+        "title": "保護されたブランチについて",
+        "url": "https://docs.github.com/ja/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/about-protected-branches",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["branch-protection", "rules", "repository"],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D2-022",
+    "domainId": "D2",
+    "questionType": "single-choice",
+    "difficulty": "basic",
+    "question": "GitHub Releases と Git タグの関係として最も適切なものはどれですか？",
+    "choices": [
+      { "id": "A", "text": "リリースを作成すると、対応する Git タグは必ず削除される" },
+      { "id": "B", "text": "Git タグは Issue のラベルを保存するためだけに使われる" },
+      { "id": "C", "text": "リリースは Git タグに基づき、特定時点のソフトウェアやリリースノートを配布するために使える" },
+      { "id": "D", "text": "リリースは private リポジトリでは表示できない" }
+    ],
+    "correctChoiceIds": ["C"],
+    "explanation": "GitHub Releases は Git タグに基づき、特定の履歴時点をリリースとしてパッケージ化します。リリースノートやバイナリへのリンクを含めて、利用者に配布可能な形にできます。",
+    "references": [
+      {
+        "title": "リリースについて",
+        "url": "https://docs.github.com/ja/repositories/releasing-projects-on-github/about-releases",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["releases", "tags", "distribution"],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D2-023",
+    "domainId": "D2",
+    "questionType": "single-choice",
+    "difficulty": "standard",
+    "question": "リリースアセットの説明として最も適切なものはどれですか？",
+    "choices": [
+      { "id": "A", "text": "リポジトリのアクセス権をチーム単位で管理する設定" },
+      { "id": "B", "text": "リリースに添付できるコンパイル済みプログラムなどのバイナリファイル" },
+      { "id": "C", "text": "GitHub Actions の実行ログだけを保存する専用ストレージ" },
+      { "id": "D", "text": "Pull Request のレビュー担当者を自動選択するファイル" }
+    ],
+    "correctChoiceIds": ["B"],
+    "explanation": "リリース作成時には、リリースノートに加えてコンパイル済みプログラムなどのバイナリファイルをアセットとして添付できます。GitHub はタグ時点のソースコードの zip と tarball も自動的に提供します。",
+    "references": [
+      {
+        "title": "リポジトリのリリースを管理する",
+        "url": "https://docs.github.com/ja/repositories/releasing-projects-on-github/managing-releases-in-a-repository",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["releases", "assets", "binaries"],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D2-024",
+    "domainId": "D2",
+    "questionType": "single-choice",
+    "difficulty": "advanced",
+    "question": "GitHub の通常の Git リポジトリで大容量ファイルを扱う際の説明として正しいものはどれですか？",
+    "choices": [
+      { "id": "A", "text": "100 MiB を超えるファイルは通常の Git プッシュでブロックされるため、Git LFS などの利用を検討する" },
+      { "id": "B", "text": "50 MiB を超えるファイルは自動的に Issue 添付ファイルへ変換される" },
+      { "id": "C", "text": "リポジトリ全体は大きいほどクローンが高速になる" },
+      { "id": "D", "text": "ブラウザーからは任意サイズのファイルを追加できる" }
+    ],
+    "correctChoiceIds": ["A"],
+    "explanation": "GitHub では大きなファイルに制限があり、50 MiB 超では警告、100 MiB 超ではブロックされます。大容量バイナリは Git LFS やリリースでの配布など、通常の Git 履歴を肥大化させない方法を検討します。",
+    "references": [
+      {
+        "title": "GitHub での大きいファイルについて",
+        "url": "https://docs.github.com/ja/repositories/working-with-files/managing-large-files/about-large-files-on-github",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["large-files", "git-lfs", "repository-size"],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D2-025",
+    "domainId": "D2",
+    "questionType": "single-choice",
+    "difficulty": "standard",
+    "question": "GitHub のファイル表示画面で Blame ビューを使う目的として最も適切なものはどれですか？",
+    "choices": [
+      { "id": "A", "text": "リポジトリの可視性を internal に変更するため" },
+      { "id": "B", "text": "ファイルの各行がいつ、どのコミットで変更されたかを追跡するため" },
+      { "id": "C", "text": "リリースに添付されたアセットを削除するため" },
+      { "id": "D", "text": "依存関係グラフを無効化するため" }
+    ],
+    "correctChoiceIds": ["B"],
+    "explanation": "Blame ビューでは、ファイル全体の行ごとのリビジョン履歴を確認できます。特定の行がいつ、どのコミットで変更されたかを理解することで、コードの経緯や責任範囲を調べやすくなります。",
+    "references": [
+      {
+        "title": "ファイルの表示と理解",
+        "url": "https://docs.github.com/ja/repositories/working-with-files/using-files/viewing-a-file",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["blame", "history", "code-navigation"],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D2-026",
+    "domainId": "D2",
+    "questionType": "single-choice",
+    "difficulty": "standard",
+    "question": "GitHub の Web ファイルエディターで保護されたブランチ上のファイルを直接編集しようとする場合の説明として正しいものはどれですか？",
+    "choices": [
+      { "id": "A", "text": "保護されたブランチでも常に直接コミットでき、保護ルールは無視される" },
+      { "id": "B", "text": "保護されたブランチ内のファイルは GitHub 上で直接編集またはアップロードできない場合がある" },
+      { "id": "C", "text": "編集すると自動的にリポジトリがアーカイブされる" },
+      { "id": "D", "text": "編集内容は必ずリリースアセットとして保存され、コミットは作成されない" }
+    ],
+    "correctChoiceIds": ["B"],
+    "explanation": "GitHub のファイルエディターではファイルを直接編集できますが、保護されたブランチでは直接編集やアップロードができない場合があります。その場合は新しいブランチで変更し、Pull Request を通じて取り込むのが一般的です。",
+    "references": [
+      {
+        "title": "ファイルを編集する",
+        "url": "https://docs.github.com/ja/repositories/working-with-files/managing-files/editing-files",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["web-editor", "protected-branches", "files"],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D2-027",
+    "domainId": "D2",
+    "questionType": "single-choice",
+    "difficulty": "standard",
+    "question": "リポジトリの Insights にある Contributors グラフで確認できる内容として最も適切なものはどれですか？",
+    "choices": [
+      { "id": "A", "text": "Organization の請求書と支払い方法" },
+      { "id": "B", "text": "GitHub Copilot の候補生成ログ" },
+      { "id": "C", "text": "すべてのユーザーのブラウザー閲覧履歴" },
+      { "id": "D", "text": "リポジトリの上位コントリビューターやコミットへの貢献状況" }
+    ],
+    "correctChoiceIds": ["D"],
+    "explanation": "Contributors グラフでは、リポジトリへの上位コントリビューターやコミットに関する貢献状況を確認できます。プロジェクトの活動状況や参加者の把握に役立ちます。",
+    "references": [
+      {
+        "title": "プロジェクトのコントリビューターを表示する",
+        "url": "https://docs.github.com/ja/repositories/viewing-activity-and-data-for-your-repository/viewing-a-projects-contributors",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["insights", "contributors", "repository-activity"],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D2-028",
+    "domainId": "D2",
+    "questionType": "single-choice",
+    "difficulty": "standard",
+    "question": "リポジトリの Traffic グラフで確認できる情報として最も適切なものはどれですか？",
+    "choices": [
+      { "id": "A", "text": "過去 14 日間の訪問者、クローン、参照元サイト、人気コンテンツなど" },
+      { "id": "B", "text": "全コントリビューターの個人メールアドレスとログイン履歴" },
+      { "id": "C", "text": "Dependabot が修正したすべてのコード差分" },
+      { "id": "D", "text": "リポジトリ内の全ファイルの圧縮率" }
+    ],
+    "correctChoiceIds": ["A"],
+    "explanation": "Traffic グラフでは、フルクローン、過去 14 日間の訪問者、参照サイト、人気コンテンツなどを確認できます。リポジトリへの到達経路や利用状況を把握するための Insights 機能です。",
+    "references": [
+      {
+        "title": "リポジトリへのトラフィックを表示する",
+        "url": "https://docs.github.com/ja/repositories/viewing-activity-and-data-for-your-repository/viewing-traffic-to-a-repository",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["insights", "traffic", "analytics"],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D2-029",
+    "domainId": "D2",
+    "questionType": "single-choice",
+    "difficulty": "advanced",
+    "question": "依存関係グラフの説明として最も適切なものはどれですか？",
+    "choices": [
+      { "id": "A", "text": "リポジトリ内のマニフェストやロックファイルなどから依存関係を把握し、パッケージや脆弱性情報の確認に役立つ機能" },
+      { "id": "B", "text": "リポジトリのソーシャルプレビュー画像を自動生成する機能" },
+      { "id": "C", "text": "すべてのブランチ名を一括変更する機能" },
+      { "id": "D", "text": "GitHub Importer で Issue を移行するための必須ファイル" }
+    ],
+    "correctChoiceIds": ["A"],
+    "explanation": "依存関係グラフは、マニフェストやロックファイルなどを分析して、リポジトリが依存しているエコシステムやパッケージを把握します。バージョン、ライセンス、既知の脆弱性の確認にも役立ちます。",
+    "references": [
+      {
+        "title": "依存関係グラフについて",
+        "url": "https://docs.github.com/ja/code-security/supply-chain-security/understanding-your-software-supply-chain/about-the-dependency-graph",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["dependency-graph", "insights", "security"],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D2-030",
+    "domainId": "D2",
+    "questionType": "single-choice",
+    "difficulty": "advanced",
+    "question": "リポジトリのアーカイブ、移譲、削除、フォークに関する説明として正しいものはどれですか？",
+    "choices": [
+      { "id": "A", "text": "アーカイブするとリポジトリは読み取り専用になり、フォークは元プロジェクトに影響を与えずに実験できる独立したリポジトリとして使える" },
+      { "id": "B", "text": "リポジトリを移譲すると、Issue、Pull Request、リリース、設定は常にすべて失われる" },
+      { "id": "C", "text": "public リポジトリを削除すると、その public fork も必ず同時に削除される" },
+      { "id": "D", "text": "フォークはブランチと同じであり、独自の Issue、Pull Request、Wiki を持てない" }
+    ],
+    "correctChoiceIds": ["A"],
+    "explanation": "アーカイブされたリポジトリは読み取り専用になり、保守されていないことを示せます。フォークは元のリポジトリに影響を与えずに変更を試せる独立したリポジトリです。移譲では多くのリポジトリデータが新しい所有者へ移り、public リポジトリ削除時も public fork は削除されません。",
+    "references": [
+      {
+        "title": "リポジトリのアーカイブ",
+        "url": "https://docs.github.com/ja/repositories/archiving-a-github-repository/archiving-repositories",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      },
+      {
+        "title": "リポジトリを移譲する",
+        "url": "https://docs.github.com/ja/repositories/creating-and-managing-repositories/transferring-a-repository",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      },
+      {
+        "title": "リポジトリの削除",
+        "url": "https://docs.github.com/ja/repositories/creating-and-managing-repositories/deleting-a-repository",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      },
+      {
+        "title": "フォークについて",
+        "url": "https://docs.github.com/ja/pull-requests/collaborating-with-pull-requests/working-with-forks/about-forks",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["archive", "transfer", "delete", "fork"],
     "updatedAt": "2026-05-31"
   }
 ]

@@ -215,8 +215,8 @@
     "explanation": "パスキーは FIDO2/WebAuthn 標準に基づく認証情報で、デバイスの生体認証（指紋・顔認証）や PIN を使ってログインできます。フィッシングサイトでは機能しない設計のため、従来のパスワード＋2FA より高いセキュリティを提供します。GitHub では2FA の代替としても利用可能です。",
     "references": [
       {
-        "title": "2 要素認証について",
-        "url": "https://docs.github.com/ja/authentication/securing-your-account-with-two-factor-authentication-2fa/about-two-factor-authentication",
+        "title": "パスキーについて",
+        "url": "https://docs.github.com/ja/authentication/authenticating-with-a-passkey/about-passkeys",
         "source": "GitHub Docs",
         "checkedAt": "2026-05-31"
       }
@@ -247,6 +247,580 @@
       }
     ],
     "tags": ["repository", "visibility", "enterprise", "security"],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D6-011",
+    "domainId": "D6",
+    "questionType": "single-choice",
+    "difficulty": "standard",
+    "question": "Organization のオーナーがメンバーに 2 要素認証（2FA）を必須化する主な目的はどれですか？",
+    "choices": [
+      { "id": "A", "text": "Organization のすべてのリポジトリを自動的に Public にするため" },
+      { "id": "B", "text": "Organization リソースへのアクセス時に、パスワードだけに依存しない追加の本人確認を強制するため" },
+      { "id": "C", "text": "GitHub Actions の実行時間を増やすため" },
+      { "id": "D", "text": "Issue と Pull Request の作成を禁止するため" }
+    ],
+    "correctChoiceIds": ["B"],
+    "explanation": "2FA を必須化すると、Organization のリソースへアクセスするメンバーに追加の認証要素を求められます。パスワード漏えい時の不正アクセスリスクを下げるための管理機能です。",
+    "references": [
+      {
+        "title": "GitHub への認証について",
+        "url": "https://docs.github.com/ja/authentication/keeping-your-account-and-data-secure/about-authentication-to-github",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["2fa", "organization", "authentication"],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D6-012",
+    "domainId": "D6",
+    "questionType": "single-choice",
+    "difficulty": "basic",
+    "question": "GitHub アカウントのパスワード管理として最も適切なものはどれですか？",
+    "choices": [
+      { "id": "A", "text": "覚えやすいように他サービスと同じパスワードを使い回す" },
+      { "id": "B", "text": "共同作業者と同じパスワードを共有する" },
+      { "id": "C", "text": "パスワードマネージャーで GitHub 専用の強力で一意なパスワードを生成する" },
+      { "id": "D", "text": "SSH キーを登録していれば、ブラウザー用パスワードは不要になる" }
+    ],
+    "correctChoiceIds": ["C"],
+    "explanation": "GitHub は強力で一意なパスワードの利用、パスワードマネージャー、2FA やパスキーの併用を推奨しています。パスワードの使い回しや共有は避けます。",
+    "references": [
+      {
+        "title": "強力なパスワードの作成",
+        "url": "https://docs.github.com/ja/authentication/keeping-your-account-and-data-secure/creating-a-strong-password",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["password", "authentication", "account-security"],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D6-013",
+    "domainId": "D6",
+    "questionType": "single-choice",
+    "difficulty": "standard",
+    "question": "fine-grained personal access token が personal access token (classic) と比べて推奨される主な理由はどれですか？",
+    "choices": [
+      { "id": "A", "text": "Git 操作では使用できず、Web UI ログイン専用だから" },
+      { "id": "B", "text": "トークン所有者より高い権限を自動的に付与できるから" },
+      { "id": "C", "text": "すべての Organization 設定を無条件に変更できるから" },
+      { "id": "D", "text": "アクセスできるリソースや権限をより細かく制御でき、必要最小限の権限にしやすいから" }
+    ],
+    "correctChoiceIds": ["D"],
+    "explanation": "PAT は API やコマンドラインでパスワードの代わりに使う資格情報です。fine-grained PAT は対象リソースや権限を細かく制限できるため、可能な場合は最小権限にしやすくなります。",
+    "references": [
+      {
+        "title": "個人用アクセス トークンを管理する",
+        "url": "https://docs.github.com/ja/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["pat", "fine-grained-pat", "authentication"],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D6-014",
+    "domainId": "D6",
+    "questionType": "single-choice",
+    "difficulty": "basic",
+    "question": "GitHub の SSH キーを定期的にレビューする理由として最も適切なものはどれですか？",
+    "choices": [
+      { "id": "A", "text": "不要または侵害された可能性のあるキーを削除し、リポジトリへの不正アクセスを防ぐため" },
+      { "id": "B", "text": "GitHub Pages の公開 URL を変更するため" },
+      { "id": "C", "text": "Pull Request のレビュー担当者を自動選択するため" },
+      { "id": "D", "text": "Dependabot の更新頻度を変更するため" }
+    ],
+    "correctChoiceIds": ["A"],
+    "explanation": "SSH キーやデプロイキーは認証情報です。利用していないキーや見覚えのないキーを放置すると、第三者がリポジトリへアクセスできる可能性があるため、定期的な監査と削除が重要です。",
+    "references": [
+      {
+        "title": "SSH キーをレビューする",
+        "url": "https://docs.github.com/ja/authentication/keeping-your-account-and-data-secure/reviewing-your-ssh-keys",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["ssh", "authentication", "key-management"],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D6-015",
+    "domainId": "D6",
+    "questionType": "single-choice",
+    "difficulty": "standard",
+    "question": "署名付きコミットの検証に関する説明として正しいものはどれですか？",
+    "choices": [
+      { "id": "A", "text": "署名付きコミットは GitHub Actions の実行を必ず無料にする" },
+      { "id": "B", "text": "署名付きコミットはリポジトリの可視性を自動で Private にする" },
+      { "id": "C", "text": "GPG、SSH、S/MIME などで署名されたコミットを GitHub が検証し、Verified と表示できる" },
+      { "id": "D", "text": "署名付きコミットを使うとレビュー承認が不要になる" }
+    ],
+    "correctChoiceIds": ["C"],
+    "explanation": "コミットやタグに暗号学的な署名があり GitHub が検証できる場合、Verified などの状態が表示されます。変更が信頼できる送信元から行われたことを確認しやすくする機能です。",
+    "references": [
+      {
+        "title": "コミット署名の検証について",
+        "url": "https://docs.github.com/ja/authentication/managing-commit-signature-verification/about-commit-signature-verification",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["signed-commits", "gpg", "ssh"],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D6-016",
+    "domainId": "D6",
+    "questionType": "single-choice",
+    "difficulty": "standard",
+    "question": "デプロイキー（deploy key）の説明として最も適切なものはどれですか？",
+    "choices": [
+      { "id": "A", "text": "Organization 全体のすべてのリポジトリへ自動的に Admin 権限を付与するキー" },
+      { "id": "B", "text": "GitHub アカウントのブラウザーログインに使うワンタイムパスワード" },
+      { "id": "C", "text": "GitHub Copilot の提案を暗号化するためのキー" },
+      { "id": "D", "text": "単一のリポジトリへのアクセスをサーバーなどに許可する SSH キー" }
+    ],
+    "correctChoiceIds": ["D"],
+    "explanation": "デプロイキーはリポジトリに直接関連付ける SSH キーで、主にデプロイや自動化に使います。単一リポジトリに限定できる一方、秘密鍵を安全に管理する必要があります。",
+    "references": [
+      {
+        "title": "デプロイキーの管理",
+        "url": "https://docs.github.com/ja/authentication/connecting-to-github-with-ssh/managing-deploy-keys",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["deploy-keys", "ssh", "automation"],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D6-017",
+    "domainId": "D6",
+    "questionType": "single-choice",
+    "difficulty": "basic",
+    "question": "リポジトリロールのうち、書き込みアクセスなしで Issue や Pull Request のトリアージを行う共同作成者に推奨されるものはどれですか？",
+    "choices": [
+      { "id": "A", "text": "Triage" },
+      { "id": "B", "text": "Write" },
+      { "id": "C", "text": "Maintain" },
+      { "id": "D", "text": "Admin" }
+    ],
+    "correctChoiceIds": ["A"],
+    "explanation": "Triage ロールは、コードへの書き込み権限を与えずに Issue、Discussion、Pull Request の管理を支援する共同作成者に適しています。Write 以上はコード変更などより広い権限を含みます。",
+    "references": [
+      {
+        "title": "Organization のリポジトリロール",
+        "url": "https://docs.github.com/ja/organizations/managing-user-access-to-your-organizations-repositories/managing-repository-roles/repository-roles-for-an-organization",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["repository-roles", "triage", "least-privilege"],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D6-018",
+    "domainId": "D6",
+    "questionType": "single-choice",
+    "difficulty": "basic",
+    "question": "Organization ロールにおける owner と member の違いとして正しいものはどれですか？",
+    "choices": [
+      { "id": "A", "text": "member は Organization を削除できるが、owner はできない" },
+      { "id": "B", "text": "owner は Organization とそのリポジトリや設定を管理する広い権限を持ち、member は付与された範囲で作業する" },
+      { "id": "C", "text": "owner はリポジトリを閲覧できず、課金設定だけを管理する" },
+      { "id": "D", "text": "member は常にすべてのプライベートリポジトリの Admin 権限を持つ" }
+    ],
+    "correctChoiceIds": ["B"],
+    "explanation": "Organization の owner は組織管理の広い権限を持つため、最小限の人数に限定するのが基本です。member は Organization の一員として、チームやリポジトリロールで付与された範囲の権限を使います。",
+    "references": [
+      {
+        "title": "組織の役割",
+        "url": "https://docs.github.com/ja/organizations/managing-peoples-access-to-your-organization-with-roles/roles-in-an-organization",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["organization-roles", "owner", "member"],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D6-019",
+    "domainId": "D6",
+    "questionType": "single-choice",
+    "difficulty": "standard",
+    "question": "Organization のチームを使って権限を管理する利点として正しいものはどれですか？",
+    "choices": [
+      { "id": "A", "text": "外部コラボレーターをチームに追加して Organization メンバーに変換せず管理できる" },
+      { "id": "B", "text": "チームにリポジトリアクセスを付与し、グループ単位で読み取り・書き込み・管理権限を管理できる" },
+      { "id": "C", "text": "チームを作成するとすべてのリポジトリが自動的に Public になる" },
+      { "id": "D", "text": "チームを使うと SAML SSO が不要になる" }
+    ],
+    "correctChoiceIds": ["B"],
+    "explanation": "チームは Organization メンバーのグループで、リポジトリへのアクセスやメンションをグループ単位で管理できます。外部コラボレーターはチームに参加できない点も重要です。",
+    "references": [
+      {
+        "title": "Organization のチームについて",
+        "url": "https://docs.github.com/ja/organizations/organizing-members-into-teams/about-teams",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["teams", "permissions", "organization"],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D6-020",
+    "domainId": "D6",
+    "questionType": "single-choice",
+    "difficulty": "advanced",
+    "question": "Organization の base permissions（基本レベルの権限）について正しい説明はどれですか？",
+    "choices": [
+      { "id": "A", "text": "Organization の全メンバーに適用されるリポジトリへの基本権限であり、外部コラボレーターには適用されない" },
+      { "id": "B", "text": "外部コラボレーターにだけ適用され、Organization メンバーには適用されない" },
+      { "id": "C", "text": "Organization の owner 権限を自動的に全メンバーへ付与する" },
+      { "id": "D", "text": "プライベートリポジトリを必ず Internal に変更する設定である" }
+    ],
+    "correctChoiceIds": ["A"],
+    "explanation": "基本レベルの権限は Organization 所有リポジトリに対して全メンバーへ適用される既定のアクセスレベルです。外部コラボレーターには適用されないため、個別に必要なリポジトリアクセスを付与します。",
+    "references": [
+      {
+        "title": "Organization の基本レベルの権限の設定",
+        "url": "https://docs.github.com/ja/organizations/managing-user-access-to-your-organizations-repositories/managing-repository-roles/setting-base-permissions-for-an-organization",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["base-permissions", "outside-collaborators", "organization"],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D6-021",
+    "domainId": "D6",
+    "questionType": "single-choice",
+    "difficulty": "standard",
+    "question": "SAML SSO を Organization で有効化する主な目的はどれですか？",
+    "choices": [
+      { "id": "A", "text": "GitHub のすべてのリポジトリを自動的にオープンソース化するため" },
+      { "id": "B", "text": "依存関係のバージョン更新 Pull Request を自動生成するため" },
+      { "id": "C", "text": "IdP による認証を通じて Organization リソースへのアクセスを集中管理・保護するため" },
+      { "id": "D", "text": "コミットメッセージの形式を統一するため" }
+    ],
+    "correctChoiceIds": ["C"],
+    "explanation": "SAML SSO は IdP と連携して Organization リソースへのアクセスを認証・制御します。通常の GitHub サインインの上に、Organization リソースへのアクセス時に IdP 認証を要求できます。",
+    "references": [
+      {
+        "title": "SAML シングルサインオンを使うアイデンティティおよびアクセス管理について",
+        "url": "https://docs.github.com/ja/organizations/managing-saml-single-sign-on-for-your-organization/about-identity-and-access-management-with-saml-single-sign-on",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["saml-sso", "identity", "organization"],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D6-022",
+    "domainId": "D6",
+    "questionType": "single-choice",
+    "difficulty": "advanced",
+    "question": "Enterprise Managed Users で SCIM プロビジョニングを使う主な利点はどれですか？",
+    "choices": [
+      { "id": "A", "text": "IdP からユーザーアカウントの作成、管理、無効化などライフサイクルを管理できる" },
+      { "id": "B", "text": "すべての Pull Request を自動でマージできる" },
+      { "id": "C", "text": "GitHub Pages の独自ドメインを自動で取得できる" },
+      { "id": "D", "text": "リポジトリ内の依存関係をすべて削除できる" }
+    ],
+    "correctChoiceIds": ["A"],
+    "explanation": "SCIM は IdP と GitHub 間でユーザー ID を管理する仕様です。Enterprise Managed Users では、ユーザーの作成、更新、無効化などを IdP 側から一元管理しやすくなります。",
+    "references": [
+      {
+        "title": "エンタープライズ マネージド ユーザーを管理するための SCIM プロビジョニングの構成",
+        "url": "https://docs.github.com/ja/enterprise-cloud@latest/admin/managing-iam/provisioning-user-accounts-with-scim/configuring-scim-provisioning-for-users",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["scim", "emu", "enterprise"],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D6-023",
+    "domainId": "D6",
+    "questionType": "single-choice",
+    "difficulty": "standard",
+    "question": "Organization の audit log（監査ログ）で確認できる内容として最も適切なものはどれですか？",
+    "choices": [
+      { "id": "A", "text": "メンバーによる Organization に影響する操作について、誰がいつ何を行ったかの記録" },
+      { "id": "B", "text": "GitHub Actions のビルド成果物そのもの" },
+      { "id": "C", "text": "リポジトリ内すべてのソースコードの暗号化キー" },
+      { "id": "D", "text": "GitHub Copilot が生成したすべての候補一覧" }
+    ],
+    "correctChoiceIds": ["A"],
+    "explanation": "監査ログは Organization の管理者が、Organization に影響するイベントや操作を確認するためのログです。セキュリティ調査や設定変更の追跡に役立ちます。",
+    "references": [
+      {
+        "title": "あなたの組織の監査ログを確認する",
+        "url": "https://docs.github.com/ja/organizations/keeping-your-organization-secure/managing-security-settings-for-your-organization/reviewing-the-audit-log-for-your-organization",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["audit-log", "organization", "governance"],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D6-024",
+    "domainId": "D6",
+    "questionType": "single-choice",
+    "difficulty": "standard",
+    "question": "依存関係グラフと Dependabot alerts / updates の関係として正しいものはどれですか？",
+    "choices": [
+      { "id": "A", "text": "依存関係グラフは依存パッケージを把握する基盤で、Dependabot alerts は脆弱性を通知し、security updates や version updates は更新 PR を作成できる" },
+      { "id": "B", "text": "依存関係グラフはコミット署名だけを検証し、Dependabot は SSH キーを削除する" },
+      { "id": "C", "text": "version updates は GitHub アカウントのパスワードを変更する" },
+      { "id": "D", "text": "Dependabot はリポジトリの可視性を Public に変更する機能である" }
+    ],
+    "correctChoiceIds": ["A"],
+    "explanation": "依存関係グラフはリポジトリの依存関係を把握する基盤です。Dependabot alerts は既知の脆弱性を通知し、security updates は修正用 PR、version updates は通常のバージョン追随用 PR を作成できます。",
+    "references": [
+      {
+        "title": "依存関係グラフについて",
+        "url": "https://docs.github.com/ja/code-security/supply-chain-security/understanding-your-software-supply-chain/about-the-dependency-graph",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      },
+      {
+        "title": "Dependabot アラートについて",
+        "url": "https://docs.github.com/ja/code-security/dependabot/dependabot-alerts/about-dependabot-alerts",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["dependency-graph", "dependabot", "supply-chain"],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D6-025",
+    "domainId": "D6",
+    "questionType": "single-choice",
+    "difficulty": "standard",
+    "question": "secret scanning の push protection が有効な場合の動作として正しいものはどれですか？",
+    "choices": [
+      { "id": "A", "text": "シークレットを含む可能性があるプッシュをリポジトリに到達する前にブロックできる" },
+      { "id": "B", "text": "すべてのシークレットを自動的に公開 Wiki へ移動する" },
+      { "id": "C", "text": "リポジトリの Issue を自動的に削除する" },
+      { "id": "D", "text": "依存関係のメジャーバージョンを必ず上げる" }
+    ],
+    "correctChoiceIds": ["A"],
+    "explanation": "Push protection は secret scanning の機能で、トークンなどのハードコードされた資格情報を含むプッシュを検出し、リポジトリへ取り込まれる前にブロックできます。",
+    "references": [
+      {
+        "title": "プッシュ保護について",
+        "url": "https://docs.github.com/ja/code-security/secret-scanning/introduction/about-push-protection",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["secret-scanning", "push-protection", "secrets"],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D6-026",
+    "domainId": "D6",
+    "questionType": "single-choice",
+    "difficulty": "standard",
+    "question": "Code scanning（CodeQL を含む）の主な目的はどれですか？",
+    "choices": [
+      { "id": "A", "text": "GitHub の請求先住所を検証すること" },
+      { "id": "B", "text": "リポジトリのコードを分析して、セキュリティ脆弱性やコーディングエラーを見つけること" },
+      { "id": "C", "text": "Organization メンバーのプロフィール画像を統一すること" },
+      { "id": "D", "text": "すべてのブランチ名を main に変更すること" }
+    ],
+    "correctChoiceIds": ["B"],
+    "explanation": "Code scanning はコードを分析し、脆弱性やエラーのアラートをリポジトリに表示します。CodeQL やサードパーティツールを使って、プッシュ時やスケジュール実行で検出できます。",
+    "references": [
+      {
+        "title": "コード スキャンについて",
+        "url": "https://docs.github.com/ja/code-security/code-scanning/introduction-to-code-scanning/about-code-scanning",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["code-scanning", "codeql", "security"],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D6-027",
+    "domainId": "D6",
+    "questionType": "single-choice",
+    "difficulty": "advanced",
+    "question": "Repository security advisory と private vulnerability reporting の使い分けとして正しいものはどれですか？",
+    "choices": [
+      { "id": "A", "text": "非公開報告で受け付けた脆弱性を、保守担当者が security advisory で非公開に調整・修正し、準備後に開示できる" },
+      { "id": "B", "text": "どちらも README の見出しを自動翻訳する機能である" },
+      { "id": "C", "text": "どちらも GitHub Actions のランナーを常に無料にする" },
+      { "id": "D", "text": "どちらも外部コラボレーターを Organization owner に昇格する" }
+    ],
+    "correctChoiceIds": ["A"],
+    "explanation": "Private vulnerability reporting は第三者が脆弱性を非公開で報告する入口です。Repository security advisory は、その脆弱性を非公開で議論・修正し、準備後に公開するために使います。",
+    "references": [
+      {
+        "title": "リポジトリ セキュリティ アドバイザリについて",
+        "url": "https://docs.github.com/ja/code-security/security-advisories/working-with-repository-security-advisories/about-repository-security-advisories",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      },
+      {
+        "title": "セキュリティの脆弱性を非公開で報告する",
+        "url": "https://docs.github.com/ja/code-security/security-advisories/guidance-on-reporting-and-writing-information-about-vulnerabilities/privately-reporting-a-security-vulnerability",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["security-advisory", "private-vulnerability-reporting", "disclosure"],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D6-028",
+    "domainId": "D6",
+    "questionType": "single-choice",
+    "difficulty": "standard",
+    "question": "GitHub Advanced Security 製品に含まれる機能の組み合わせとして正しいものはどれですか？",
+    "choices": [
+      { "id": "A", "text": "GitHub Pages の独自ドメイン登録と Wiki の自動生成" },
+      { "id": "B", "text": "Issue テンプレートの翻訳と Projects の列作成" },
+      { "id": "C", "text": "Secret Protection の secret scanning / push protection や、Code Security の code scanning など" },
+      { "id": "D", "text": "Organization の名前変更だけを行う管理ツール" }
+    ],
+    "correctChoiceIds": ["C"],
+    "explanation": "GitHub Advanced Security 関連製品には、Secret Protection として secret scanning や push protection、Code Security として code scanning や依存関係レビューなどが含まれます。",
+    "references": [
+      {
+        "title": "GitHub Advanced Security について",
+        "url": "https://docs.github.com/ja/get-started/learning-about-github/about-github-advanced-security",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["github-advanced-security", "secret-protection", "code-security"],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D6-029",
+    "domainId": "D6",
+    "questionType": "single-choice",
+    "difficulty": "basic",
+    "question": "SECURITY.md をリポジトリに追加する主な目的はどれですか？",
+    "choices": [
+      { "id": "A", "text": "プロジェクト内のセキュリティ脆弱性を報告する方法や手順を示すため" },
+      { "id": "B", "text": "ライセンスファイルを自動生成するため" },
+      { "id": "C", "text": "すべてのブランチを削除できるようにするため" },
+      { "id": "D", "text": "GitHub Copilot の利用料金を管理するため" }
+    ],
+    "correctChoiceIds": ["A"],
+    "explanation": "SECURITY.md などのセキュリティポリシーを追加すると、利用者や研究者に脆弱性の報告方法、連絡先、サポート対象バージョンなどを伝えられます。",
+    "references": [
+      {
+        "title": "リポジトリへのセキュリティ ポリシーの追加",
+        "url": "https://docs.github.com/ja/code-security/getting-started/adding-a-security-policy-to-your-repository",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["security-md", "security-policy", "vulnerability-reporting"],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D6-030",
+    "domainId": "D6",
+    "questionType": "single-choice",
+    "difficulty": "standard",
+    "question": "リポジトリの ruleset と branch protection ルールの目的として最も適切なものはどれですか？",
+    "choices": [
+      { "id": "A", "text": "特定のブランチやタグに対して、レビュー必須、ステータスチェック必須、削除制限などのルールを適用する" },
+      { "id": "B", "text": "すべての Issue を匿名化して公開する" },
+      { "id": "C", "text": "リポジトリのスター数を非公開にする" },
+      { "id": "D", "text": "GitHub Actions のログを削除する" }
+    ],
+    "correctChoiceIds": ["A"],
+    "explanation": "Ruleset や branch protection は、重要なブランチやタグを保護するために使います。たとえば pull request レビュー、必須ステータスチェック、強制プッシュや削除の制限などを設定できます。",
+    "references": [
+      {
+        "title": "ルールセットについて",
+        "url": "https://docs.github.com/ja/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/about-rulesets",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["rulesets", "branch-protection", "repository-security"],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D6-031",
+    "domainId": "D6",
+    "questionType": "single-choice",
+    "difficulty": "standard",
+    "question": "リポジトリの可視性と GitHub のデータ保護に関する説明として正しいものはどれですか？",
+    "choices": [
+      { "id": "A", "text": "Public は誰でも閲覧でき、Private は明示的にアクセス権を付与されたユーザーが閲覧でき、Internal は Enterprise 内のユーザーに限定される" },
+      { "id": "B", "text": "Private リポジトリは Organization の外部コラボレーターが常に自動で閲覧できる" },
+      { "id": "C", "text": "Public に変更しても、公開フォークや GitHub Pages などへの影響は一切ない" },
+      { "id": "D", "text": "GitHub のプライバシーステートメントは個人データの取り扱いとは無関係である" }
+    ],
+    "correctChoiceIds": ["A"],
+    "explanation": "リポジトリ可視性は誰がリポジトリを閲覧できるかを決めます。また、GitHub のプライバシーステートメントはサービス利用時の個人データの取り扱いを説明しています。公開範囲とデータ保護の基本を区別して理解します。",
+    "references": [
+      {
+        "title": "リポジトリの可視性を設定する",
+        "url": "https://docs.github.com/ja/repositories/managing-your-repositorys-settings-and-features/managing-repository-settings/setting-repository-visibility",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      },
+      {
+        "title": "GitHub の一般プライバシー ステートメント",
+        "url": "https://docs.github.com/ja/site-policy/privacy-policies/github-privacy-statement",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["repository-visibility", "privacy", "data-protection"],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D6-032",
+    "domainId": "D6",
+    "questionType": "single-choice",
+    "difficulty": "advanced",
+    "question": "Enterprise の IP allow list と認証セッション管理に関する理解として正しいものはどれですか？",
+    "choices": [
+      { "id": "A", "text": "IP allow list は指定 IP からの Enterprise リソースアクセスに制限でき、認識できないアクティブセッションはユーザー設定から取り消せる" },
+      { "id": "B", "text": "IP allow list はパブリックリポジトリを必ず削除し、セッション管理は SSH キーを生成する" },
+      { "id": "C", "text": "IP allow list を有効にすると 2FA は設定できなくなる" },
+      { "id": "D", "text": "アクティブセッションは確認できず、サインアウトは GitHub Support だけが実行できる" }
+    ],
+    "correctChoiceIds": ["A"],
+    "explanation": "IP allow list は Enterprise のプライベートリソースなどへのアクセス元ネットワークを制限する管理機能です。また、ユーザーはアクティブな Web やモバイルセッションを確認し、見覚えのないセッションを取り消せます。",
+    "references": [
+      {
+        "title": "IP 許可リストを使用して Enterprise へのネットワーク トラフィックを制限する",
+        "url": "https://docs.github.com/ja/enterprise-cloud@latest/admin/configuration/restricting-network-traffic-to-your-enterprise",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      },
+      {
+        "title": "セッションの表示と管理",
+        "url": "https://docs.github.com/ja/authentication/keeping-your-account-and-data-secure/viewing-and-managing-your-sessions",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["ip-allow-list", "sessions", "enterprise-security"],
     "updatedAt": "2026-05-31"
   }
 ]
