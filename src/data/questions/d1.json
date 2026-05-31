@@ -265,8 +265,8 @@
     "explanation": "git fetch はリモートの最新情報をローカルに取得しますが、ワーキングツリーは変更しません。git pull は fetch + merge（または rebase）を一度に行い、ローカルブランチを最新にします。fetch で内容を確認してからマージしたい場合に fetch を使います。",
     "references": [
       {
-        "title": "リポジトリについて",
-        "url": "https://docs.github.com/ja/repositories/creating-and-managing-repositories/about-repositories",
+        "title": "リモートリポジトリから変更を取得する",
+        "url": "https://docs.github.com/ja/get-started/using-git/getting-changes-from-a-remote-repository",
         "source": "GitHub Docs",
         "checkedAt": "2026-05-31"
       }
@@ -447,6 +447,1068 @@
       }
     ],
     "tags": ["enterprise", "organization"],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D1-019",
+    "domainId": "D1",
+    "questionType": "single-choice",
+    "difficulty": "basic",
+    "question": "集中型バージョン管理と比べて、Gitのような分散型バージョン管理で「ローカルコミット」が可能な理由として最も適切なものはどれですか？",
+    "choices": [
+      { "id": "A", "text": "ローカルにも履歴を持つリポジトリがあり、中央サーバーへ常時接続しなくても記録できる" },
+      { "id": "B", "text": "GitHubのWeb UIがすべての変更を自動承認するため" },
+      { "id": "C", "text": "READMEに変更内容を書くとコミットとして扱われるため" },
+      { "id": "D", "text": "Organizationの管理者だけが履歴を保存するため" }
+    ],
+    "correctChoiceIds": ["A"],
+    "explanation": "正解は「ローカルにも履歴を持つリポジトリがあり、中央サーバーへ常時接続しなくても記録できる」です。Gitは分散型で、手元のリポジトリに対してコミットできます。他の選択肢はGitHubの機能や管理権限をコミット記録と混同しています。",
+    "references": [
+      {
+        "title": "Git について",
+        "url": "https://docs.github.com/ja/get-started/using-git/about-git",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["git", "dvcs", "local-repository"],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D1-020",
+    "domainId": "D1",
+    "questionType": "single-choice",
+    "difficulty": "standard",
+    "question": "GitHub上の「リモート」リポジトリをローカルリポジトリと区別する説明として最も適切なものはどれですか？",
+    "choices": [
+      { "id": "A", "text": "作業ツリーにある未追跡ファイルの一覧" },
+      { "id": "B", "text": "コンピューターではなく GitHub に保存され、共有や同期の対象になるリポジトリ" },
+      { "id": "C", "text": "コミット前に変更を一時的に置く領域" },
+      { "id": "D", "text": "ローカルでのみ参照できる一時ブランチ" }
+    ],
+    "correctChoiceIds": ["B"],
+    "explanation": "正解は「コンピューターではなく GitHub に保存され、共有や同期の対象になるリポジトリ」です。リモートはGitHubなどコンピューター外に保存されたリポジトリです。他の選択肢は、別のGit/GitHub機能や該当しない操作を述べているため誤りです。",
+    "references": [
+      {
+        "title": "リポジトリについて",
+        "url": "https://docs.github.com/ja/repositories/creating-and-managing-repositories/about-repositories",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["repository", "remote"],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D1-021",
+    "domainId": "D1",
+    "questionType": "single-choice",
+    "difficulty": "basic",
+    "question": "Gitで「ステージングエリア（index）」を使う目的として最も適切なものはどれですか？",
+    "choices": [
+      { "id": "A", "text": "リモートから自動的に全変更を取得するため" },
+      { "id": "B", "text": "Organization のメンバー権限を一時保存するため" },
+      { "id": "C", "text": "次のコミットに含める変更を選んで準備するため" },
+      { "id": "D", "text": "ブランチ名をGitHub上で予約するため" }
+    ],
+    "correctChoiceIds": ["C"],
+    "explanation": "正解は「次のコミットに含める変更を選んで準備するため」です。ステージングエリアは次のコミットに入れる変更を準備する場所です。他の選択肢は、別のGit/GitHub機能や該当しない操作を述べているため誤りです。",
+    "references": [
+      {
+        "title": "変更内容のリポジトリへの記録",
+        "url": "https://git-scm.com/book/ja/v2/Git-%E3%81%AE%E5%9F%BA%E6%9C%AC-%E5%A4%89%E6%9B%B4%E5%86%85%E5%AE%B9%E3%81%AE%E3%83%AA%E3%83%9D%E3%82%B8%E3%83%88%E3%83%AA%E3%81%B8%E3%81%AE%E8%A8%98%E9%8C%B2",
+        "source": "Git Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["git", "staging", "index"],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D1-022",
+    "domainId": "D1",
+    "questionType": "single-choice",
+    "difficulty": "standard",
+    "question": "作業ツリー内のファイルが「untracked」と表示される状況として最も適切なものはどれですか？",
+    "choices": [
+      { "id": "A", "text": "すでにリモートへpush済みで変更できない" },
+      { "id": "B", "text": "GitHub Actionsでビルド済みである" },
+      { "id": "C", "text": "タグが付いているため編集できない" },
+      { "id": "D", "text": "直近のコミットにもステージングエリアにも存在せず、Gitがまだ追跡していない" }
+    ],
+    "correctChoiceIds": ["D"],
+    "explanation": "正解は「直近のコミットにもステージングエリアにも存在せず、Gitがまだ追跡していない」です。untrackedは直近のスナップショットにもステージングエリアにもないファイルです。他の選択肢は、別のGit/GitHub機能や該当しない操作を述べているため誤りです。",
+    "references": [
+      {
+        "title": "変更内容のリポジトリへの記録",
+        "url": "https://git-scm.com/book/ja/v2/Git-%E3%81%AE%E5%9F%BA%E6%9C%AC-%E5%A4%89%E6%9B%B4%E5%86%85%E5%AE%B9%E3%81%AE%E3%83%AA%E3%83%9D%E3%82%B8%E3%83%88%E3%83%AA%E3%81%B8%E3%81%AE%E8%A8%98%E9%8C%B2",
+        "source": "Git Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["git", "working-tree", "untracked"],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D1-023",
+    "domainId": "D1",
+    "questionType": "single-choice",
+    "difficulty": "basic",
+    "question": ".gitignore ファイルの主な用途として最も適切なものはどれですか？",
+    "choices": [
+      { "id": "A", "text": "コミット時に無視するファイルやディレクトリをGitに指示する" },
+      { "id": "B", "text": "すべてのブランチを読み取り専用にする" },
+      { "id": "C", "text": "リモートリポジトリのURLを暗号化する" },
+      { "id": "D", "text": "GitHubアカウントのパスワードを保存する" }
+    ],
+    "correctChoiceIds": ["A"],
+    "explanation": "正解は「コミット時に無視するファイルやディレクトリをGitに指示する」です。.gitignoreはコミットしたくない生成物や環境固有ファイルなどを無視するルールです。他の選択肢は、別のGit/GitHub機能や該当しない操作を述べているため誤りです。",
+    "references": [
+      {
+        "title": "ファイルを無視する",
+        "url": "https://docs.github.com/ja/get-started/git-basics/ignoring-files",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["gitignore", "repository"],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D1-024",
+    "domainId": "D1",
+    "questionType": "single-choice",
+    "difficulty": "advanced",
+    "question": "すでにコミット済みのファイルを今後 .gitignore で無視したい場合の考え方として最も適切なものはどれですか？",
+    "choices": [
+      { "id": "A", "text": ".gitignoreに書くだけで過去の追跡状態も自動解除される" },
+      { "id": "B", "text": "まず追跡を解除し、そのうえで無視ルールを追加する" },
+      { "id": "C", "text": "リポジトリを削除して作り直す必要がある" },
+      { "id": "D", "text": "GitHubのプランをTeam以上に変更する必要がある" }
+    ],
+    "correctChoiceIds": ["B"],
+    "explanation": "正解は「まず追跡を解除し、そのうえで無視ルールを追加する」です。既に追跡されているファイルは.gitignoreだけでは追跡解除されません。他の選択肢は、別のGit/GitHub機能や該当しない操作を述べているため誤りです。",
+    "references": [
+      {
+        "title": "ファイルを無視する",
+        "url": "https://docs.github.com/ja/get-started/git-basics/ignoring-files",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["gitignore", "tracking"],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D1-025",
+    "domainId": "D1",
+    "questionType": "single-choice",
+    "difficulty": "basic",
+    "question": "git status コマンドで確認できる内容として最も適切なものはどれですか？",
+    "choices": [
+      { "id": "A", "text": "GitHubの請求プランと利用料金" },
+      { "id": "B", "text": "すべてのリリースアセットのダウンロード数" },
+      { "id": "C", "text": "現在のブランチや、変更済み・ステージ済み・未追跡ファイルの状態" },
+      { "id": "D", "text": "Organization内の監査ログ" }
+    ],
+    "correctChoiceIds": ["C"],
+    "explanation": "正解は「現在のブランチや、変更済み・ステージ済み・未追跡ファイルの状態」です。git statusは作業ツリーとステージングの状態、現在のブランチなどを確認する基本コマンドです。他の選択肢は、別のGit/GitHub機能や該当しない操作を述べているため誤りです。",
+    "references": [
+      {
+        "title": "変更内容のリポジトリへの記録",
+        "url": "https://git-scm.com/book/ja/v2/Git-%E3%81%AE%E5%9F%BA%E6%9C%AC-%E5%A4%89%E6%9B%B4%E5%86%85%E5%AE%B9%E3%81%AE%E3%83%AA%E3%83%9D%E3%82%B8%E3%83%88%E3%83%AA%E3%81%B8%E3%81%AE%E8%A8%98%E9%8C%B2",
+        "source": "Git Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["git", "status", "working-tree"],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D1-026",
+    "domainId": "D1",
+    "questionType": "single-choice",
+    "difficulty": "basic",
+    "question": "git add の基本的な役割として最も適切なものはどれですか？",
+    "choices": [
+      { "id": "A", "text": "ローカルコミットをGitHubへ送信する" },
+      { "id": "B", "text": "リモートリポジトリを削除する" },
+      { "id": "C", "text": "Pull Requestを承認する" },
+      { "id": "D", "text": "変更や新しいファイルをステージングエリアに追加する" }
+    ],
+    "correctChoiceIds": ["D"],
+    "explanation": "正解は「変更や新しいファイルをステージングエリアに追加する」です。git addは次のコミットに含める変更をステージします。他の選択肢は、別のGit/GitHub機能や該当しない操作を述べているため誤りです。",
+    "references": [
+      {
+        "title": "変更内容のリポジトリへの記録",
+        "url": "https://git-scm.com/book/ja/v2/Git-%E3%81%AE%E5%9F%BA%E6%9C%AC-%E5%A4%89%E6%9B%B4%E5%86%85%E5%AE%B9%E3%81%AE%E3%83%AA%E3%83%9D%E3%82%B8%E3%83%88%E3%83%AA%E3%81%B8%E3%81%AE%E8%A8%98%E9%8C%B2",
+        "source": "Git Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["git", "add", "staging"],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D1-027",
+    "domainId": "D1",
+    "questionType": "single-choice",
+    "difficulty": "standard",
+    "question": "作業中の変更内容をコミット前に比較したいときに使うコマンドとして最も適切なものはどれですか？",
+    "choices": [
+      { "id": "A", "text": "git diff" },
+      { "id": "B", "text": "git remote" },
+      { "id": "C", "text": "git tag" },
+      { "id": "D", "text": "git push" }
+    ],
+    "correctChoiceIds": ["A"],
+    "explanation": "正解は「git diff」です。git diffはバージョン間や作業中の変更点の比較に使います。他の選択肢は、別のGit/GitHub機能や該当しない操作を述べているため誤りです。",
+    "references": [
+      {
+        "title": "Git について",
+        "url": "https://docs.github.com/ja/get-started/using-git/about-git",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["git", "diff"],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D1-028",
+    "domainId": "D1",
+    "questionType": "single-choice",
+    "difficulty": "basic",
+    "question": "git log の主な用途として最も適切なものはどれですか？",
+    "choices": [
+      { "id": "A", "text": "未追跡ファイルを自動削除する" },
+      { "id": "B", "text": "過去のコミット履歴を確認する" },
+      { "id": "C", "text": "GitHub Mobileに通知を送る" },
+      { "id": "D", "text": "READMEをHTMLへ変換する" }
+    ],
+    "correctChoiceIds": ["B"],
+    "explanation": "正解は「過去のコミット履歴を確認する」です。git logはコミット履歴を確認するためのコマンドです。他の選択肢は、別のGit/GitHub機能や該当しない操作を述べているため誤りです。",
+    "references": [
+      {
+        "title": "Git について",
+        "url": "https://docs.github.com/ja/get-started/using-git/about-git",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["git", "log", "history"],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D1-029",
+    "domainId": "D1",
+    "questionType": "single-choice",
+    "difficulty": "standard",
+    "question": "git remote コマンドで扱う対象として最も適切なものはどれですか？",
+    "choices": [
+      { "id": "A", "text": "コミットメッセージのテンプレート" },
+      { "id": "B", "text": "Markdownの見出し階層" },
+      { "id": "C", "text": "GitHubなどにあるリモートリポジトリの名前やURL" },
+      { "id": "D", "text": "Pull Requestのレビュー担当者" }
+    ],
+    "correctChoiceIds": ["C"],
+    "explanation": "正解は「GitHubなどにあるリモートリポジトリの名前やURL」です。git remoteはoriginなどリモートリポジトリの参照を扱います。他の選択肢は、別のGit/GitHub機能や該当しない操作を述べているため誤りです。",
+    "references": [
+      {
+        "title": "リポジトリについて",
+        "url": "https://docs.github.com/ja/repositories/creating-and-managing-repositories/about-repositories",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["git", "remote"],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D1-030",
+    "domainId": "D1",
+    "questionType": "single-choice",
+    "difficulty": "standard",
+    "question": "git push の説明として最も適切なものはどれですか？",
+    "choices": [
+      { "id": "A", "text": "GitHub上の変更を取得して自動マージする" },
+      { "id": "B", "text": "作業ツリーの差分だけを画面に表示する" },
+      { "id": "C", "text": "現在のブランチを削除する" },
+      { "id": "D", "text": "ローカルで作成したコミットをリモートリポジトリへ送信する" }
+    ],
+    "correctChoiceIds": ["D"],
+    "explanation": "正解は「ローカルで作成したコミットをリモートリポジトリへ送信する」です。pushはローカルの変更をGitHubなどのリモートへ送信します。他の選択肢は、別のGit/GitHub機能や該当しない操作を述べているため誤りです。",
+    "references": [
+      {
+        "title": "GitHubと Git について",
+        "url": "https://docs.github.com/ja/get-started/start-your-journey/about-github-and-git",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["git", "push", "remote"],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D1-031",
+    "domainId": "D1",
+    "questionType": "single-choice",
+    "difficulty": "advanced",
+    "question": "共有ブランチを更新する前に作業内容の衝突リスクを小さくしたい場合、git pull ではなく git fetch を先に使う理由として最も適切なものはどれですか？",
+    "choices": [
+      { "id": "A", "text": "リモート追跡ブランチを更新し、作業ブランチへ統合する前に差分や履歴を確認できる" },
+      { "id": "B", "text": "GitHub上のPull Requestを自動承認できる" },
+      { "id": "C", "text": "ローカルの未コミット変更を自動的に暗号化できる" },
+      { "id": "D", "text": "リポジトリの可視性をPrivateへ変更できる" }
+    ],
+    "correctChoiceIds": ["A"],
+    "explanation": "正解は「リモート追跡ブランチを更新し、作業ブランチへ統合する前に差分や履歴を確認できる」です。fetchは取得、pullは取得と統合をまとめて行います。他の選択肢はGitHubのレビュー、暗号化、可視性設定でありfetchの役割ではありません。",
+    "references": [
+      {
+        "title": "GitHubと Git について",
+        "url": "https://docs.github.com/ja/get-started/start-your-journey/about-github-and-git",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["git", "fetch", "remote-tracking"],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D1-032",
+    "domainId": "D1",
+    "questionType": "single-choice",
+    "difficulty": "standard",
+    "question": "Gitにおける HEAD の説明として最も適切なものはどれですか？",
+    "choices": [
+      { "id": "A", "text": "GitHub Enterpriseの管理者アカウント" },
+      { "id": "B", "text": "現在チェックアウトしているコミットまたはブランチを指す参照" },
+      { "id": "C", "text": "READMEの最初の見出しだけを指す記号" },
+      { "id": "D", "text": "リモートリポジトリのURL一覧" }
+    ],
+    "correctChoiceIds": ["B"],
+    "explanation": "正解は「現在チェックアウトしているコミットまたはブランチを指す参照」です。HEADは通常、現在作業しているブランチの先端コミットを指す参照です。他の選択肢は、別のGit/GitHub機能や該当しない操作を述べているため誤りです。",
+    "references": [
+      {
+        "title": "Git について",
+        "url": "https://docs.github.com/ja/get-started/using-git/about-git",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["git", "head", "branch"],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D1-033",
+    "domainId": "D1",
+    "questionType": "single-choice",
+    "difficulty": "standard",
+    "question": "GitHubで「デフォルトブランチ」が使われる場面として最も適切なものはどれですか？",
+    "choices": [
+      { "id": "A", "text": "すべてのタグが自動作成される専用ブランチ" },
+      { "id": "B", "text": "GitHub Mobileだけで編集できるブランチ" },
+      { "id": "C", "text": "リポジトリの表示時やクローン時に最初に基準となるブランチ" },
+      { "id": "D", "text": "Organizationの請求情報を保存するブランチ" }
+    ],
+    "correctChoiceIds": ["C"],
+    "explanation": "正解は「リポジトリの表示時やクローン時に最初に基準となるブランチ」です。デフォルトブランチはリポジトリ表示やクローン時の初期チェックアウト、PRの既定ベースとして使われます。他の選択肢は、別のGit/GitHub機能や該当しない操作を述べているため誤りです。",
+    "references": [
+      {
+        "title": "ブランチの概要",
+        "url": "https://docs.github.com/ja/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-branches",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["branch", "default-branch"],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D1-034",
+    "domainId": "D1",
+    "questionType": "single-choice",
+    "difficulty": "basic",
+    "question": "マージ（merge）の基本的な意味として最も適切なものはどれですか？",
+    "choices": [
+      { "id": "A", "text": "GitHubアカウントを削除すること" },
+      { "id": "B", "text": "MarkdownをPDFに変換すること" },
+      { "id": "C", "text": "リモートURLをHTTPSからSSHへ必ず変更すること" },
+      { "id": "D", "text": "あるブランチの変更を別のブランチへ取り込むこと" }
+    ],
+    "correctChoiceIds": ["D"],
+    "explanation": "正解は「あるブランチの変更を別のブランチへ取り込むこと」です。マージは一方のブランチの変更を別のブランチに適用する操作です。他の選択肢は、別のGit/GitHub機能や該当しない操作を述べているため誤りです。",
+    "references": [
+      {
+        "title": "リポジトリについて",
+        "url": "https://docs.github.com/ja/repositories/creating-and-managing-repositories/about-repositories",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["git", "merge", "branch"],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D1-035",
+    "domainId": "D1",
+    "questionType": "single-choice",
+    "difficulty": "standard",
+    "question": "マージコンフリクトが発生しやすい状況として最も適切なものはどれですか？",
+    "choices": [
+      { "id": "A", "text": "別々のブランチで同じファイルの同じ行に異なる変更を加えた" },
+      { "id": "B", "text": "READMEに見出しを1つ追加した" },
+      { "id": "C", "text": "git statusを実行した" },
+      { "id": "D", "text": "GitHub Mobileで通知を既読にした" }
+    ],
+    "correctChoiceIds": ["A"],
+    "explanation": "正解は「別々のブランチで同じファイルの同じ行に異なる変更を加えた」です。同じ行への異なる変更や編集と削除の競合などはGitが自動判断できずコンフリクトになります。他の選択肢は、別のGit/GitHub機能や該当しない操作を述べているため誤りです。",
+    "references": [
+      {
+        "title": "マージ競合について",
+        "url": "https://docs.github.com/ja/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/about-merge-conflicts",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["merge-conflict", "branch"],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D1-036",
+    "domainId": "D1",
+    "questionType": "single-choice",
+    "difficulty": "advanced",
+    "question": "GitHubのPull Requestでマージコンフリクトが残っている場合の扱いとして正しいものはどれですか？",
+    "choices": [
+      { "id": "A", "text": "競合が残っていてもMerge pull requestボタンで必ずマージできる" },
+      { "id": "B", "text": "すべての競合を解決するまでマージ操作はできない" },
+      { "id": "C", "text": "競合ファイルはGitHubが常に自動削除する" },
+      { "id": "D", "text": "競合があるとリポジトリ全体が非公開になる" }
+    ],
+    "correctChoiceIds": ["B"],
+    "explanation": "正解は「すべての競合を解決するまでマージ操作はできない」です。GitHubではPRをマージする前にすべてのマージコンフリクトを解決する必要があります。他の選択肢は、別のGit/GitHub機能や該当しない操作を述べているため誤りです。",
+    "references": [
+      {
+        "title": "マージ競合について",
+        "url": "https://docs.github.com/ja/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/about-merge-conflicts",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["pull-request", "merge-conflict"],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D1-037",
+    "domainId": "D1",
+    "questionType": "single-choice",
+    "difficulty": "basic",
+    "question": "Gitのタグを使う目的として最も適切なものはどれですか？",
+    "choices": [
+      { "id": "A", "text": "未追跡ファイルを一覧表示する" },
+      { "id": "B", "text": "Issueの担当者を自動割り当てする" },
+      { "id": "C", "text": "履歴上の特定時点をマークし、リリースなどの基準にする" },
+      { "id": "D", "text": "Organizationのメンバーを招待する" }
+    ],
+    "correctChoiceIds": ["C"],
+    "explanation": "正解は「履歴上の特定時点をマークし、リリースなどの基準にする」です。タグはリポジトリ履歴の特定時点を示し、GitHub Releasesもタグに基づきます。他の選択肢は、別のGit/GitHub機能や該当しない操作を述べているため誤りです。",
+    "references": [
+      {
+        "title": "リリースについて",
+        "url": "https://docs.github.com/ja/repositories/releasing-projects-on-github/about-releases",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["git", "tag", "release"],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D1-038",
+    "domainId": "D1",
+    "questionType": "single-choice",
+    "difficulty": "standard",
+    "question": "GitHub FlowでPull Requestを開く主な目的として最も適切なものはどれですか？",
+    "choices": [
+      { "id": "A", "text": "変更をすぐ本番へ直接デプロイするため" },
+      { "id": "B", "text": "リポジトリの可視性をPublicへ変更するため" },
+      { "id": "C", "text": "GitHubアカウントをTeamプランへ変更するため" },
+      { "id": "D", "text": "変更内容を提案し、レビューや議論を行ってからマージするため" }
+    ],
+    "correctChoiceIds": ["D"],
+    "explanation": "正解は「変更内容を提案し、レビューや議論を行ってからマージするため」です。Pull Requestはブランチの変更を提案し、レビューや議論を経て合意後にマージするための中心的な仕組みです。他の選択肢は、別のGit/GitHub機能や該当しない操作を述べているため誤りです。",
+    "references": [
+      {
+        "title": "GitHub フロー",
+        "url": "https://docs.github.com/ja/get-started/using-github/github-flow",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["github-flow", "pull-request"],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D1-039",
+    "domainId": "D1",
+    "questionType": "single-choice",
+    "difficulty": "standard",
+    "question": "GitHub Flowで短く分かりやすいブランチ名を付ける理由として最も適切なものはどれですか？",
+    "choices": [
+      { "id": "A", "text": "コラボレーターが進行中の作業内容を把握しやすくするため" },
+      { "id": "B", "text": "GitHub Actionsの利用料金をゼロにするため" },
+      { "id": "C", "text": "コミット履歴を自動的に削除するため" },
+      { "id": "D", "text": "READMEを必ず表示させるため" }
+    ],
+    "correctChoiceIds": ["A"],
+    "explanation": "正解は「コラボレーターが進行中の作業内容を把握しやすくするため」です。GitHub Flowでは作業内容が分かる短いブランチ名が推奨されます。他の選択肢は、別のGit/GitHub機能や該当しない操作を述べているため誤りです。",
+    "references": [
+      {
+        "title": "GitHub フロー",
+        "url": "https://docs.github.com/ja/get-started/using-github/github-flow",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["github-flow", "branch"],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D1-040",
+    "domainId": "D1",
+    "questionType": "single-choice",
+    "difficulty": "advanced",
+    "question": "GitHub Flowで変更をmainへマージした後の「デプロイ」に関する考え方として最も適切なものはどれですか？",
+    "choices": [
+      { "id": "A", "text": "レビュー前に必ず個人アカウントを削除する段階である" },
+      { "id": "B", "text": "マージ後の変更をユーザーが利用できる環境へ反映する段階である" },
+      { "id": "C", "text": "タグがない変更はGitHub上で表示できないため不要である" },
+      { "id": "D", "text": "ステージングエリアを空にするGitコマンドの別名である" }
+    ],
+    "correctChoiceIds": ["B"],
+    "explanation": "正解は「マージ後の変更をユーザーが利用できる環境へ反映する段階である」です。GitHub Flowではレビューとマージ後に変更をデプロイして利用可能にします。他の選択肢は、別のGit/GitHub機能や該当しない操作を述べているため誤りです。",
+    "references": [
+      {
+        "title": "GitHub フロー",
+        "url": "https://docs.github.com/ja/get-started/using-github/github-flow",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["github-flow", "deployment"],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D1-041",
+    "domainId": "D1",
+    "questionType": "single-choice",
+    "difficulty": "basic",
+    "question": "Organizationが所有するリポジトリで個人アカウントと異なる点として最も適切なものはどれですか？",
+    "choices": [
+      { "id": "A", "text": "タグを作成できなくなる" },
+      { "id": "B", "text": "Gitコマンドが使えなくなる" },
+      { "id": "C", "text": "チームやロールを使って複数メンバーのアクセスを管理しやすい" },
+      { "id": "D", "text": "READMEを作成できなくなる" }
+    ],
+    "correctChoiceIds": ["C"],
+    "explanation": "正解は「チームやロールを使って複数メンバーのアクセスを管理しやすい」です。Organizationは共同作業と権限管理に向いたアカウントです。他の選択肢はOrganizationでも通常可能、またはGitHubアカウント種別の違いではありません。",
+    "references": [
+      {
+        "title": "GitHub アカウントの種類",
+        "url": "https://docs.github.com/ja/get-started/learning-about-github/types-of-github-accounts",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["organization", "access-management"],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D1-042",
+    "domainId": "D1",
+    "questionType": "single-choice",
+    "difficulty": "standard",
+    "question": "GitHub Free、GitHub Team、GitHub Enterpriseのような「プラン」を理解する目的として最も適切なものはどれですか？",
+    "choices": [
+      { "id": "A", "text": "GitのコミットIDを短くするため" },
+      { "id": "B", "text": "Markdownの絵文字一覧を増やすため" },
+      { "id": "C", "text": "すべてのリポジトリを自動的にInternalへ変えるため" },
+      { "id": "D", "text": "利用できる機能、対象アカウント、サポートや管理機能の違いを判断するため" }
+    ],
+    "correctChoiceIds": ["D"],
+    "explanation": "正解は「利用できる機能、対象アカウント、サポートや管理機能の違いを判断するため」です。GitHubのプランは無料・有料の機能差や個人/組織/Enterprise向けの違いを判断するために重要です。他の選択肢は、別のGit/GitHub機能や該当しない操作を述べているため誤りです。",
+    "references": [
+      {
+        "title": "GitHubのプラン",
+        "url": "https://docs.github.com/ja/get-started/learning-about-github/githubs-plans",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["plans", "github-free", "github-team", "enterprise"],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D1-043",
+    "domainId": "D1",
+    "questionType": "single-choice",
+    "difficulty": "advanced",
+    "question": "Enterpriseアカウントで複数Organizationをまとめて扱う利点として最も適切なものはどれですか？",
+    "choices": [
+      { "id": "A", "text": "企業全体のポリシーや請求などをOrganization横断で管理しやすい" },
+      { "id": "B", "text": "個人プロフィールの絵文字を増やせる" },
+      { "id": "C", "text": "GitHub Mobileからの閲覧を禁止するためだけに使う" },
+      { "id": "D", "text": "すべてのリポジトリを自動的にGistへ変換する" }
+    ],
+    "correctChoiceIds": ["A"],
+    "explanation": "正解は「企業全体のポリシーや請求などをOrganization横断で管理しやすい」です。Enterpriseは複数Organizationの管理単位です。他の選択肢はEnterpriseアカウントの目的や機能を表していません。",
+    "references": [
+      {
+        "title": "GitHub アカウントの種類",
+        "url": "https://docs.github.com/ja/get-started/learning-about-github/types-of-github-accounts",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["enterprise", "account-management"],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D1-044",
+    "domainId": "D1",
+    "questionType": "single-choice",
+    "difficulty": "basic",
+    "question": "GitHub.com のWeb UIで実行できる作業として最も適切なものはどれですか？",
+    "choices": [
+      { "id": "A", "text": "ローカルOSのカーネルを更新する" },
+      { "id": "B", "text": "ブラウザーでファイル編集、コミット、Pull Request作成などを行う" },
+      { "id": "C", "text": "Gitの履歴を必ず削除してから同期する" },
+      { "id": "D", "text": "SSHキーなしではリポジトリを閲覧できないようにする" }
+    ],
+    "correctChoiceIds": ["B"],
+    "explanation": "正解は「ブラウザーでファイル編集、コミット、Pull Request作成などを行う」です。GitHub.comのWeb UIではブラウザー上でGitHub Flowの多くを実行できます。他の選択肢は、別のGit/GitHub機能や該当しない操作を述べているため誤りです。",
+    "references": [
+      {
+        "title": "GitHubへの接続",
+        "url": "https://docs.github.com/ja/get-started/using-github/connecting-to-github",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["web-ui", "github-flow"],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D1-045",
+    "domainId": "D1",
+    "questionType": "single-choice",
+    "difficulty": "standard",
+    "question": "GitHub CLI（gh）とGit（git）コマンドの違いとして最も適切なものはどれですか？",
+    "choices": [
+      { "id": "A", "text": "ghは画像編集専用で、gitはIssue管理専用" },
+      { "id": "B", "text": "ghはWebブラウザーでしか使えず、gitはスマートフォン専用" },
+      { "id": "C", "text": "ghはGitHub機能をターミナルで操作するツールで、gitはGitリポジトリを操作するツール" },
+      { "id": "D", "text": "ghとgitは完全に同じコマンド名の別名" }
+    ],
+    "correctChoiceIds": ["C"],
+    "explanation": "正解は「ghはGitHub機能をターミナルで操作するツールで、gitはGitリポジトリを操作するツール」です。GitHub CLIはPR、Issue、ActionsなどGitHub機能を扱い、gitはローカル/リモートのGitリポジトリを扱います。他の選択肢は、別のGit/GitHub機能や該当しない操作を述べているため誤りです。",
+    "references": [
+      {
+        "title": "GitHub CLI について",
+        "url": "https://docs.github.com/ja/github-cli/github-cli/about-github-cli",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["github-cli", "git"],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D1-046",
+    "domainId": "D1",
+    "questionType": "single-choice",
+    "difficulty": "basic",
+    "question": "GitHub DesktopがWeb UIと異なる点として最も適切なものはどれですか？",
+    "choices": [
+      { "id": "A", "text": "ブラウザーだけで動作し、ローカルファイルは扱えない" },
+      { "id": "B", "text": "REST API専用の認証ツールである" },
+      { "id": "C", "text": "スマートフォン通知専用アプリである" },
+      { "id": "D", "text": "PCにインストールして、ローカルリポジトリの変更確認やコミットなどをGUIで行う" }
+    ],
+    "correctChoiceIds": ["D"],
+    "explanation": "正解は「PCにインストールして、ローカルリポジトリの変更確認やコミットなどをGUIで行う」です。GitHub Desktopはデスクトップアプリです。他の選択肢はWeb UI、API、Mobileの説明と混同しています。",
+    "references": [
+      {
+        "title": "GitHub Desktop について",
+        "url": "https://docs.github.com/ja/desktop/overview/about-github-desktop",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["github-desktop", "local-repository"],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D1-047",
+    "domainId": "D1",
+    "questionType": "single-choice",
+    "difficulty": "standard",
+    "question": "GitHub Mobileの位置づけとして最も適切なものはどれですか？",
+    "choices": [
+      { "id": "A", "text": "外出先で通知、Issue、Pull Requestの確認や対応を行うためのモバイルアプリ" },
+      { "id": "B", "text": "ローカルの.gitディレクトリを直接修復するためのGitサーバー" },
+      { "id": "C", "text": "デスクトップPC専用のGUIクライアント" },
+      { "id": "D", "text": "MarkdownをPDFに変換する公式ビルドツール" }
+    ],
+    "correctChoiceIds": ["A"],
+    "explanation": "正解は「外出先で通知、Issue、Pull Requestの確認や対応を行うためのモバイルアプリ」です。GitHub Mobileはモバイル端末でGitHub上の作業を扱うアプリです。他の選択肢はローカルGit、Desktop、文書変換の説明です。",
+    "references": [
+      {
+        "title": "GitHub Mobile",
+        "url": "https://docs.github.com/ja/get-started/using-github/github-mobile",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["github-mobile", "notifications"],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D1-048",
+    "domainId": "D1",
+    "questionType": "single-choice",
+    "difficulty": "advanced",
+    "question": "GitHub REST APIを使う場面として最も適切なものはどれですか？",
+    "choices": [
+      { "id": "A", "text": "READMEの見出しを手入力で太字にする" },
+      { "id": "B", "text": "HTTPメソッドとエンドポイントを使ってGitHub上のリソースをプログラムから操作する" },
+      { "id": "C", "text": "ローカルファイルをステージングエリアに追加する" },
+      { "id": "D", "text": "スマートフォンで通知をスワイプする" }
+    ],
+    "correctChoiceIds": ["B"],
+    "explanation": "正解は「HTTPメソッドとエンドポイントを使ってGitHub上のリソースをプログラムから操作する」です。REST APIはGET、POST、PATCH、DELETEなどでGitHubリソースをプログラムから扱います。他の選択肢は、別のGit/GitHub機能や該当しない操作を述べているため誤りです。",
+    "references": [
+      {
+        "title": "REST API を使用した作業の開始",
+        "url": "https://docs.github.com/ja/rest/using-the-rest-api/getting-started-with-the-rest-api",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["api", "rest"],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D1-049",
+    "domainId": "D1",
+    "questionType": "single-choice",
+    "difficulty": "basic",
+    "question": "READMEファイルに通常含める情報として最も適切なものはどれですか？",
+    "choices": [
+      { "id": "A", "text": "GitHubアカウントのパスワード" },
+      { "id": "B", "text": "すべての未解決コンフリクトのマーカー" },
+      { "id": "C", "text": "プロジェクトの概要、使い始め方、ヘルプの入手先など" },
+      { "id": "D", "text": "Enterpriseの請求先クレジットカード番号" }
+    ],
+    "correctChoiceIds": ["C"],
+    "explanation": "正解は「プロジェクトの概要、使い始め方、ヘルプの入手先など」です。READMEは訪問者にプロジェクトの目的、利用方法、ヘルプ先など重要情報を伝えます。他の選択肢は、別のGit/GitHub機能や該当しない操作を述べているため誤りです。",
+    "references": [
+      {
+        "title": "リポジトリの README ファイルについて",
+        "url": "https://docs.github.com/ja/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["readme", "repository"],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D1-050",
+    "domainId": "D1",
+    "questionType": "single-choice",
+    "difficulty": "basic",
+    "question": "GitHubでMarkdownの太字を表す記法として正しいものはどれですか？",
+    "choices": [
+      { "id": "A", "text": "## 強調したいテキスト" },
+      { "id": "B", "text": "`強調したいテキスト`" },
+      { "id": "C", "text": "[ ] 強調したいテキスト" },
+      { "id": "D", "text": "**強調したいテキスト**" }
+    ],
+    "correctChoiceIds": ["D"],
+    "explanation": "正解は「**強調したいテキスト**」です。太字はテキストを ** ** または __ __ で囲みます。他の選択肢は、別のGit/GitHub機能や該当しない操作を述べているため誤りです。",
+    "references": [
+      {
+        "title": "基本的な書き込みと書式設定の構文",
+        "url": "https://docs.github.com/ja/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["markdown", "formatting"],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D1-051",
+    "domainId": "D1",
+    "questionType": "single-choice",
+    "difficulty": "standard",
+    "question": "GitHub Flavored Markdownでタスクリストを表す記法として最も適切なものはどれですか？",
+    "choices": [
+      { "id": "A", "text": "- [ ] 未完了のタスク" },
+      { "id": "B", "text": "## 未完了のタスク" },
+      { "id": "C", "text": "@task 未完了のタスク" },
+      { "id": "D", "text": "``` 未完了のタスク ```" }
+    ],
+    "correctChoiceIds": ["A"],
+    "explanation": "正解は「- [ ] 未完了のタスク」です。タスクリストはチェックボックス付きの行として - [ ] や - [x] を使います。他の選択肢は、別のGit/GitHub機能や該当しない操作を述べているため誤りです。",
+    "references": [
+      {
+        "title": "タスクリストについて",
+        "url": "https://docs.github.com/ja/get-started/writing-on-github/working-with-advanced-formatting/about-task-lists",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["markdown", "task-list"],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D1-052",
+    "domainId": "D1",
+    "questionType": "single-choice",
+    "difficulty": "basic",
+    "question": "GitHub上のコメントで @octocat のようにユーザー名の前に @ を付ける主な効果として最も適切なものはどれですか？",
+    "choices": [
+      { "id": "A", "text": "コミットを自動的に取り消す" },
+      { "id": "B", "text": "特定ユーザーへのメンションとして通知や参照に使われる" },
+      { "id": "C", "text": "リポジトリを非公開にする" },
+      { "id": "D", "text": "Markdownの表を作成する" }
+    ],
+    "correctChoiceIds": ["B"],
+    "explanation": "正解は「特定ユーザーへのメンションとして通知や参照に使われる」です。@ユーザー名はGitHub上でユーザーへのメンションとして使われます。他の選択肢は、別のGit/GitHub機能や該当しない操作を述べているため誤りです。",
+    "references": [
+      {
+        "title": "基本的な書き込みと書式設定の構文",
+        "url": "https://docs.github.com/ja/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["markdown", "mention"],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D1-053",
+    "domainId": "D1",
+    "questionType": "single-choice",
+    "difficulty": "basic",
+    "question": "GitHubのMarkdownで :shipit: のようなコロンで囲んだ名前が使われる用途として最も適切なものはどれですか？",
+    "choices": [
+      { "id": "A", "text": "SSHキーを作成するため" },
+      { "id": "B", "text": "ブランチを削除するため" },
+      { "id": "C", "text": "絵文字を挿入するため" },
+      { "id": "D", "text": "REST APIの認証を省略するため" }
+    ],
+    "correctChoiceIds": ["C"],
+    "explanation": "正解は「絵文字を挿入するため」です。GitHubのMarkdownでは絵文字コードを使って絵文字を表現できます。他の選択肢は、別のGit/GitHub機能や該当しない操作を述べているため誤りです。",
+    "references": [
+      {
+        "title": "基本的な書き込みと書式設定の構文",
+        "url": "https://docs.github.com/ja/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["markdown", "emoji"],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D1-054",
+    "domainId": "D1",
+    "questionType": "single-choice",
+    "difficulty": "standard",
+    "question": "Gistの使いどころとして最も適切なものはどれですか？",
+    "choices": [
+      { "id": "A", "text": "Organizationの全メンバーを一括削除する" },
+      { "id": "B", "text": "リポジトリの全ブランチを自動マージする" },
+      { "id": "C", "text": "GitHub Actionsの実行時間を購入する" },
+      { "id": "D", "text": "短いコードスニペットやメモをGitHub上で作成・共有する" }
+    ],
+    "correctChoiceIds": ["D"],
+    "explanation": "正解は「短いコードスニペットやメモをGitHub上で作成・共有する」です。Gistはコード片やメモの共有に使われ、GitHub CLIでも作成・編集などができます。他の選択肢は、別のGit/GitHub機能や該当しない操作を述べているため誤りです。",
+    "references": [
+      {
+        "title": "Gist の作成",
+        "url": "https://docs.github.com/ja/get-started/writing-on-github/editing-and-sharing-content-with-gists/creating-gists",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["gist", "sharing"],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D1-055",
+    "domainId": "D1",
+    "questionType": "single-choice",
+    "difficulty": "advanced",
+    "question": "SSHでGitHubへ接続する方法をHTTPSと比較した説明として最も適切なものはどれですか？",
+    "choices": [
+      { "id": "A", "text": "SSHキーを使って認証し、リモートリポジトリとの安全な通信に利用できる" },
+      { "id": "B", "text": "ブラウザーからREADMEを読むためだけの方式" },
+      { "id": "C", "text": "Markdownの絵文字を有効にする設定" },
+      { "id": "D", "text": "GitHub Mobile専用の通知方式" }
+    ],
+    "correctChoiceIds": ["A"],
+    "explanation": "正解は「SSHキーを使って認証し、リモートリポジトリとの安全な通信に利用できる」です。SSHはキーに基づく認証でGitHubのリモート操作に利用されます。他の選択肢は、別のGit/GitHub機能や該当しない操作を述べているため誤りです。",
+    "references": [
+      {
+        "title": "GitHubへの接続",
+        "url": "https://docs.github.com/ja/get-started/using-github/connecting-to-github",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["ssh", "https", "clone"],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D1-056",
+    "domainId": "D1",
+    "questionType": "single-choice",
+    "difficulty": "basic",
+    "question": "SSH URLとHTTPS URLのどちらでcloneしても共通して行われることとして最も適切なものはどれですか？",
+    "choices": [
+      { "id": "A", "text": "リポジトリが自動的にPublicへ変更される" },
+      { "id": "B", "text": "リモートリポジトリの内容をローカルに複製して作業を始められる" },
+      { "id": "C", "text": "GitHubの料金プランが更新される" },
+      { "id": "D", "text": "Pull Requestが自動的に作成される" }
+    ],
+    "correctChoiceIds": ["B"],
+    "explanation": "正解は「リモートリポジトリの内容をローカルに複製して作業を始められる」です。SSHとHTTPSは接続・認証方式が異なりますが、cloneの目的はローカルコピー作成です。他の選択肢はcloneの効果ではありません。",
+    "references": [
+      {
+        "title": "リポジトリについて",
+        "url": "https://docs.github.com/ja/repositories/creating-and-managing-repositories/about-repositories",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      },
+      {
+        "title": "GitHubへの接続",
+        "url": "https://docs.github.com/ja/get-started/using-github/connecting-to-github",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["clone", "ssh", "https"],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D1-057",
+    "domainId": "D1",
+    "questionType": "single-choice",
+    "difficulty": "advanced",
+    "question": "GitHubでリリースを作成するときにタグが重要になる理由として最も適切なものはどれですか？",
+    "choices": [
+      { "id": "A", "text": "タグはIssueのラベル色を決めるため" },
+      { "id": "B", "text": "タグはOrganizationの請求先を表すため" },
+      { "id": "C", "text": "リリース対象となる履歴上の特定コミットを示す基準になるため" },
+      { "id": "D", "text": "タグを作ると自動的に全ブランチが削除されるため" }
+    ],
+    "correctChoiceIds": ["C"],
+    "explanation": "正解は「リリース対象となる履歴上の特定コミットを示す基準になるため」です。GitHub ReleasesはGitタグに基づきます。他の選択肢はIssueラベル、請求、ブランチ削除と混同しています。",
+    "references": [
+      {
+        "title": "リリースについて",
+        "url": "https://docs.github.com/ja/repositories/releasing-projects-on-github/about-releases",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["release", "tag"],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D1-058",
+    "domainId": "D1",
+    "questionType": "single-choice",
+    "difficulty": "standard",
+    "question": "GitHub Docsを学習リソースとして使う利点として最も適切なものはどれですか？",
+    "choices": [
+      { "id": "A", "text": "認定試験の合格を自動保証する" },
+      { "id": "B", "text": "すべての有料機能を無料化する" },
+      { "id": "C", "text": "Gitコマンドを実行せずに履歴を消去する" },
+      { "id": "D", "text": "GitHub機能や操作方法の公式情報を確認できる" }
+    ],
+    "correctChoiceIds": ["D"],
+    "explanation": "正解は「GitHub機能や操作方法の公式情報を確認できる」です。GitHub DocsはGitHubの公式ドキュメントで、機能や操作方法の確認に適しています。他の選択肢は、別のGit/GitHub機能や該当しない操作を述べているため誤りです。",
+    "references": [
+      {
+        "title": "GitHubへの接続",
+        "url": "https://docs.github.com/ja/get-started/using-github/connecting-to-github",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["github-docs", "learning"],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D1-059",
+    "domainId": "D1",
+    "questionType": "single-choice",
+    "difficulty": "basic",
+    "question": "GitHub Skillsのようなハンズオン学習を使う目的として最も適切なものはどれですか？",
+    "choices": [
+      { "id": "A", "text": "GitHub FlowやMarkdownなどを実際に操作しながら学ぶ" },
+      { "id": "B", "text": "GitHubの課金プランを自動的に変更する" },
+      { "id": "C", "text": "リポジトリ内の秘密情報を公開する" },
+      { "id": "D", "text": "Gitの履歴をランダムに並べ替える" }
+    ],
+    "correctChoiceIds": ["A"],
+    "explanation": "正解は「GitHub FlowやMarkdownなどを実際に操作しながら学ぶ」です。ハンズオン形式の学習は、GitHubの基本操作を実際に試しながら身につける目的に適しています。他の選択肢は、別のGit/GitHub機能や該当しない操作を述べているため誤りです。",
+    "references": [
+      {
+        "title": "GitHub フロー",
+        "url": "https://docs.github.com/ja/get-started/using-github/github-flow",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      },
+      {
+        "title": "基本的な書き込みと書式設定の構文",
+        "url": "https://docs.github.com/ja/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["github-skills", "learning"],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D1-060",
+    "domainId": "D1",
+    "questionType": "single-choice",
+    "difficulty": "standard",
+    "question": "GitHubで初めて小さな変更を行う利用者にWeb UIが適している理由として最も適切なものはどれですか？",
+    "choices": [
+      { "id": "A", "text": "必ずREST APIの認証ヘッダーを手書きする必要がある" },
+      { "id": "B", "text": "リポジトリをローカルへ同期せず、ブラウザーで編集やコミットを開始できる" },
+      { "id": "C", "text": "GitHub DesktopをインストールしないとWeb UIは使えない" },
+      { "id": "D", "text": "すべての変更がレビューなしでmainへ強制マージされる" }
+    ],
+    "correctChoiceIds": ["B"],
+    "explanation": "正解は「リポジトリをローカルへ同期せず、ブラウザーで編集やコミットを開始できる」です。小規模な変更ではWeb UIによりブラウザーで直接編集・コミットでき、ローカル同期や追加認証設定を減らせます。他の選択肢は、別のGit/GitHub機能や該当しない操作を述べているため誤りです。",
+    "references": [
+      {
+        "title": "GitHubへの接続",
+        "url": "https://docs.github.com/ja/get-started/using-github/connecting-to-github",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": ["web-ui", "beginner"],
     "updatedAt": "2026-05-31"
   }
 ]
