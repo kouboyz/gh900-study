@@ -6,12 +6,26 @@
     "difficulty": "standard",
     "question": "GitHubのFork（フォーク）の主な目的として最も適切なものはどれですか？",
     "choices": [
-      { "id": "A", "text": "他のユーザーのリポジトリを自分のアカウントにコピーし、独立して変更を加えるため" },
-      { "id": "B", "text": "リポジトリを完全に削除するため" },
-      { "id": "C", "text": "リポジトリの可視性をプライベートに変更するため" },
-      { "id": "D", "text": "GitHubのサブスクリプションをアップグレードするため" }
+      {
+        "id": "A",
+        "text": "他のユーザーのリポジトリを自分のアカウントにコピーし、独立して変更を加えるため"
+      },
+      {
+        "id": "B",
+        "text": "リポジトリを完全に削除するため"
+      },
+      {
+        "id": "C",
+        "text": "リポジトリの可視性をプライベートに変更するため"
+      },
+      {
+        "id": "D",
+        "text": "GitHubのサブスクリプションをアップグレードするため"
+      }
     ],
-    "correctChoiceIds": ["A"],
+    "correctChoiceIds": [
+      "A"
+    ],
     "explanation": "Forkは他ユーザーのリポジトリのコピーを自分のGitHubアカウント上に作成する機能です。Forkしたリポジトリで自由に変更を加え、元のリポジトリにPull Requestを送ることでOSSへの貢献が可能になります。",
     "references": [
       {
@@ -21,7 +35,10 @@
         "checkedAt": "2026-05-31"
       }
     ],
-    "tags": ["fork", "open-source"],
+    "tags": [
+      "fork",
+      "open-source"
+    ],
     "updatedAt": "2026-05-31"
   },
   {
@@ -31,12 +48,26 @@
     "difficulty": "standard",
     "question": "InnerSource の説明として最も適切なものはどれですか？",
     "choices": [
-      { "id": "A", "text": "Organizationのプライベートリポジトリを外部に公開する機能" },
-      { "id": "B", "text": "企業内部でOSSの開発手法（Pull Request・Issues・透明な貢献）を取り入れる実践" },
-      { "id": "C", "text": "GitHub Marketplaceでアプリを購入する仕組み" },
-      { "id": "D", "text": "GitHub Copilotのコード補完をチーム全体で共有する機能" }
+      {
+        "id": "A",
+        "text": "Organizationのプライベートリポジトリを外部に公開する機能"
+      },
+      {
+        "id": "B",
+        "text": "企業内部でOSSの開発手法（Pull Request・Issues・透明な貢献）を取り入れる実践"
+      },
+      {
+        "id": "C",
+        "text": "GitHub Marketplaceでアプリを購入する仕組み"
+      },
+      {
+        "id": "D",
+        "text": "GitHub Copilotのコード補完をチーム全体で共有する機能"
+      }
     ],
-    "correctChoiceIds": ["B"],
+    "correctChoiceIds": [
+      "B"
+    ],
     "explanation": "InnerSourceはOSS開発の慣行（オープンな貢献・Pull Requestレビュー・Issues管理・ドキュメント文化）を企業内部のプロジェクトに適用する手法です。組織横断的なコラボレーションと知識共有を促進します。",
     "references": [
       {
@@ -46,7 +77,348 @@
         "checkedAt": "2026-05-31"
       }
     ],
-    "tags": ["innersource", "open-source"],
+    "tags": [
+      "innersource",
+      "open-source"
+    ],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D7-003",
+    "domainId": "D7",
+    "questionType": "single-choice",
+    "difficulty": "basic",
+    "question": "オープンソースソフトウェア（OSS）に貢献する際の一般的なワークフローとして最も適切なものはどれですか？",
+    "choices": [
+      {
+        "id": "A",
+        "text": "元リポジトリに直接コミットしてから Pull Request を送る"
+      },
+      {
+        "id": "B",
+        "text": "リポジトリを Fork → ブランチを作成 → 変更をコミット → Fork 元に Pull Request を送る"
+      },
+      {
+        "id": "C",
+        "text": "Issue を作成してから元リポジトリのオーナーに SSH アクセスを依頼する"
+      },
+      {
+        "id": "D",
+        "text": "リポジトリを Clone してローカルで変更後、元リポジトリに直接 Push する"
+      }
+    ],
+    "correctChoiceIds": [
+      "B"
+    ],
+    "explanation": "OSS 貢献の標準的なフローは「Fork → ブランチ作成 → 変更コミット → Fork から元リポジトリへの Pull Request」です。直接 Push する権限がない外部コントリビューターは Fork を通じて貢献します。",
+    "references": [
+      {
+        "title": "プロジェクトに貢献する",
+        "url": "https://docs.github.com/ja/get-started/exploring-projects-on-github/contributing-to-a-project",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": [
+      "fork",
+      "open-source",
+      "contribution"
+    ],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D7-004",
+    "domainId": "D7",
+    "questionType": "single-choice",
+    "difficulty": "basic",
+    "question": "GitHub Marketplace の説明として最も適切なものはどれですか？",
+    "choices": [
+      {
+        "id": "A",
+        "text": "GitHub の有料プランを購入するオンラインショップ"
+      },
+      {
+        "id": "B",
+        "text": "GitHub と連携するアプリ・Actions・ツールを探して導入できるプラットフォーム"
+      },
+      {
+        "id": "C",
+        "text": "GitHub が販売するハードウェア製品のカタログ"
+      },
+      {
+        "id": "D",
+        "text": "OSS リポジトリのスポンサーシップを管理する機能"
+      }
+    ],
+    "correctChoiceIds": [
+      "B"
+    ],
+    "explanation": "GitHub Marketplace は CI/CD・コードレビュー・セキュリティ・プロジェクト管理など様々なカテゴリの GitHub Apps や Actions を探して導入できる場所です。無料・有料のツールがあり、GitHub と認証連携して利用できます。",
+    "references": [
+      {
+        "title": "リポジトリをフォークする",
+        "url": "https://docs.github.com/ja/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": [
+      "marketplace"
+    ],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D7-005",
+    "domainId": "D7",
+    "questionType": "single-choice",
+    "difficulty": "standard",
+    "question": "GitHub Sponsors の説明として最も適切なものはどれですか？",
+    "choices": [
+      {
+        "id": "A",
+        "text": "GitHub が OSS 開発者に広告収益を分配する仕組み"
+      },
+      {
+        "id": "B",
+        "text": "個人・組織が OSS 開発者やプロジェクトを金銭的に支援できる機能"
+      },
+      {
+        "id": "C",
+        "text": "企業が GitHub のエンタープライズプランを契約するための申請フォーム"
+      },
+      {
+        "id": "D",
+        "text": "GitHub Actions の実行コストを他ユーザーに負担してもらう機能"
+      }
+    ],
+    "correctChoiceIds": [
+      "B"
+    ],
+    "explanation": "GitHub Sponsors は OSS 開発者・チーム・プロジェクトを月次または単発の金銭的サポートで支援できる機能です。スポンサーは開発者のプロフィールや README に表示されます。GitHub は手数料を取らないため支援の全額が開発者に届きます。",
+    "references": [
+      {
+        "title": "プロジェクトに貢献する",
+        "url": "https://docs.github.com/ja/get-started/exploring-projects-on-github/contributing-to-a-project",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": [
+      "sponsors",
+      "open-source"
+    ],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D7-006",
+    "domainId": "D7",
+    "questionType": "single-choice",
+    "difficulty": "standard",
+    "question": "Fork とテンプレートリポジトリ（Template repository）の違いとして最も適切なものはどれですか？",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Fork はコミット履歴を引き継ぐが、テンプレートから作成したリポジトリは履歴を引き継がない"
+      },
+      {
+        "id": "B",
+        "text": "Fork はパブリックリポジトリのみ可能で、テンプレートはプライベートリポジトリでも使える"
+      },
+      {
+        "id": "C",
+        "text": "Fork とテンプレートは全く同じ機能を指す別名である"
+      },
+      {
+        "id": "D",
+        "text": "テンプレートから作成したリポジトリは元のリポジトリと自動同期される"
+      }
+    ],
+    "correctChoiceIds": [
+      "A"
+    ],
+    "explanation": "Fork は元リポジトリとのコミット履歴・関係性を維持し、Pull Request で上流に貢献することを前提とします。テンプレートリポジトリから作成されるリポジトリはコミット履歴を持たない新規スタートで、上流への貢献ではなくプロジェクト雛形の再利用が目的です。",
+    "references": [
+      {
+        "title": "リポジトリをフォークする",
+        "url": "https://docs.github.com/ja/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": [
+      "fork",
+      "template",
+      "repository"
+    ],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D7-007",
+    "domainId": "D7",
+    "questionType": "single-choice",
+    "difficulty": "advanced",
+    "question": "InnerSource を実践する際にリポジトリを Internal 可視性に設定する主な理由はどれですか？",
+    "choices": [
+      {
+        "id": "A",
+        "text": "リポジトリをインターネット上に公開してより多くの貢献者を集めるため"
+      },
+      {
+        "id": "B",
+        "text": "社内の全メンバーがコードを参照・貢献できるようにしながら、社外への公開は防ぐため"
+      },
+      {
+        "id": "C",
+        "text": "リポジトリへのアクセスをオーナーのみに制限するため"
+      },
+      {
+        "id": "D",
+        "text": "GitHub Actions の実行コストを削減するため"
+      }
+    ],
+    "correctChoiceIds": [
+      "B"
+    ],
+    "explanation": "Internal 可視性は Enterprise 内の全認証済みメンバーが閲覧・フォーク・貢献できる状態を作りながら、外部への公開は防ぎます。これにより社内のコード共有・横断的な貢献・知識の民主化が実現し、InnerSource の基盤として機能します。",
+    "references": [
+      {
+        "title": "リポジトリの可視性を設定する",
+        "url": "https://docs.github.com/ja/repositories/managing-your-repositorys-settings-and-features/managing-repository-settings/setting-repository-visibility",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": [
+      "innersource",
+      "repository",
+      "visibility"
+    ],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D7-008",
+    "domainId": "D7",
+    "questionType": "single-choice",
+    "difficulty": "basic",
+    "question": "GitHub でリポジトリに Star（スター）を付ける主な目的はどれですか？",
+    "choices": [
+      {
+        "id": "A",
+        "text": "リポジトリのオーナーに課金するため"
+      },
+      {
+        "id": "B",
+        "text": "興味のあるリポジトリをブックマークし、後から見つけやすくするため"
+      },
+      {
+        "id": "C",
+        "text": "リポジトリのコントリビューターとして登録されるため"
+      },
+      {
+        "id": "D",
+        "text": "リポジトリのコードを自動でフォークするため"
+      }
+    ],
+    "correctChoiceIds": [
+      "B"
+    ],
+    "explanation": "Star はリポジトリをブックマークする機能です。スターしたリポジトリはプロフィールの「Stars」タブから一覧でき、後から見つけやすくなります。また Star 数はリポジトリの人気・信頼性の目安にもなります。",
+    "references": [
+      {
+        "title": "スターを付けてリポジトリをブックマークする",
+        "url": "https://docs.github.com/ja/get-started/exploring-projects-on-github/saving-repositories-with-stars",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": [
+      "star",
+      "community"
+    ],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D7-009",
+    "domainId": "D7",
+    "questionType": "single-choice",
+    "difficulty": "basic",
+    "question": "GitHub で他のユーザーをフォローすると何が起きますか？",
+    "choices": [
+      {
+        "id": "A",
+        "text": "そのユーザーのリポジトリがすべて自動でフォークされる"
+      },
+      {
+        "id": "B",
+        "text": "フォローしたユーザーの公開アクティビティ（Star・フォーク・コントリビューションなど）がダッシュボードに表示される"
+      },
+      {
+        "id": "C",
+        "text": "フォローしたユーザーに自分のリポジトリへのアクセス権が付与される"
+      },
+      {
+        "id": "D",
+        "text": "フォローしたユーザーの Issue に自動的にアサインされる"
+      }
+    ],
+    "correctChoiceIds": [
+      "B"
+    ],
+    "explanation": "GitHub でユーザーをフォローすると、そのユーザーの公開アクティビティ（リポジトリへの Star・新規リポジトリ作成・コントリビューションなど）が自分のダッシュボードフィードに表示されます。OSS コミュニティの動向を把握するのに役立ちます。",
+    "references": [
+      {
+        "title": "人をフォローする",
+        "url": "https://docs.github.com/ja/get-started/exploring-projects-on-github/following-people",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": [
+      "follow",
+      "community"
+    ],
+    "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D7-010",
+    "domainId": "D7",
+    "questionType": "single-choice",
+    "difficulty": "standard",
+    "question": "Fork したリポジトリを元のリポジトリ（上流）の最新状態に同期する方法として正しいものはどれですか？",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Fork を一度削除して再度 Fork し直す"
+      },
+      {
+        "id": "B",
+        "text": "GitHub の「Sync fork」ボタンまたは git コマンドで上流の変更を取り込む"
+      },
+      {
+        "id": "C",
+        "text": "上流のオーナーに自分の Fork へ push してもらう"
+      },
+      {
+        "id": "D",
+        "text": "Fork したリポジトリは上流と自動同期されるため手動操作は不要"
+      }
+    ],
+    "correctChoiceIds": [
+      "B"
+    ],
+    "explanation": "GitHub の Web UI にある「Sync fork」ボタンをクリックするか、ローカルで上流リモートを追加して `git fetch upstream → git merge upstream/main` を実行することで Fork を上流と同期できます。OSS に継続貢献する際は定期的な同期が重要です。",
+    "references": [
+      {
+        "title": "フォークを同期する",
+        "url": "https://docs.github.com/ja/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-05-31"
+      }
+    ],
+    "tags": [
+      "fork",
+      "sync"
+    ],
     "updatedAt": "2026-05-31"
   }
 ]
