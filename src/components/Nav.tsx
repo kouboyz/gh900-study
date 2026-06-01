@@ -1,3 +1,5 @@
+import { APP_CONFIG } from '../config/app'
+
 type Props = {
   onHome: () => void
   showBack: boolean
@@ -12,7 +14,7 @@ export function Nav({ onHome, showBack, quizInfo }: Props) {
           onClick={onHome}
           className="text-sm font-medium tracking-widest uppercase hover:text-gray-500 transition-colors cursor-pointer"
         >
-          gh-900
+          {APP_CONFIG.appShortName}
         </button>
         <div className="flex items-center gap-6 text-xs text-gray-400">
           {showBack && (

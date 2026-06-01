@@ -1,7 +1,8 @@
 import { useState, useCallback } from 'react'
 import type { AnswerHistory } from '../types/quiz'
+import { APP_CONFIG } from '../config/app'
 
-const LS_KEY = 'gh900-history-v1'
+const LS_KEY = APP_CONFIG.storageKey
 
 function readHistory(): AnswerHistory {
   try {
