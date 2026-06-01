@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
-  base: '/gh900-foundations-trainer/',
+  base: '/gh900-study/',
   plugins: [
     react(),
     tailwindcss(),
