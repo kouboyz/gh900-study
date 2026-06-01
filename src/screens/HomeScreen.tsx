@@ -1,7 +1,7 @@
 import type { AnswerHistory } from '../types/quiz'
 import { DOMAINS } from '../data/domains'
 import { QUESTIONS } from '../data/loader'
-import { OFFICIAL_LINKS } from '../data/officialLinks'
+import { APP_CONFIG, buildShareText } from '../config/app'
 import { DomainCard } from '../components/DomainCard'
 import { ProgressBar } from '../components/ProgressBar'
 import { ShareButtons } from '../components/ShareButtons'
@@ -18,17 +18,17 @@ export function HomeScreen({ history, onStartDomain }: Props) {
   const overallPct = answered > 0 ? Math.round((correct / answered) * 100) : null
   const progressPct = totalQ > 0 ? Math.round((answered / totalQ) * 100) : 0
 
-  const shareText = `GH-900 Study で学習中！\n${answered}/${totalQ}問回答済み、正答率 ${overallPct}%`
+  const shareText = overallPct !== null ? buildShareText(answered, totalQ, overallPct) : ''
 
   return (
     <div className="animate-[fadeIn_0.25s_ease]">
       <div className="mb-12">
-        <p className="text-xs tracking-widest uppercase text-gray-400 mb-2">GitHub Foundations</p>
+        <p className="text-xs tracking-widest uppercase text-gray-400 mb-2">{APP_CONFIG.examLabel}</p>
         <h1 className="text-2xl font-light tracking-tight mb-3">
-          GH-900 Study <span className="text-sm text-gray-400 font-normal">β</span>
+          {APP_CONFIG.appName} <span className="text-sm text-gray-400 font-normal">β</span>
         </h1>
         <p className="text-sm text-gray-500 leading-relaxed">
-          GitHub Foundations 認定試験（GH-900）の学習アプリです。7つのドメインから問題を選んで学習できます。学習履歴はブラウザに保存されます。
+          {APP_CONFIG.description}
         </p>
       </div>
 
@@ -75,10 +75,11 @@ export function HomeScreen({ history, onStartDomain }: Props) {
       </div>
 
       {/* Official Resources */}
+      {APP_CONFIG.officialLinks.length > 0 && (
       <div>
         <p className="text-xs tracking-widest uppercase text-gray-400 mb-6">Official Resources</p>
         <div className="divide-y divide-gray-100">
-          {OFFICIAL_LINKS.map(link => (
+          {APP_CONFIG.officialLinks.map(link => (
             <a
               key={link.url}
               href={link.url}
@@ -102,6 +103,7 @@ export function HomeScreen({ history, onStartDomain }: Props) {
           ))}
         </div>
       </div>
+      )}
     </div>
   )
 }
