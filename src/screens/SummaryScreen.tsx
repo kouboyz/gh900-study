@@ -1,12 +1,22 @@
 import type { QuizAnswer } from '../types/quiz'
 import { DOMAINS } from '../data/domains'
 import { ProgressBar } from '../components/ProgressBar'
+import { ShareButtons } from '../components/ShareButtons'
 
 type Props = {
   answers: QuizAnswer[]
   onRetry: () => void
   onReviewWrong: () => void
   onHome: () => void
+}
+
+function buildShareText(pct: number, correct: number, total: number, domainIds: string[]): string {
+  const score = `${pct}%（${correct}/${total}問）`
+  if (domainIds.length === 1) {
+    const d = DOMAINS.find(d => d.id === domainIds[0])
+    return `GH-900 Study Domain${d?.id.replace('D', '')}（${d?.name}）を ${score} で完了！`
+  }
+  return `GH-900 Study 全${domainIds.length}ドメインを ${score} で完了！`
 }
 
 export function SummaryScreen({ answers, onRetry, onReviewWrong, onHome }: Props) {
@@ -54,6 +64,12 @@ export function SummaryScreen({ answers, onRetry, onReviewWrong, onHome }: Props
             )
           })}
         </div>
+      </div>
+
+      {/* Share */}
+      <div className="mb-8">
+        <p className="text-xs tracking-widest uppercase text-gray-400 mb-4">Share</p>
+        <ShareButtons text={buildShareText(pct, correct, total, usedDomainIds)} />
       </div>
 
       {/* Actions */}

@@ -4,6 +4,7 @@ import { QUESTIONS } from '../data/loader'
 import { OFFICIAL_LINKS } from '../data/officialLinks'
 import { DomainCard } from '../components/DomainCard'
 import { ProgressBar } from '../components/ProgressBar'
+import { ShareButtons } from '../components/ShareButtons'
 
 type Props = {
   history: AnswerHistory
@@ -17,15 +18,17 @@ export function HomeScreen({ history, onStartDomain }: Props) {
   const overallPct = answered > 0 ? Math.round((correct / answered) * 100) : null
   const progressPct = totalQ > 0 ? Math.round((answered / totalQ) * 100) : 0
 
+  const shareText = `GH-900 Study で学習中！\n${answered}/${totalQ}問回答済み、正答率 ${overallPct}%`
+
   return (
     <div className="animate-[fadeIn_0.25s_ease]">
       <div className="mb-12">
         <p className="text-xs tracking-widest uppercase text-gray-400 mb-2">GitHub Foundations</p>
         <h1 className="text-2xl font-light tracking-tight mb-3">
-          GH-900 Trainer <span className="text-sm text-gray-400 font-normal">β</span>
+          GH-900 Study <span className="text-sm text-gray-400 font-normal">β</span>
         </h1>
         <p className="text-sm text-gray-500 leading-relaxed">
-          GH-900 認定試験の対策問題集です。6つのドメインから問題を選んで学習できます。学習履歴はブラウザに保存されます。
+          GitHub Foundations 認定試験（GH-900）の学習アプリです。7つのドメインから問題を選んで学習できます。学習履歴はブラウザに保存されます。
         </p>
       </div>
 
@@ -38,7 +41,12 @@ export function HomeScreen({ history, onStartDomain }: Props) {
           </p>
         </div>
         <ProgressBar value={progressPct} />
-        <p className="text-xs text-gray-400 mt-1.5">{answered} / {totalQ} 問回答済み</p>
+        <div className="flex items-center justify-between mt-1.5">
+          <p className="text-xs text-gray-400">{answered} / {totalQ} 問回答済み</p>
+          {overallPct !== null && (
+            <ShareButtons text={shareText} layout="icon" />
+          )}
+        </div>
       </div>
 
       {/* Domain list */}
