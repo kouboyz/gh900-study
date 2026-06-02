@@ -1,4 +1,5 @@
 import type { AnswerHistory } from '../types/quiz'
+import type { QuizSession } from '../hooks/useQuizSession'
 import { DOMAINS } from '../data/domains'
 import { QUESTIONS } from '../data/loader'
 import { APP_CONFIG, buildShareText } from '../config/app'
@@ -9,9 +10,11 @@ import { ShareButtons } from '../components/ShareButtons'
 type Props = {
   history: AnswerHistory
   onStartDomain: (domainId: string | null) => void
+  savedSession: QuizSession | null
+  onResumeSession: () => void
 }
 
-export function HomeScreen({ history, onStartDomain }: Props) {
+export function HomeScreen({ history, onStartDomain, savedSession, onResumeSession }: Props) {
   const totalQ = QUESTIONS.length
   const answered = Object.keys(history).length
   const correct = Object.values(history).filter(h => h.lastCorrect).length
@@ -31,6 +34,25 @@ export function HomeScreen({ history, onStartDomain }: Props) {
           {APP_CONFIG.description}
         </p>
       </div>
+
+      {/* Resume banner */}
+      {savedSession && (
+        <div className="mb-8 flex items-center justify-between gap-4 rounded border border-gray-200 px-4 py-3">
+          <div className="min-w-0">
+            <p className="text-xs text-gray-400 mb-0.5">前回の続きがあります</p>
+            <p className="text-sm text-gray-700">
+              {savedSession.index + 1} / {savedSession.questionIds.length} 問目
+              {savedSession.domainId ? `（${savedSession.domainId}）` : '（全ドメイン）'}
+            </p>
+          </div>
+          <button
+            onClick={onResumeSession}
+            className="shrink-0 text-sm px-4 py-2 bg-gray-900 text-white rounded hover:bg-gray-700 transition-colors cursor-pointer"
+          >
+            再開
+          </button>
+        </div>
+      )}
 
       {/* Overall Progress */}
       <div className="mb-10">
