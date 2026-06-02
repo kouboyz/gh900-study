@@ -1,6 +1,6 @@
 export type Difficulty = 'basic' | 'standard' | 'advanced'
 
-export type QuestionType = 'single-choice'
+export type QuestionType = 'single-choice' | 'multiple-choice'
 
 export interface Choice {
   id: string
@@ -49,6 +49,6 @@ export type AnswerHistory = Record<string, AnswerRecord>
 export interface QuizAnswer {
   questionId: string
   domainId: string
-  selectedId: string
+  selectedIds: string[]
   isCorrect: boolean
 }

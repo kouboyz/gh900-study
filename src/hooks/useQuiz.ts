@@ -17,15 +17,18 @@ export function useQuiz() {
     setQuiz({ questions: shuffle(questions), index: 0, answers: [] })
   }, [])
 
-  const answer = useCallback((selectedId: string, saveAnswer: (id: string, correct: boolean) => void) => {
+  const answer = useCallback((selectedIds: string[], saveAnswer: (id: string, correct: boolean) => void) => {
     setQuiz(prev => {
       const q = prev.questions[prev.index]
       if (!q) return prev
-      const isCorrect = q.correctChoiceIds.includes(selectedId)
+      const correct = q.correctChoiceIds
+      const isCorrect =
+        selectedIds.length === correct.length &&
+        selectedIds.every(id => correct.includes(id))
       saveAnswer(q.id, isCorrect)
       return {
         ...prev,
-        answers: [...prev.answers, { questionId: q.id, domainId: q.domainId, selectedId, isCorrect }],
+        answers: [...prev.answers, { questionId: q.id, domainId: q.domainId, selectedIds, isCorrect }],
       }
     })
   }, [])
