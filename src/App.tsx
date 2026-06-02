@@ -109,6 +109,9 @@ export function App() {
         showBack={screen !== 'home'}
         quizInfo={quizInfo}
       />
+      <footer className="fixed bottom-0 left-0 right-0 text-center text-xs text-gray-400 py-2 bg-white/80">
+        © 2026 kouboyz
+      </footer>
       <main className="max-w-2xl mx-auto px-6 pt-24 pb-24">
         {screen === 'home' && (
           <HomeScreen
