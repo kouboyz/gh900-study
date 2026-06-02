@@ -125,41 +125,16 @@
     "updatedAt": "2026-05-31"
   },
   {
-    "id": "D6-006",
-    "domainId": "D6",
-    "questionType": "single-choice",
-    "difficulty": "standard",
-    "question": "Organization のロール（役割）のうち、メンバーの追加・削除やリポジトリの作成・設定変更など最も広い権限を持つのはどれですか？",
-    "choices": [
-      { "id": "A", "text": "Member（メンバー）" },
-      { "id": "B", "text": "Owner（オーナー）" },
-      { "id": "C", "text": "Billing Manager（支払いマネージャー）" },
-      { "id": "D", "text": "Security Manager（セキュリティマネージャー）" }
-    ],
-    "correctChoiceIds": ["B"],
-    "explanation": "Organization の Owner はすべての管理権限を持ちます。メンバーの招待・削除・ロール変更、リポジトリ作成・設定変更、支払い設定、Organization 自体の削除なども可能です。最小権限の原則に従い Owner は最小人数に限定することが推奨されます。",
-    "references": [
-      {
-        "title": "組織の役割",
-        "url": "https://docs.github.com/ja/organizations/managing-peoples-access-to-your-organization-with-roles/roles-in-an-organization",
-        "source": "GitHub Docs",
-        "checkedAt": "2026-05-31"
-      }
-    ],
-    "tags": ["organization", "roles", "security"],
-    "updatedAt": "2026-05-31"
-  },
-  {
     "id": "D6-007",
     "domainId": "D6",
     "questionType": "single-choice",
     "difficulty": "standard",
     "question": "GitHub の Secret scanning（シークレットスキャン）の主な目的はどれですか？",
     "choices": [
-      { "id": "A", "text": "リポジトリ内のコードに含まれるバグを自動的に修正する" },
-      { "id": "B", "text": "コードやコミット履歴に誤ってコミットされた APIキー・トークン・パスワードなどを検出する" },
-      { "id": "C", "text": "不審なユーザーのアカウントを自動停止する" },
-      { "id": "D", "text": "リポジトリへの不正アクセスをリアルタイムに遮断する" }
+      { "id": "A", "text": "依存パッケージの脆弱性を検出して更新PRを自動作成する（Dependabotの役割）" },
+      { "id": "B", "text": "コードに誤ってコミットされたAPIキーや認証情報などのシークレットを検出・通知する" },
+      { "id": "C", "text": "コードの潜在的なセキュリティ脆弱性（SQLインジェクション等）をCodeQLで静的解析する（Code scanningの役割）" },
+      { "id": "D", "text": "リポジトリへの不正アクセスを監視してアラートを送信する" }
     ],
     "correctChoiceIds": ["B"],
     "explanation": "Secret scanning はコードやコミット履歴に含まれる APIキー・トークン・資格情報などのシークレットを自動検出する機能です。検出された場合はアラートを発し、サービスプロバイダーへの自動通知（partner pattern）も行います。誤コミットによる認証情報漏洩を防ぎます。",
@@ -172,7 +147,7 @@
       }
     ],
     "tags": ["secret-scanning", "security"],
-    "updatedAt": "2026-05-31"
+    "updatedAt": "2026-06-02"
   },
   {
     "id": "D6-008",
@@ -254,25 +229,25 @@
     "domainId": "D6",
     "questionType": "single-choice",
     "difficulty": "standard",
-    "question": "Organization のオーナーがメンバーに 2 要素認証（2FA）を必須化する主な目的はどれですか？",
+    "question": "Organization のオーナーが 2 要素認証（2FA）をメンバーに必須化しました。この設定が適用されないユーザーはどれですか？",
     "choices": [
-      { "id": "A", "text": "Organization のすべてのリポジトリを自動的に Public にするため" },
-      { "id": "B", "text": "Organization リソースへのアクセス時に、パスワードだけに依存しない追加の本人確認を強制するため" },
-      { "id": "C", "text": "GitHub Actions の実行時間を増やすため" },
-      { "id": "D", "text": "Issue と Pull Request の作成を禁止するため" }
+      { "id": "A", "text": "Organization のメンバー" },
+      { "id": "B", "text": "Organization のオーナー" },
+      { "id": "C", "text": "外部コラボレーター（Outside Collaborators）" },
+      { "id": "D", "text": "Billing Manager" }
     ],
-    "correctChoiceIds": ["B"],
-    "explanation": "2FA を必須化すると、Organization のリソースへアクセスするメンバーに追加の認証要素を求められます。パスワード漏えい時の不正アクセスリスクを下げるための管理機能です。",
+    "correctChoiceIds": ["C"],
+    "explanation": "2FA 必須化ポリシーは Organization のメンバーとオーナーに適用されますが、外部コラボレーターには適用されません。外部コラボレーターの 2FA 状況は各自のアカウント設定に委ねられ、Organization は強制できません。そのため、機密リポジトリへの外部コラボレーターのアクセスには別途注意が必要です。",
     "references": [
       {
-        "title": "GitHub への認証について",
-        "url": "https://docs.github.com/ja/authentication/keeping-your-account-and-data-secure/about-authentication-to-github",
+        "title": "Organization で 2 要素認証を要求する",
+        "url": "https://docs.github.com/ja/organizations/keeping-your-organization-secure/managing-two-factor-authentication-for-your-organization/requiring-two-factor-authentication-in-your-organization",
         "source": "GitHub Docs",
-        "checkedAt": "2026-05-31"
+        "checkedAt": "2026-06-02"
       }
     ],
-    "tags": ["2fa", "organization", "authentication"],
-    "updatedAt": "2026-05-31"
+    "tags": ["2fa", "organization", "outside-collaborators"],
+    "updatedAt": "2026-06-02"
   },
   {
     "id": "D6-012",
@@ -579,31 +554,25 @@
     "domainId": "D6",
     "questionType": "single-choice",
     "difficulty": "standard",
-    "question": "依存関係グラフと Dependabot alerts / updates の関係として正しいものはどれですか？",
+    "question": "Dependabot の説明として正しいものはどれですか？",
     "choices": [
-      { "id": "A", "text": "依存関係グラフは依存パッケージを把握する基盤で、Dependabot alerts は脆弱性を通知し、security updates や version updates は更新 PR を作成できる" },
-      { "id": "B", "text": "依存関係グラフはコミット署名だけを検証し、Dependabot は SSH キーを削除する" },
-      { "id": "C", "text": "version updates は GitHub アカウントのパスワードを変更する" },
-      { "id": "D", "text": "Dependabot はリポジトリの可視性を Public に変更する機能である" }
+      { "id": "A", "text": "依存パッケージに既知の脆弱性が見つかると alerts で通知し、security updates と version updates によって修正・更新の PR を自動作成する" },
+      { "id": "B", "text": "Code scanning と同じ機能で、コードの静的解析によってセキュリティ脆弱性（SQLインジェクション等）を検出する" },
+      { "id": "C", "text": "Secret scanning と同じ機能で、コードに誤ってコミットされた API キーなどの認証情報を検出する" },
+      { "id": "D", "text": "リポジトリへの不正アクセスを検知してリポジトリを自動的に Private に変更する" }
     ],
     "correctChoiceIds": ["A"],
-    "explanation": "依存関係グラフはリポジトリの依存関係を把握する基盤です。Dependabot alerts は既知の脆弱性を通知し、security updates は修正用 PR、version updates は通常のバージョン追随用 PR を作成できます。",
+    "explanation": "Dependabot は依存関係のセキュリティと最新化を担う機能です。alerts は依存パッケージの既知脆弱性（CVE等）を通知し、security updates は脆弱性を修正するバージョンへの更新 PR を、version updates は定期的に最新バージョンへの更新 PR を自動作成します。Code scanning はコード自体の脆弱性を静的解析で検出する別機能、Secret scanning はコードに含まれるシークレットを検出する別機能です。",
     "references": [
-      {
-        "title": "依存関係グラフについて",
-        "url": "https://docs.github.com/ja/code-security/supply-chain-security/understanding-your-software-supply-chain/about-the-dependency-graph",
-        "source": "GitHub Docs",
-        "checkedAt": "2026-05-31"
-      },
       {
         "title": "Dependabot アラートについて",
         "url": "https://docs.github.com/ja/code-security/dependabot/dependabot-alerts/about-dependabot-alerts",
         "source": "GitHub Docs",
-        "checkedAt": "2026-05-31"
+        "checkedAt": "2026-06-02"
       }
     ],
-    "tags": ["dependency-graph", "dependabot", "supply-chain"],
-    "updatedAt": "2026-05-31"
+    "tags": ["dependabot", "supply-chain", "security"],
+    "updatedAt": "2026-06-02"
   },
   {
     "id": "D6-025",
@@ -612,10 +581,10 @@
     "difficulty": "standard",
     "question": "secret scanning の push protection が有効な場合の動作として正しいものはどれですか？",
     "choices": [
-      { "id": "A", "text": "シークレットを含む可能性があるプッシュをリポジトリに到達する前にブロックできる" },
-      { "id": "B", "text": "すべてのシークレットを自動的に公開 Wiki へ移動する" },
-      { "id": "C", "text": "リポジトリの Issue を自動的に削除する" },
-      { "id": "D", "text": "依存関係のメジャーバージョンを必ず上げる" }
+      { "id": "A", "text": "シークレットが検出されてもpushはブロックされず、後からアラートで通知される" },
+      { "id": "B", "text": "シークレットが含まれるコミットのpushをブロックし、開発者に警告・回避の選択肢を提示する" },
+      { "id": "C", "text": "push protectionはパブリックリポジトリにのみ適用され、プライベートリポジトリでは動作しない" },
+      { "id": "D", "text": "push protectionが有効なリポジトリへのpushにはOrganizationオーナーの承認が必要になる" }
     ],
     "correctChoiceIds": ["A"],
     "explanation": "Push protection は secret scanning の機能で、トークンなどのハードコードされた資格情報を含むプッシュを検出し、リポジトリへ取り込まれる前にブロックできます。",
@@ -628,7 +597,7 @@
       }
     ],
     "tags": ["secret-scanning", "push-protection", "secrets"],
-    "updatedAt": "2026-05-31"
+    "updatedAt": "2026-06-02"
   },
   {
     "id": "D6-026",
@@ -689,52 +658,58 @@
   {
     "id": "D6-028",
     "domainId": "D6",
-    "questionType": "single-choice",
+    "questionType": "multiple-choice",
     "difficulty": "standard",
-    "question": "GitHub Advanced Security 製品に含まれる機能の組み合わせとして正しいものはどれですか？",
+    "question": "GitHub Advanced Security 製品に含まれる機能として正しいものを2つ選んでください。",
     "choices": [
-      { "id": "A", "text": "GitHub Pages の独自ドメイン登録と Wiki の自動生成" },
-      { "id": "B", "text": "Issue テンプレートの翻訳と Projects の列作成" },
-      { "id": "C", "text": "Secret Protection の secret scanning / push protection や、Code Security の code scanning など" },
-      { "id": "D", "text": "Organization の名前変更だけを行う管理ツール" }
+      { "id": "A", "text": "Code scanning（CodeQL によるセキュリティ脆弱性の静的解析）" },
+      { "id": "B", "text": "SAML SSO による Organization アクセスの IdP 認証" },
+      { "id": "C", "text": "Secret scanning と push protection（シークレットの検出とプッシュ前のブロック）" },
+      { "id": "D", "text": "Organization の audit log（監査ログ）の閲覧" }
     ],
-    "correctChoiceIds": ["C"],
-    "explanation": "GitHub Advanced Security 関連製品には、Secret Protection として secret scanning や push protection、Code Security として code scanning や依存関係レビューなどが含まれます。",
+    "correctChoiceIds": ["A", "C"],
+    "explanation": "GitHub Advanced Security 関連製品は、Code Security（code scanning・CodeQL・dependency review）と Secret Protection（secret scanning・push protection・secret scanning alerts）で構成されます。SAML SSO は GitHub Enterprise の認証機能、audit log は GitHub Enterprise Cloud / Organization のガバナンス機能であり、Advanced Security とは別の機能です。",
     "references": [
       {
         "title": "GitHub Advanced Security について",
         "url": "https://docs.github.com/ja/get-started/learning-about-github/about-github-advanced-security",
         "source": "GitHub Docs",
-        "checkedAt": "2026-05-31"
+        "checkedAt": "2026-06-02"
       }
     ],
-    "tags": ["github-advanced-security", "secret-protection", "code-security"],
-    "updatedAt": "2026-05-31"
+    "tags": ["github-advanced-security", "code-scanning", "secret-scanning"],
+    "updatedAt": "2026-06-02"
   },
   {
     "id": "D6-029",
     "domainId": "D6",
     "questionType": "single-choice",
-    "difficulty": "basic",
-    "question": "SECURITY.md をリポジトリに追加する主な目的はどれですか？",
+    "difficulty": "standard",
+    "question": "パブリックリポジトリに SECURITY.md（セキュリティポリシー）を追加すると、GitHub 上で自動的に有効になる機能はどれですか？",
     "choices": [
-      { "id": "A", "text": "プロジェクト内のセキュリティ脆弱性を報告する方法や手順を示すため" },
-      { "id": "B", "text": "ライセンスファイルを自動生成するため" },
-      { "id": "C", "text": "すべてのブランチを削除できるようにするため" },
-      { "id": "D", "text": "GitHub Copilot の利用料金を管理するため" }
+      { "id": "A", "text": "リポジトリへのすべての Push が自動的にブロックされる" },
+      { "id": "B", "text": "private vulnerability reporting（非公開の脆弱性報告）ボタンがリポジトリに表示される" },
+      { "id": "C", "text": "リポジトリの可視性が自動的に Internal に変更される" },
+      { "id": "D", "text": "GitHub Dependabot が週次で脆弱性スキャンを実行する" }
     ],
-    "correctChoiceIds": ["A"],
-    "explanation": "SECURITY.md などのセキュリティポリシーを追加すると、利用者や研究者に脆弱性の報告方法、連絡先、サポート対象バージョンなどを伝えられます。",
+    "correctChoiceIds": ["B"],
+    "explanation": "SECURITY.md を追加すると、新しい Issue を作成するリンクの代わりに、セキュリティポリシーへのリンクが表示されます。また、private vulnerability reporting が有効な場合、リポジトリの Security タブに「脆弱性を報告する」ボタンが表示され、外部の研究者が安全に非公開で脆弱性を報告できるようになります。",
     "references": [
       {
         "title": "リポジトリへのセキュリティ ポリシーの追加",
         "url": "https://docs.github.com/ja/code-security/getting-started/adding-a-security-policy-to-your-repository",
         "source": "GitHub Docs",
-        "checkedAt": "2026-05-31"
+        "checkedAt": "2026-06-02"
+      },
+      {
+        "title": "セキュリティの脆弱性を非公開で報告する",
+        "url": "https://docs.github.com/ja/code-security/security-advisories/guidance-on-reporting-and-writing-information-about-vulnerabilities/privately-reporting-a-security-vulnerability",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-06-02"
       }
     ],
-    "tags": ["security-md", "security-policy", "vulnerability-reporting"],
-    "updatedAt": "2026-05-31"
+    "tags": ["security-md", "security-policy", "private-vulnerability-reporting"],
+    "updatedAt": "2026-06-02"
   },
   {
     "id": "D6-030",
@@ -796,31 +771,75 @@
     "id": "D6-032",
     "domainId": "D6",
     "questionType": "single-choice",
-    "difficulty": "advanced",
-    "question": "Enterprise の IP allow list と認証セッション管理に関する理解として正しいものはどれですか？",
+    "difficulty": "standard",
+    "question": "見知らぬ端末から自分の GitHub アカウントがサインインされた可能性があります。この場合、真っ先に取るべき対応はどれですか？",
     "choices": [
-      { "id": "A", "text": "IP allow list は指定 IP からの Enterprise リソースアクセスに制限でき、認識できないアクティブセッションはユーザー設定から取り消せる" },
-      { "id": "B", "text": "IP allow list はパブリックリポジトリを必ず削除し、セッション管理は SSH キーを生成する" },
-      { "id": "C", "text": "IP allow list を有効にすると 2FA は設定できなくなる" },
-      { "id": "D", "text": "アクティブセッションは確認できず、サインアウトは GitHub Support だけが実行できる" }
+      { "id": "A", "text": "アカウントの Settings → Sessions からアクティブセッションを確認し、不審なセッションを取り消す" },
+      { "id": "B", "text": "リポジトリをすべて削除してからアカウントを再作成する" },
+      { "id": "C", "text": "GitHub Support に連絡して、自分のアカウントを一時停止してもらう" },
+      { "id": "D", "text": "Organization のすべてのメンバーをいったん削除して招待し直す" }
     ],
     "correctChoiceIds": ["A"],
-    "explanation": "IP allow list は Enterprise のプライベートリソースなどへのアクセス元ネットワークを制限する管理機能です。また、ユーザーはアクティブな Web やモバイルセッションを確認し、見覚えのないセッションを取り消せます。",
+    "explanation": "GitHub アカウントの Settings > Sessions（セッション） では、現在アクティブな Web・モバイルセッションを一覧できます。見覚えのないセッションは「取り消す」ことで即座にサインアウトできます。あわせてパスワードの変更と 2FA の確認を行うことが推奨されます。",
     "references": [
-      {
-        "title": "IP 許可リストを使用して Enterprise へのネットワーク トラフィックを制限する",
-        "url": "https://docs.github.com/ja/enterprise-cloud@latest/admin/configuration/restricting-network-traffic-to-your-enterprise",
-        "source": "GitHub Docs",
-        "checkedAt": "2026-05-31"
-      },
       {
         "title": "セッションの表示と管理",
         "url": "https://docs.github.com/ja/authentication/keeping-your-account-and-data-secure/viewing-and-managing-your-sessions",
         "source": "GitHub Docs",
-        "checkedAt": "2026-05-31"
+        "checkedAt": "2026-06-02"
       }
     ],
-    "tags": ["ip-allow-list", "sessions", "enterprise-security"],
-    "updatedAt": "2026-05-31"
+    "tags": ["sessions", "account-security", "incident-response"],
+    "updatedAt": "2026-06-02"
+  },
+  {
+    "id": "D6-033",
+    "domainId": "D6",
+    "questionType": "single-choice",
+    "difficulty": "standard",
+    "question": "リポジトリロールの Maintain と Admin の違いとして正しいものはどれですか？",
+    "choices": [
+      { "id": "A", "text": "Maintain は Issue のクローズもできない。Admin はすべての操作が可能" },
+      { "id": "B", "text": "Maintain はリリース管理・保護ブランチへのマージなど日常的な管理ができるが、リポジトリ設定の変更やコラボレーターの追加はできない。Admin はそれらすべてが可能" },
+      { "id": "C", "text": "Maintain と Admin は同じ権限で、名前が違うだけ" },
+      { "id": "D", "text": "Admin は読み取り専用、Maintain は書き込み可能" }
+    ],
+    "correctChoiceIds": ["B"],
+    "explanation": "Maintain ロールはリポジトリのリリース管理・Issue や PR のクローズ・保護ブランチへのマージ依頼など、メンテナーとしての日常業務が行えます。ただしリポジトリ設定の変更・コラボレーターの追加・削除・Webhookの設定変更などはできません。Admin ロールはこれらすべてを含むリポジトリの完全な管理権限を持ちます。",
+    "references": [
+      {
+        "title": "Organization のリポジトリロール",
+        "url": "https://docs.github.com/ja/organizations/managing-user-access-to-your-organizations-repositories/managing-repository-roles/repository-roles-for-an-organization",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-06-02"
+      }
+    ],
+    "tags": ["repository-roles", "maintain", "admin", "permissions"],
+    "updatedAt": "2026-06-02"
+  },
+  {
+    "id": "D6-034",
+    "domainId": "D6",
+    "questionType": "single-choice",
+    "difficulty": "standard",
+    "question": "GitHub のプラン（Free・Team・Enterprise）による機能の違いとして正しいものはどれですか？",
+    "choices": [
+      { "id": "A", "text": "ブランチ保護ルールは Team 以上でのみ使用できる" },
+      { "id": "B", "text": "GitHub Free でもパブリックリポジトリであればブランチ保護ルールを設定できるが、SAML SSO は GitHub Enterprise Cloud 以上が必要" },
+      { "id": "C", "text": "プライベートリポジトリは Enterprise プランでしか作成できない" },
+      { "id": "D", "text": "GitHub Actions は Team プラン以上でのみ利用できる" }
+    ],
+    "correctChoiceIds": ["B"],
+    "explanation": "GitHub Free でもパブリックリポジトリに対してブランチ保護ルールを設定できます。プライベートリポジトリへのブランチ保護は GitHub Pro / Team 以上が必要です。SAML SSO（シングルサインオン）は GitHub Enterprise Cloud 以上の機能です。GitHub Actions はすべてのプランで利用でき、月間の無料利用枠がプランによって異なります。",
+    "references": [
+      {
+        "title": "GitHub のプランの製品",
+        "url": "https://docs.github.com/ja/get-started/learning-about-github/githubs-plans",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-06-02"
+      }
+    ],
+    "tags": ["plans", "free", "team", "enterprise", "branch-protection", "saml-sso"],
+    "updatedAt": "2026-06-02"
   }
 ]

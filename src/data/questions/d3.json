@@ -150,31 +150,6 @@
     "updatedAt": "2026-05-31"
   },
   {
-    "id": "D3-007",
-    "domainId": "D3",
-    "questionType": "single-choice",
-    "difficulty": "basic",
-    "question": "GitHub Gist の説明として最も適切なものはどれですか？",
-    "choices": [
-      { "id": "A", "text": "リポジトリ全体をアーカイブして ZIP でダウンロードする機能" },
-      { "id": "B", "text": "コードスニペットやメモを手軽に共有できる軽量版リポジトリ" },
-      { "id": "C", "text": "GitHub の Issue テンプレートを管理する機能" },
-      { "id": "D", "text": "GitHub Pages のサブドメインを管理する機能" }
-    ],
-    "correctChoiceIds": ["B"],
-    "explanation": "Gist はコードスニペット・設定ファイル・メモなどを気軽に共有できる機能です。通常のリポジトリと同様 Git で管理され、Public（検索可能）と Secret（URL を知っている人のみ閲覧可能）の2種類があります。",
-    "references": [
-      {
-        "title": "Gist の作成",
-        "url": "https://docs.github.com/ja/get-started/writing-on-github/editing-and-sharing-content-with-gists/creating-gists",
-        "source": "GitHub Docs",
-        "checkedAt": "2026-05-31"
-      }
-    ],
-    "tags": ["gist"],
-    "updatedAt": "2026-05-31"
-  },
-  {
     "id": "D3-008",
     "domainId": "D3",
     "questionType": "single-choice",
@@ -197,31 +172,6 @@
       }
     ],
     "tags": ["wiki"],
-    "updatedAt": "2026-05-31"
-  },
-  {
-    "id": "D3-009",
-    "domainId": "D3",
-    "questionType": "single-choice",
-    "difficulty": "basic",
-    "question": "GitHub Pages の説明として最も適切なものはどれですか？",
-    "choices": [
-      { "id": "A", "text": "GitHub の管理画面（Settings）の各設定ページのこと" },
-      { "id": "B", "text": "リポジトリのファイルから静的 Web サイトを無料でホスティングする機能" },
-      { "id": "C", "text": "Markdown で書いた README を PDF に変換するサービス" },
-      { "id": "D", "text": "リポジトリの Issue を公開 Web ページとして表示する機能" }
-    ],
-    "correctChoiceIds": ["B"],
-    "explanation": "GitHub Pages は HTML・CSS・JavaScript ファイルをリポジトリから直接配信して静的 Web サイトを無料でホスティングするサービスです。ドキュメントサイト・ポートフォリオ・プロジェクト紹介ページなどに使われます。Jekyll などの静的サイトジェネレーターとも連携できます。",
-    "references": [
-      {
-        "title": "GitHub Pages とは",
-        "url": "https://docs.github.com/ja/pages/getting-started-with-github-pages/about-github-pages",
-        "source": "GitHub Docs",
-        "checkedAt": "2026-05-31"
-      }
-    ],
-    "tags": ["github-pages"],
     "updatedAt": "2026-05-31"
   },
   {
@@ -577,77 +527,27 @@
   {
     "id": "D3-024",
     "domainId": "D3",
-    "questionType": "single-choice",
+    "questionType": "multiple-choice",
     "difficulty": "advanced",
-    "question": "Pull Request で「Squash and merge」を選択するとどうなりますか？",
+    "question": "GitHub の Pull Request マージ戦略について正しい説明を2つ選んでください。",
     "choices": [
-      { "id": "A", "text": "ブランチのすべてのコミットがそのままベースブランチに追加される" },
-      { "id": "B", "text": "ブランチのすべてのコミットが1つのコミットに圧縮されてベースブランチに追加される" },
-      { "id": "C", "text": "ベースブランチのコミットがブランチの先頭に移動する" },
-      { "id": "D", "text": "コミット履歴が削除されてマージのみが記録される" }
+      { "id": "A", "text": "Squash and merge はブランチの複数コミットを1つに圧縮してベースブランチに追加し、コミット履歴をクリーンに保てる" },
+      { "id": "B", "text": "Rebase and merge はブランチの各コミットをベースブランチに順番に再適用し、マージコミットを作成しない" },
+      { "id": "C", "text": "通常の Merge commit はブランチのコミット履歴を消去し、マージコミットのみを残す" },
+      { "id": "D", "text": "Squash and merge と Rebase and merge はどちらもマージコミットを作成する" }
     ],
-    "correctChoiceIds": ["B"],
-    "explanation": "Squash and merge はブランチ上の複数のコミットを1つにまとめてベースブランチに追加します。作業中の細かいコミットをきれいな1コミットにまとめられるため、main ブランチの履歴をすっきり保ちたい場合に有効です。",
-    "references": [
-      {
-        "title": "pull request マージについて",
-        "url": "https://docs.github.com/ja/pull-requests/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/about-pull-request-merges",
-        "source": "GitHub Docs",
-        "checkedAt": "2026-05-31"
-      }
-    ],
-    "tags": ["pull-request", "merge"],
-    "updatedAt": "2026-05-31"
-  },
-  {
-    "id": "D3-025",
-    "domainId": "D3",
-    "questionType": "single-choice",
-    "difficulty": "standard",
-    "question": "Pull Request の通常の Merge commit 方式を選ぶ主な効果として正しいものはどれですか？",
-    "choices": [
-      { "id": "A", "text": "フィーチャーブランチ上の複数コミットを1つのコミットに圧縮して取り込む" },
-      { "id": "B", "text": "フィーチャーブランチの各コミットを保持し、ベースブランチにマージコミットを追加して取り込む" },
-      { "id": "C", "text": "各コミットをベースブランチの先頭に付け替え、マージコミットを作成しない" },
-      { "id": "D", "text": "PR の差分だけを ZIP ファイルとして保存し、履歴には残さない" }
-    ],
-    "correctChoiceIds": ["B"],
-    "explanation": "通常の Merge commit は、トピックブランチのコミットを保持したまま、ベースブランチに追加のマージコミットを作成します。個々の作業コミットと「いつ統合したか」を履歴に残したい場合に適しています。",
+    "correctChoiceIds": ["A", "B"],
+    "explanation": "Squash and merge はフィーチャーブランチの複数コミットを1つに圧縮してベースブランチへ追加します。Rebase and merge は各コミットをそのままベースブランチへ再適用してリニアな履歴を作りますが、マージコミットは作成しません。通常の Merge commit はブランチのコミットを保持しマージコミットを追加します。Squash と Rebase はどちらもマージコミットを作成しません。",
     "references": [
       {
         "title": "プルリクエストのマージについて",
         "url": "https://docs.github.com/ja/pull-requests/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/about-pull-request-merges",
         "source": "GitHub Docs",
-        "checkedAt": "2026-05-31"
+        "checkedAt": "2026-06-02"
       }
     ],
-    "tags": ["pull-request", "merge", "collaboration"],
-    "updatedAt": "2026-05-31"
-  },
-  {
-    "id": "D3-026",
-    "domainId": "D3",
-    "questionType": "single-choice",
-    "difficulty": "advanced",
-    "question": "Pull Request の Rebase and merge が Squash and merge と異なる点として最も適切なものはどれですか？",
-    "choices": [
-      { "id": "A", "text": "Rebase and merge は PR のコミットを1つにまとめ、Squash and merge は各コミットを保持する" },
-      { "id": "B", "text": "どちらも常にマージコミットを作成し、履歴上の違いはない" },
-      { "id": "C", "text": "Rebase and merge は PR の各コミットをベースブランチに順番に再適用し、Squash and merge は1つのコミットにまとめる" },
-      { "id": "D", "text": "Rebase and merge は Issue を自動作成し、Squash and merge は Issue を自動クローズする" }
-    ],
-    "correctChoiceIds": ["C"],
-    "explanation": "Rebase and merge はフィーチャーブランチの個々のコミットをベースブランチへ再適用して取り込みます。一方、Squash and merge は複数コミットを1つに圧縮するため、細かい作業コミットを残すかどうかで使い分けます。",
-    "references": [
-      {
-        "title": "プルリクエストのマージについて",
-        "url": "https://docs.github.com/ja/pull-requests/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/about-pull-request-merges",
-        "source": "GitHub Docs",
-        "checkedAt": "2026-05-31"
-      }
-    ],
-    "tags": ["pull-request", "rebase", "merge"],
-    "updatedAt": "2026-05-31"
+    "tags": ["pull-request", "merge", "squash", "rebase"],
+    "updatedAt": "2026-06-02"
   },
   {
     "id": "D3-027",
@@ -827,27 +727,27 @@
   {
     "id": "D3-034",
     "domainId": "D3",
-    "questionType": "single-choice",
+    "questionType": "multiple-choice",
     "difficulty": "standard",
-    "question": "GitHub 通知で自動的に会話へサブスクライブされる例として正しいものはどれですか？",
+    "question": "GitHub で自動的にある会話（Issue や Pull Request）へサブスクライブされる状況として正しいものを2つ選んでください。",
     "choices": [
-      { "id": "A", "text": "リポジトリ名を検索結果で見ただけの場合" },
-      { "id": "B", "text": "Issue や PR を開く、コメントする、担当者になる、@メンションされるなど会話に参加した場合" },
-      { "id": "C", "text": "GitHub Pages のサイトをブラウザーで閲覧した場合" },
-      { "id": "D", "text": "別のユーザーのプロフィールをフォロー解除した場合" }
+      { "id": "A", "text": "Issue や Pull Request を自分で作成した場合" },
+      { "id": "B", "text": "コメントで @メンションされた場合" },
+      { "id": "C", "text": "リポジトリのソースコードをブラウザで閲覧した場合" },
+      { "id": "D", "text": "リポジトリに Star を付けた場合" }
     ],
-    "correctChoiceIds": ["B"],
-    "explanation": "GitHub は、Issue や PR を開いた、コメントした、アサインされた、@メンションされた、状態を変更したなどの場合に、既定でその会話へサブスクライブします。通知設定で受信方法や粒度を調整できます。",
+    "correctChoiceIds": ["A", "B"],
+    "explanation": "GitHub は、Issue や PR を開いた・コメントした・アサインされた・@メンションされた・状態を変更したなどの場合に、既定でその会話へサブスクライブします。リポジトリの閲覧や Star 付けはサブスクライブのトリガーにはなりません。",
     "references": [
       {
         "title": "通知について",
         "url": "https://docs.github.com/ja/account-and-profile/managing-subscriptions-and-notifications-on-github/setting-up-notifications/about-notifications",
         "source": "GitHub Docs",
-        "checkedAt": "2026-05-31"
+        "checkedAt": "2026-06-02"
       }
     ],
     "tags": ["notifications", "subscribe", "watch"],
-    "updatedAt": "2026-05-31"
+    "updatedAt": "2026-06-02"
   },
   {
     "id": "D3-035",
@@ -898,5 +798,55 @@
     ],
     "tags": ["discussions", "categories", "answered"],
     "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D3-037",
+    "domainId": "D3",
+    "questionType": "single-choice",
+    "difficulty": "standard",
+    "question": "GitHub Discussions をリポジトリで有効にしたとき、デフォルトで作成されるカテゴリの組み合わせとして正しいものはどれですか？",
+    "choices": [
+      { "id": "A", "text": "Bugs / Features / Questions / Help Wanted" },
+      { "id": "B", "text": "Announcements / General / Ideas / Polls / Q&A / Show and tell" },
+      { "id": "C", "text": "Open / In Progress / Done / Archived" },
+      { "id": "D", "text": "Issues / Pull Requests / Releases / Wiki" }
+    ],
+    "correctChoiceIds": ["B"],
+    "explanation": "GitHub Discussions を有効にすると、Announcements（お知らせ）・General（一般）・Ideas（アイデア）・Polls（投票）・Q&A（質疑応答）・Show and tell（成果共有）の6カテゴリがデフォルトで作成されます。これらは後から追加・変更・削除できます。Q&A カテゴリのみ「回答済み」マークを付ける機能があります。",
+    "references": [
+      {
+        "title": "リポジトリの Discussions を有効にする",
+        "url": "https://docs.github.com/ja/discussions/managing-discussions-for-your-community/enabling-or-disabling-github-discussions-for-a-repository",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-06-02"
+      }
+    ],
+    "tags": ["discussions", "categories", "announcements", "q-and-a"],
+    "updatedAt": "2026-06-02"
+  },
+  {
+    "id": "D3-038",
+    "domainId": "D3",
+    "questionType": "single-choice",
+    "difficulty": "standard",
+    "question": "GitHub の Issue・Pull Request・Discussions それぞれの主な用途の組み合わせとして正しいものはどれですか？",
+    "choices": [
+      { "id": "A", "text": "Issue=コードの変更提案、Pull Request=バグ報告、Discussions=リリース管理" },
+      { "id": "B", "text": "Issue=タスク・バグ・要望の追跡管理、Pull Request=コード変更のレビューとマージ、Discussions=Q&A・アイデア・オープンな会話" },
+      { "id": "C", "text": "3つの機能は互換性があり、どれを使っても同じ結果になる" },
+      { "id": "D", "text": "Issue=ドキュメント管理、Pull Request=Issue のクローズ専用、Discussions=コードレビュー" }
+    ],
+    "correctChoiceIds": ["B"],
+    "explanation": "Issue はタスク・バグ・機能要望などを記録・追跡するための機能です。Pull Request はブランチの変更をレビューしてベースブランチにマージするプロセスで、コード変更の持ち込み口です。Discussions は Q&A・アイデア出し・雑談などオープンな会話を行う場で、解決すべき具体的なタスクがなくても使えます。Issue と Discussions は特に混同されやすく、「追跡が必要な具体的なタスク → Issue」「オープンな議論 → Discussions」と使い分けるのが基本です。",
+    "references": [
+      {
+        "title": "GitHub Discussions のドキュメント",
+        "url": "https://docs.github.com/ja/discussions",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-06-02"
+      }
+    ],
+    "tags": ["issue", "pull-request", "discussions", "collaboration"],
+    "updatedAt": "2026-06-02"
   }
 ]

@@ -27,77 +27,52 @@
   {
     "id": "D4-002",
     "domainId": "D4",
-    "questionType": "single-choice",
+    "questionType": "multiple-choice",
     "difficulty": "standard",
-    "question": "GitHub Codespaces の説明として最も適切なものはどれですか？",
+    "question": "GitHub Codespaces に関する説明として正しいものを2つ選んでください。",
     "choices": [
-      { "id": "A", "text": "GitHubが提供するクラウドベースの開発環境で、ブラウザやVS Codeからアクセスできる" },
-      { "id": "B", "text": "リポジトリのコードを静的解析するセキュリティスキャナー" },
-      { "id": "C", "text": "Pull Requestのコードレビューを自動で行うAIツール" },
-      { "id": "D", "text": "GitHub Pagesのビルドパイプラインの名称" }
+      { "id": "A", "text": "クラウド上でホストされる開発環境で、ブラウザまたはローカルのVS Codeから接続できる" },
+      { "id": "B", "text": "devcontainer.json でコンテナイメージや拡張機能など開発環境の構成を定義できる" },
+      { "id": "C", "text": "コードを実行したりターミナルを使うことはできない軽量エディタである" },
+      { "id": "D", "text": "Codespacesを起動するには必ずGitHub Enterpriseライセンスが必要である" }
     ],
-    "correctChoiceIds": ["A"],
-    "explanation": "CodespacesはGitHub上でホストされるクラウド開発環境（CDE）です。リポジトリをクリックするだけでVS Codeライクな環境が起動し、ローカル環境のセットアップなしに開発を始められます。devcontainer.jsonで環境を定義・共有できます。",
+    "correctChoiceIds": ["A", "B"],
+    "explanation": "Codespacesはクラウドホスト型の開発環境（CDE）で、ブラウザまたはローカルVS Codeから接続できます。devcontainer.jsonでイメージ・ツール・拡張機能・ポートを定義し、チーム全員が同一環境を即座に起動できます。ターミナルやコード実行が不要な軽量編集はgithub.devが担当します。",
     "references": [
       {
         "title": "GitHub Codespaces とは",
         "url": "https://docs.github.com/ja/codespaces/overview",
         "source": "GitHub Docs",
-        "checkedAt": "2026-05-31"
+        "checkedAt": "2026-06-02"
       }
     ],
-    "tags": ["codespaces"],
-    "updatedAt": "2026-05-31"
-  },
-  {
-    "id": "D4-003",
-    "domainId": "D4",
-    "questionType": "single-choice",
-    "difficulty": "basic",
-    "question": "GitHub Copilot の基本的な機能として最も適切な説明はどれですか？",
-    "choices": [
-      { "id": "A", "text": "リポジトリのバックアップを自動的に取得するツール" },
-      { "id": "B", "text": "AIがコードの補完・生成・説明・レビューを支援するツール" },
-      { "id": "C", "text": "Organizationのアクセス権限を自動設定するツール" },
-      { "id": "D", "text": "GitHub Pagesのデザインを自動生成するツール" }
-    ],
-    "correctChoiceIds": ["B"],
-    "explanation": "GitHub CopilotはAI駆動のコーディングアシスタントです。コードの自動補完に加え、チャットでの質問への回答・コードの説明・バグ修正提案・テスト生成などを提供します。2026年時点ではAgent Mode・マルチモデル対応など機能が大幅に拡張されています。",
-    "references": [
-      {
-        "title": "GitHub Copilot とは",
-        "url": "https://docs.github.com/ja/copilot/about-github-copilot/what-is-github-copilot",
-        "source": "GitHub Docs",
-        "checkedAt": "2026-05-31"
-      }
-    ],
-    "tags": ["copilot", "ai"],
-    "updatedAt": "2026-05-31"
+    "tags": ["codespaces", "devcontainer"],
+    "updatedAt": "2026-06-02"
   },
   {
     "id": "D4-004",
     "domainId": "D4",
-    "questionType": "single-choice",
+    "questionType": "multiple-choice",
     "difficulty": "standard",
-    "question": "GitHub Copilot のプラン区分として最も適切な説明はどれですか？",
+    "question": "GitHub Copilot のプランに関する説明として正しいものを2つ選んでください。",
     "choices": [
-      { "id": "A", "text": "Copilot Freeのみが存在し、全ユーザーに無制限で提供される" },
-      { "id": "B", "text": "個人向けプランと、組織・企業向けの Business / Enterprise プランがあり、機能と管理範囲が異なる" },
-      { "id": "C", "text": "GitHub Actionsと同じプランに含まれており、追加費用は不要" },
-      { "id": "D", "text": "Organization単位では購入できず、個人単位のみ購入できる" }
+      { "id": "A", "text": "Copilot Free は月間の補完・チャット利用回数に上限があり、無料で使用できる" },
+      { "id": "B", "text": "Copilot Business はOrganization管理者がメンバーへの割り当てやポリシーを一元管理できる" },
+      { "id": "C", "text": "Copilot Enterpriseは個人ユーザー専用プランで、組織では利用できない" },
+      { "id": "D", "text": "すべてのプランで利用できる機能・上限はまったく同じである" }
     ],
-    "correctChoiceIds": ["B"],
-    "explanation": "GitHub Copilot は個人向けプランに加え、組織・企業向けの Business / Enterprise プランを提供しています。Business / Enterprise では、管理者がメンバーへの割り当てやポリシーを一元管理でき、個人向けプランとは管理範囲が異なります。",
+    "correctChoiceIds": ["A", "B"],
+    "explanation": "Copilot FreeはGitHubアカウントを持つ個人が無料で使える月間制限付きプランです。Copilot Businessは組織向けで、管理者によるライセンス割り当て・ポリシー管理・IP除外などの機能を提供します。Enterpriseはさらにorganization知識の活用など高度な機能を追加します。",
     "references": [
       {
         "title": "GitHub Copilot の計画",
         "url": "https://docs.github.com/ja/copilot/about-github-copilot/subscription-plans-for-github-copilot",
         "source": "GitHub Docs",
-        "checkedAt": "2026-05-31"
+        "checkedAt": "2026-06-02"
       }
     ],
-    "tags": ["copilot", "plans"],
-    "updatedAt": "2026-05-31"
+    "tags": ["copilot", "plans", "business"],
+    "updatedAt": "2026-06-02"
   },
   {
     "id": "D4-005",
@@ -179,25 +154,25 @@
     "domainId": "D4",
     "questionType": "single-choice",
     "difficulty": "standard",
-    "question": "GitHub Copilot の Agent Mode の説明として最も適切なものはどれですか？",
+    "question": "GitHub Copilot Chat の主な用途として最も適切なものはどれですか？",
     "choices": [
-      { "id": "A", "text": "Copilot がコードを1行ずつ提案するインライン補完モード" },
-      { "id": "B", "text": "Copilot が複数ファイルにまたがる複雑なタスクを自律的に計画・実行するモード" },
-      { "id": "C", "text": "Copilot がチームメンバーの代わりに Pull Request をレビューするモード" },
-      { "id": "D", "text": "Copilot がセキュリティ脆弱性を自動修正してコミットするモード" }
+      { "id": "A", "text": "リポジトリへのSSHアクセスキーを生成する" },
+      { "id": "B", "text": "自然言語でコードについて質問・説明依頼・バグ修正提案を受けるAIアシスタント機能" },
+      { "id": "C", "text": "Pull Requestを自動的にマージするボット機能" },
+      { "id": "D", "text": "GitHub Actionsのワークフローをスケジュール実行する機能" }
     ],
     "correctChoiceIds": ["B"],
-    "explanation": "Agent Mode では Copilot が自然言語の指示に基づいてコードベースを分析し、複数ファイルにわたる変更・テスト実行・エラー修正などを自律的に繰り返します。単純な補完を超えた複雑なタスクの自動化が可能です。",
+    "explanation": "Copilot Chatは、エディターやGitHub.com上でコードについて自然言語で質問できるAIアシスタントです。コードの説明、バグ修正案の提示、テスト生成のサポートなどをチャット形式で行えます。インライン補完と組み合わせることで開発全体をサポートします。",
     "references": [
       {
-        "title": "GitHub Copilot とは",
-        "url": "https://docs.github.com/ja/copilot/about-github-copilot/what-is-github-copilot",
+        "title": "GitHub Copilot Chat について",
+        "url": "https://docs.github.com/ja/copilot/github-copilot-chat/about-github-copilot-chat",
         "source": "GitHub Docs",
-        "checkedAt": "2026-05-31"
+        "checkedAt": "2026-06-02"
       }
     ],
-    "tags": ["copilot", "agent-mode"],
-    "updatedAt": "2026-05-31"
+    "tags": ["copilot", "chat", "ai"],
+    "updatedAt": "2026-06-02"
   },
   {
     "id": "D4-009",
@@ -252,27 +227,27 @@
   {
     "id": "D4-011",
     "domainId": "D4",
-    "questionType": "single-choice",
+    "questionType": "multiple-choice",
     "difficulty": "standard",
-    "question": "GitHub Actions のワークフローをトリガーするイベントとして正しいものはどれですか？",
+    "question": "GitHub Actions のワークフローをトリガーするイベントとして正しいものを2つ選んでください。",
     "choices": [
-      { "id": "A", "text": "push・pull_request・schedule・workflow_dispatch など多数のイベントでトリガーできる" },
-      { "id": "B", "text": "push イベントのみがワークフローをトリガーできる" },
-      { "id": "C", "text": "手動実行（workflow_dispatch）のみがサポートされている" },
-      { "id": "D", "text": "外部 API からのみトリガーできる" }
+      { "id": "A", "text": "push（ブランチへのコードプッシュ）" },
+      { "id": "B", "text": "schedule（cron式による定期実行）" },
+      { "id": "C", "text": "repo_sync（リポジトリの自動同期）" },
+      { "id": "D", "text": "branch_merge_auto（ブランチ自動マージ）" }
     ],
-    "correctChoiceIds": ["A"],
-    "explanation": "GitHub Actions は push・pull_request・issues・schedule（cron）・workflow_dispatch（手動）・repository_dispatch（外部API）など多数のイベントでトリガーできます。複数のイベントを組み合わせることも可能です。",
+    "correctChoiceIds": ["A", "B"],
+    "explanation": "GitHub Actionsはpush・pull_request・schedule・workflow_dispatch・issuesなど多数のイベントでトリガーできます。scheduleはcron式で定期実行を設定します。`repo_sync`や`branch_merge_auto`は存在しないイベント名です。",
     "references": [
       {
         "title": "ワークフローをトリガーするイベント",
         "url": "https://docs.github.com/ja/actions/writing-workflows/choosing-when-your-workflow-runs/events-that-trigger-workflows",
         "source": "GitHub Docs",
-        "checkedAt": "2026-05-31"
+        "checkedAt": "2026-06-02"
       }
     ],
     "tags": ["actions", "workflow", "trigger"],
-    "updatedAt": "2026-05-31"
+    "updatedAt": "2026-06-02"
   },
   {
     "id": "D4-012",
@@ -431,10 +406,10 @@
     "difficulty": "basic",
     "question": "CI（継続的インテグレーション）の説明として最も適切なものはどれですか？",
     "choices": [
-      { "id": "A", "text": "コード変更のたびにビルドやテストを自動実行し、早期に問題を検出する取り組み" },
-      { "id": "B", "text": "本番環境へのリリースを必ず手動承認なしで行う取り組み" },
-      { "id": "C", "text": "ソースコードをバージョン管理から削除して成果物だけを保管する取り組み" },
-      { "id": "D", "text": "Issue の担当者を自動的にランダム割り当てする取り組み" }
+      { "id": "A", "text": "テスト済みのコードを本番環境へ自動デプロイするプロセス" },
+      { "id": "B", "text": "コードの変更を頻繁にメインブランチに統合し、自動テストで問題を早期発見するプラクティス" },
+      { "id": "C", "text": "本番リリース前にコードを手動検証するゲートキーパープロセス" },
+      { "id": "D", "text": "週次でまとめてコードをマージし、リリース前に集中してテストする手法" }
     ],
     "correctChoiceIds": ["A"],
     "explanation": "CI はコード変更を頻繁に統合し、ビルドやテストを自動化して不具合を早期に発見する考え方です。GitHub Actions は CI/CD パイプラインを自動化できるプラットフォームです。",
@@ -447,7 +422,7 @@
       }
     ],
     "tags": ["ci-cd", "automation", "actions"],
-    "updatedAt": "2026-05-31"
+    "updatedAt": "2026-06-02"
   },
   {
     "id": "D4-019",
@@ -487,10 +462,10 @@
     "difficulty": "advanced",
     "question": "GitHub Actions の Environments をデプロイで使う主な目的はどれですか？",
     "choices": [
-      { "id": "A", "text": "ワークフローファイルを自動的に TypeScript に変換するため" },
-      { "id": "B", "text": "ジョブの実行ログをリポジトリから完全に削除するため" },
-      { "id": "C", "text": "必須レビューや環境シークレットなどを使って、特定環境へのデプロイを保護するため" },
-      { "id": "D", "text": "すべての Pull Request を自動的にマージするため" }
+      { "id": "A", "text": "本番・ステージング・開発など環境ごとに異なるシークレット・承認者・保護ルールを設定してデプロイフローを制御するため" },
+      { "id": "B", "text": "Environmentsはリポジトリのブランチと1対1で対応しており、ブランチを切るだけで自動作成される" },
+      { "id": "C", "text": "Environmentsを使うと複数のジョブが同じシークレットを共有できなくなる" },
+      { "id": "D", "text": "Environmentsの保護ルールはOrganizationオーナーのみが設定できる" }
     ],
     "correctChoiceIds": ["C"],
     "explanation": "Environments は production や staging などのデプロイ先を表し、保護ルールや環境シークレットを設定できます。環境を参照するジョブは、保護ルールを満たしてから実行またはシークレットへアクセスします。",
@@ -503,7 +478,7 @@
       }
     ],
     "tags": ["actions", "environments", "deployment"],
-    "updatedAt": "2026-05-31"
+    "updatedAt": "2026-06-02"
   },
   {
     "id": "D4-021",
@@ -656,31 +631,6 @@
     "updatedAt": "2026-05-31"
   },
   {
-    "id": "D4-027",
-    "domainId": "D4",
-    "questionType": "single-choice",
-    "difficulty": "standard",
-    "question": "GitHub Codespaces の devcontainer.json で定義できる内容として最も適切なものはどれですか？",
-    "choices": [
-      { "id": "A", "text": "GitHub のユーザー名とパスワード" },
-      { "id": "B", "text": "開発コンテナーに含めるツール、ランタイム、拡張機能、ポートフォワーディングなど" },
-      { "id": "C", "text": "GitHub Actions の課金上限のみ" },
-      { "id": "D", "text": "Pull Request のレビュー承認者のみ" }
-    ],
-    "correctChoiceIds": ["B"],
-    "explanation": "`devcontainer.json` は Codespaces の開発コンテナー構成の中心ファイルです。プロジェクトに必要なツール、ランタイム、VS Code 拡張機能、ポート設定などをコードとして共有できます。",
-    "references": [
-      {
-        "title": "開発コンテナーの概要",
-        "url": "https://docs.github.com/ja/codespaces/setting-up-your-project-for-codespaces/introduction-to-dev-containers",
-        "source": "GitHub Docs",
-        "checkedAt": "2026-05-31"
-      }
-    ],
-    "tags": ["codespaces", "devcontainer", "environment"],
-    "updatedAt": "2026-05-31"
-  },
-  {
     "id": "D4-028",
     "domainId": "D4",
     "questionType": "single-choice",
@@ -703,31 +653,6 @@
       }
     ],
     "tags": ["codespaces", "prebuilds", "productivity"],
-    "updatedAt": "2026-05-31"
-  },
-  {
-    "id": "D4-029",
-    "domainId": "D4",
-    "questionType": "single-choice",
-    "difficulty": "basic",
-    "question": "github.dev Web エディターと GitHub Codespaces の使い分けとして最も適切なものはどれですか？",
-    "choices": [
-      { "id": "A", "text": "github.dev は GPU ビルド専用、Codespaces は README 編集専用である" },
-      { "id": "B", "text": "軽微な閲覧・編集は github.dev、ターミナルや依存関係を含む開発環境が必要な場合は Codespaces を使う" },
-      { "id": "C", "text": "github.dev だけが devcontainer を実行でき、Codespaces は実行環境を持たない" },
-      { "id": "D", "text": "Codespaces はローカル VS Code と連携できず、必ず GitHub Actions からだけ起動する" }
-    ],
-    "correctChoiceIds": ["B"],
-    "explanation": "github.dev はブラウザ上で素早くファイルを閲覧・編集する用途に向いています。ターミナル、依存関係、ビルド、テスト、またはローカル VS Code から接続できるクラウド開発環境が必要な場合は Codespaces が適しています。",
-    "references": [
-      {
-        "title": "試験 GH-900 の学習ガイド: GitHub Foundations",
-        "url": "https://learn.microsoft.com/ja-jp/credentials/certifications/resources/study-guides/gh-900",
-        "source": "Microsoft Learn",
-        "checkedAt": "2026-05-31"
-      }
-    ],
-    "tags": ["github-dev", "codespaces", "editor"],
     "updatedAt": "2026-05-31"
   },
   {
@@ -762,43 +687,6 @@
     "updatedAt": "2026-05-31"
   },
   {
-    "id": "D4-031",
-    "domainId": "D4",
-    "questionType": "single-choice",
-    "difficulty": "advanced",
-    "question": "GitHub Copilot のプランに関する説明として最も適切なものはどれですか？",
-    "choices": [
-      { "id": "A", "text": "Copilot は Enterprise プランだけで提供され、個人やチームでは利用できない" },
-      { "id": "B", "text": "Copilot Free、Pro、Business、Enterprise などがあり、個人利用、組織管理、エンタープライズ向け機能の範囲が異なる" },
-      { "id": "C", "text": "Copilot Business はコード補完を提供せず、Issue 管理だけを行う" },
-      { "id": "D", "text": "Copilot Enterprise は GitHub Actions のランナー種別の名前である" }
-    ],
-    "correctChoiceIds": ["B"],
-    "explanation": "GH-900 の学習範囲では、個人、ビジネス、エンタープライズ向け Copilot の違いを理解することが求められます。Business は組織向け管理、Enterprise は組織知識の活用など、利用規模に応じた機能が提供されます。",
-    "references": [
-      {
-        "title": "試験 GH-900 の学習ガイド: GitHub Foundations",
-        "url": "https://learn.microsoft.com/ja-jp/credentials/certifications/resources/study-guides/gh-900",
-        "source": "Microsoft Learn",
-        "checkedAt": "2026-05-31"
-      },
-      {
-        "title": "GitHub Copilot Business の概要",
-        "url": "https://learn.microsoft.com/ja-jp/training/modules/introduction-to-github-copilot-for-business/",
-        "source": "Microsoft Learn",
-        "checkedAt": "2026-05-31"
-      },
-      {
-        "title": "GitHub Copilot Enterprise の概要",
-        "url": "https://learn.microsoft.com/ja-jp/training/modules/introduction-to-github-copilot-enterprise/",
-        "source": "Microsoft Learn",
-        "checkedAt": "2026-05-31"
-      }
-    ],
-    "tags": ["copilot", "plans", "business", "enterprise"],
-    "updatedAt": "2026-05-31"
-  },
-  {
     "id": "D4-032",
     "domainId": "D4",
     "questionType": "single-choice",
@@ -822,5 +710,55 @@
     ],
     "tags": ["copilot", "responsible-ai", "security"],
     "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D4-033",
+    "domainId": "D4",
+    "questionType": "single-choice",
+    "difficulty": "standard",
+    "question": "CI（継続的インテグレーション）と CD（継続的デリバリー）の説明として正しいものはどれですか？",
+    "choices": [
+      { "id": "A", "text": "CI と CD はまったく同じプロセスの別名であり、区別する必要はない" },
+      { "id": "B", "text": "CI はコードの変更を頻繁に統合して自動テストで問題を早期発見するプロセス、CD はテスト済みのコードをいつでもデプロイできる状態に保ち本番環境への展開を自動化するプロセス" },
+      { "id": "C", "text": "CI は本番環境へのデプロイを担当し、CD はコードレビューを自動化するプロセス" },
+      { "id": "D", "text": "CD はデプロイを意図的に遅らせてコードの品質を担保するプロセス" }
+    ],
+    "correctChoiceIds": ["B"],
+    "explanation": "CI（Continuous Integration）は開発者がコードを頻繁にメインブランチに統合し、自動ビルド・テストで問題を早期発見するプラクティスです。CD（Continuous Delivery / Deployment）はCIでテスト済みのコードをステージングや本番環境へ自動的にデプロイできる状態を維持するプラクティスです。GitHub Actionsを使うとpushやPRマージをトリガーにCI/CDパイプラインを構築できます。",
+    "references": [
+      {
+        "title": "継続的インテグレーションについて",
+        "url": "https://docs.github.com/ja/actions/use-cases-and-examples/building-and-testing/about-continuous-integration",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-06-02"
+      }
+    ],
+    "tags": ["ci", "cd", "continuous-integration", "continuous-delivery", "actions"],
+    "updatedAt": "2026-06-02"
+  },
+  {
+    "id": "D4-034",
+    "domainId": "D4",
+    "questionType": "single-choice",
+    "difficulty": "standard",
+    "question": "GitHub Actions のシークレットを Organization レベルで設定する主な利点はどれですか？",
+    "choices": [
+      { "id": "A", "text": "シークレットがワークフローのログに平文で表示されるようになる" },
+      { "id": "B", "text": "同一 Organization 内の複数リポジトリで同じシークレットを共有でき、各リポジトリに個別に設定する手間を省ける" },
+      { "id": "C", "text": "Organization シークレットは GitHub 上のすべてのユーザーが参照・変更できる" },
+      { "id": "D", "text": "Organization シークレットはリポジトリレベルのシークレットより優先度が低いため、リポジトリで上書きできない" }
+    ],
+    "correctChoiceIds": ["B"],
+    "explanation": "GitHub Actions のシークレットにはリポジトリ・Environment・Organization の3つのスコープがあります。Organization シークレットは同一 Organization 内の複数リポジトリで共有でき、アクセスできるリポジトリの範囲（全リポジトリ・パブリックのみ・特定リポジトリ）も設定できます。リポジトリ固有のシークレットを同じ名前で設定すると Organization シークレットより優先されます。",
+    "references": [
+      {
+        "title": "GitHub Actions でのシークレットの使用",
+        "url": "https://docs.github.com/ja/actions/security-for-github-actions/security-guides/using-secrets-in-github-actions",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-06-02"
+      }
+    ],
+    "tags": ["actions", "secrets", "organization", "scope"],
+    "updatedAt": "2026-06-02"
   }
 ]

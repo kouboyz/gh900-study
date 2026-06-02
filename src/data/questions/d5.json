@@ -29,75 +29,50 @@
     "domainId": "D5",
     "questionType": "single-choice",
     "difficulty": "standard",
-    "question": "GitHub Projects のマイルストーン（milestone）の主な用途として正しいものはどれですか？",
+    "question": "v2.0 リリースに向けて修正すべきバグのIssueをグループ化し、残件数と期限をひと目で把握したい場合、最も適した機能はどれですか？",
     "choices": [
-      { "id": "A", "text": "コードのバージョンタグを作成する" },
-      { "id": "B", "text": "期限付きのゴールに向けて複数のIssueやPull Requestをグルーピングして進捗を追跡する" },
-      { "id": "C", "text": "GitHub Actionsのスケジュール実行を設定する" },
-      { "id": "D", "text": "リポジトリのリリースを自動作成する" }
+      { "id": "A", "text": "リポジトリのTopics" },
+      { "id": "B", "text": "マイルストーン（Milestone）" },
+      { "id": "C", "text": "GitHub Actionsのmatrix戦略" },
+      { "id": "D", "text": "Organization のteam設定" }
     ],
     "correctChoiceIds": ["B"],
-    "explanation": "マイルストーンはリリースやスプリントなど期限のある目標に向けてIssueやPull Requestをまとめる機能です。進捗率・期限・クローズ済み件数をひと目で確認でき、プロジェクトの達成状況の可視化に役立ちます。",
+    "explanation": "マイルストーンはIssueやPull Requestをリリースやスプリントなど期限付きの目標に向けてグルーピングする機能です。クローズ済み件数・残件数・期限・進捗率を一覧できます。GitHub Projects（v2）とは独立した機能ですが、合わせて使うことでより詳細な計画管理が可能です。",
     "references": [
       {
         "title": "マイルストーンについて",
         "url": "https://docs.github.com/ja/issues/using-labels-and-milestones-to-track-work/about-milestones",
         "source": "GitHub Docs",
-        "checkedAt": "2026-05-31"
+        "checkedAt": "2026-06-02"
       }
     ],
-    "tags": ["milestones", "project-management"],
-    "updatedAt": "2026-05-31"
+    "tags": ["milestones", "issues", "project-management"],
+    "updatedAt": "2026-06-02"
   },
   {
     "id": "D5-003",
     "domainId": "D5",
-    "questionType": "single-choice",
-    "difficulty": "basic",
-    "question": "GitHub Projects で利用できるビュー（レイアウト）の組み合わせとして正しいものはどれですか？",
+    "questionType": "multiple-choice",
+    "difficulty": "standard",
+    "question": "GitHub Projects のビュー（レイアウト）に関する説明として正しいものを2つ選んでください。",
     "choices": [
-      { "id": "A", "text": "リスト・カレンダー・マップ" },
-      { "id": "B", "text": "テーブル・ボード（カンバン）・ロードマップ" },
-      { "id": "C", "text": "ガントチャート・バーンダウン・スプレッドシート" },
-      { "id": "D", "text": "タイムライン・フロー・ツリー" }
+      { "id": "A", "text": "ボードレイアウトでは、カードをステータス列間でドラッグ＆ドロップしてフィールド値を更新できる" },
+      { "id": "B", "text": "ロードマップレイアウトでは、日付フィールドやIterationを使って項目をタイムラインに配置できる" },
+      { "id": "C", "text": "テーブルレイアウトはガントチャート専用で、ステータス管理には使えない" },
+      { "id": "D", "text": "1つのプロジェクトに対して1種類のレイアウトしか設定できない" }
     ],
-    "correctChoiceIds": ["B"],
-    "explanation": "GitHub Projects は テーブル（スプレッドシート形式）・ボード（カンバン形式）・ロードマップ（タイムライン形式）の3つのレイアウトを提供しています。同じプロジェクトデータを目的に応じて切り替えて表示できます。",
+    "correctChoiceIds": ["A", "B"],
+    "explanation": "ボードレイアウトはカンバン形式でカードをドラッグ＆ドロップすると対応フィールドが自動更新されます。ロードマップレイアウトは日付フィールドやIterationを使ってタイムライン上に作業を配置できます。テーブルレイアウトはスプレッドシート形式で複数フィールドの一覧表示・編集に適しており、1つのプロジェクトに複数のビューを追加できます。",
     "references": [
       {
         "title": "ビューのレイアウトを変更する",
         "url": "https://docs.github.com/ja/issues/planning-and-tracking-with-projects/customizing-views-in-your-project/changing-the-layout-of-a-view",
         "source": "GitHub Docs",
-        "checkedAt": "2026-05-31"
+        "checkedAt": "2026-06-02"
       }
     ],
-    "tags": ["projects", "board", "roadmap"],
-    "updatedAt": "2026-05-31"
-  },
-  {
-    "id": "D5-004",
-    "domainId": "D5",
-    "questionType": "single-choice",
-    "difficulty": "standard",
-    "question": "GitHub Projects の組み込み自動化（Built-in automations）の説明として最も適切なものはどれですか？",
-    "choices": [
-      { "id": "A", "text": "Issue を自動的に削除するルールを設定できる" },
-      { "id": "B", "text": "Issue や PR のステータスをイベント（オープン・クローズ・マージなど）に応じて自動更新できる" },
-      { "id": "C", "text": "GitHub Actions と連携してコードを自動デプロイする" },
-      { "id": "D", "text": "プロジェクトの期限が来たら Issue を自動クローズする" }
-    ],
-    "correctChoiceIds": ["B"],
-    "explanation": "Projects の組み込み自動化は、Issue や PR のステータスフィールドをイベントに応じて自動更新する機能です。たとえば「Issue がオープンされたら Status を Todo にする」「PR がマージされたら Done にする」などのルールを設定できます。",
-    "references": [
-      {
-        "title": "組み込みの自動化機能を使用する",
-        "url": "https://docs.github.com/ja/issues/planning-and-tracking-with-projects/automating-your-project/using-the-built-in-automations",
-        "source": "GitHub Docs",
-        "checkedAt": "2026-05-31"
-      }
-    ],
-    "tags": ["projects", "automation"],
-    "updatedAt": "2026-05-31"
+    "tags": ["projects", "board", "roadmap", "table-view"],
+    "updatedAt": "2026-06-02"
   },
   {
     "id": "D5-005",
@@ -462,10 +437,10 @@
     "difficulty": "basic",
     "question": "複数リポジトリのIssueやPull Requestを1つの計画表で横断的に管理したい場合、GitHub Projectsの説明として最も適切なものはどれですか？",
     "choices": [
-      { "id": "A", "text": "Projectsは1つのリポジトリ内のコミットだけを表示する機能である" },
-      { "id": "B", "text": "ProjectsはユーザーまたはOrganizationレベルで作業を計画・追跡し、IssueやPull Requestと統合できる" },
-      { "id": "C", "text": "ProjectsはWikiページだけを分類する機能である" },
-      { "id": "D", "text": "Projectsを使うとすべてのリポジトリが自動的に公開される" }
+      { "id": "A", "text": "複数リポジトリを横断管理するには、まずリポジトリを1つに統合する必要がある" },
+      { "id": "B", "text": "GitHub Projectsは複数リポジトリのIssue・PRを1つのProjectに追加して横断管理できる" },
+      { "id": "C", "text": "横断管理できるのはOrganization内のリポジトリのみで、個人リポジトリは追加できない" },
+      { "id": "D", "text": "ProjectsにPrivateリポジトリのIssueを追加すると、そのIssueが全員に公開される" }
     ],
     "correctChoiceIds": ["B"],
     "explanation": "ProjectsはユーザーまたはOrganizationレベルで利用でき、GitHubのIssueやPull Requestと統合して作業を計画・追跡できます。複数リポジトリにまたがるバックログやロードマップの管理に役立ちます。",
@@ -478,7 +453,7 @@
       }
     ],
     "tags": ["projects", "multi-repository", "planning"],
-    "updatedAt": "2026-05-31"
+    "updatedAt": "2026-06-02"
   },
   {
     "id": "D5-020",
@@ -543,10 +518,10 @@
     "difficulty": "standard",
     "question": "プロジェクトをチーム外へ見せるか制限するかを判断するとき、GitHub Projectsの可視性とアクセス管理について最も適切な説明はどれですか？",
     "choices": [
-      { "id": "A", "text": "Projectsは常にインターネット全体へ公開され、非公開にはできない" },
-      { "id": "B", "text": "Projectsを公開すると、含まれるPrivateリポジトリのコードも自動的に公開される" },
-      { "id": "C", "text": "ProjectsはユーザーまたはOrganizationレベルの作業計画ツールであり、チームのニーズに合わせて共有範囲やアクセスを設計する" },
-      { "id": "D", "text": "Projectsのアクセス設定はIssueやPull Requestの表示とは無関係に、すべての項目本文を匿名ユーザーに公開する" }
+      { "id": "A", "text": "Projectsの可視性をPublicにすると、含まれるIssueのタイトルは誰でも閲覧できるが、PrivateリポジトリのコードやファイルはPrivateのまま" },
+      { "id": "B", "text": "ProjectsはOrganizationかリポジトリに紐づき、可視性（Public/Private）と誰がアクセスできるかをオーナーが管理できる" },
+      { "id": "C", "text": "ProjectsはPublicかPrivateの2種類の可視性があり、Private ProjectはOrg/リポジトリ権限に基づいてアクセス制御される" },
+      { "id": "D", "text": "Projectsの可視性はリポジトリの可視性に自動的に同期されるため、個別に設定する必要はない" }
     ],
     "correctChoiceIds": ["C"],
     "explanation": "ProjectsはユーザーまたはOrganizationレベルで作業を計画・追跡する柔軟なツールです。公開・非公開やアクセス範囲を考慮し、チームやOrganizationの運用に合わせて共有します。",
@@ -559,6 +534,6 @@
       }
     ],
     "tags": ["projects", "visibility", "access-management"],
-    "updatedAt": "2026-05-31"
+    "updatedAt": "2026-06-02"
   }
 ]

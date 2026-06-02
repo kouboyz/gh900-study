@@ -29,25 +29,25 @@
     "domainId": "D2",
     "questionType": "single-choice",
     "difficulty": "basic",
-    "question": "README.md の主な役割として最も適切なものはどれですか？",
+    "question": "新しいオープンソースリポジトリを公開する際に、他の開発者がプロジェクトの目的・インストール方法・使い方をすぐ理解できるようにするために最初に追加すべきファイルはどれですか？",
     "choices": [
-      { "id": "A", "text": "リポジトリのビルド設定を定義する" },
-      { "id": "B", "text": "リポジトリのトップページに表示され、プロジェクトの概要・使い方・貢献方法を伝える" },
-      { "id": "C", "text": "コードの著作権情報だけを記載する" },
-      { "id": "D", "text": "テストの実行結果を自動記録する" }
+      { "id": "A", "text": "CODEOWNERS" },
+      { "id": "B", "text": "README.md" },
+      { "id": "C", "text": ".github/workflows/ci.yml" },
+      { "id": "D", "text": "SECURITY.md" }
     ],
     "correctChoiceIds": ["B"],
-    "explanation": "README.mdはリポジトリのフロントページとして機能し、プロジェクトの目的・インストール方法・使い方・ライセンス・貢献方法などを説明します。Markdownで記述し、GitHub上でHTMLとしてレンダリングされます。",
+    "explanation": "README.md はリポジトリのフロントページとして機能し、プロジェクトの目的・インストール方法・使い方・ライセンス・コントリビューション方法などを説明します。GitHub はリポジトリのトップページに README.md を自動表示するため、まず追加すべき重要なファイルです。",
     "references": [
       {
         "title": "リポジトリの README ファイルについて",
         "url": "https://docs.github.com/ja/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes",
         "source": "GitHub Docs",
-        "checkedAt": "2026-05-31"
+        "checkedAt": "2026-06-02"
       }
     ],
-    "tags": ["readme", "repository"],
-    "updatedAt": "2026-05-31"
+    "tags": ["readme", "repository", "open-source"],
+    "updatedAt": "2026-06-02"
   },
   {
     "id": "D2-003",
@@ -302,27 +302,27 @@
   {
     "id": "D2-013",
     "domainId": "D2",
-    "questionType": "single-choice",
+    "questionType": "multiple-choice",
     "difficulty": "standard",
-    "question": "GitHub のコミュニティプロフィールで確認されるファイルの例として最も適切なものはどれですか？",
+    "question": "GitHub のコミュニティプロフィールのチェックリストで確認されるファイルとして正しいものを2つ選んでください。",
     "choices": [
-      { "id": "A", "text": "README、LICENSE、CONTRIBUTING、CODE_OF_CONDUCT など" },
-      { "id": "B", "text": "node_modules、dist、coverage、.cache など" },
-      { "id": "C", "text": "個人アクセストークン、SSH 秘密鍵、環境変数ファイルなど" },
-      { "id": "D", "text": "ブラウザー履歴、Cookie、ローカル通知設定など" }
+      { "id": "A", "text": "CONTRIBUTING.md" },
+      { "id": "B", "text": "CODE_OF_CONDUCT.md" },
+      { "id": "C", "text": "package.json" },
+      { "id": "D", "text": ".github/workflows/ci.yml" }
     ],
-    "correctChoiceIds": ["A"],
-    "explanation": "コミュニティプロフィールは、README、CODE_OF_CONDUCT、LICENSE、CONTRIBUTING など、プロジェクトの健全な参加を助ける推奨ファイルが存在するかを確認します。これらは利用者やコントリビューターへの案内になります。",
+    "correctChoiceIds": ["A", "B"],
+    "explanation": "コミュニティプロフィールは README・LICENSE・CONTRIBUTING・CODE_OF_CONDUCT・SECURITY.md など、健全なコミュニティ参加を助ける推奨ファイルの存在を確認します。package.json は依存関係管理ファイル、CI ワークフロー設定はコミュニティプロフィールのチェック対象外です。",
     "references": [
       {
         "title": "パブリックリポジトリのコミュニティプロフィールについて",
         "url": "https://docs.github.com/ja/communities/setting-up-your-project-for-healthy-contributions/about-community-profiles-for-public-repositories",
         "source": "GitHub Docs",
-        "checkedAt": "2026-05-31"
+        "checkedAt": "2026-06-02"
       }
     ],
     "tags": ["community-profile", "repository-health", "contributing"],
-    "updatedAt": "2026-05-31"
+    "updatedAt": "2026-06-02"
   },
   {
     "id": "D2-014",
@@ -527,52 +527,27 @@
   {
     "id": "D2-022",
     "domainId": "D2",
-    "questionType": "single-choice",
-    "difficulty": "basic",
-    "question": "GitHub Releases と Git タグの関係として最も適切なものはどれですか？",
+    "questionType": "multiple-choice",
+    "difficulty": "standard",
+    "question": "GitHub Releases について正しい説明を2つ選んでください。",
     "choices": [
-      { "id": "A", "text": "リリースを作成すると、対応する Git タグは必ず削除される" },
-      { "id": "B", "text": "Git タグは Issue のラベルを保存するためだけに使われる" },
-      { "id": "C", "text": "リリースは Git タグに基づき、特定時点のソフトウェアやリリースノートを配布するために使える" },
-      { "id": "D", "text": "リリースは private リポジトリでは表示できない" }
+      { "id": "A", "text": "リリースは Git タグに基づいており、存在しない場合はリリース作成時に自動生成される" },
+      { "id": "B", "text": "リリースにはコンパイル済みバイナリなどのファイルをアセットとして添付できる" },
+      { "id": "C", "text": "リリースを作成すると、対応する Git タグは自動的に削除される" },
+      { "id": "D", "text": "リリースは Private リポジトリでは作成できない" }
     ],
-    "correctChoiceIds": ["C"],
-    "explanation": "GitHub Releases は Git タグに基づき、特定の履歴時点をリリースとしてパッケージ化します。リリースノートやバイナリへのリンクを含めて、利用者に配布可能な形にできます。",
+    "correctChoiceIds": ["A", "B"],
+    "explanation": "GitHub Releases は Git タグに基づいて作成されます。タグが存在しない場合はリリース作成時に自動生成されます。また、コンパイル済みバイナリなどのファイルをアセットとして添付でき、ソースコードの zip・tarball も自動提供されます。タグは削除されず、Private リポジトリでもリリースは作成可能です。",
     "references": [
       {
         "title": "リリースについて",
         "url": "https://docs.github.com/ja/repositories/releasing-projects-on-github/about-releases",
         "source": "GitHub Docs",
-        "checkedAt": "2026-05-31"
+        "checkedAt": "2026-06-02"
       }
     ],
-    "tags": ["releases", "tags", "distribution"],
-    "updatedAt": "2026-05-31"
-  },
-  {
-    "id": "D2-023",
-    "domainId": "D2",
-    "questionType": "single-choice",
-    "difficulty": "standard",
-    "question": "リリースアセットの説明として最も適切なものはどれですか？",
-    "choices": [
-      { "id": "A", "text": "リポジトリのアクセス権をチーム単位で管理する設定" },
-      { "id": "B", "text": "リリースに添付できるコンパイル済みプログラムなどのバイナリファイル" },
-      { "id": "C", "text": "GitHub Actions の実行ログだけを保存する専用ストレージ" },
-      { "id": "D", "text": "Pull Request のレビュー担当者を自動選択するファイル" }
-    ],
-    "correctChoiceIds": ["B"],
-    "explanation": "リリース作成時には、リリースノートに加えてコンパイル済みプログラムなどのバイナリファイルをアセットとして添付できます。GitHub はタグ時点のソースコードの zip と tarball も自動的に提供します。",
-    "references": [
-      {
-        "title": "リポジトリのリリースを管理する",
-        "url": "https://docs.github.com/ja/repositories/releasing-projects-on-github/managing-releases-in-a-repository",
-        "source": "GitHub Docs",
-        "checkedAt": "2026-05-31"
-      }
-    ],
-    "tags": ["releases", "assets", "binaries"],
-    "updatedAt": "2026-05-31"
+    "tags": ["releases", "tags", "assets"],
+    "updatedAt": "2026-06-02"
   },
   {
     "id": "D2-024",

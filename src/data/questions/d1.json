@@ -179,25 +179,31 @@
     "domainId": "D1",
     "questionType": "single-choice",
     "difficulty": "basic",
-    "question": "GitHub Desktop の主な用途として最も適切なものはどれですか？",
+    "question": "GitHub Desktop と GitHub Mobile の主な用途の違いとして最も適切なものはどれですか？",
     "choices": [
-      { "id": "A", "text": "スマートフォンから Issue や Pull Request を確認・コメントするため" },
-      { "id": "B", "text": "ブラウザを使わずにデスクトップから GUI で Git 操作（コミット・プッシュ・PR など）を行うため" },
-      { "id": "C", "text": "GitHub Actions のワークフローを GUI 上で実行するため" },
-      { "id": "D", "text": "GitHub Pages のデプロイ状況をモニタリングするため" }
+      { "id": "A", "text": "GitHub Desktop はデスクトップで GUI を使った Git 操作（コミット・プッシュ・PR 作成など）を行うためのアプリで、GitHub Mobile はスマートフォンから Issue・PR・通知を確認・操作するためのアプリである" },
+      { "id": "B", "text": "どちらも同じ機能を提供しており、デバイスの種類によって自動切換えされる" },
+      { "id": "C", "text": "GitHub Desktop はコードレビューのみ、GitHub Mobile はコミット操作のみに対応している" },
+      { "id": "D", "text": "GitHub Desktop はクラウド環境専用、GitHub Mobile はローカル環境専用である" }
     ],
-    "correctChoiceIds": ["B"],
-    "explanation": "GitHub Desktop はデスクトップ向けの GUI アプリで、コマンドラインを使わずにコミット・プッシュ・ブランチ操作・Pull Request の作成などの Git 操作を行えます。スマートフォンから Issue や通知を管理するのは GitHub Mobile の役割です。",
+    "correctChoiceIds": ["A"],
+    "explanation": "GitHub Desktop はデスクトップ向け GUI アプリで、コマンドラインを使わずにコミット・プッシュ・ブランチ操作などの Git 操作ができます。GitHub Mobile（iOS/Android）はスマートフォンから Issue や PR へのコメント・通知管理などが行えます。それぞれデバイスや用途に応じた異なる役割を持ちます。",
     "references": [
       {
         "title": "GitHub Desktop について",
         "url": "https://docs.github.com/ja/desktop/overview/about-github-desktop",
         "source": "GitHub Docs",
-        "checkedAt": "2026-05-31"
+        "checkedAt": "2026-06-02"
+      },
+      {
+        "title": "GitHub Mobile",
+        "url": "https://docs.github.com/ja/get-started/using-github/github-mobile",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-06-02"
       }
     ],
     "tags": ["github-desktop", "github-mobile"],
-    "updatedAt": "2026-05-31"
+    "updatedAt": "2026-06-02"
   },
   {
     "id": "D1-009",
@@ -300,31 +306,6 @@
     "updatedAt": "2026-05-31"
   },
   {
-    "id": "D1-013",
-    "domainId": "D1",
-    "questionType": "single-choice",
-    "difficulty": "standard",
-    "question": "GitHub Mobile の主な用途として最も適切なものはどれですか？",
-    "choices": [
-      { "id": "A", "text": "スマートフォンから Issue・Pull Request・通知を確認・操作するため" },
-      { "id": "B", "text": "スマートフォンのカメラで QR コードをスキャンしてリポジトリにアクセスするため" },
-      { "id": "C", "text": "スマートフォンからコードをコンパイル・ビルドするため" },
-      { "id": "D", "text": "スマートフォンに GitHub Pages のサイトをキャッシュするため" }
-    ],
-    "correctChoiceIds": ["A"],
-    "explanation": "GitHub Mobile（iOS / Android）は外出先でも Issue やPull Requestへのコメント・レビュー・マージ、通知の確認・管理などができるアプリです。コードの編集には github.dev や Codespaces が適しています。",
-    "references": [
-      {
-        "title": "GitHub Mobile",
-        "url": "https://docs.github.com/ja/get-started/using-github/github-mobile",
-        "source": "GitHub Docs",
-        "checkedAt": "2026-05-31"
-      }
-    ],
-    "tags": ["github-mobile"],
-    "updatedAt": "2026-05-31"
-  },
-  {
     "id": "D1-014",
     "domainId": "D1",
     "questionType": "single-choice",
@@ -372,31 +353,6 @@
       }
     ],
     "tags": ["repository", "visibility"],
-    "updatedAt": "2026-05-31"
-  },
-  {
-    "id": "D1-016",
-    "domainId": "D1",
-    "questionType": "single-choice",
-    "difficulty": "standard",
-    "question": "GitHub のリリース（Release）の説明として最も適切なものはどれですか？",
-    "choices": [
-      { "id": "A", "text": "Pull Request を main ブランチにマージする操作のこと" },
-      { "id": "B", "text": "Git タグに基づいてソフトウェアのバイナリやソースコードをパッケージ化して配布する機能" },
-      { "id": "C", "text": "GitHub Pages でサイトを公開するための設定画面" },
-      { "id": "D", "text": "Codespaces の開発環境をチームに共有する機能" }
-    ],
-    "correctChoiceIds": ["B"],
-    "explanation": "GitHub Releases は Git タグと紐づけてソフトウェアのバイナリファイルやソースコードのアーカイブを配布できる機能です。リリースノートを添えることでユーザーに変更内容を伝えられ、ダウンロード数の確認も可能です。",
-    "references": [
-      {
-        "title": "リリースについて",
-        "url": "https://docs.github.com/ja/repositories/releasing-projects-on-github/about-releases",
-        "source": "GitHub Docs",
-        "checkedAt": "2026-05-31"
-      }
-    ],
-    "tags": ["release", "tags"],
     "updatedAt": "2026-05-31"
   },
   {
@@ -453,26 +409,26 @@
     "id": "D1-019",
     "domainId": "D1",
     "questionType": "single-choice",
-    "difficulty": "basic",
-    "question": "集中型バージョン管理と比べて、Gitのような分散型バージョン管理で「ローカルコミット」が可能な理由として最も適切なものはどれですか？",
+    "difficulty": "standard",
+    "question": "開発者がネットワーク接続のない環境で作業しています。Git を使っている場合、この開発者がオフラインでも実行できる操作として正しいものはどれですか？",
     "choices": [
-      { "id": "A", "text": "ローカルにも履歴を持つリポジトリがあり、中央サーバーへ常時接続しなくても記録できる" },
-      { "id": "B", "text": "GitHubのWeb UIがすべての変更を自動承認するため" },
-      { "id": "C", "text": "READMEに変更内容を書くとコミットとして扱われるため" },
-      { "id": "D", "text": "Organizationの管理者だけが履歴を保存するため" }
+      { "id": "A", "text": "git push でリモートリポジトリに変更を送信できる" },
+      { "id": "B", "text": "GitHub の Web UI でファイルを編集できる" },
+      { "id": "C", "text": "git commit でローカルリポジトリに変更を記録できる" },
+      { "id": "D", "text": "Pull Request を作成してレビューを依頼できる" }
     ],
-    "correctChoiceIds": ["A"],
-    "explanation": "正解は「ローカルにも履歴を持つリポジトリがあり、中央サーバーへ常時接続しなくても記録できる」です。Gitは分散型で、手元のリポジトリに対してコミットできます。他の選択肢はGitHubの機能や管理権限をコミット記録と混同しています。",
+    "correctChoiceIds": ["C"],
+    "explanation": "Git は分散型バージョン管理システムであり、各開発者がローカルにリポジトリの完全なコピーを持ちます。そのため、ネットワーク接続がなくてもローカルリポジトリに対して git commit を実行できます。git push や Pull Request 作成にはネットワーク接続が必要です。",
     "references": [
       {
-        "title": "Git について",
-        "url": "https://docs.github.com/ja/get-started/using-git/about-git",
+        "title": "GitHub と Git について",
+        "url": "https://docs.github.com/ja/get-started/start-your-journey/about-github-and-git",
         "source": "GitHub Docs",
-        "checkedAt": "2026-05-31"
+        "checkedAt": "2026-06-02"
       }
     ],
-    "tags": ["git", "dvcs", "local-repository"],
-    "updatedAt": "2026-05-31"
+    "tags": ["git", "dvcs", "offline"],
+    "updatedAt": "2026-06-02"
   },
   {
     "id": "D1-020",
@@ -800,31 +756,6 @@
     "updatedAt": "2026-05-31"
   },
   {
-    "id": "D1-033",
-    "domainId": "D1",
-    "questionType": "single-choice",
-    "difficulty": "standard",
-    "question": "GitHubで「デフォルトブランチ」が使われる場面として最も適切なものはどれですか？",
-    "choices": [
-      { "id": "A", "text": "すべてのタグが自動作成される専用ブランチ" },
-      { "id": "B", "text": "GitHub Mobileだけで編集できるブランチ" },
-      { "id": "C", "text": "リポジトリの表示時やクローン時に最初に基準となるブランチ" },
-      { "id": "D", "text": "Organizationの請求情報を保存するブランチ" }
-    ],
-    "correctChoiceIds": ["C"],
-    "explanation": "正解は「リポジトリの表示時やクローン時に最初に基準となるブランチ」です。デフォルトブランチはリポジトリ表示やクローン時の初期チェックアウト、PRの既定ベースとして使われます。他の選択肢は、別のGit/GitHub機能や該当しない操作を述べているため誤りです。",
-    "references": [
-      {
-        "title": "ブランチの概要",
-        "url": "https://docs.github.com/ja/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-branches",
-        "source": "GitHub Docs",
-        "checkedAt": "2026-05-31"
-      }
-    ],
-    "tags": ["branch", "default-branch"],
-    "updatedAt": "2026-05-31"
-  },
-  {
     "id": "D1-034",
     "domainId": "D1",
     "questionType": "single-choice",
@@ -929,25 +860,25 @@
     "domainId": "D1",
     "questionType": "single-choice",
     "difficulty": "standard",
-    "question": "GitHub FlowでPull Requestを開く主な目的として最も適切なものはどれですか？",
+    "question": "あなたはチームで開発しており、新機能の実装が完了しました。main ブランチへのマージ前に最初に行うべき GitHub Flow のステップとして最も適切なものはどれですか？",
     "choices": [
-      { "id": "A", "text": "変更をすぐ本番へ直接デプロイするため" },
-      { "id": "B", "text": "リポジトリの可視性をPublicへ変更するため" },
-      { "id": "C", "text": "GitHubアカウントをTeamプランへ変更するため" },
-      { "id": "D", "text": "変更内容を提案し、レビューや議論を行ってからマージするため" }
+      { "id": "A", "text": "直接 main ブランチに git push する" },
+      { "id": "B", "text": "Pull Request を開き、変更内容についてチームにレビューを依頼する" },
+      { "id": "C", "text": "リポジトリを削除して作り直す" },
+      { "id": "D", "text": "タグを作成してリリースとして公開する" }
     ],
-    "correctChoiceIds": ["D"],
-    "explanation": "正解は「変更内容を提案し、レビューや議論を行ってからマージするため」です。Pull Requestはブランチの変更を提案し、レビューや議論を経て合意後にマージするための中心的な仕組みです。他の選択肢は、別のGit/GitHub機能や該当しない操作を述べているため誤りです。",
+    "correctChoiceIds": ["B"],
+    "explanation": "GitHub Flow では新機能の実装が完了したらトピックブランチから Pull Request を開き、チームメンバーにレビューと議論の機会を設けます。main への直接プッシュはブランチ保護ルール上も推奨されず、PR を通じたレビューがフローの核心です。",
     "references": [
       {
         "title": "GitHub フロー",
         "url": "https://docs.github.com/ja/get-started/using-github/github-flow",
         "source": "GitHub Docs",
-        "checkedAt": "2026-05-31"
+        "checkedAt": "2026-06-02"
       }
     ],
-    "tags": ["github-flow", "pull-request"],
-    "updatedAt": "2026-05-31"
+    "tags": ["github-flow", "pull-request", "workflow"],
+    "updatedAt": "2026-06-02"
   },
   {
     "id": "D1-039",
@@ -956,10 +887,10 @@
     "difficulty": "standard",
     "question": "GitHub Flowで短く分かりやすいブランチ名を付ける理由として最も適切なものはどれですか？",
     "choices": [
-      { "id": "A", "text": "コラボレーターが進行中の作業内容を把握しやすくするため" },
-      { "id": "B", "text": "GitHub Actionsの利用料金をゼロにするため" },
-      { "id": "C", "text": "コミット履歴を自動的に削除するため" },
-      { "id": "D", "text": "READMEを必ず表示させるため" }
+      { "id": "A", "text": "GitHub Actionsがブランチ名を元にCIを自動設定するため" },
+      { "id": "B", "text": "チームメンバーが作業内容をブランチ名から素早く理解できるため" },
+      { "id": "C", "text": "Gitのブランチ名はリモートに送信されないため、名前は関係ない" },
+      { "id": "D", "text": "短いブランチ名だとマージ時のコンフリクトが発生しにくくなるため" }
     ],
     "correctChoiceIds": ["A"],
     "explanation": "正解は「コラボレーターが進行中の作業内容を把握しやすくするため」です。GitHub Flowでは作業内容が分かる短いブランチ名が推奨されます。他の選択肢は、別のGit/GitHub機能や該当しない操作を述べているため誤りです。",
@@ -972,7 +903,7 @@
       }
     ],
     "tags": ["github-flow", "branch"],
-    "updatedAt": "2026-05-31"
+    "updatedAt": "2026-06-02"
   },
   {
     "id": "D1-040",
@@ -981,10 +912,10 @@
     "difficulty": "advanced",
     "question": "GitHub Flowで変更をmainへマージした後の「デプロイ」に関する考え方として最も適切なものはどれですか？",
     "choices": [
-      { "id": "A", "text": "レビュー前に必ず個人アカウントを削除する段階である" },
-      { "id": "B", "text": "マージ後の変更をユーザーが利用できる環境へ反映する段階である" },
-      { "id": "C", "text": "タグがない変更はGitHub上で表示できないため不要である" },
-      { "id": "D", "text": "ステージングエリアを空にするGitコマンドの別名である" }
+      { "id": "A", "text": "マージ後はリリースタグを作成してからでないとデプロイできない" },
+      { "id": "B", "text": "mainは常にデプロイ可能な状態に保ち、マージ後すぐにデプロイできる" },
+      { "id": "C", "text": "デプロイはCIが自動で行うため、開発者が意識する必要はない" },
+      { "id": "D", "text": "mainへのマージ後は必ず別のリリースブランチを切ってからデプロイする" }
     ],
     "correctChoiceIds": ["B"],
     "explanation": "正解は「マージ後の変更をユーザーが利用できる環境へ反映する段階である」です。GitHub Flowではレビューとマージ後に変更をデプロイして利用可能にします。他の選択肢は、別のGit/GitHub機能や該当しない操作を述べているため誤りです。",
@@ -997,7 +928,7 @@
       }
     ],
     "tags": ["github-flow", "deployment"],
-    "updatedAt": "2026-05-31"
+    "updatedAt": "2026-06-02"
   },
   {
     "id": "D1-041",
@@ -1031,10 +962,10 @@
     "difficulty": "standard",
     "question": "GitHub Free、GitHub Team、GitHub Enterpriseのような「プラン」を理解する目的として最も適切なものはどれですか？",
     "choices": [
-      { "id": "A", "text": "GitのコミットIDを短くするため" },
-      { "id": "B", "text": "Markdownの絵文字一覧を増やすため" },
-      { "id": "C", "text": "すべてのリポジトリを自動的にInternalへ変えるため" },
-      { "id": "D", "text": "利用できる機能、対象アカウント、サポートや管理機能の違いを判断するため" }
+      { "id": "A", "text": "GitHubのSLAや障害対応ポリシーを確認するため" },
+      { "id": "B", "text": "GitHub Actionsの無料利用枠やプライベートリポジトリの機能範囲など、利用できる機能・制限・コストをプロジェクトの要件に合わせて選択するため" },
+      { "id": "C", "text": "FreeプランでもEnterpriseと同等の機能が使えることを確認するため" },
+      { "id": "D", "text": "プランを変更するとリポジトリのデータが移行されることを理解するため" }
     ],
     "correctChoiceIds": ["D"],
     "explanation": "正解は「利用できる機能、対象アカウント、サポートや管理機能の違いを判断するため」です。GitHubのプランは無料・有料の機能差や個人/組織/Enterprise向けの違いを判断するために重要です。他の選択肢は、別のGit/GitHub機能や該当しない操作を述べているため誤りです。",
@@ -1047,7 +978,7 @@
       }
     ],
     "tags": ["plans", "github-free", "github-team", "enterprise"],
-    "updatedAt": "2026-05-31"
+    "updatedAt": "2026-06-02"
   },
   {
     "id": "D1-043",
@@ -1056,10 +987,10 @@
     "difficulty": "advanced",
     "question": "Enterpriseアカウントで複数Organizationをまとめて扱う利点として最も適切なものはどれですか？",
     "choices": [
-      { "id": "A", "text": "企業全体のポリシーや請求などをOrganization横断で管理しやすい" },
-      { "id": "B", "text": "個人プロフィールの絵文字を増やせる" },
-      { "id": "C", "text": "GitHub Mobileからの閲覧を禁止するためだけに使う" },
-      { "id": "D", "text": "すべてのリポジトリを自動的にGistへ変換する" }
+      { "id": "A", "text": "各OrganizationのリポジトリをすべてPublicに統一できる" },
+      { "id": "B", "text": "複数OrganizationのポリシーIssue・請求・セキュリティ設定を一元管理できる" },
+      { "id": "C", "text": "Enterprise配下の全リポジトリを1つのリポジトリに自動統合できる" },
+      { "id": "D", "text": "EnterpriseアカウントはOrganizationを1つしか持てないため管理が単純になる" }
     ],
     "correctChoiceIds": ["A"],
     "explanation": "正解は「企業全体のポリシーや請求などをOrganization横断で管理しやすい」です。Enterpriseは複数Organizationの管理単位です。他の選択肢はEnterpriseアカウントの目的や機能を表していません。",
@@ -1072,7 +1003,7 @@
       }
     ],
     "tags": ["enterprise", "account-management"],
-    "updatedAt": "2026-05-31"
+    "updatedAt": "2026-06-02"
   },
   {
     "id": "D1-044",
@@ -1122,56 +1053,6 @@
       }
     ],
     "tags": ["github-cli", "git"],
-    "updatedAt": "2026-05-31"
-  },
-  {
-    "id": "D1-046",
-    "domainId": "D1",
-    "questionType": "single-choice",
-    "difficulty": "basic",
-    "question": "GitHub DesktopがWeb UIと異なる点として最も適切なものはどれですか？",
-    "choices": [
-      { "id": "A", "text": "ブラウザーだけで動作し、ローカルファイルは扱えない" },
-      { "id": "B", "text": "REST API専用の認証ツールである" },
-      { "id": "C", "text": "スマートフォン通知専用アプリである" },
-      { "id": "D", "text": "PCにインストールして、ローカルリポジトリの変更確認やコミットなどをGUIで行う" }
-    ],
-    "correctChoiceIds": ["D"],
-    "explanation": "正解は「PCにインストールして、ローカルリポジトリの変更確認やコミットなどをGUIで行う」です。GitHub Desktopはデスクトップアプリです。他の選択肢はWeb UI、API、Mobileの説明と混同しています。",
-    "references": [
-      {
-        "title": "GitHub Desktop について",
-        "url": "https://docs.github.com/ja/desktop/overview/about-github-desktop",
-        "source": "GitHub Docs",
-        "checkedAt": "2026-05-31"
-      }
-    ],
-    "tags": ["github-desktop", "local-repository"],
-    "updatedAt": "2026-05-31"
-  },
-  {
-    "id": "D1-047",
-    "domainId": "D1",
-    "questionType": "single-choice",
-    "difficulty": "standard",
-    "question": "GitHub Mobileの位置づけとして最も適切なものはどれですか？",
-    "choices": [
-      { "id": "A", "text": "外出先で通知、Issue、Pull Requestの確認や対応を行うためのモバイルアプリ" },
-      { "id": "B", "text": "ローカルの.gitディレクトリを直接修復するためのGitサーバー" },
-      { "id": "C", "text": "デスクトップPC専用のGUIクライアント" },
-      { "id": "D", "text": "MarkdownをPDFに変換する公式ビルドツール" }
-    ],
-    "correctChoiceIds": ["A"],
-    "explanation": "正解は「外出先で通知、Issue、Pull Requestの確認や対応を行うためのモバイルアプリ」です。GitHub Mobileはモバイル端末でGitHub上の作業を扱うアプリです。他の選択肢はローカルGit、Desktop、文書変換の説明です。",
-    "references": [
-      {
-        "title": "GitHub Mobile",
-        "url": "https://docs.github.com/ja/get-started/using-github/github-mobile",
-        "source": "GitHub Docs",
-        "checkedAt": "2026-05-31"
-      }
-    ],
-    "tags": ["github-mobile", "notifications"],
     "updatedAt": "2026-05-31"
   },
   {
@@ -1229,50 +1110,50 @@
     "domainId": "D1",
     "questionType": "single-choice",
     "difficulty": "basic",
-    "question": "GitHubでMarkdownの太字を表す記法として正しいものはどれですか？",
+    "question": "GitHub Flavored Markdown において、テキストを太字にする記法として正しいものをすべて含む選択肢はどれですか？",
     "choices": [
-      { "id": "A", "text": "## 強調したいテキスト" },
-      { "id": "B", "text": "`強調したいテキスト`" },
-      { "id": "C", "text": "[ ] 強調したいテキスト" },
-      { "id": "D", "text": "**強調したいテキスト**" }
+      { "id": "A", "text": "**テキスト** のみが太字になる" },
+      { "id": "B", "text": "**テキスト** と __テキスト__ の両方が太字になる" },
+      { "id": "C", "text": "~~テキスト~~ が太字になる" },
+      { "id": "D", "text": "*テキスト* が太字になる" }
     ],
-    "correctChoiceIds": ["D"],
-    "explanation": "正解は「**強調したいテキスト**」です。太字はテキストを ** ** または __ __ で囲みます。他の選択肢は、別のGit/GitHub機能や該当しない操作を述べているため誤りです。",
+    "correctChoiceIds": ["B"],
+    "explanation": "GitHub Flavored Markdown では、アスタリスク2つ（**テキスト**）またはアンダースコア2つ（__テキスト__）で囲むと太字になります。*テキスト* や _テキスト_ は斜体、~~テキスト~~ は取り消し線です。",
     "references": [
       {
         "title": "基本的な書き込みと書式設定の構文",
         "url": "https://docs.github.com/ja/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax",
         "source": "GitHub Docs",
-        "checkedAt": "2026-05-31"
+        "checkedAt": "2026-06-02"
       }
     ],
-    "tags": ["markdown", "formatting"],
-    "updatedAt": "2026-05-31"
+    "tags": ["markdown"],
+    "updatedAt": "2026-06-02"
   },
   {
     "id": "D1-051",
     "domainId": "D1",
-    "questionType": "single-choice",
+    "questionType": "multiple-choice",
     "difficulty": "standard",
-    "question": "GitHub Flavored Markdownでタスクリストを表す記法として最も適切なものはどれですか？",
+    "question": "GitHub Flavored Markdown（GFM）で利用できる書式として正しいものを2つ選んでください。",
     "choices": [
-      { "id": "A", "text": "- [ ] 未完了のタスク" },
-      { "id": "B", "text": "## 未完了のタスク" },
-      { "id": "C", "text": "@task 未完了のタスク" },
-      { "id": "D", "text": "``` 未完了のタスク ```" }
+      { "id": "A", "text": "- [ ] タスク項目 のようにチェックボックス付きタスクリストを作成できる" },
+      { "id": "B", "text": ":smile: のようなコロンで囲んだ名前で絵文字を挿入できる" },
+      { "id": "C", "text": "<script> タグでJavaScriptを実行できる" },
+      { "id": "D", "text": "%%数式%% 記法で数学的表現を記述できる" }
     ],
-    "correctChoiceIds": ["A"],
-    "explanation": "正解は「- [ ] 未完了のタスク」です。タスクリストはチェックボックス付きの行として - [ ] や - [x] を使います。他の選択肢は、別のGit/GitHub機能や該当しない操作を述べているため誤りです。",
+    "correctChoiceIds": ["A", "B"],
+    "explanation": "GitHub Flavored Markdown では、- [ ] でタスクリスト（チェックボックス付き）を作成でき、:smile: のようなショートコードで絵文字を挿入できます。セキュリティ上 <script> などのHTMLスクリプトはサニタイズされ実行されません。数式は $$ 記法（LaTeX）が使えます。",
     "references": [
       {
-        "title": "タスクリストについて",
-        "url": "https://docs.github.com/ja/get-started/writing-on-github/working-with-advanced-formatting/about-task-lists",
+        "title": "GitHub Flavored Markdown の仕様",
+        "url": "https://docs.github.com/ja/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax",
         "source": "GitHub Docs",
-        "checkedAt": "2026-05-31"
+        "checkedAt": "2026-06-02"
       }
     ],
-    "tags": ["markdown", "task-list"],
-    "updatedAt": "2026-05-31"
+    "tags": ["markdown", "gfm", "task-list", "emoji"],
+    "updatedAt": "2026-06-02"
   },
   {
     "id": "D1-052",
@@ -1325,41 +1206,16 @@
     "updatedAt": "2026-05-31"
   },
   {
-    "id": "D1-054",
-    "domainId": "D1",
-    "questionType": "single-choice",
-    "difficulty": "standard",
-    "question": "Gistの使いどころとして最も適切なものはどれですか？",
-    "choices": [
-      { "id": "A", "text": "Organizationの全メンバーを一括削除する" },
-      { "id": "B", "text": "リポジトリの全ブランチを自動マージする" },
-      { "id": "C", "text": "GitHub Actionsの実行時間を購入する" },
-      { "id": "D", "text": "短いコードスニペットやメモをGitHub上で作成・共有する" }
-    ],
-    "correctChoiceIds": ["D"],
-    "explanation": "正解は「短いコードスニペットやメモをGitHub上で作成・共有する」です。Gistはコード片やメモの共有に使われ、GitHub CLIでも作成・編集などができます。他の選択肢は、別のGit/GitHub機能や該当しない操作を述べているため誤りです。",
-    "references": [
-      {
-        "title": "Gist の作成",
-        "url": "https://docs.github.com/ja/get-started/writing-on-github/editing-and-sharing-content-with-gists/creating-gists",
-        "source": "GitHub Docs",
-        "checkedAt": "2026-05-31"
-      }
-    ],
-    "tags": ["gist", "sharing"],
-    "updatedAt": "2026-05-31"
-  },
-  {
     "id": "D1-055",
     "domainId": "D1",
     "questionType": "single-choice",
     "difficulty": "advanced",
     "question": "SSHでGitHubへ接続する方法をHTTPSと比較した説明として最も適切なものはどれですか？",
     "choices": [
-      { "id": "A", "text": "SSHキーを使って認証し、リモートリポジトリとの安全な通信に利用できる" },
-      { "id": "B", "text": "ブラウザーからREADMEを読むためだけの方式" },
-      { "id": "C", "text": "Markdownの絵文字を有効にする設定" },
-      { "id": "D", "text": "GitHub Mobile専用の通知方式" }
+      { "id": "A", "text": "SSHはHTTPSよりも接続が遅いが、暗号化強度が高い" },
+      { "id": "B", "text": "SSHはHTTPSと異なり、GitHubへのpushにのみ使用できる" },
+      { "id": "C", "text": "SSH鍵を登録すれば、認証後はパスワードやトークンの入力なしに操作できる" },
+      { "id": "D", "text": "SSHはGitHub EnterpriseでのみサポートされるプロトコルでGitHub.comでは使えない" }
     ],
     "correctChoiceIds": ["A"],
     "explanation": "正解は「SSHキーを使って認証し、リモートリポジトリとの安全な通信に利用できる」です。SSHはキーに基づく認証でGitHubのリモート操作に利用されます。他の選択肢は、別のGit/GitHub機能や該当しない操作を述べているため誤りです。",
@@ -1372,7 +1228,7 @@
       }
     ],
     "tags": ["ssh", "https", "clone"],
-    "updatedAt": "2026-05-31"
+    "updatedAt": "2026-06-02"
   },
   {
     "id": "D1-056",
@@ -1462,10 +1318,10 @@
     "difficulty": "basic",
     "question": "GitHub Skillsのようなハンズオン学習を使う目的として最も適切なものはどれですか？",
     "choices": [
-      { "id": "A", "text": "GitHub FlowやMarkdownなどを実際に操作しながら学ぶ" },
-      { "id": "B", "text": "GitHubの課金プランを自動的に変更する" },
-      { "id": "C", "text": "リポジトリ内の秘密情報を公開する" },
-      { "id": "D", "text": "Gitの履歴をランダムに並べ替える" }
+      { "id": "A", "text": "GitHub認定試験の代替として資格を取得できる" },
+      { "id": "B", "text": "実際のリポジトリを操作しながら実践的にGitHubを学べる" },
+      { "id": "C", "text": "GitHub Actionsのワークフローを自動生成してくれる" },
+      { "id": "D", "text": "受講すると自動的にGitHub Proプランが付与される" }
     ],
     "correctChoiceIds": ["A"],
     "explanation": "正解は「GitHub FlowやMarkdownなどを実際に操作しながら学ぶ」です。ハンズオン形式の学習は、GitHubの基本操作を実際に試しながら身につける目的に適しています。他の選択肢は、別のGit/GitHub機能や該当しない操作を述べているため誤りです。",
@@ -1484,7 +1340,7 @@
       }
     ],
     "tags": ["github-skills", "learning"],
-    "updatedAt": "2026-05-31"
+    "updatedAt": "2026-06-02"
   },
   {
     "id": "D1-060",
@@ -1510,5 +1366,55 @@
     ],
     "tags": ["web-ui", "beginner"],
     "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D1-061",
+    "domainId": "D1",
+    "questionType": "single-choice",
+    "difficulty": "standard",
+    "question": "GitHub Team プランが GitHub Free（個人・Organization）と比べて追加で利用できる機能として正しいものはどれですか？",
+    "choices": [
+      { "id": "A", "text": "プライベートリポジトリの作成" },
+      { "id": "B", "text": "GitHub Actions の利用" },
+      { "id": "C", "text": "プライベートリポジトリに対するブランチ保護ルールと必須レビュアーの設定" },
+      { "id": "D", "text": "Issue とプロジェクトボードの利用" }
+    ],
+    "correctChoiceIds": ["C"],
+    "explanation": "GitHub Team プランでは、プライベートリポジトリに対してもブランチ保護ルールや必須レビュアーの設定が可能になります。プライベートリポジトリの作成・GitHub Actions の利用・Issue やプロジェクトボードは GitHub Free でも利用できます。Team プランはこれに加え、コードオーナー指定、高度なコードレビュー機能、より多い Actions 利用枠なども提供します。",
+    "references": [
+      {
+        "title": "GitHub のプランの製品",
+        "url": "https://docs.github.com/ja/get-started/learning-about-github/githubs-plans",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-06-02"
+      }
+    ],
+    "tags": ["plans", "team", "free", "branch-protection"],
+    "updatedAt": "2026-06-02"
+  },
+  {
+    "id": "D1-062",
+    "domainId": "D1",
+    "questionType": "single-choice",
+    "difficulty": "standard",
+    "question": "フォーク（Fork）とクローン（Clone）の違いとして最も適切なものはどれですか？",
+    "choices": [
+      { "id": "A", "text": "どちらもまったく同じ操作で、名前が異なるだけ" },
+      { "id": "B", "text": "クローンはリポジトリをローカルマシンにコピーする操作で、フォークは他のユーザーのリポジトリを自分の GitHub アカウント上にコピーして独立したリポジトリとして扱う操作" },
+      { "id": "C", "text": "フォークはローカルへのコピー、クローンは GitHub 上での複製" },
+      { "id": "D", "text": "クローンには書き込み権限が必要だが、フォークは誰でも制限なく実行できる" }
+    ],
+    "correctChoiceIds": ["B"],
+    "explanation": "クローン（git clone）はリモートリポジトリをローカルマシンにコピーして作業できるようにする操作です。フォークは GitHub 上で他ユーザーのリポジトリを自分のアカウントにコピーし、独立したリポジトリとして管理する操作です。フォークしたリポジトリからは元のリポジトリへ Pull Request を送ることができます。OSS への貢献では「フォーク → ローカルにクローン → 変更 → PR」の流れが一般的です。",
+    "references": [
+      {
+        "title": "リポジトリをフォークする",
+        "url": "https://docs.github.com/ja/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-06-02"
+      }
+    ],
+    "tags": ["fork", "clone", "git"],
+    "updatedAt": "2026-06-02"
   }
 ]
