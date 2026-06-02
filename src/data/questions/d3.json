@@ -6,12 +6,26 @@
     "difficulty": "basic",
     "question": "Pull Requestの主な目的として最も適切なものはどれですか？",
     "choices": [
-      { "id": "A", "text": "リポジトリの請求情報を管理するため" },
-      { "id": "B", "text": "変更を提案し、レビューと議論を経てマージするため" },
-      { "id": "C", "text": "GitHub Pagesの独自ドメインを購入するため" },
-      { "id": "D", "text": "Organizationの所有者を自動変更するため" }
+      {
+        "id": "A",
+        "text": "リポジトリの請求情報を管理するため"
+      },
+      {
+        "id": "B",
+        "text": "変更を提案し、レビューと議論を経てマージするため"
+      },
+      {
+        "id": "C",
+        "text": "GitHub Pagesの独自ドメインを購入するため"
+      },
+      {
+        "id": "D",
+        "text": "Organizationの所有者を自動変更するため"
+      }
     ],
-    "correctChoiceIds": ["B"],
+    "correctChoiceIds": [
+      "B"
+    ],
     "explanation": "Pull Requestは、プロジェクトに変更を取り込む前に変更内容を議論しレビューするためのGitHubの中心的な協働機能です。コードレビュー・コメント・承認フローを通じてチームで安全に変更をマージでき、変更の意図を記録として残すことができます。",
     "references": [
       {
@@ -21,7 +35,10 @@
         "checkedAt": "2026-05-31"
       }
     ],
-    "tags": ["pull-request", "collaboration"],
+    "tags": [
+      "pull-request",
+      "collaboration"
+    ],
     "updatedAt": "2026-05-31"
   },
   {
@@ -31,12 +48,26 @@
     "difficulty": "basic",
     "question": "GitHub Issues の説明として最も適切なものはどれですか？",
     "choices": [
-      { "id": "A", "text": "コードの差分をリアルタイムに比較するツール" },
-      { "id": "B", "text": "バグ報告・機能要望・タスク管理など、プロジェクト内の作業アイテムを追跡する機能" },
-      { "id": "C", "text": "リポジトリを別アカウントにコピーする機能" },
-      { "id": "D", "text": "GitHub Actionsのジョブ実行ログを保管する機能" }
+      {
+        "id": "A",
+        "text": "コードの差分をリアルタイムに比較するツール"
+      },
+      {
+        "id": "B",
+        "text": "バグ報告・機能要望・タスク管理など、プロジェクト内の作業アイテムを追跡する機能"
+      },
+      {
+        "id": "C",
+        "text": "リポジトリを別アカウントにコピーする機能"
+      },
+      {
+        "id": "D",
+        "text": "GitHub Actionsのジョブ実行ログを保管する機能"
+      }
     ],
-    "correctChoiceIds": ["B"],
+    "correctChoiceIds": [
+      "B"
+    ],
     "explanation": "IssuesはGitHubのタスク・バグ・フィーチャー管理機能です。ラベル・マイルストーン・担当者・プロジェクトとの連携が可能で、Pull Requestとリンクさせることで「なぜその変更をしたか」のコンテキストを残せます。",
     "references": [
       {
@@ -46,7 +77,10 @@
         "checkedAt": "2026-05-31"
       }
     ],
-    "tags": ["issues", "collaboration"],
+    "tags": [
+      "issues",
+      "collaboration"
+    ],
     "updatedAt": "2026-05-31"
   },
   {
@@ -56,12 +90,26 @@
     "difficulty": "standard",
     "question": "GitHub Discussions と Issues の違いとして最も適切な説明はどれですか？",
     "choices": [
-      { "id": "A", "text": "DiscussionsはOSSのみ、IssuesはPrivateリポジトリのみで使える" },
-      { "id": "B", "text": "Discussionsはオープンエンドな会話や質問向け、Issuesは具体的なタスクや作業項目のトラッキング向け" },
-      { "id": "C", "text": "Discussionsは有料プランのみ利用可能で、Issuesは無料プランでも使える" },
-      { "id": "D", "text": "機能に差はなく、どちらを使っても同じ結果になる" }
+      {
+        "id": "A",
+        "text": "DiscussionsはOSSのみ、IssuesはPrivateリポジトリのみで使える"
+      },
+      {
+        "id": "B",
+        "text": "Discussionsはオープンエンドな会話や質問向け、Issuesは具体的なタスクや作業項目のトラッキング向け"
+      },
+      {
+        "id": "C",
+        "text": "Discussionsは有料プランのみ利用可能で、Issuesは無料プランでも使える"
+      },
+      {
+        "id": "D",
+        "text": "機能に差はなく、どちらを使っても同じ結果になる"
+      }
     ],
-    "correctChoiceIds": ["B"],
+    "correctChoiceIds": [
+      "B"
+    ],
     "explanation": "Discussionsはコミュニティとのオープンな対話（Q&A・アイデア共有・お知らせなど）に適しており、特定のコード変更に直結しない会話に向いています。一方Issuesは具体的なバグ修正や機能実装など、完了できるタスクのトラッキングに使います。",
     "references": [
       {
@@ -71,58 +119,100 @@
         "checkedAt": "2026-05-31"
       }
     ],
-    "tags": ["discussions", "issues", "collaboration"],
+    "tags": [
+      "discussions",
+      "issues",
+      "collaboration"
+    ],
     "updatedAt": "2026-05-31"
   },
   {
     "id": "D3-004",
     "domainId": "D3",
     "questionType": "single-choice",
-    "difficulty": "basic",
-    "question": "Pull Request のレビューで「Approve（承認）」をすると何が起きますか？",
+    "difficulty": "standard",
+    "question": "Pull Request レビューの送信オプション（Comment・Approve・Request changes）の説明として正しいものはどれですか？",
     "choices": [
-      { "id": "A", "text": "Pull Request が自動的に main ブランチにマージされる" },
-      { "id": "B", "text": "そのレビュアーがコードの変更内容を確認し問題ないと承認したことが記録される" },
-      { "id": "C", "text": "Pull Request のブランチが削除される" },
-      { "id": "D", "text": "他のレビュアーへの通知が自動的に停止される" }
+      {
+        "id": "A",
+        "text": "Comment はフィードバックのみ共有（承認も変更要求もしない）、Approve は変更内容を承認、Request changes は修正が完了するまでマージをブロックするシグナルを送る"
+      },
+      {
+        "id": "B",
+        "text": "Comment は変更を承認し、Approve はマージをブロックし、Request changes はフィードバックのみ共有する"
+      },
+      {
+        "id": "C",
+        "text": "3つのオプションはすべて同じ効果で、名称が異なるだけ"
+      },
+      {
+        "id": "D",
+        "text": "Request changes を選ぶとブランチが自動削除され、Approve を選ぶとブランチが保護される"
+      }
     ],
-    "correctChoiceIds": ["B"],
-    "explanation": "Approve はレビュアーがコード変更を確認し問題ないと判断したことを示します。ブランチ保護ルールで「必要な承認数」を設定している場合、その数の Approve が集まることでマージが可能になります。自動マージは別途設定が必要です。",
+    "correctChoiceIds": [
+      "A"
+    ],
+    "explanation": "PRレビューの送信オプションは3種類です。Comment は承認も変更要求もせずフィードバックだけを共有します。Approve はコード変更を承認したことを記録し、必要な承認数に達するとマージ可能になります。Request changes はレビュアーが指摘事項を記録し、ブランチ保護ルールの設定によっては対応が完了するまでマージをブロックします。",
     "references": [
       {
         "title": "プルリクエストのレビューについて",
         "url": "https://docs.github.com/ja/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/about-pull-request-reviews",
         "source": "GitHub Docs",
-        "checkedAt": "2026-05-31"
+        "checkedAt": "2026-06-02"
       }
     ],
-    "tags": ["pull-request", "review"],
-    "updatedAt": "2026-05-31"
+    "tags": [
+      "pull-request",
+      "review",
+      "approve",
+      "request-changes",
+      "comment"
+    ],
+    "updatedAt": "2026-06-02"
   },
   {
     "id": "D3-005",
     "domainId": "D3",
     "questionType": "single-choice",
     "difficulty": "standard",
-    "question": "Issue に Pull Request をリンクするキーワードとして正しいものはどれですか？",
+    "question": "PR の説明文に「fixes #42」のようなリンクキーワードを使う場合の説明として正しいものはどれですか？",
     "choices": [
-      { "id": "A", "text": "PR本文に「link #123」と書く" },
-      { "id": "B", "text": "PR本文に「closes #123」や「fixes #123」と書く" },
-      { "id": "C", "text": "PR本文に「merge #123」と書く" },
-      { "id": "D", "text": "PR本文に「resolve: 123」と書く" }
+      {
+        "id": "A",
+        "text": "closes・fixes・resolves などのキーワードで PR と Issue をリンクでき、その PR が既定のブランチにマージされると Issue が自動クローズされる"
+      },
+      {
+        "id": "B",
+        "text": "link: #42 と書くと Issue がリンクされ、PR 作成時点で Issue が自動クローズされる"
+      },
+      {
+        "id": "C",
+        "text": "キーワードは PR の本文にのみ使えるため、コメントに書いても Issue はリンクされない"
+      },
+      {
+        "id": "D",
+        "text": "resolve: 123 と書くと Issue が自動クローズされ、PR も自動でマージされる"
+      }
     ],
-    "correctChoiceIds": ["B"],
-    "explanation": "closes・fixes・resolves などのキーワードに続けて Issue 番号（#123）を書くと Pull Request と Issue が自動リンクされます。この Pull Request がマージされると、リンクされた Issue も自動的にクローズされます。",
+    "correctChoiceIds": [
+      "A"
+    ],
+    "explanation": "closes・fixes・resolves などのキーワードに続けて Issue 番号（#123）を書くと PR と Issue が自動リンクされます。自動クローズは「PR が既定のブランチへマージされたとき」に行われます。PR 作成時点や PR ブランチ削除時にはクローズされません。",
     "references": [
       {
         "title": "プルリクエストを課題にリンクする",
         "url": "https://docs.github.com/ja/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue",
         "source": "GitHub Docs",
-        "checkedAt": "2026-05-31"
+        "checkedAt": "2026-06-02"
       }
     ],
-    "tags": ["pull-request", "issues"],
-    "updatedAt": "2026-05-31"
+    "tags": [
+      "pull-request",
+      "issues",
+      "closing-keywords"
+    ],
+    "updatedAt": "2026-06-02"
   },
   {
     "id": "D3-006",
@@ -131,12 +221,26 @@
     "difficulty": "basic",
     "question": "GitHub の通知（Notifications）の説明として最も適切なものはどれですか？",
     "choices": [
-      { "id": "A", "text": "リポジトリのコードを自動でテストして結果を通知する機能" },
-      { "id": "B", "text": "サブスクライブしているリポジトリや会話での活動を知らせる機能" },
-      { "id": "C", "text": "Organization のメンバーに一斉メッセージを送る機能" },
-      { "id": "D", "text": "CI/CD パイプラインの完了をSlackに送る機能" }
+      {
+        "id": "A",
+        "text": "リポジトリのコードを自動でテストして結果を通知する機能"
+      },
+      {
+        "id": "B",
+        "text": "サブスクライブしているリポジトリや会話での活動を知らせる機能"
+      },
+      {
+        "id": "C",
+        "text": "Organization のメンバーに一斉メッセージを送る機能"
+      },
+      {
+        "id": "D",
+        "text": "CI/CD パイプラインの完了をSlackに送る機能"
+      }
     ],
-    "correctChoiceIds": ["B"],
+    "correctChoiceIds": [
+      "B"
+    ],
     "explanation": "GitHub の通知は Watch しているリポジトリや参加している Issue・PR の更新を知らせます。メール・Web の受信トレイ・GitHub Mobile で受け取れます。通知の粒度はリポジトリ単位・スレッド単位でカスタマイズ可能です。",
     "references": [
       {
@@ -146,7 +250,9 @@
         "checkedAt": "2026-05-31"
       }
     ],
-    "tags": ["notifications"],
+    "tags": [
+      "notifications"
+    ],
     "updatedAt": "2026-05-31"
   },
   {
@@ -156,12 +262,26 @@
     "difficulty": "basic",
     "question": "GitHub Gist の説明として最も適切なものはどれですか？",
     "choices": [
-      { "id": "A", "text": "リポジトリ全体をアーカイブして ZIP でダウンロードする機能" },
-      { "id": "B", "text": "コードスニペットやメモを手軽に共有できる軽量版リポジトリ" },
-      { "id": "C", "text": "GitHub の Issue テンプレートを管理する機能" },
-      { "id": "D", "text": "GitHub Pages のサブドメインを管理する機能" }
+      {
+        "id": "A",
+        "text": "リポジトリ全体をアーカイブして ZIP でダウンロードする機能"
+      },
+      {
+        "id": "B",
+        "text": "コードスニペットやメモを手軽に共有できる軽量版リポジトリ"
+      },
+      {
+        "id": "C",
+        "text": "GitHub の Issue テンプレートを管理する機能"
+      },
+      {
+        "id": "D",
+        "text": "GitHub Pages のサブドメインを管理する機能"
+      }
     ],
-    "correctChoiceIds": ["B"],
+    "correctChoiceIds": [
+      "B"
+    ],
     "explanation": "Gist はコードスニペット・設定ファイル・メモなどを気軽に共有できる機能です。通常のリポジトリと同様 Git で管理され、Public（検索可能）と Secret（URL を知っている人のみ閲覧可能）の2種類があります。",
     "references": [
       {
@@ -171,7 +291,9 @@
         "checkedAt": "2026-05-31"
       }
     ],
-    "tags": ["gist"],
+    "tags": [
+      "gist"
+    ],
     "updatedAt": "2026-05-31"
   },
   {
@@ -181,12 +303,26 @@
     "difficulty": "basic",
     "question": "GitHub Wiki の主な用途として最も適切なものはどれですか？",
     "choices": [
-      { "id": "A", "text": "リポジトリのソースコードをドキュメント形式に自動変換する" },
-      { "id": "B", "text": "リポジトリに関するドキュメント（設計・手順・仕様など）をページ形式で管理・共有する" },
-      { "id": "C", "text": "チームメンバーのタスクを Kanban ボードで管理する" },
-      { "id": "D", "text": "外部 Web サイトのコンテンツをリポジトリに取り込む" }
+      {
+        "id": "A",
+        "text": "リポジトリのソースコードをドキュメント形式に自動変換する"
+      },
+      {
+        "id": "B",
+        "text": "リポジトリに関するドキュメント（設計・手順・仕様など）をページ形式で管理・共有する"
+      },
+      {
+        "id": "C",
+        "text": "チームメンバーのタスクを Kanban ボードで管理する"
+      },
+      {
+        "id": "D",
+        "text": "外部 Web サイトのコンテンツをリポジトリに取り込む"
+      }
     ],
-    "correctChoiceIds": ["B"],
+    "correctChoiceIds": [
+      "B"
+    ],
     "explanation": "Wiki はリポジトリに紐づいたドキュメントを複数ページで管理できる機能です。設計書・FAQ・操作マニュアルなど README に収まらないドキュメントに適しています。Markdown で記述でき、独自の Git リポジトリとして管理されます。",
     "references": [
       {
@@ -196,7 +332,9 @@
         "checkedAt": "2026-05-31"
       }
     ],
-    "tags": ["wiki"],
+    "tags": [
+      "wiki"
+    ],
     "updatedAt": "2026-05-31"
   },
   {
@@ -206,12 +344,26 @@
     "difficulty": "basic",
     "question": "GitHub Pages の説明として最も適切なものはどれですか？",
     "choices": [
-      { "id": "A", "text": "GitHub の管理画面（Settings）の各設定ページのこと" },
-      { "id": "B", "text": "リポジトリのファイルから静的 Web サイトを無料でホスティングする機能" },
-      { "id": "C", "text": "Markdown で書いた README を PDF に変換するサービス" },
-      { "id": "D", "text": "リポジトリの Issue を公開 Web ページとして表示する機能" }
+      {
+        "id": "A",
+        "text": "GitHub の管理画面（Settings）の各設定ページのこと"
+      },
+      {
+        "id": "B",
+        "text": "リポジトリのファイルから静的 Web サイトを無料でホスティングする機能"
+      },
+      {
+        "id": "C",
+        "text": "Markdown で書いた README を PDF に変換するサービス"
+      },
+      {
+        "id": "D",
+        "text": "リポジトリの Issue を公開 Web ページとして表示する機能"
+      }
     ],
-    "correctChoiceIds": ["B"],
+    "correctChoiceIds": [
+      "B"
+    ],
     "explanation": "GitHub Pages は HTML・CSS・JavaScript ファイルをリポジトリから直接配信して静的 Web サイトを無料でホスティングするサービスです。ドキュメントサイト・ポートフォリオ・プロジェクト紹介ページなどに使われます。Jekyll などの静的サイトジェネレーターとも連携できます。",
     "references": [
       {
@@ -221,7 +373,9 @@
         "checkedAt": "2026-05-31"
       }
     ],
-    "tags": ["github-pages"],
+    "tags": [
+      "github-pages"
+    ],
     "updatedAt": "2026-05-31"
   },
   {
@@ -231,12 +385,26 @@
     "difficulty": "standard",
     "question": "Issue にラベル（label）を付ける主な目的はどれですか？",
     "choices": [
-      { "id": "A", "text": "Issue を自動的にクローズするため" },
-      { "id": "B", "text": "Issue を分類・フィルタリングして管理しやすくするため" },
-      { "id": "C", "text": "担当者に Issue をアサインするため" },
-      { "id": "D", "text": "Issue のコメントに優先度スコアを付けるため" }
+      {
+        "id": "A",
+        "text": "Issue を自動的にクローズするため"
+      },
+      {
+        "id": "B",
+        "text": "Issue を分類・フィルタリングして管理しやすくするため"
+      },
+      {
+        "id": "C",
+        "text": "担当者に Issue をアサインするため"
+      },
+      {
+        "id": "D",
+        "text": "Issue のコメントに優先度スコアを付けるため"
+      }
     ],
-    "correctChoiceIds": ["B"],
+    "correctChoiceIds": [
+      "B"
+    ],
     "explanation": "ラベルは Issue や Pull Request に付けるタグで、種類（bug・feature・documentation など）・優先度・状態などで分類できます。ラベルでフィルタリングすることで、特定種類のタスクを素早く見つけられます。",
     "references": [
       {
@@ -246,7 +414,10 @@
         "checkedAt": "2026-05-31"
       }
     ],
-    "tags": ["labels", "issues"],
+    "tags": [
+      "labels",
+      "issues"
+    ],
     "updatedAt": "2026-05-31"
   },
   {
@@ -256,12 +427,26 @@
     "difficulty": "standard",
     "question": "Pull Request の Draft（ドラフト）状態の説明として最も適切なものはどれですか？",
     "choices": [
-      { "id": "A", "text": "マージが完了した Pull Request のアーカイブ状態" },
-      { "id": "B", "text": "まだレビュー準備が整っていないことを示す状態で、マージボタンが無効になる" },
-      { "id": "C", "text": "レビュアーが変更を要求した後の Pull Request の状態" },
-      { "id": "D", "text": "コンフリクトが発生している Pull Request の状態" }
+      {
+        "id": "A",
+        "text": "マージが完了した Pull Request のアーカイブ状態"
+      },
+      {
+        "id": "B",
+        "text": "まだレビュー準備が整っていないことを示す状態で、マージボタンが無効になる"
+      },
+      {
+        "id": "C",
+        "text": "レビュアーが変更を要求した後の Pull Request の状態"
+      },
+      {
+        "id": "D",
+        "text": "コンフリクトが発生している Pull Request の状態"
+      }
     ],
-    "correctChoiceIds": ["B"],
+    "correctChoiceIds": [
+      "B"
+    ],
     "explanation": "Draft Pull Request は作業中であることをチームに知らせる状態です。マージできない状態になり、CODEOWNERS への自動レビューリクエストも送られません。作業が完了したら「Ready for review」に変更してレビューを依頼します。",
     "references": [
       {
@@ -271,33 +456,61 @@
         "checkedAt": "2026-05-31"
       }
     ],
-    "tags": ["pull-request", "draft"],
+    "tags": [
+      "pull-request",
+      "draft"
+    ],
     "updatedAt": "2026-05-31"
   },
   {
     "id": "D3-012",
     "domainId": "D3",
-    "questionType": "single-choice",
-    "difficulty": "advanced",
-    "question": "Pull Request テンプレート（pull_request_template.md）を配置する主な目的はどれですか？",
+    "questionType": "multiple-choice",
+    "difficulty": "standard",
+    "question": "GitHub のテンプレート機能に関する説明として正しいものを2つ選んでください。",
     "choices": [
-      { "id": "A", "text": "Pull Request を自動的に承認するルールを定義するため" },
-      { "id": "B", "text": "Pull Request 作成時に説明欄へ記入すべき項目（変更内容・テスト手順・チェックリストなど）を統一するため" },
-      { "id": "C", "text": "Pull Request に自動的にラベルを付与するため" },
-      { "id": "D", "text": "Pull Request のマージ戦略（squash・merge・rebase）を固定するため" }
+      {
+        "id": "A",
+        "text": "pull_request_template.md を配置すると、PR 作成時に変更内容・テスト手順・チェックリストなどの記入項目のひな形が説明欄に自動挿入される"
+      },
+      {
+        "id": "B",
+        "text": ".github/ISSUE_TEMPLATE/ にテンプレートを配置すると、Issue 作成時に再現手順・環境・期待値などの記入項目を種類ごとに統一できる"
+      },
+      {
+        "id": "C",
+        "text": "PR テンプレートは PR を自動的に Approve するルールを定義する"
+      },
+      {
+        "id": "D",
+        "text": "Issue テンプレートは Issue の担当者を自動でアサインし、ラベルも自動付与する"
+      }
     ],
-    "correctChoiceIds": ["B"],
-    "explanation": "`.github/pull_request_template.md` を配置すると、Pull Request 作成時に本文へ自動的にテンプレートが挿入されます。変更内容の説明・テスト確認・関連 Issue 番号などの記入を促し、レビュー品質を均一化できます。",
+    "correctChoiceIds": [
+      "A",
+      "B"
+    ],
+    "explanation": "PR テンプレート（pull_request_template.md）は PR 作成時に本文へひな形を自動挿入し、変更内容の説明やテスト確認などの記入を促します。Issue テンプレート（.github/ISSUE_TEMPLATE/）は Issue 作成時に種類ごとの記入項目を統一し、情報不足の Issue を減らします。どちらも自動承認や自動アサインは行いません。",
     "references": [
       {
         "title": "リポジトリの Pull Request テンプレートの作成",
         "url": "https://docs.github.com/ja/communities/using-templates-to-encourage-useful-issues-and-pull-requests/creating-a-pull-request-template-for-your-repository",
         "source": "GitHub Docs",
-        "checkedAt": "2026-05-31"
+        "checkedAt": "2026-06-02"
+      },
+      {
+        "title": "リポジトリの Issue テンプレートを設定する",
+        "url": "https://docs.github.com/ja/communities/using-templates-to-encourage-useful-issues-and-pull-requests/configuring-issue-templates-for-your-repository",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-06-02"
       }
     ],
-    "tags": ["pull-request", "template"],
-    "updatedAt": "2026-05-31"
+    "tags": [
+      "pull-request",
+      "issues",
+      "template"
+    ],
+    "updatedAt": "2026-06-02"
   },
   {
     "id": "D3-013",
@@ -306,12 +519,26 @@
     "difficulty": "basic",
     "question": "Public リポジトリで Issue を作成できるのは誰ですか？",
     "choices": [
-      { "id": "A", "text": "リポジトリのオーナーのみ" },
-      { "id": "B", "text": "Organizationのメンバーのみ" },
-      { "id": "C", "text": "GitHub アカウントを持つすべてのユーザー" },
-      { "id": "D", "text": "有料プランのユーザーのみ" }
+      {
+        "id": "A",
+        "text": "リポジトリのオーナーのみ"
+      },
+      {
+        "id": "B",
+        "text": "Organizationのメンバーのみ"
+      },
+      {
+        "id": "C",
+        "text": "GitHub アカウントを持つすべてのユーザー"
+      },
+      {
+        "id": "D",
+        "text": "有料プランのユーザーのみ"
+      }
     ],
-    "correctChoiceIds": ["C"],
+    "correctChoiceIds": [
+      "C"
+    ],
     "explanation": "Public リポジトリでは GitHub アカウントを持つ誰でも Issue を作成できます。Private リポジトリでは招待されたコラボレーター以上の権限が必要です。リポジトリの設定で Issue 機能自体を無効化することも可能です。",
     "references": [
       {
@@ -321,7 +548,9 @@
         "checkedAt": "2026-05-31"
       }
     ],
-    "tags": ["issues"],
+    "tags": [
+      "issues"
+    ],
     "updatedAt": "2026-05-31"
   },
   {
@@ -331,12 +560,26 @@
     "difficulty": "standard",
     "question": "Pull Request にインラインコメントを追加する際、どのタブを使いますか？",
     "choices": [
-      { "id": "A", "text": "Conversation タブ" },
-      { "id": "B", "text": "Commits タブ" },
-      { "id": "C", "text": "Files changed タブ" },
-      { "id": "D", "text": "Checks タブ" }
+      {
+        "id": "A",
+        "text": "Conversation タブ"
+      },
+      {
+        "id": "B",
+        "text": "Commits タブ"
+      },
+      {
+        "id": "C",
+        "text": "Files changed タブ"
+      },
+      {
+        "id": "D",
+        "text": "Checks タブ"
+      }
     ],
-    "correctChoiceIds": ["C"],
+    "correctChoiceIds": [
+      "C"
+    ],
     "explanation": "「Files changed」タブでは差分が行ごとに表示され、行番号の横にある「+」アイコンをクリックして特定の行に対するインラインコメントを追加できます。Conversation タブは PR 全体へのコメントに使います。",
     "references": [
       {
@@ -346,7 +589,11 @@
         "checkedAt": "2026-05-31"
       }
     ],
-    "tags": ["pull-request", "review", "comment"],
+    "tags": [
+      "pull-request",
+      "review",
+      "comment"
+    ],
     "updatedAt": "2026-05-31"
   },
   {
@@ -356,12 +603,26 @@
     "difficulty": "basic",
     "question": "Pull Request を作成するとき、ベースブランチ（base）とコンペアブランチ（compare）の関係として正しいものはどれですか？",
     "choices": [
-      { "id": "A", "text": "ベースブランチが変更元、コンペアブランチがマージ先" },
-      { "id": "B", "text": "コンペアブランチが変更元、ベースブランチがマージ先" },
-      { "id": "C", "text": "両方のブランチに同じ変更が適用される" },
-      { "id": "D", "text": "ベースとコンペアは同一ブランチでなければならない" }
+      {
+        "id": "A",
+        "text": "ベースブランチが変更元、コンペアブランチがマージ先"
+      },
+      {
+        "id": "B",
+        "text": "コンペアブランチが変更元、ベースブランチがマージ先"
+      },
+      {
+        "id": "C",
+        "text": "両方のブランチに同じ変更が適用される"
+      },
+      {
+        "id": "D",
+        "text": "ベースとコンペアは同一ブランチでなければならない"
+      }
     ],
-    "correctChoiceIds": ["B"],
+    "correctChoiceIds": [
+      "B"
+    ],
     "explanation": "Pull Request は「コンペアブランチ（自分の変更を加えたブランチ）をベースブランチ（main など）にマージしてほしい」という提案です。コンペアがマージ元、ベースがマージ先になります。",
     "references": [
       {
@@ -371,32 +632,9 @@
         "checkedAt": "2026-05-31"
       }
     ],
-    "tags": ["pull-request"],
-    "updatedAt": "2026-05-31"
-  },
-  {
-    "id": "D3-016",
-    "domainId": "D3",
-    "questionType": "single-choice",
-    "difficulty": "standard",
-    "question": "Issue テンプレートをリポジトリに設定する主な目的はどれですか？",
-    "choices": [
-      { "id": "A", "text": "Issue を自動でクローズするルールを定義するため" },
-      { "id": "B", "text": "Issue 作成時に報告者が記入すべき情報（再現手順・環境・期待値など）を統一するため" },
-      { "id": "C", "text": "Issue の担当者を自動アサインするため" },
-      { "id": "D", "text": "Issue にラベルを自動付与するため" }
+    "tags": [
+      "pull-request"
     ],
-    "correctChoiceIds": ["B"],
-    "explanation": "Issue テンプレートを `.github/ISSUE_TEMPLATE/` に配置すると、Issue 作成時に選択できるテンプレートが表示されます。バグ報告・機能要望など種類ごとに記入項目を定義することで、情報不足の Issue を減らせます。",
-    "references": [
-      {
-        "title": "リポジトリの Issue テンプレートを設定する",
-        "url": "https://docs.github.com/ja/communities/using-templates-to-encourage-useful-issues-and-pull-requests/configuring-issue-templates-for-your-repository",
-        "source": "GitHub Docs",
-        "checkedAt": "2026-05-31"
-      }
-    ],
-    "tags": ["issues", "template"],
     "updatedAt": "2026-05-31"
   },
   {
@@ -406,12 +644,26 @@
     "difficulty": "standard",
     "question": "GitHub Discussions の Q&A カテゴリでできることとして正しいものはどれですか？",
     "choices": [
-      { "id": "A", "text": "質問に対して複数の回答を投稿し、最も役立つ回答をメンテナーまたは投稿者がマークできる" },
-      { "id": "B", "text": "Q&A カテゴリでは1つの投稿に1つの回答しか付けられない" },
-      { "id": "C", "text": "Q&A カテゴリの回答は自動的に Issue に変換される" },
-      { "id": "D", "text": "Q&A カテゴリはリポジトリ管理者しか投稿できない" }
+      {
+        "id": "A",
+        "text": "質問に対して複数の回答を投稿し、最も役立つ回答をメンテナーまたは投稿者がマークできる"
+      },
+      {
+        "id": "B",
+        "text": "Q&A カテゴリでは1つの投稿に1つの回答しか付けられない"
+      },
+      {
+        "id": "C",
+        "text": "Q&A カテゴリの回答は自動的に Issue に変換される"
+      },
+      {
+        "id": "D",
+        "text": "Q&A カテゴリはリポジトリ管理者しか投稿できない"
+      }
     ],
-    "correctChoiceIds": ["A"],
+    "correctChoiceIds": [
+      "A"
+    ],
     "explanation": "Discussions の Q&A カテゴリでは複数の回答を投稿でき、メンテナーまたは質問の投稿者がベストアンサーを「Answer」としてマークできます。これにより解決済みの質問を他のユーザーが素早く見つけられます。",
     "references": [
       {
@@ -421,82 +673,9 @@
         "checkedAt": "2026-05-31"
       }
     ],
-    "tags": ["discussions"],
-    "updatedAt": "2026-05-31"
-  },
-  {
-    "id": "D3-018",
-    "domainId": "D3",
-    "questionType": "single-choice",
-    "difficulty": "basic",
-    "question": "リポジトリを Watch（ウォッチ）すると何が起きますか？",
-    "choices": [
-      { "id": "A", "text": "リポジトリのコードが定期的に自動テストされる" },
-      { "id": "B", "text": "そのリポジトリでの Issue・PR・Releases などの活動が通知される" },
-      { "id": "C", "text": "リポジトリのソースコードが自分のアカウントにコピーされる" },
-      { "id": "D", "text": "リポジトリのオーナーに自分のフォローリクエストが送られる" }
+    "tags": [
+      "discussions"
     ],
-    "correctChoiceIds": ["B"],
-    "explanation": "Watch するとそのリポジトリの Issue 作成・PR オープン・コメント・Release など指定したイベントの通知を受け取れます。通知の粒度は「All activity」「Participating and @mentions」「Releases only」などから選択できます。",
-    "references": [
-      {
-        "title": "通知について",
-        "url": "https://docs.github.com/ja/account-and-profile/managing-subscriptions-and-notifications-on-github/setting-up-notifications/about-notifications",
-        "source": "GitHub Docs",
-        "checkedAt": "2026-05-31"
-      }
-    ],
-    "tags": ["notifications", "watch"],
-    "updatedAt": "2026-05-31"
-  },
-  {
-    "id": "D3-019",
-    "domainId": "D3",
-    "questionType": "single-choice",
-    "difficulty": "standard",
-    "question": "GitHub Pages で公開できるサイトの種類として正しいものはどれですか？",
-    "choices": [
-      { "id": "A", "text": "PHPやPythonで動作するサーバーサイドアプリケーション" },
-      { "id": "B", "text": "HTML・CSS・JavaScript で構成された静的サイト" },
-      { "id": "C", "text": "MySQLデータベースと連携したWebアプリ" },
-      { "id": "D", "text": "Docker コンテナで動作するマイクロサービス" }
-    ],
-    "correctChoiceIds": ["B"],
-    "explanation": "GitHub Pages はサーバーサイド処理のない静的サイトのみホスティングできます。HTML・CSS・JavaScript のファイルを配信するため、PHP・Ruby・Python などは実行できません。Jekyll などの静的サイトジェネレーターとの組み合わせは可能です。",
-    "references": [
-      {
-        "title": "GitHub Pages とは",
-        "url": "https://docs.github.com/ja/pages/getting-started-with-github-pages/about-github-pages",
-        "source": "GitHub Docs",
-        "checkedAt": "2026-05-31"
-      }
-    ],
-    "tags": ["github-pages"],
-    "updatedAt": "2026-05-31"
-  },
-  {
-    "id": "D3-020",
-    "domainId": "D3",
-    "questionType": "single-choice",
-    "difficulty": "advanced",
-    "question": "Pull Request の「Request changes（変更要求）」レビューの説明として最も適切なものはどれですか？",
-    "choices": [
-      { "id": "A", "text": "レビュアーが変更を拒否し、PR を永久にクローズする" },
-      { "id": "B", "text": "レビュアーが指摘事項を記録し、修正が完了するまでマージを保留させるシグナルを送る" },
-      { "id": "C", "text": "PR の担当者を別のメンバーに自動で変更する" },
-      { "id": "D", "text": "PR ブランチの最新コミットを自動で取り消す" }
-    ],
-    "correctChoiceIds": ["B"],
-    "explanation": "「Request changes」を選択すると、そのレビュアーの変更要求が解除されるまでブランチ保護ルールでマージがブロックされます（設定による）。作者は指摘に対処して再度レビューを依頼することで、レビュアーが Approve に変えることができます。",
-    "references": [
-      {
-        "title": "プルリクエストのレビューについて",
-        "url": "https://docs.github.com/ja/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/about-pull-request-reviews",
-        "source": "GitHub Docs",
-        "checkedAt": "2026-05-31"
-      }
-    ],
-    "tags": ["pull-request", "review"],
     "updatedAt": "2026-05-31"
   },
   {
@@ -506,12 +685,26 @@
     "difficulty": "standard",
     "question": "GitHub Gist の「Secret」と「Public」の違いとして正しいものはどれですか？",
     "choices": [
-      { "id": "A", "text": "Secret Gist は暗号化されており、URLを知っていても内容を読めない" },
-      { "id": "B", "text": "Secret Gist は検索エンジンにインデックスされず、URL を知っている人のみ閲覧できる" },
-      { "id": "C", "text": "Secret Gist は作成者本人しか閲覧できない完全非公開設定" },
-      { "id": "D", "text": "Secret Gist はチームメンバーにのみ共有される" }
+      {
+        "id": "A",
+        "text": "Secret Gist は暗号化されており、URLを知っていても内容を読めない"
+      },
+      {
+        "id": "B",
+        "text": "Secret Gist は検索エンジンにインデックスされず、URL を知っている人のみ閲覧できる"
+      },
+      {
+        "id": "C",
+        "text": "Secret Gist は作成者本人しか閲覧できない完全非公開設定"
+      },
+      {
+        "id": "D",
+        "text": "Secret Gist はチームメンバーにのみ共有される"
+      }
     ],
-    "correctChoiceIds": ["B"],
+    "correctChoiceIds": [
+      "B"
+    ],
     "explanation": "Secret Gist は検索エンジンにインデックスされず、GitHub の Gist 一覧にも表示されません。しかし URL を知っている人であれば誰でも閲覧できるため、完全な秘密情報の共有には適していません。Public Gist は誰でも検索・閲覧が可能です。",
     "references": [
       {
@@ -521,7 +714,9 @@
         "checkedAt": "2026-05-31"
       }
     ],
-    "tags": ["gist"],
+    "tags": [
+      "gist"
+    ],
     "updatedAt": "2026-05-31"
   },
   {
@@ -531,12 +726,26 @@
     "difficulty": "standard",
     "question": "マイルストーンに期限（Due date）を設定する主な目的はどれですか？",
     "choices": [
-      { "id": "A", "text": "期限を過ぎた Issue を自動でクローズするため" },
-      { "id": "B", "text": "リリース目標日やスプリント終了日に向けた進捗をチームで可視化するため" },
-      { "id": "C", "text": "担当者に期限超過のペナルティを通知するため" },
-      { "id": "D", "text": "期限内にマージされなかった PR を自動でリジェクトするため" }
+      {
+        "id": "A",
+        "text": "期限を過ぎた Issue を自動でクローズするため"
+      },
+      {
+        "id": "B",
+        "text": "リリース目標日やスプリント終了日に向けた進捗をチームで可視化するため"
+      },
+      {
+        "id": "C",
+        "text": "担当者に期限超過のペナルティを通知するため"
+      },
+      {
+        "id": "D",
+        "text": "期限内にマージされなかった PR を自動でリジェクトするため"
+      }
     ],
-    "correctChoiceIds": ["B"],
+    "correctChoiceIds": [
+      "B"
+    ],
     "explanation": "マイルストーンの Due date は自動的な処理は行いません。期限を設定することで、残り日数と完了率をチームで把握しやすくなり、進捗が遅れている場合のスコープ調整の判断材料になります。",
     "references": [
       {
@@ -546,48 +755,40 @@
         "checkedAt": "2026-05-31"
       }
     ],
-    "tags": ["milestones"],
-    "updatedAt": "2026-05-31"
-  },
-  {
-    "id": "D3-023",
-    "domainId": "D3",
-    "questionType": "single-choice",
-    "difficulty": "advanced",
-    "question": "GitHub Gist はどのように管理されていますか？",
-    "choices": [
-      { "id": "A", "text": "GitHub のデータベースにのみ保存されており、Git での操作はできない" },
-      { "id": "B", "text": "通常のリポジトリと同様に Git リポジトリとして管理されており、clone・commit・push が可能" },
-      { "id": "C", "text": "Dropbox のようなファイルストレージとして管理されており、Git は使えない" },
-      { "id": "D", "text": "Markdown ファイルのみを保存できる専用ストレージ" }
+    "tags": [
+      "milestones"
     ],
-    "correctChoiceIds": ["B"],
-    "explanation": "各 Gist は独立した Git リポジトリとして管理されています。そのため git clone でローカルにコピーしたり、変更を commit・push することが可能です。複数ファイルを含めることもできます。",
-    "references": [
-      {
-        "title": "Gist の作成",
-        "url": "https://docs.github.com/ja/get-started/writing-on-github/editing-and-sharing-content-with-gists/creating-gists",
-        "source": "GitHub Docs",
-        "checkedAt": "2026-05-31"
-      }
-    ],
-    "tags": ["gist", "git"],
     "updatedAt": "2026-05-31"
   },
   {
     "id": "D3-024",
     "domainId": "D3",
-    "questionType": "single-choice",
+    "questionType": "multiple-choice",
     "difficulty": "advanced",
-    "question": "Pull Request で「Squash and merge」を選択するとどうなりますか？",
+    "question": "GitHub Pull Request のマージ後、ベースブランチの履歴に専用のマージコミットが追加されない方式を2つ選んでください。",
     "choices": [
-      { "id": "A", "text": "ブランチのすべてのコミットがそのままベースブランチに追加される" },
-      { "id": "B", "text": "ブランチのすべてのコミットが1つのコミットに圧縮されてベースブランチに追加される" },
-      { "id": "C", "text": "ベースブランチのコミットがブランチの先頭に移動する" },
-      { "id": "D", "text": "コミット履歴が削除されてマージのみが記録される" }
+      {
+        "id": "A",
+        "text": "Merge commit（通常マージ）"
+      },
+      {
+        "id": "B",
+        "text": "Squash and merge"
+      },
+      {
+        "id": "C",
+        "text": "Rebase and merge"
+      },
+      {
+        "id": "D",
+        "text": "Close without merging（マージせずにクローズ）"
+      }
     ],
-    "correctChoiceIds": ["B"],
-    "explanation": "Squash and merge はブランチ上の複数のコミットを1つにまとめてベースブランチに追加します。作業中の細かいコミットをきれいな1コミットにまとめられるため、main ブランチの履歴をすっきり保ちたい場合に有効です。",
+    "correctChoiceIds": [
+      "B",
+      "C"
+    ],
+    "explanation": "Squash and merge は複数コミットを1つのコミットに圧縮してベースブランチに追加します。Rebase and merge は各コミットをベースブランチの先頭に順番に再適用します。いずれもマージコミット自体は作成されません。一方、Merge commit は既存のコミットをすべて保持したままマージコミットを追加します。",
     "references": [
       {
         "title": "pull request マージについて",
@@ -596,83 +797,13 @@
         "checkedAt": "2026-05-31"
       }
     ],
-    "tags": ["pull-request", "merge"],
-    "updatedAt": "2026-05-31"
-  },
-  {
-    "id": "D3-025",
-    "domainId": "D3",
-    "questionType": "single-choice",
-    "difficulty": "standard",
-    "question": "Pull Request の通常の Merge commit 方式を選ぶ主な効果として正しいものはどれですか？",
-    "choices": [
-      { "id": "A", "text": "フィーチャーブランチ上の複数コミットを1つのコミットに圧縮して取り込む" },
-      { "id": "B", "text": "フィーチャーブランチの各コミットを保持し、ベースブランチにマージコミットを追加して取り込む" },
-      { "id": "C", "text": "各コミットをベースブランチの先頭に付け替え、マージコミットを作成しない" },
-      { "id": "D", "text": "PR の差分だけを ZIP ファイルとして保存し、履歴には残さない" }
+    "tags": [
+      "pull-request",
+      "merge",
+      "squash",
+      "rebase"
     ],
-    "correctChoiceIds": ["B"],
-    "explanation": "通常の Merge commit は、トピックブランチのコミットを保持したまま、ベースブランチに追加のマージコミットを作成します。個々の作業コミットと「いつ統合したか」を履歴に残したい場合に適しています。",
-    "references": [
-      {
-        "title": "プルリクエストのマージについて",
-        "url": "https://docs.github.com/ja/pull-requests/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/about-pull-request-merges",
-        "source": "GitHub Docs",
-        "checkedAt": "2026-05-31"
-      }
-    ],
-    "tags": ["pull-request", "merge", "collaboration"],
-    "updatedAt": "2026-05-31"
-  },
-  {
-    "id": "D3-026",
-    "domainId": "D3",
-    "questionType": "single-choice",
-    "difficulty": "advanced",
-    "question": "Pull Request の Rebase and merge が Squash and merge と異なる点として最も適切なものはどれですか？",
-    "choices": [
-      { "id": "A", "text": "Rebase and merge は PR のコミットを1つにまとめ、Squash and merge は各コミットを保持する" },
-      { "id": "B", "text": "どちらも常にマージコミットを作成し、履歴上の違いはない" },
-      { "id": "C", "text": "Rebase and merge は PR の各コミットをベースブランチに順番に再適用し、Squash and merge は1つのコミットにまとめる" },
-      { "id": "D", "text": "Rebase and merge は Issue を自動作成し、Squash and merge は Issue を自動クローズする" }
-    ],
-    "correctChoiceIds": ["C"],
-    "explanation": "Rebase and merge はフィーチャーブランチの個々のコミットをベースブランチへ再適用して取り込みます。一方、Squash and merge は複数コミットを1つに圧縮するため、細かい作業コミットを残すかどうかで使い分けます。",
-    "references": [
-      {
-        "title": "プルリクエストのマージについて",
-        "url": "https://docs.github.com/ja/pull-requests/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/about-pull-request-merges",
-        "source": "GitHub Docs",
-        "checkedAt": "2026-05-31"
-      }
-    ],
-    "tags": ["pull-request", "rebase", "merge"],
-    "updatedAt": "2026-05-31"
-  },
-  {
-    "id": "D3-027",
-    "domainId": "D3",
-    "questionType": "single-choice",
-    "difficulty": "standard",
-    "question": "PR の説明に「Fixes #42」と書いた場合、リンクされた Issue が自動クローズされる条件として正しいものはどれですか？",
-    "choices": [
-      { "id": "A", "text": "PR が作成された時点で、リンクされた Issue はただちにクローズされる" },
-      { "id": "B", "text": "PR にレビューコメントが1件付くと、リンクされた Issue はクローズされる" },
-      { "id": "C", "text": "リンクキーワードを含む PR が既定のブランチにマージされると、リンクされた Issue はクローズされる" },
-      { "id": "D", "text": "PR のブランチが削除されると、マージされていなくても Issue はクローズされる" }
-    ],
-    "correctChoiceIds": ["C"],
-    "explanation": "closes、fixes、resolves などのキーワードは PR と Issue をリンクします。自動クローズは、対象の PR が既定のブランチへマージされたときに行われます。",
-    "references": [
-      {
-        "title": "プルリクエストを課題にリンクする",
-        "url": "https://docs.github.com/ja/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue",
-        "source": "GitHub Docs",
-        "checkedAt": "2026-05-31"
-      }
-    ],
-    "tags": ["issues", "pull-request", "closing-keywords"],
-    "updatedAt": "2026-05-31"
+    "updatedAt": "2026-06-02"
   },
   {
     "id": "D3-028",
@@ -681,12 +812,26 @@
     "difficulty": "basic",
     "question": "Issue や PR のコメントで @ユーザー名 や @チーム名 をメンションする主な目的はどれですか？",
     "choices": [
-      { "id": "A", "text": "メンションされたユーザーやチームを会話に気付かせ、通知を送るため" },
-      { "id": "B", "text": "メンションされたユーザーの GitHub 権限を自動的に管理者へ変更するため" },
-      { "id": "C", "text": "メンションされたチームの全リポジトリを自動で Watch するため" },
-      { "id": "D", "text": "メンションされたユーザーの代わりに PR をマージするため" }
+      {
+        "id": "A",
+        "text": "メンションされたユーザーやチームを会話に気付かせ、通知を送るため"
+      },
+      {
+        "id": "B",
+        "text": "メンションされたユーザーの GitHub 権限を自動的に管理者へ変更するため"
+      },
+      {
+        "id": "C",
+        "text": "メンションされたチームの全リポジトリを自動で Watch するため"
+      },
+      {
+        "id": "D",
+        "text": "メンションされたユーザーの代わりに PR をマージするため"
+      }
     ],
-    "correctChoiceIds": ["A"],
+    "correctChoiceIds": [
+      "A"
+    ],
     "explanation": "通知の既定サブスクリプションには、ユーザー名や所属チームが @mentioned された場合が含まれます。必要な相手にレビュー依頼や確認事項を気付いてもらうために使います。",
     "references": [
       {
@@ -696,7 +841,11 @@
         "checkedAt": "2026-05-31"
       }
     ],
-    "tags": ["mentions", "notifications", "collaboration"],
+    "tags": [
+      "mentions",
+      "notifications",
+      "collaboration"
+    ],
     "updatedAt": "2026-05-31"
   },
   {
@@ -706,12 +855,26 @@
     "difficulty": "basic",
     "question": "保存済み返信（saved replies）を使う利点として最も適切なものはどれですか？",
     "choices": [
-      { "id": "A", "text": "よく使う Issue や PR への返信文をテンプレートとして挿入し、必要に応じて編集できる" },
-      { "id": "B", "text": "PR のレビューを自動的に Approve に変更できる" },
-      { "id": "C", "text": "コメントに付いたリアクション数を非表示にできる" },
-      { "id": "D", "text": "リポジトリ内のすべての Issue を一括でクローズできる" }
+      {
+        "id": "A",
+        "text": "よく使う Issue や PR への返信文をテンプレートとして挿入し、必要に応じて編集できる"
+      },
+      {
+        "id": "B",
+        "text": "PR のレビューを自動的に Approve に変更できる"
+      },
+      {
+        "id": "C",
+        "text": "コメントに付いたリアクション数を非表示にできる"
+      },
+      {
+        "id": "D",
+        "text": "リポジトリ内のすべての Issue を一括でクローズできる"
+      }
     ],
-    "correctChoiceIds": ["A"],
+    "correctChoiceIds": [
+      "A"
+    ],
     "explanation": "保存済み返信は、Issue や Pull Request のコメントで繰り返し使う文章をすばやく入力するための機能です。定型的な案内や追加情報の依頼を効率化しつつ、投稿前に内容を調整できます。",
     "references": [
       {
@@ -721,32 +884,11 @@
         "checkedAt": "2026-05-31"
       }
     ],
-    "tags": ["saved-replies", "issues", "pull-request"],
-    "updatedAt": "2026-05-31"
-  },
-  {
-    "id": "D3-030",
-    "domainId": "D3",
-    "questionType": "single-choice",
-    "difficulty": "standard",
-    "question": "Pull Request レビューで「Comment」を選ぶ場面として最も適切なものはどれですか？",
-    "choices": [
-      { "id": "A", "text": "PR の全コミットを1つに圧縮したい場合" },
-      { "id": "B", "text": "必ずマージをブロックし、修正されるまで解除できない状態にしたい場合" },
-      { "id": "C", "text": "PR を作成者に確認せず自動でマージしたい場合" },
-      { "id": "D", "text": "変更を承認または拒否せず、質問や提案などのフィードバックだけを共有したい場合" }
+    "tags": [
+      "saved-replies",
+      "issues",
+      "pull-request"
     ],
-    "correctChoiceIds": ["D"],
-    "explanation": "レビュー送信時の状態には Comment、Approve、Request changes があります。Comment は承認や変更要求を行わず、フィードバックを共有するための選択肢です。",
-    "references": [
-      {
-        "title": "プルリクエストのレビューについて",
-        "url": "https://docs.github.com/ja/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/about-pull-request-reviews",
-        "source": "GitHub Docs",
-        "checkedAt": "2026-05-31"
-      }
-    ],
-    "tags": ["pull-request", "review", "comment"],
     "updatedAt": "2026-05-31"
   },
   {
@@ -756,12 +898,26 @@
     "difficulty": "advanced",
     "question": "CODEOWNERS と必須レビューを組み合わせる主な効果として正しいものはどれですか？",
     "choices": [
-      { "id": "A", "text": "該当ファイルを変更した PR でコード所有者にレビューを自動依頼し、承認をマージ条件にできる" },
-      { "id": "B", "text": "コード所有者が指定されたファイルは、誰も編集できない読み取り専用ファイルになる" },
-      { "id": "C", "text": "CODEOWNERS に書かれたユーザーへ、すべての Issue が自動アサインされる" },
-      { "id": "D", "text": "PR のマージ方式が常に Rebase and merge に固定される" }
+      {
+        "id": "A",
+        "text": "該当ファイルを変更した PR でコード所有者にレビューを自動依頼し、承認をマージ条件にできる"
+      },
+      {
+        "id": "B",
+        "text": "コード所有者が指定されたファイルは、誰も編集できない読み取り専用ファイルになる"
+      },
+      {
+        "id": "C",
+        "text": "CODEOWNERS に書かれたユーザーへ、すべての Issue が自動アサインされる"
+      },
+      {
+        "id": "D",
+        "text": "PR のマージ方式が常に Rebase and merge に固定される"
+      }
     ],
-    "correctChoiceIds": ["A"],
+    "correctChoiceIds": [
+      "A"
+    ],
     "explanation": "CODEOWNERS でコード所有者を定義すると、対象コードが変更された PR でレビュー担当者として自動要求できます。ブランチ保護などで必須レビューを設定すると、承認をマージ条件にできます。",
     "references": [
       {
@@ -771,7 +927,11 @@
         "checkedAt": "2026-05-31"
       }
     ],
-    "tags": ["codeowners", "required-review", "pull-request"],
+    "tags": [
+      "codeowners",
+      "required-review",
+      "pull-request"
+    ],
     "updatedAt": "2026-05-31"
   },
   {
@@ -781,12 +941,26 @@
     "difficulty": "standard",
     "question": "Pull Request の Suggested changes と Resolve conversation の使い方として最も適切なものはどれですか？",
     "choices": [
-      { "id": "A", "text": "Suggested changes はレビュアーが具体的な修正案を提示し、Resolve conversation は対応済みの会話を追跡しやすくする" },
-      { "id": "B", "text": "Suggested changes は PR をドラフトに戻し、Resolve conversation は全レビューを削除する" },
-      { "id": "C", "text": "Suggested changes は Issue を自動作成し、Resolve conversation はマイルストーンを完了にする" },
-      { "id": "D", "text": "Suggested changes はマージ方式を変更し、Resolve conversation はブランチを削除する" }
+      {
+        "id": "A",
+        "text": "Suggested changes はレビュアーが具体的な修正案を提示し、Resolve conversation は対応済みの会話を追跡しやすくする"
+      },
+      {
+        "id": "B",
+        "text": "Suggested changes は PR をドラフトに戻し、Resolve conversation は全レビューを削除する"
+      },
+      {
+        "id": "C",
+        "text": "Suggested changes は Issue を自動作成し、Resolve conversation はマイルストーンを完了にする"
+      },
+      {
+        "id": "D",
+        "text": "Suggested changes はマージ方式を変更し、Resolve conversation はブランチを削除する"
+      }
     ],
-    "correctChoiceIds": ["A"],
+    "correctChoiceIds": [
+      "A"
+    ],
     "explanation": "レビューでは、作成者が適用できる具体的な変更案を提示できます。また、対応が済んだレビュー会話は解決済みとしてマークし、未対応のフィードバックと区別できます。",
     "references": [
       {
@@ -796,7 +970,11 @@
         "checkedAt": "2026-05-31"
       }
     ],
-    "tags": ["suggested-changes", "resolve-conversation", "review"],
+    "tags": [
+      "suggested-changes",
+      "resolve-conversation",
+      "review"
+    ],
     "updatedAt": "2026-05-31"
   },
   {
@@ -806,12 +984,26 @@
     "difficulty": "basic",
     "question": "PR の差分やコミット履歴を確認する目的として最も適切なものはどれですか？",
     "choices": [
-      { "id": "A", "text": "変更されたファイル、行ごとの差分、含まれるコミットを確認し、レビューの根拠にするため" },
-      { "id": "B", "text": "PR の作成者を別の GitHub アカウントへ自動的に変更するため" },
-      { "id": "C", "text": "Issue テンプレートの YAML 構文を検証するため" },
-      { "id": "D", "text": "GitHub Pages の公開 URL を発行するため" }
+      {
+        "id": "A",
+        "text": "変更されたファイル、行ごとの差分、含まれるコミットを確認し、レビューの根拠にするため"
+      },
+      {
+        "id": "B",
+        "text": "PR の作成者を別の GitHub アカウントへ自動的に変更するため"
+      },
+      {
+        "id": "C",
+        "text": "Issue テンプレートの YAML 構文を検証するため"
+      },
+      {
+        "id": "D",
+        "text": "GitHub Pages の公開 URL を発行するため"
+      }
     ],
-    "correctChoiceIds": ["A"],
+    "correctChoiceIds": [
+      "A"
+    ],
     "explanation": "PR レビューでは、提案された変更を確認し、特定の行へのコメントや実装方法の議論を行います。差分とコミット履歴を確認することで、変更内容と意図を把握してレビューできます。",
     "references": [
       {
@@ -821,7 +1013,11 @@
         "checkedAt": "2026-05-31"
       }
     ],
-    "tags": ["pull-request", "diff", "commits"],
+    "tags": [
+      "pull-request",
+      "diff",
+      "commits"
+    ],
     "updatedAt": "2026-05-31"
   },
   {
@@ -831,12 +1027,26 @@
     "difficulty": "standard",
     "question": "GitHub 通知で自動的に会話へサブスクライブされる例として正しいものはどれですか？",
     "choices": [
-      { "id": "A", "text": "リポジトリ名を検索結果で見ただけの場合" },
-      { "id": "B", "text": "Issue や PR を開く、コメントする、担当者になる、@メンションされるなど会話に参加した場合" },
-      { "id": "C", "text": "GitHub Pages のサイトをブラウザーで閲覧した場合" },
-      { "id": "D", "text": "別のユーザーのプロフィールをフォロー解除した場合" }
+      {
+        "id": "A",
+        "text": "リポジトリ名を検索結果で見ただけの場合"
+      },
+      {
+        "id": "B",
+        "text": "Issue や PR を開く、コメントする、担当者になる、@メンションされるなど会話に参加した場合"
+      },
+      {
+        "id": "C",
+        "text": "GitHub Pages のサイトをブラウザーで閲覧した場合"
+      },
+      {
+        "id": "D",
+        "text": "別のユーザーのプロフィールをフォロー解除した場合"
+      }
     ],
-    "correctChoiceIds": ["B"],
+    "correctChoiceIds": [
+      "B"
+    ],
     "explanation": "GitHub は、Issue や PR を開いた、コメントした、アサインされた、@メンションされた、状態を変更したなどの場合に、既定でその会話へサブスクライブします。通知設定で受信方法や粒度を調整できます。",
     "references": [
       {
@@ -846,57 +1056,11 @@
         "checkedAt": "2026-05-31"
       }
     ],
-    "tags": ["notifications", "subscribe", "watch"],
-    "updatedAt": "2026-05-31"
-  },
-  {
-    "id": "D3-035",
-    "domainId": "D3",
-    "questionType": "single-choice",
-    "difficulty": "standard",
-    "question": "Issue テンプレートやフォームを、ラベル・担当者・マイルストーンと組み合わせて使う狙いとして最も適切なものはどれですか？",
-    "choices": [
-      { "id": "A", "text": "報告内容を構造化し、種類・責任者・リリース目標ごとに Issue を整理しやすくするため" },
-      { "id": "B", "text": "Issue 作成者にリポジトリ管理者権限を自動付与するため" },
-      { "id": "C", "text": "すべての Issue を PR に変換し、コメントを禁止するため" },
-      { "id": "D", "text": "Git のコミット履歴を自動的に削除するため" }
+    "tags": [
+      "notifications",
+      "subscribe",
+      "watch"
     ],
-    "correctChoiceIds": ["A"],
-    "explanation": "GH-900 の共同作業領域では、Issue や PR のテンプレート、フィルター、割り当てを管理することが求められます。テンプレートやフォームで必要情報をそろえ、ラベル・担当者・マイルストーンで分類と追跡を行うと、チームの作業管理がしやすくなります。",
-    "references": [
-      {
-        "title": "試験 GH-900 の学習ガイド: GitHub Foundations",
-        "url": "https://learn.microsoft.com/ja-jp/credentials/certifications/resources/study-guides/gh-900",
-        "source": "Microsoft Learn",
-        "checkedAt": "2026-05-31"
-      }
-    ],
-    "tags": ["issues", "issue-forms", "labels", "assignees", "milestones"],
-    "updatedAt": "2026-05-31"
-  },
-  {
-    "id": "D3-036",
-    "domainId": "D3",
-    "questionType": "single-choice",
-    "difficulty": "standard",
-    "question": "GitHub Discussions のカテゴリや回答済みマークを使う目的として最も適切なものはどれですか？",
-    "choices": [
-      { "id": "A", "text": "会話の種類を分類し、Q&A では解決に役立つ回答を見つけやすくするため" },
-      { "id": "B", "text": "すべての Discussion を自動的に Pull Request としてマージするため" },
-      { "id": "C", "text": "Discussion に投稿したユーザーを Organization から自動削除するため" },
-      { "id": "D", "text": "リポジトリの既定ブランチを変更するため" }
-    ],
-    "correctChoiceIds": ["A"],
-    "explanation": "Discussions は Issue や PR と並ぶ共同作業ツールです。カテゴリで質問、アイデア、告知などの会話を分け、Q&A では役立つ回答を示すことで、後から参加するユーザーも解決済み情報を見つけやすくなります。",
-    "references": [
-      {
-        "title": "試験 GH-900 の学習ガイド: GitHub Foundations",
-        "url": "https://learn.microsoft.com/ja-jp/credentials/certifications/resources/study-guides/gh-900",
-        "source": "Microsoft Learn",
-        "checkedAt": "2026-05-31"
-      }
-    ],
-    "tags": ["discussions", "categories", "answered"],
     "updatedAt": "2026-05-31"
   }
 ]

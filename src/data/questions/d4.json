@@ -52,17 +52,17 @@
   {
     "id": "D4-003",
     "domainId": "D4",
-    "questionType": "single-choice",
+    "questionType": "multiple-choice",
     "difficulty": "basic",
-    "question": "GitHub Copilot の基本的な機能として最も適切な説明はどれですか？",
+    "question": "GitHub Copilot が提供する機能として正しいものを2つ選んでください。",
     "choices": [
-      { "id": "A", "text": "リポジトリのバックアップを自動的に取得するツール" },
-      { "id": "B", "text": "AIがコードの補完・生成・説明・レビューを支援するツール" },
-      { "id": "C", "text": "Organizationのアクセス権限を自動設定するツール" },
-      { "id": "D", "text": "GitHub Pagesのデザインを自動生成するツール" }
+      { "id": "A", "text": "エディター上でのコード補完・生成" },
+      { "id": "B", "text": "Copilot Chat によるコードの説明・質問への回答" },
+      { "id": "C", "text": "リポジトリのバックアップと復元" },
+      { "id": "D", "text": "Organization のメンバー権限の自動設定" }
     ],
-    "correctChoiceIds": ["B"],
-    "explanation": "GitHub CopilotはAI駆動のコーディングアシスタントです。コードの自動補完に加え、チャットでの質問への回答・コードの説明・バグ修正提案・テスト生成などを提供します。2026年時点ではAgent Mode・マルチモデル対応など機能が大幅に拡張されています。",
+    "correctChoiceIds": ["A", "B"],
+    "explanation": "GitHub Copilot の主な機能は、エディター上でのインラインコード補完・生成と、Copilot Chat によるコードの説明・バグ修正提案・テスト生成などの会話型支援です。バックアップやアクセス権限管理は Copilot の機能ではありません。",
     "references": [
       {
         "title": "GitHub Copilot とは",
@@ -72,22 +72,22 @@
       }
     ],
     "tags": ["copilot", "ai"],
-    "updatedAt": "2026-05-31"
+    "updatedAt": "2026-06-02"
   },
   {
     "id": "D4-004",
     "domainId": "D4",
-    "questionType": "single-choice",
+    "questionType": "multiple-choice",
     "difficulty": "standard",
-    "question": "GitHub Copilot のプラン区分として最も適切な説明はどれですか？",
+    "question": "GitHub Copilot のサブスクリプションプランに含まれるものを2つ選んでください。",
     "choices": [
-      { "id": "A", "text": "Copilot Freeのみが存在し、全ユーザーに無制限で提供される" },
-      { "id": "B", "text": "個人向けプランと、組織・企業向けの Business / Enterprise プランがあり、機能と管理範囲が異なる" },
-      { "id": "C", "text": "GitHub Actionsと同じプランに含まれており、追加費用は不要" },
-      { "id": "D", "text": "Organization単位では購入できず、個人単位のみ購入できる" }
+      { "id": "A", "text": "Copilot Free / Pro（個人向け）" },
+      { "id": "B", "text": "Copilot Business / Enterprise（組織・企業向けで管理者ポリシーを一元管理できる）" },
+      { "id": "C", "text": "Copilot Pages（GitHub Pages の自動デザイン生成プラン）" },
+      { "id": "D", "text": "Copilot Actions（GitHub Actions の実行プラン）" }
     ],
-    "correctChoiceIds": ["B"],
-    "explanation": "GitHub Copilot は個人向けプランに加え、組織・企業向けの Business / Enterprise プランを提供しています。Business / Enterprise では、管理者がメンバーへの割り当てやポリシーを一元管理でき、個人向けプランとは管理範囲が異なります。",
+    "correctChoiceIds": ["A", "B"],
+    "explanation": "GitHub Copilot は Free・Pro などの個人向けプランと、Business・Enterprise などの組織・企業向けプランを提供しています。Business / Enterprise では管理者がメンバーへの割り当てやポリシーを一元管理できます。「Copilot Pages」「Copilot Actions」というプランは存在しません。",
     "references": [
       {
         "title": "GitHub Copilot の計画",
@@ -97,7 +97,7 @@
       }
     ],
     "tags": ["copilot", "plans"],
-    "updatedAt": "2026-05-31"
+    "updatedAt": "2026-06-02"
   },
   {
     "id": "D4-005",
@@ -656,31 +656,6 @@
     "updatedAt": "2026-05-31"
   },
   {
-    "id": "D4-027",
-    "domainId": "D4",
-    "questionType": "single-choice",
-    "difficulty": "standard",
-    "question": "GitHub Codespaces の devcontainer.json で定義できる内容として最も適切なものはどれですか？",
-    "choices": [
-      { "id": "A", "text": "GitHub のユーザー名とパスワード" },
-      { "id": "B", "text": "開発コンテナーに含めるツール、ランタイム、拡張機能、ポートフォワーディングなど" },
-      { "id": "C", "text": "GitHub Actions の課金上限のみ" },
-      { "id": "D", "text": "Pull Request のレビュー承認者のみ" }
-    ],
-    "correctChoiceIds": ["B"],
-    "explanation": "`devcontainer.json` は Codespaces の開発コンテナー構成の中心ファイルです。プロジェクトに必要なツール、ランタイム、VS Code 拡張機能、ポート設定などをコードとして共有できます。",
-    "references": [
-      {
-        "title": "開発コンテナーの概要",
-        "url": "https://docs.github.com/ja/codespaces/setting-up-your-project-for-codespaces/introduction-to-dev-containers",
-        "source": "GitHub Docs",
-        "checkedAt": "2026-05-31"
-      }
-    ],
-    "tags": ["codespaces", "devcontainer", "environment"],
-    "updatedAt": "2026-05-31"
-  },
-  {
     "id": "D4-028",
     "domainId": "D4",
     "questionType": "single-choice",
@@ -703,99 +678,6 @@
       }
     ],
     "tags": ["codespaces", "prebuilds", "productivity"],
-    "updatedAt": "2026-05-31"
-  },
-  {
-    "id": "D4-029",
-    "domainId": "D4",
-    "questionType": "single-choice",
-    "difficulty": "basic",
-    "question": "github.dev Web エディターと GitHub Codespaces の使い分けとして最も適切なものはどれですか？",
-    "choices": [
-      { "id": "A", "text": "github.dev は GPU ビルド専用、Codespaces は README 編集専用である" },
-      { "id": "B", "text": "軽微な閲覧・編集は github.dev、ターミナルや依存関係を含む開発環境が必要な場合は Codespaces を使う" },
-      { "id": "C", "text": "github.dev だけが devcontainer を実行でき、Codespaces は実行環境を持たない" },
-      { "id": "D", "text": "Codespaces はローカル VS Code と連携できず、必ず GitHub Actions からだけ起動する" }
-    ],
-    "correctChoiceIds": ["B"],
-    "explanation": "github.dev はブラウザ上で素早くファイルを閲覧・編集する用途に向いています。ターミナル、依存関係、ビルド、テスト、またはローカル VS Code から接続できるクラウド開発環境が必要な場合は Codespaces が適しています。",
-    "references": [
-      {
-        "title": "試験 GH-900 の学習ガイド: GitHub Foundations",
-        "url": "https://learn.microsoft.com/ja-jp/credentials/certifications/resources/study-guides/gh-900",
-        "source": "Microsoft Learn",
-        "checkedAt": "2026-05-31"
-      }
-    ],
-    "tags": ["github-dev", "codespaces", "editor"],
-    "updatedAt": "2026-05-31"
-  },
-  {
-    "id": "D4-030",
-    "domainId": "D4",
-    "questionType": "single-choice",
-    "difficulty": "standard",
-    "question": "GitHub Copilot の機能の説明として最も適切なものはどれですか？",
-    "choices": [
-      { "id": "A", "text": "コード補完、Copilot Chat、agent mode などにより、コード作成・理解・複数ステップ作業を支援する" },
-      { "id": "B", "text": "Organization の 2FA を無効化し、すべての権限管理を代行する" },
-      { "id": "C", "text": "GitHub Actions のランナーを物理的に配送する" },
-      { "id": "D", "text": "GitHub Copilot は Issue のラベル付けだけに使う機能である" }
-    ],
-    "correctChoiceIds": ["A"],
-    "explanation": "GitHub Copilot はエディターでのコード補完、自然言語で質問できる Copilot Chat、複数ステップの作業を支援する agent mode などを通じて、開発者の生産性向上を支援します。",
-    "references": [
-      {
-        "title": "GitHub Copilot の概要",
-        "url": "https://learn.microsoft.com/ja-jp/training/modules/introduction-to-github-copilot/",
-        "source": "Microsoft Learn",
-        "checkedAt": "2026-05-31"
-      },
-      {
-        "title": "試験 GH-900 の学習ガイド: GitHub Foundations",
-        "url": "https://learn.microsoft.com/ja-jp/credentials/certifications/resources/study-guides/gh-900",
-        "source": "Microsoft Learn",
-        "checkedAt": "2026-05-31"
-      }
-    ],
-    "tags": ["copilot", "chat", "code-completion", "agent-mode"],
-    "updatedAt": "2026-05-31"
-  },
-  {
-    "id": "D4-031",
-    "domainId": "D4",
-    "questionType": "single-choice",
-    "difficulty": "advanced",
-    "question": "GitHub Copilot のプランに関する説明として最も適切なものはどれですか？",
-    "choices": [
-      { "id": "A", "text": "Copilot は Enterprise プランだけで提供され、個人やチームでは利用できない" },
-      { "id": "B", "text": "Copilot Free、Pro、Business、Enterprise などがあり、個人利用、組織管理、エンタープライズ向け機能の範囲が異なる" },
-      { "id": "C", "text": "Copilot Business はコード補完を提供せず、Issue 管理だけを行う" },
-      { "id": "D", "text": "Copilot Enterprise は GitHub Actions のランナー種別の名前である" }
-    ],
-    "correctChoiceIds": ["B"],
-    "explanation": "GH-900 の学習範囲では、個人、ビジネス、エンタープライズ向け Copilot の違いを理解することが求められます。Business は組織向け管理、Enterprise は組織知識の活用など、利用規模に応じた機能が提供されます。",
-    "references": [
-      {
-        "title": "試験 GH-900 の学習ガイド: GitHub Foundations",
-        "url": "https://learn.microsoft.com/ja-jp/credentials/certifications/resources/study-guides/gh-900",
-        "source": "Microsoft Learn",
-        "checkedAt": "2026-05-31"
-      },
-      {
-        "title": "GitHub Copilot Business の概要",
-        "url": "https://learn.microsoft.com/ja-jp/training/modules/introduction-to-github-copilot-for-business/",
-        "source": "Microsoft Learn",
-        "checkedAt": "2026-05-31"
-      },
-      {
-        "title": "GitHub Copilot Enterprise の概要",
-        "url": "https://learn.microsoft.com/ja-jp/training/modules/introduction-to-github-copilot-enterprise/",
-        "source": "Microsoft Learn",
-        "checkedAt": "2026-05-31"
-      }
-    ],
-    "tags": ["copilot", "plans", "business", "enterprise"],
     "updatedAt": "2026-05-31"
   },
   {

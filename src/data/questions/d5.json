@@ -6,12 +6,26 @@
     "difficulty": "basic",
     "question": "GitHub Projects の主な用途として最も適切なものはどれですか？",
     "choices": [
-      { "id": "A", "text": "GitHubへのSSH接続を設定する" },
-      { "id": "B", "text": "IssueやPull Requestをカンバンボードやテーブルで可視化・管理する" },
-      { "id": "C", "text": "リポジトリのバックアップを自動作成する" },
-      { "id": "D", "text": "GitHub Copilotのモデルを選択する" }
+      {
+        "id": "A",
+        "text": "GitHubへのSSH接続を設定する"
+      },
+      {
+        "id": "B",
+        "text": "IssueやPull Requestをカンバンボードやテーブルで可視化・管理する"
+      },
+      {
+        "id": "C",
+        "text": "リポジトリのバックアップを自動作成する"
+      },
+      {
+        "id": "D",
+        "text": "GitHub Copilotのモデルを選択する"
+      }
     ],
-    "correctChoiceIds": ["B"],
+    "correctChoiceIds": [
+      "B"
+    ],
     "explanation": "GitHub Projectsは、IssueやPull Requestをカンバンボード・テーブル・ロードマップビューで整理・管理するプロジェクト管理機能です。カスタムフィールド・フィルタリング・自動化（Automation）を組み合わせて、チームのワークフローを柔軟に構築できます。",
     "references": [
       {
@@ -21,7 +35,10 @@
         "checkedAt": "2026-05-31"
       }
     ],
-    "tags": ["projects", "project-management"],
+    "tags": [
+      "projects",
+      "project-management"
+    ],
     "updatedAt": "2026-05-31"
   },
   {
@@ -31,12 +48,26 @@
     "difficulty": "standard",
     "question": "GitHub Projects のマイルストーン（milestone）の主な用途として正しいものはどれですか？",
     "choices": [
-      { "id": "A", "text": "コードのバージョンタグを作成する" },
-      { "id": "B", "text": "期限付きのゴールに向けて複数のIssueやPull Requestをグルーピングして進捗を追跡する" },
-      { "id": "C", "text": "GitHub Actionsのスケジュール実行を設定する" },
-      { "id": "D", "text": "リポジトリのリリースを自動作成する" }
+      {
+        "id": "A",
+        "text": "コードのバージョンタグを作成する"
+      },
+      {
+        "id": "B",
+        "text": "期限付きのゴールに向けて複数のIssueやPull Requestをグルーピングして進捗を追跡する"
+      },
+      {
+        "id": "C",
+        "text": "GitHub Actionsのスケジュール実行を設定する"
+      },
+      {
+        "id": "D",
+        "text": "リポジトリのリリースを自動作成する"
+      }
     ],
-    "correctChoiceIds": ["B"],
+    "correctChoiceIds": [
+      "B"
+    ],
     "explanation": "マイルストーンはリリースやスプリントなど期限のある目標に向けてIssueやPull Requestをまとめる機能です。進捗率・期限・クローズ済み件数をひと目で確認でき、プロジェクトの達成状況の可視化に役立ちます。",
     "references": [
       {
@@ -46,33 +77,55 @@
         "checkedAt": "2026-05-31"
       }
     ],
-    "tags": ["milestones", "project-management"],
+    "tags": [
+      "milestones",
+      "project-management"
+    ],
     "updatedAt": "2026-05-31"
   },
   {
     "id": "D5-003",
     "domainId": "D5",
     "questionType": "single-choice",
-    "difficulty": "basic",
-    "question": "GitHub Projects で利用できるビュー（レイアウト）の組み合わせとして正しいものはどれですか？",
+    "difficulty": "standard",
+    "question": "GitHub Projects の3つのビューとその用途の組み合わせとして正しいものはどれですか？",
     "choices": [
-      { "id": "A", "text": "リスト・カレンダー・マップ" },
-      { "id": "B", "text": "テーブル・ボード（カンバン）・ロードマップ" },
-      { "id": "C", "text": "ガントチャート・バーンダウン・スプレッドシート" },
-      { "id": "D", "text": "タイムライン・フロー・ツリー" }
+      {
+        "id": "A",
+        "text": "テーブル＝フィールドを一覧・編集、ボード＝ステータス別カンバンでドラッグ管理、ロードマップ＝日付・Iterationを使った時系列タイムライン"
+      },
+      {
+        "id": "B",
+        "text": "テーブル＝時系列タイムライン、ボード＝フィールドを一覧・編集、ロードマップ＝ステータス別カンバン"
+      },
+      {
+        "id": "C",
+        "text": "テーブル＝ステータス別カンバン、ボード＝時系列タイムライン、ロードマップ＝フィールドを一覧・編集"
+      },
+      {
+        "id": "D",
+        "text": "3つのビューは同じ用途で、表示形式だけが異なる"
+      }
     ],
-    "correctChoiceIds": ["B"],
-    "explanation": "GitHub Projects は テーブル（スプレッドシート形式）・ボード（カンバン形式）・ロードマップ（タイムライン形式）の3つのレイアウトを提供しています。同じプロジェクトデータを目的に応じて切り替えて表示できます。",
+    "correctChoiceIds": [
+      "A"
+    ],
+    "explanation": "GitHub Projects は3つのレイアウトを提供します。テーブルはスプレッドシート形式で多数の項目とフィールドを一覧・編集するのに適しています。ボードはステータスなどの列にカードを並べ、ドラッグで進捗を更新するカンバン形式です。ロードマップは日付フィールドや Iteration を使って作業を時系列で追跡するタイムライン形式です。",
     "references": [
       {
         "title": "ビューのレイアウトを変更する",
         "url": "https://docs.github.com/ja/issues/planning-and-tracking-with-projects/customizing-views-in-your-project/changing-the-layout-of-a-view",
         "source": "GitHub Docs",
-        "checkedAt": "2026-05-31"
+        "checkedAt": "2026-06-02"
       }
     ],
-    "tags": ["projects", "board", "roadmap"],
-    "updatedAt": "2026-05-31"
+    "tags": [
+      "projects",
+      "table-view",
+      "board-view",
+      "roadmap"
+    ],
+    "updatedAt": "2026-06-02"
   },
   {
     "id": "D5-004",
@@ -81,12 +134,26 @@
     "difficulty": "standard",
     "question": "GitHub Projects の組み込み自動化（Built-in automations）の説明として最も適切なものはどれですか？",
     "choices": [
-      { "id": "A", "text": "Issue を自動的に削除するルールを設定できる" },
-      { "id": "B", "text": "Issue や PR のステータスをイベント（オープン・クローズ・マージなど）に応じて自動更新できる" },
-      { "id": "C", "text": "GitHub Actions と連携してコードを自動デプロイする" },
-      { "id": "D", "text": "プロジェクトの期限が来たら Issue を自動クローズする" }
+      {
+        "id": "A",
+        "text": "Issue を自動的に削除するルールを設定できる"
+      },
+      {
+        "id": "B",
+        "text": "Issue や PR のステータスをイベント（オープン・クローズ・マージなど）に応じて自動更新できる"
+      },
+      {
+        "id": "C",
+        "text": "GitHub Actions と連携してコードを自動デプロイする"
+      },
+      {
+        "id": "D",
+        "text": "プロジェクトの期限が来たら Issue を自動クローズする"
+      }
     ],
-    "correctChoiceIds": ["B"],
+    "correctChoiceIds": [
+      "B"
+    ],
     "explanation": "Projects の組み込み自動化は、Issue や PR のステータスフィールドをイベントに応じて自動更新する機能です。たとえば「Issue がオープンされたら Status を Todo にする」「PR がマージされたら Done にする」などのルールを設定できます。",
     "references": [
       {
@@ -96,7 +163,10 @@
         "checkedAt": "2026-05-31"
       }
     ],
-    "tags": ["projects", "automation"],
+    "tags": [
+      "projects",
+      "automation"
+    ],
     "updatedAt": "2026-05-31"
   },
   {
@@ -106,12 +176,26 @@
     "difficulty": "advanced",
     "question": "GitHub Projects のカスタムフィールドを使う主な目的はどれですか？",
     "choices": [
-      { "id": "A", "text": "Issue にコードスニペットを埋め込むため" },
-      { "id": "B", "text": "優先度・見積もり・スプリント番号など、デフォルトにない情報をアイテムに追加して管理するため" },
-      { "id": "C", "text": "チームメンバーのコード貢献量をグラフ表示するため" },
-      { "id": "D", "text": "Pull Request のレビュアーを自動でアサインするため" }
+      {
+        "id": "A",
+        "text": "Issue にコードスニペットを埋め込むため"
+      },
+      {
+        "id": "B",
+        "text": "優先度・見積もり・スプリント番号など、デフォルトにない情報をアイテムに追加して管理するため"
+      },
+      {
+        "id": "C",
+        "text": "チームメンバーのコード貢献量をグラフ表示するため"
+      },
+      {
+        "id": "D",
+        "text": "Pull Request のレビュアーを自動でアサインするため"
+      }
     ],
-    "correctChoiceIds": ["B"],
+    "correctChoiceIds": [
+      "B"
+    ],
     "explanation": "カスタムフィールドにはテキスト・数値・日付・単一選択・反復（Iteration）などの型があり、プロジェクト固有の情報（優先度・ストーリーポイント・担当チームなど）を自由に追加できます。フィールドでのグループ化・フィルタリング・ソートも可能です。",
     "references": [
       {
@@ -121,7 +205,10 @@
         "checkedAt": "2026-05-31"
       }
     ],
-    "tags": ["projects", "custom-fields"],
+    "tags": [
+      "projects",
+      "custom-fields"
+    ],
     "updatedAt": "2026-05-31"
   },
   {
@@ -131,12 +218,26 @@
     "difficulty": "standard",
     "question": "Issue に担当者（Assignee）を設定する主な目的はどれですか？",
     "choices": [
-      { "id": "A", "text": "担当者のみがその Issue にコメントできるようにするため" },
-      { "id": "B", "text": "その Issue の対応責任者を明示してチームの作業分担を可視化するため" },
-      { "id": "C", "text": "担当者の GitHub アカウントに課金するため" },
-      { "id": "D", "text": "担当者が Issue をクローズした際に自動マージを行うため" }
+      {
+        "id": "A",
+        "text": "担当者のみがその Issue にコメントできるようにするため"
+      },
+      {
+        "id": "B",
+        "text": "その Issue の対応責任者を明示してチームの作業分担を可視化するため"
+      },
+      {
+        "id": "C",
+        "text": "担当者の GitHub アカウントに課金するため"
+      },
+      {
+        "id": "D",
+        "text": "担当者が Issue をクローズした際に自動マージを行うため"
+      }
     ],
-    "correctChoiceIds": ["B"],
+    "correctChoiceIds": [
+      "B"
+    ],
     "explanation": "担当者（Assignee）を設定することで、誰がその Issue に責任を持つかをチームに示せます。担当者は自分に割り当てられた Issue を GitHub のプロフィールやプロジェクトのフィルタリングで確認できます。",
     "references": [
       {
@@ -146,82 +247,11 @@
         "checkedAt": "2026-05-31"
       }
     ],
-    "tags": ["issues", "assignee", "project-management"],
-    "updatedAt": "2026-05-31"
-  },
-  {
-    "id": "D5-007",
-    "domainId": "D5",
-    "questionType": "single-choice",
-    "difficulty": "basic",
-    "question": "多数のIssueを一覧し、優先度や見積もりなど複数のフィールドをまとめて確認・編集したい場合、GitHub Projectsで最も適したビューはどれですか？",
-    "choices": [
-      { "id": "A", "text": "テーブルビュー" },
-      { "id": "B", "text": "コードビュー" },
-      { "id": "C", "text": "ネットワークビュー" },
-      { "id": "D", "text": "セキュリティアラートビュー" }
+    "tags": [
+      "issues",
+      "assignee",
+      "project-management"
     ],
-    "correctChoiceIds": ["A"],
-    "explanation": "テーブルビューは、Issue、Pull Request、ドラフトIssue、カスタムフィールドをスプレッドシートのように表示し、フィールドの表示・非表示、フィルター、ソート、グループ化に向いています。",
-    "references": [
-      {
-        "title": "ビューのレイアウトを変更する",
-        "url": "https://docs.github.com/ja/issues/planning-and-tracking-with-projects/customizing-views-in-your-project/changing-the-layout-of-a-view",
-        "source": "GitHub Docs",
-        "checkedAt": "2026-05-31"
-      }
-    ],
-    "tags": ["projects", "table-view"],
-    "updatedAt": "2026-05-31"
-  },
-  {
-    "id": "D5-008",
-    "domainId": "D5",
-    "questionType": "single-choice",
-    "difficulty": "standard",
-    "question": "作業をステータス別の列に並べ、カードを列間でドラッグして進捗を更新したい場合、GitHub Projectsで最も適したレイアウトはどれですか？",
-    "choices": [
-      { "id": "A", "text": "ロードマップレイアウト" },
-      { "id": "B", "text": "ボードレイアウト" },
-      { "id": "C", "text": "リリースノートレイアウト" },
-      { "id": "D", "text": "依存関係グラフ" }
-    ],
-    "correctChoiceIds": ["B"],
-    "explanation": "ボードレイアウトでは、Statusなどの単一選択フィールドやIterationフィールドを列として使い、カードをドラッグすると移動先の列に合わせてフィールド値が更新されます。",
-    "references": [
-      {
-        "title": "ビューのレイアウトを変更する",
-        "url": "https://docs.github.com/ja/issues/planning-and-tracking-with-projects/customizing-views-in-your-project/changing-the-layout-of-a-view",
-        "source": "GitHub Docs",
-        "checkedAt": "2026-05-31"
-      }
-    ],
-    "tags": ["projects", "board-view", "status"],
-    "updatedAt": "2026-05-31"
-  },
-  {
-    "id": "D5-009",
-    "domainId": "D5",
-    "questionType": "single-choice",
-    "difficulty": "standard",
-    "question": "開始日や目標日、Iterationを使って作業を時系列で追跡したい場合、GitHub Projectsで選ぶべきビューはどれですか？",
-    "choices": [
-      { "id": "A", "text": "Wikiビュー" },
-      { "id": "B", "text": "監査ログビュー" },
-      { "id": "C", "text": "ロードマップビュー" },
-      { "id": "D", "text": "通知ビュー" }
-    ],
-    "correctChoiceIds": ["C"],
-    "explanation": "ロードマップレイアウトは、カスタム日付フィールドやIterationフィールドを使ってIssue、Pull Request、ドラフトIssueをタイムラインに配置し、作業を経時的に追跡するために使います。",
-    "references": [
-      {
-        "title": "ビューのレイアウトを変更する",
-        "url": "https://docs.github.com/ja/issues/planning-and-tracking-with-projects/customizing-views-in-your-project/changing-the-layout-of-a-view",
-        "source": "GitHub Docs",
-        "checkedAt": "2026-05-31"
-      }
-    ],
-    "tags": ["projects", "roadmap", "iteration"],
     "updatedAt": "2026-05-31"
   },
   {
@@ -231,12 +261,26 @@
     "difficulty": "basic",
     "question": "GitHub Projectsのカスタムフィールドの型として正しい組み合わせはどれですか？",
     "choices": [
-      { "id": "A", "text": "テキスト、数値、日付、単一選択、Iteration" },
-      { "id": "B", "text": "SSHキー、GPGキー、PAT、OAuthアプリ" },
-      { "id": "C", "text": "ブランチ、タグ、コミット、リリース" },
-      { "id": "D", "text": "CPU、メモリ、ディスク、ネットワーク" }
+      {
+        "id": "A",
+        "text": "テキスト、数値、日付、単一選択、Iteration"
+      },
+      {
+        "id": "B",
+        "text": "SSHキー、GPGキー、PAT、OAuthアプリ"
+      },
+      {
+        "id": "C",
+        "text": "ブランチ、タグ、コミット、リリース"
+      },
+      {
+        "id": "D",
+        "text": "CPU、メモリ、ディスク、ネットワーク"
+      }
     ],
-    "correctChoiceIds": ["A"],
+    "correctChoiceIds": [
+      "A"
+    ],
     "explanation": "Projectsでは、テキスト、数値、日付、単一選択、Iterationなどのカスタムフィールドを使い、チーム固有のメタデータを項目に追加できます。",
     "references": [
       {
@@ -246,7 +290,10 @@
         "checkedAt": "2026-05-31"
       }
     ],
-    "tags": ["projects", "custom-fields"],
+    "tags": [
+      "projects",
+      "custom-fields"
+    ],
     "updatedAt": "2026-05-31"
   },
   {
@@ -256,12 +303,26 @@
     "difficulty": "advanced",
     "question": "2週間スプリントごとに作業を計画し、現在・前回・次回のスプリントでフィルターしたい場合に最も適したProjectsのフィールドはどれですか？",
     "choices": [
-      { "id": "A", "text": "テキストフィールド" },
-      { "id": "B", "text": "数値フィールド" },
-      { "id": "C", "text": "Iterationフィールド" },
-      { "id": "D", "text": "リポジトリフィールド" }
+      {
+        "id": "A",
+        "text": "テキストフィールド"
+      },
+      {
+        "id": "B",
+        "text": "数値フィールド"
+      },
+      {
+        "id": "C",
+        "text": "Iterationフィールド"
+      },
+      {
+        "id": "D",
+        "text": "リポジトリフィールド"
+      }
     ],
-    "correctChoiceIds": ["C"],
+    "correctChoiceIds": [
+      "C"
+    ],
     "explanation": "Iterationフィールドは任意の長さの繰り返し期間を作成し、項目を特定のIterationに関連付けます。`@current`、`@previous`、`@next`などでフィルターすることもできます。",
     "references": [
       {
@@ -271,7 +332,11 @@
         "checkedAt": "2026-05-31"
       }
     ],
-    "tags": ["projects", "iteration", "filter"],
+    "tags": [
+      "projects",
+      "iteration",
+      "filter"
+    ],
     "updatedAt": "2026-05-31"
   },
   {
@@ -281,12 +346,26 @@
     "difficulty": "standard",
     "question": "Projectsのビューで`label:bug status:\"In progress\"`のように複数条件を指定した場合の動作として正しいものはどれですか？",
     "choices": [
-      { "id": "A", "text": "どちらか一方の条件に一致する項目を表示する" },
-      { "id": "B", "text": "すべての条件に一致する項目を表示する" },
-      { "id": "C", "text": "条件を保存できず、毎回削除される" },
-      { "id": "D", "text": "Issueではなくリポジトリだけを検索する" }
+      {
+        "id": "A",
+        "text": "どちらか一方の条件に一致する項目を表示する"
+      },
+      {
+        "id": "B",
+        "text": "すべての条件に一致する項目を表示する"
+      },
+      {
+        "id": "C",
+        "text": "条件を保存できず、毎回削除される"
+      },
+      {
+        "id": "D",
+        "text": "Issueではなくリポジトリだけを検索する"
+      }
     ],
-    "correctChoiceIds": ["B"],
+    "correctChoiceIds": [
+      "B"
+    ],
     "explanation": "Projectsで複数のフィルターを組み合わせると論理ANDとして機能し、指定したすべての条件に一致する項目がビューに表示されます。",
     "references": [
       {
@@ -296,32 +375,11 @@
         "checkedAt": "2026-05-31"
       }
     ],
-    "tags": ["projects", "filter", "triage"],
-    "updatedAt": "2026-05-31"
-  },
-  {
-    "id": "D5-013",
-    "domainId": "D5",
-    "questionType": "single-choice",
-    "difficulty": "standard",
-    "question": "スプリントごとの作業量の偏りを確認するため、ProjectsでIteration別に項目をまとめて表示したい場合に使う機能として最も適切なものはどれですか？",
-    "choices": [
-      { "id": "A", "text": "リポジトリをフォークする" },
-      { "id": "B", "text": "Codespacesを停止する" },
-      { "id": "C", "text": "Issueをロックする" },
-      { "id": "D", "text": "Iterationフィールドでグループ化する" }
+    "tags": [
+      "projects",
+      "filter",
+      "triage"
     ],
-    "correctChoiceIds": ["D"],
-    "explanation": "Iterationフィールドでは、Iterationごとに項目をグループ化して今後の作業バランスを視覚化でき、特定のIterationへのフィルターやIteration順のソートにも利用できます。",
-    "references": [
-      {
-        "title": "繰り返しフィールドについて",
-        "url": "https://docs.github.com/ja/issues/planning-and-tracking-with-projects/understanding-fields/about-iteration-fields",
-        "source": "GitHub Docs",
-        "checkedAt": "2026-05-31"
-      }
-    ],
-    "tags": ["projects", "iteration", "grouping"],
     "updatedAt": "2026-05-31"
   },
   {
@@ -331,12 +389,26 @@
     "difficulty": "advanced",
     "question": "Projectsの状態更新をより細かく自動化し、スクリプトやGitHub Actionsからプロジェクト項目を読み書きしたい場合に使うAPIとして最も適切なものはどれですか？",
     "choices": [
-      { "id": "A", "text": "GitHub GraphQL API" },
-      { "id": "B", "text": "DNSゾーン転送" },
-      { "id": "C", "text": "SMTP API" },
-      { "id": "D", "text": "WebAuthn登録API" }
+      {
+        "id": "A",
+        "text": "GitHub GraphQL API"
+      },
+      {
+        "id": "B",
+        "text": "DNSゾーン転送"
+      },
+      {
+        "id": "C",
+        "text": "SMTP API"
+      },
+      {
+        "id": "D",
+        "text": "WebAuthn登録API"
+      }
     ],
-    "correctChoiceIds": ["A"],
+    "correctChoiceIds": [
+      "A"
+    ],
     "explanation": "ProjectsはGraphQL APIで管理できます。プロジェクトIDを取得したり、項目やフィールド値を更新したりして、GitHub Actionsなどから高度な自動化を実装できます。",
     "references": [
       {
@@ -346,32 +418,11 @@
         "checkedAt": "2026-05-31"
       }
     ],
-    "tags": ["projects", "graphql", "automation"],
-    "updatedAt": "2026-05-31"
-  },
-  {
-    "id": "D5-015",
-    "domainId": "D5",
-    "questionType": "single-choice",
-    "difficulty": "standard",
-    "question": "IssueがクローズされたらProjectsのStatusをDoneにする、といったルールを設定したい場合に使う機能はどれですか？",
-    "choices": [
-      { "id": "A", "text": "リポジトリのTopics" },
-      { "id": "B", "text": "組み込みワークフロー（Built-in automations）" },
-      { "id": "C", "text": "Git LFS" },
-      { "id": "D", "text": "ブランチ保護ルール" }
+    "tags": [
+      "projects",
+      "graphql",
+      "automation"
     ],
-    "correctChoiceIds": ["B"],
-    "explanation": "Projectsの組み込みワークフローでは、項目が追加・変更されたときやIssue/PRがクローズ・マージされたときにStatusを自動更新するなどの自動化を構成できます。",
-    "references": [
-      {
-        "title": "組み込みの自動化機能を使用する",
-        "url": "https://docs.github.com/ja/issues/planning-and-tracking-with-projects/automating-your-project/using-the-built-in-automations",
-        "source": "GitHub Docs",
-        "checkedAt": "2026-05-31"
-      }
-    ],
-    "tags": ["projects", "workflows", "automation"],
     "updatedAt": "2026-05-31"
   },
   {
@@ -381,12 +432,26 @@
     "difficulty": "advanced",
     "question": "ProjectsのInsightsでバーンアップチャートを使う主な目的はどれですか？",
     "choices": [
-      { "id": "A", "text": "依存関係の脆弱性を自動修正するため" },
-      { "id": "B", "text": "ブランチのマージ競合を解決するため" },
-      { "id": "C", "text": "時間の経過に伴う完了済み作業と残作業を可視化し、進捗やボトルネックを把握するため" },
-      { "id": "D", "text": "Secret scanningの検出結果を非表示にするため" }
+      {
+        "id": "A",
+        "text": "依存関係の脆弱性を自動修正するため"
+      },
+      {
+        "id": "B",
+        "text": "ブランチのマージ競合を解決するため"
+      },
+      {
+        "id": "C",
+        "text": "時間の経過に伴う完了済み作業と残作業を可視化し、進捗やボトルネックを把握するため"
+      },
+      {
+        "id": "D",
+        "text": "Secret scanningの検出結果を非表示にするため"
+      }
     ],
-    "correctChoiceIds": ["C"],
+    "correctChoiceIds": [
+      "C"
+    ],
     "explanation": "Insightsでは現在のグラフや履歴グラフを作成できます。既定のバーンアップチャートは、時間の経過に伴うIssueの進行状況、完了した作業、残っている作業を可視化します。",
     "references": [
       {
@@ -396,7 +461,11 @@
         "checkedAt": "2026-05-31"
       }
     ],
-    "tags": ["projects", "insights", "burnup"],
+    "tags": [
+      "projects",
+      "insights",
+      "burnup"
+    ],
     "updatedAt": "2026-05-31"
   },
   {
@@ -406,12 +475,26 @@
     "difficulty": "standard",
     "question": "Issue本文のタスクリストで、さらに追跡や議論が必要になった個別タスクに対して行える操作として正しいものはどれですか？",
     "choices": [
-      { "id": "A", "text": "タスクをIssueに変換する" },
-      { "id": "B", "text": "タスクをSSHキーに変換する" },
-      { "id": "C", "text": "タスクをGitHub Actionsランナーに変換する" },
-      { "id": "D", "text": "タスクをリポジトリのライセンスに変換する" }
+      {
+        "id": "A",
+        "text": "タスクをIssueに変換する"
+      },
+      {
+        "id": "B",
+        "text": "タスクをSSHキーに変換する"
+      },
+      {
+        "id": "C",
+        "text": "タスクをGitHub Actionsランナーに変換する"
+      },
+      {
+        "id": "D",
+        "text": "タスクをリポジトリのライセンスに変換する"
+      }
     ],
-    "correctChoiceIds": ["A"],
+    "correctChoiceIds": [
+      "A"
+    ],
     "explanation": "タスクリストの項目はチェックボックスで進捗を追跡できます。追加の追跡や議論が必要な場合、タスク項目から新しいIssueへ変換できます。",
     "references": [
       {
@@ -421,7 +504,11 @@
         "checkedAt": "2026-05-31"
       }
     ],
-    "tags": ["issues", "task-lists", "convert-to-issue"],
+    "tags": [
+      "issues",
+      "task-lists",
+      "convert-to-issue"
+    ],
     "updatedAt": "2026-05-31"
   },
   {
@@ -431,12 +518,26 @@
     "difficulty": "standard",
     "question": "IssueフォームとIssueの種類を組み合わせて使う主な利点はどれですか？",
     "choices": [
-      { "id": "A", "text": "Pull Requestを自動的にマージし、ブランチ保護を無効にする" },
-      { "id": "B", "text": "コントリビューターが新しいIssueを開くときに必要情報を入力しやすくし、バグやタスクなどの種類で分類しやすくする" },
-      { "id": "C", "text": "リポジトリを非公開に変更し、すべてのIssueを削除する" },
-      { "id": "D", "text": "GitHub Actionsの課金を停止し、ワークフローを無効にする" }
+      {
+        "id": "A",
+        "text": "Pull Requestを自動的にマージし、ブランチ保護を無効にする"
+      },
+      {
+        "id": "B",
+        "text": "コントリビューターが新しいIssueを開くときに必要情報を入力しやすくし、バグやタスクなどの種類で分類しやすくする"
+      },
+      {
+        "id": "C",
+        "text": "リポジトリを非公開に変更し、すべてのIssueを削除する"
+      },
+      {
+        "id": "D",
+        "text": "GitHub Actionsの課金を停止し、ワークフローを無効にする"
+      }
     ],
-    "correctChoiceIds": ["B"],
+    "correctChoiceIds": [
+      "B"
+    ],
     "explanation": "IssueテンプレートやIssueフォームを設定すると必要な情報を入力してもらいやすくなります。Issueの種類と組み合わせることで、バグ、タスク、機能要求などを分類し、トリアージしやすくなります。",
     "references": [
       {
@@ -452,7 +553,11 @@
         "checkedAt": "2026-05-31"
       }
     ],
-    "tags": ["issues", "issue-templates", "issue-forms"],
+    "tags": [
+      "issues",
+      "issue-templates",
+      "issue-forms"
+    ],
     "updatedAt": "2026-05-31"
   },
   {
@@ -462,12 +567,26 @@
     "difficulty": "basic",
     "question": "複数リポジトリのIssueやPull Requestを1つの計画表で横断的に管理したい場合、GitHub Projectsの説明として最も適切なものはどれですか？",
     "choices": [
-      { "id": "A", "text": "Projectsは1つのリポジトリ内のコミットだけを表示する機能である" },
-      { "id": "B", "text": "ProjectsはユーザーまたはOrganizationレベルで作業を計画・追跡し、IssueやPull Requestと統合できる" },
-      { "id": "C", "text": "ProjectsはWikiページだけを分類する機能である" },
-      { "id": "D", "text": "Projectsを使うとすべてのリポジトリが自動的に公開される" }
+      {
+        "id": "A",
+        "text": "Projectsは1つのリポジトリ内のコミットだけを表示する機能である"
+      },
+      {
+        "id": "B",
+        "text": "ProjectsはユーザーまたはOrganizationレベルで作業を計画・追跡し、IssueやPull Requestと統合できる"
+      },
+      {
+        "id": "C",
+        "text": "ProjectsはWikiページだけを分類する機能である"
+      },
+      {
+        "id": "D",
+        "text": "Projectsを使うとすべてのリポジトリが自動的に公開される"
+      }
     ],
-    "correctChoiceIds": ["B"],
+    "correctChoiceIds": [
+      "B"
+    ],
     "explanation": "ProjectsはユーザーまたはOrganizationレベルで利用でき、GitHubのIssueやPull Requestと統合して作業を計画・追跡できます。複数リポジトリにまたがるバックログやロードマップの管理に役立ちます。",
     "references": [
       {
@@ -477,7 +596,11 @@
         "checkedAt": "2026-05-31"
       }
     ],
-    "tags": ["projects", "multi-repository", "planning"],
+    "tags": [
+      "projects",
+      "multi-repository",
+      "planning"
+    ],
     "updatedAt": "2026-05-31"
   },
   {
@@ -487,12 +610,26 @@
     "difficulty": "standard",
     "question": "新着Issueをトリアージするビューとして、ラベル、マイルストーン、担当者が未設定の項目に絞り込みたい場合に適切なProjectsフィルター例はどれですか？",
     "choices": [
-      { "id": "A", "text": "no:label no:milestone no:assignee" },
-      { "id": "B", "text": "is:merged is:tag is:release" },
-      { "id": "C", "text": "fork:true archived:true public:true" },
-      { "id": "D", "text": "license:mit language:go stars:>100" }
+      {
+        "id": "A",
+        "text": "no:label no:milestone no:assignee"
+      },
+      {
+        "id": "B",
+        "text": "is:merged is:tag is:release"
+      },
+      {
+        "id": "C",
+        "text": "fork:true archived:true public:true"
+      },
+      {
+        "id": "D",
+        "text": "license:mit language:go stars:>100"
+      }
     ],
-    "correctChoiceIds": ["A"],
+    "correctChoiceIds": [
+      "A"
+    ],
     "explanation": "Projectsでは項目のメタデータやフィールドでフィルターできます。`no:label no:milestone no:assignee`のような負のフィルターは、未分類・未担当のIssueを集めるトリアージビューに利用できます。",
     "references": [
       {
@@ -502,7 +639,12 @@
         "checkedAt": "2026-05-31"
       }
     ],
-    "tags": ["issues", "labels", "assignee", "triage"],
+    "tags": [
+      "issues",
+      "labels",
+      "assignee",
+      "triage"
+    ],
     "updatedAt": "2026-05-31"
   },
   {
@@ -512,12 +654,26 @@
     "difficulty": "advanced",
     "question": "Issueの親子関係とピン留めの使い分けとして最も適切な説明はどれですか？",
     "choices": [
-      { "id": "A", "text": "サブIssueは重要なIssueをリポジトリ上部に固定表示するためだけに使う" },
-      { "id": "B", "text": "サブIssueは大きな作業を小さなIssueに分割して階層的に追跡し、ピン留めIssueは重要なIssueを見つけやすくするために使う" },
-      { "id": "C", "text": "ピン留めIssueを使うと、親Issueの進捗率が自動的に100%になる" },
-      { "id": "D", "text": "サブIssueとピン留めIssueはどちらもGit履歴を書き換える機能である" }
+      {
+        "id": "A",
+        "text": "サブIssueは重要なIssueをリポジトリ上部に固定表示するためだけに使う"
+      },
+      {
+        "id": "B",
+        "text": "サブIssueは大きな作業を小さなIssueに分割して階層的に追跡し、ピン留めIssueは重要なIssueを見つけやすくするために使う"
+      },
+      {
+        "id": "C",
+        "text": "ピン留めIssueを使うと、親Issueの進捗率が自動的に100%になる"
+      },
+      {
+        "id": "D",
+        "text": "サブIssueとピン留めIssueはどちらもGit履歴を書き換える機能である"
+      }
     ],
-    "correctChoiceIds": ["B"],
+    "correctChoiceIds": [
+      "B"
+    ],
     "explanation": "サブIssueは大きなIssueを小さなIssueに分割し、親子関係で進捗を追跡するために使います。一方、ピン留めIssueはリポジトリで重要なIssueを目立たせ、すばやく見つけられるようにする用途です。",
     "references": [
       {
@@ -533,7 +689,11 @@
         "checkedAt": "2026-05-31"
       }
     ],
-    "tags": ["issues", "sub-issues", "hierarchy"],
+    "tags": [
+      "issues",
+      "sub-issues",
+      "hierarchy"
+    ],
     "updatedAt": "2026-05-31"
   },
   {
@@ -543,12 +703,26 @@
     "difficulty": "standard",
     "question": "プロジェクトをチーム外へ見せるか制限するかを判断するとき、GitHub Projectsの可視性とアクセス管理について最も適切な説明はどれですか？",
     "choices": [
-      { "id": "A", "text": "Projectsは常にインターネット全体へ公開され、非公開にはできない" },
-      { "id": "B", "text": "Projectsを公開すると、含まれるPrivateリポジトリのコードも自動的に公開される" },
-      { "id": "C", "text": "ProjectsはユーザーまたはOrganizationレベルの作業計画ツールであり、チームのニーズに合わせて共有範囲やアクセスを設計する" },
-      { "id": "D", "text": "Projectsのアクセス設定はIssueやPull Requestの表示とは無関係に、すべての項目本文を匿名ユーザーに公開する" }
+      {
+        "id": "A",
+        "text": "Projectsは常にインターネット全体へ公開され、非公開にはできない"
+      },
+      {
+        "id": "B",
+        "text": "Projectsを公開すると、含まれるPrivateリポジトリのコードも自動的に公開される"
+      },
+      {
+        "id": "C",
+        "text": "ProjectsはユーザーまたはOrganizationレベルの作業計画ツールであり、チームのニーズに合わせて共有範囲やアクセスを設計する"
+      },
+      {
+        "id": "D",
+        "text": "Projectsのアクセス設定はIssueやPull Requestの表示とは無関係に、すべての項目本文を匿名ユーザーに公開する"
+      }
     ],
-    "correctChoiceIds": ["C"],
+    "correctChoiceIds": [
+      "C"
+    ],
     "explanation": "ProjectsはユーザーまたはOrganizationレベルで作業を計画・追跡する柔軟なツールです。公開・非公開やアクセス範囲を考慮し、チームやOrganizationの運用に合わせて共有します。",
     "references": [
       {
@@ -558,7 +732,11 @@
         "checkedAt": "2026-05-31"
       }
     ],
-    "tags": ["projects", "visibility", "access-management"],
+    "tags": [
+      "projects",
+      "visibility",
+      "access-management"
+    ],
     "updatedAt": "2026-05-31"
   }
 ]
