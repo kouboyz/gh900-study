@@ -28,8 +28,8 @@ export function App() {
     window.scrollTo({ top: 0 })
   }, [start])
 
-  const handleAnswer = useCallback((selectedId: string) => {
-    answer(selectedId, saveAnswer)
+  const handleAnswer = useCallback((selectedIds: string[]) => {
+    answer(selectedIds, saveAnswer)
   }, [answer, saveAnswer])
 
   const handleNext = useCallback(() => {

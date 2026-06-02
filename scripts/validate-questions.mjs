@@ -51,6 +51,18 @@ for (const file of files) {
     }
   }
 
+  // questionType と correctChoiceIds 件数の整合性チェック
+  for (const q of data) {
+    if (q.questionType === 'single-choice' && q.correctChoiceIds.length !== 1) {
+      console.error(`❌ ${file}: ${q.id} は single-choice ですが correctChoiceIds が ${q.correctChoiceIds.length} 件です`)
+      hasError = true
+    }
+    if (q.questionType === 'multiple-choice' && q.correctChoiceIds.length < 2) {
+      console.error(`❌ ${file}: ${q.id} は multiple-choice ですが correctChoiceIds が ${q.correctChoiceIds.length} 件しかありません`)
+      hasError = true
+    }
+  }
+
   console.log(`✅ ${file}: ${data.length}問 OK`)
 }
 

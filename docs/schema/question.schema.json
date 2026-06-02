@@ -20,7 +20,7 @@
       },
       "questionType": {
         "type": "string",
-        "enum": ["single-choice"]
+        "enum": ["single-choice", "multiple-choice"]
       },
       "difficulty": {
         "type": "string",
@@ -53,7 +53,7 @@
       "correctChoiceIds": {
         "type": "array",
         "minItems": 1,
-        "maxItems": 1,
+        "maxItems": 4,
         "items": {
           "type": "string",
           "enum": ["A", "B", "C", "D"]
