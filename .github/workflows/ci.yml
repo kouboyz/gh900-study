@@ -1,13 +1,22 @@
-name: Validate Questions
+name: CI
 
 on:
   pull_request:
-    paths:
-      - 'src/data/questions/**.json'
-      - 'docs/schema/question.schema.json'
-      - 'scripts/validate-questions.mjs'
 
 jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+      - run: npm test
+
   validate:
     runs-on: ubuntu-latest
     steps:
@@ -20,4 +29,3 @@ jobs:
 
       - run: npm ci
       - run: npm run validate
- 
