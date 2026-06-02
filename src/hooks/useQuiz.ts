@@ -17,6 +17,10 @@ export function useQuiz() {
     setQuiz({ questions: shuffle(questions), index: 0, answers: [] })
   }, [])
 
+  const resume = useCallback((questions: Question[], index: number, answers: QuizAnswer[]) => {
+    setQuiz({ questions, index, answers })
+  }, [])
+
   const answer = useCallback((selectedIds: string[], saveAnswer: (id: string, correct: boolean) => void) => {
     setQuiz(prev => {
       const q = prev.questions[prev.index]
@@ -41,5 +45,5 @@ export function useQuiz() {
   const isFinished = quiz.questions.length > 0 && quiz.index >= quiz.questions.length
   const hasAnsweredCurrent = quiz.answers.length > quiz.index
 
-  return { quiz, currentQuestion, isFinished, hasAnsweredCurrent, start, answer, next }
+  return { quiz, currentQuestion, isFinished, hasAnsweredCurrent, start, resume, answer, next }
 }
