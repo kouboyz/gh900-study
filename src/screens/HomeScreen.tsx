@@ -96,6 +96,11 @@ export function HomeScreen({ history, onStartDomain, savedSession, onResumeSessi
         </button>
       </div>
 
+      {/* Disclaimer */}
+      <div className="mb-12 text-xs text-gray-400 leading-relaxed border-t border-gray-100 pt-6">
+        このコンテンツは一般公開されている GitHub Foundations の公式ドキュメントに基づいています。サポートされるすべての構成で検&#35388;されたわけではありません。最新のドキュメントとの整合を維持するよう努めていますが、意思決定を行う前に、公式の GitHub ドキュメントで詳細を確認することをお勧めします。
+      </div>
+
       {/* Official Resources */}
       {APP_CONFIG.officialLinks.length > 0 && (
       <div>
