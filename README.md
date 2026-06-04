@@ -1,6 +1,8 @@
 # GH-900 GitHub Foundations Trainer
 
-GH-900（GitHub Foundations）認定試験の対策Webアプリです。GitHub Pages で公開します。
+GH-900（GitHub Foundations）認定試験の学習Webアプリです。
+
+**公開URL**: https://kouboyz.github.io/gh900-study/
 
 ## 機能
 
@@ -44,7 +46,7 @@ npm install
 npm run dev
 ```
 
-`http://localhost:5173/gh900/` でアクセスできます。
+`http://localhost:5173/gh900-study/` でアクセスできます。
 
 ## ビルド・バリデーション
 
@@ -77,7 +79,8 @@ src/
 ├── utils/shuffle.ts
 ├── hooks/
 │   ├── useHistory.ts      # LocalStorage の読み書き
-│   └── useQuiz.ts         # クイズ進行ロジック
+│   ├── useQuiz.ts         # クイズ進行ロジック
+│   └── useQuizSessions.ts # クイズセッションの中断・再開
 ├── components/
 └── screens/
 ```
