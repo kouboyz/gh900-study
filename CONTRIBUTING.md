@@ -93,7 +93,7 @@ npm install
 npm run dev
 ```
 
-`http://localhost:5173/gh900/` でアクセスできます。
+`http://localhost:5173/gh900-study/` でアクセスできます。
 
 ### PR を出す前に
 
