@@ -467,7 +467,7 @@
       { "id": "C", "text": "Environmentsを使うと複数のジョブが同じシークレットを共有できなくなる" },
       { "id": "D", "text": "Environmentsの保護ルールはOrganizationオーナーのみが設定できる" }
     ],
-    "correctChoiceIds": ["C"],
+    "correctChoiceIds": ["A"],
     "explanation": "Environments は production や staging などのデプロイ先を表し、保護ルールや環境シークレットを設定できます。環境を参照するジョブは、保護ルールを満たしてから実行またはシークレットへアクセスします。",
     "references": [
       {
