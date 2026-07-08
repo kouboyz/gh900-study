@@ -306,13 +306,13 @@
     "difficulty": "standard",
     "question": "GitHub Actions で Pull Request が開かれたときだけ CI を実行したい場合、最も適切なトリガーはどれですか？",
     "choices": [
-      { "id": "A", "text": "on: pull_request" },
+      { "id": "A", "text": "on: pull_request（types: [opened]）" },
       { "id": "B", "text": "on: release" },
       { "id": "C", "text": "on: schedule" },
       { "id": "D", "text": "on: workflow_dispatch" }
     ],
     "correctChoiceIds": ["A"],
-    "explanation": "`pull_request` イベントは Pull Request の作成、更新、再オープンなどをきっかけにワークフローを実行できます。定期実行は `schedule`、手動実行は `workflow_dispatch` を使います。",
+    "explanation": "Pull Request が開かれたとき“だけ”実行するには、pull_request イベントでアクティビティタイプを opened に絞り込みます（例: on: pull_request: types: [opened]）。単に on: pull_request のみを指定すると opened のほか synchronize や reopened などでも実行されます。release はリリース時、schedule は定期実行、workflow_dispatch は手動実行用です。",
     "references": [
       {
         "title": "ワークフローをトリガーするイベント",
@@ -406,13 +406,13 @@
     "difficulty": "basic",
     "question": "CI（継続的インテグレーション）の説明として最も適切なものはどれですか？",
     "choices": [
-      { "id": "A", "text": "テスト済みのコードを本番環境へ自動デプロイするプロセス" },
+      { "id": "A", "text": "テスト済みのコードを本番環境へ自動デプロイするプロセス（継続的デプロイ: CD）" },
       { "id": "B", "text": "コードの変更を頻繁にメインブランチに統合し、自動テストで問題を早期発見するプラクティス" },
       { "id": "C", "text": "本番リリース前にコードを手動検証するゲートキーパープロセス" },
       { "id": "D", "text": "週次でまとめてコードをマージし、リリース前に集中してテストする手法" }
     ],
-    "correctChoiceIds": ["A"],
-    "explanation": "CI はコード変更を頻繁に統合し、ビルドやテストを自動化して不具合を早期に発見する考え方です。GitHub Actions は CI/CD パイプラインを自動化できるプラットフォームです。",
+    "correctChoiceIds": ["B"],
+    "explanation": "CI は、開発者のコード変更を頻繁に共有リポジトリ（例: メインブランチ）へ統合し、そのたびに自動ビルドと自動テストを実行して問題を早期に検出するプラクティスです。テスト済みコードを本番へ自動デプロイするのは継続的デプロイ（CD）であり、CI の定義ではありません。GitHub Actions を用いると、このような CI/CD ワークフローを自動化できます。",
     "references": [
       {
         "title": "GitHub Actions について",

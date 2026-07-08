@@ -582,12 +582,12 @@
     "question": "secret scanning の push protection が有効な場合の動作として正しいものはどれですか？",
     "choices": [
       { "id": "A", "text": "シークレットが検出されてもpushはブロックされず、後からアラートで通知される" },
-      { "id": "B", "text": "シークレットが含まれるコミットのpushをブロックし、開発者に警告・回避の選択肢を提示する" },
+      { "id": "B", "text": "シークレットが含まれるコミットのpushをブロックし、開発者に警告し修正または正当な理由によるバイパスを選択させる" },
       { "id": "C", "text": "push protectionはパブリックリポジトリにのみ適用され、プライベートリポジトリでは動作しない" },
       { "id": "D", "text": "push protectionが有効なリポジトリへのpushにはOrganizationオーナーの承認が必要になる" }
     ],
-    "correctChoiceIds": ["A"],
-    "explanation": "Push protection は secret scanning の機能で、トークンなどのハードコードされた資格情報を含むプッシュを検出し、リポジトリへ取り込まれる前にブロックできます。",
+    "correctChoiceIds": ["B"],
+    "explanation": "Secret scanning の push protection は、サポート対象のシークレットが検出された場合に、リポジトリへ取り込まれる前の push をブロックし、開発者に検出内容を警告します。開発者はシークレットを削除して再度 push するか、必要に応じて理由を入力してバイパス（Push anyway）を選択できます。したがってBが正解です。Aはブロックしないとするため誤り、Cはパブリックのみとする誤り（プライベート/内部リポジトリでもGitHub Advanced Securityで有効化可能）、Dのような承認フローはありません。",
     "references": [
       {
         "title": "プッシュ保護について",
@@ -688,12 +688,12 @@
     "question": "パブリックリポジトリに SECURITY.md（セキュリティポリシー）を追加すると、GitHub 上で自動的に有効になる機能はどれですか？",
     "choices": [
       { "id": "A", "text": "リポジトリへのすべての Push が自動的にブロックされる" },
-      { "id": "B", "text": "private vulnerability reporting（非公開の脆弱性報告）ボタンがリポジトリに表示される" },
+      { "id": "B", "text": "Issues の新規作成フローにセキュリティポリシー（SECURITY.md）へのリンクが自動的に表示される" },
       { "id": "C", "text": "リポジトリの可視性が自動的に Internal に変更される" },
       { "id": "D", "text": "GitHub Dependabot が週次で脆弱性スキャンを実行する" }
     ],
     "correctChoiceIds": ["B"],
-    "explanation": "SECURITY.md を追加すると、新しい Issue を作成するリンクの代わりに、セキュリティポリシーへのリンクが表示されます。また、private vulnerability reporting が有効な場合、リポジトリの Security タブに「脆弱性を報告する」ボタンが表示され、外部の研究者が安全に非公開で脆弱性を報告できるようになります。",
+    "explanation": "SECURITY.md を既定のブランチに追加すると、ユーザーがリポジトリで新しい Issue を作成する際に、セキュリティポリシー（SECURITY.md）へのリンクが自動的に表示されます。これにより、脆弱性の報告方法を案内できます。一方、Security タブの「脆弱性を報告する」ボタン（非公開の脆弱性報告）は、該当機能を別途有効化した場合にのみ表示され、SECURITY.md の追加だけでは自動的には有効になりません。Dependabot のスキャンやリポジトリの可視性変更なども自動的には行われません。",
     "references": [
       {
         "title": "リポジトリへのセキュリティ ポリシーの追加",
@@ -800,12 +800,12 @@
     "question": "リポジトリロールの Maintain と Admin の違いとして正しいものはどれですか？",
     "choices": [
       { "id": "A", "text": "Maintain は Issue のクローズもできない。Admin はすべての操作が可能" },
-      { "id": "B", "text": "Maintain はリリース管理・保護ブランチへのマージなど日常的な管理ができるが、リポジトリ設定の変更やコラボレーターの追加はできない。Admin はそれらすべてが可能" },
+      { "id": "B", "text": "Maintain は Issue/PR の管理やリリースの作成・編集など日常的な運用作業を行えるが、アクセス管理や機密性の高い設定（例: ブランチ保護ルール、シークレット、Webhook、可視性の変更、移譲・削除）の変更はできない。Admin はそれらを含めた完全な管理が可能" },
       { "id": "C", "text": "Maintain と Admin は同じ権限で、名前が違うだけ" },
       { "id": "D", "text": "Admin は読み取り専用、Maintain は書き込み可能" }
     ],
     "correctChoiceIds": ["B"],
-    "explanation": "Maintain ロールはリポジトリのリリース管理・Issue や PR のクローズ・保護ブランチへのマージ依頼など、メンテナーとしての日常業務が行えます。ただしリポジトリ設定の変更・コラボレーターの追加・削除・Webhookの設定変更などはできません。Admin ロールはこれらすべてを含むリポジトリの完全な管理権限を持ちます。",
+    "explanation": "Maintain は、機密性の高い／破壊的な操作にアクセスさせずにリポジトリの運用を委任するためのロールです。Issue や Pull Request の管理、リリースの作成・編集などは可能ですが、コラボレーターやチームのアクセス管理、ブランチ保護ルールやシークレット／Webhook の設定、リポジトリの可視性変更、移譲・削除といった機密性の高い設定変更はできません。Admin はこれらを含むリポジトリの完全な管理権限を持ちます。なお、保護されたブランチへのプッシュやマージの可否はブランチ保護ルールによって制御され、ロールだけで常に許可されるわけではありません。",
     "references": [
       {
         "title": "Organization のリポジトリロール",
@@ -822,15 +822,15 @@
     "domainId": "D6",
     "questionType": "single-choice",
     "difficulty": "standard",
-    "question": "GitHub のプラン（Free・Team・Enterprise）による機能の違いとして正しいものはどれですか？",
+    "question": "あなたは組織の管理者です。GitHub のプラン（Free・Team・Enterprise）による機能の違いを確認しています。次の記述のうち正しいものはどれですか？",
     "choices": [
       { "id": "A", "text": "ブランチ保護ルールは Team 以上でのみ使用できる" },
-      { "id": "B", "text": "GitHub Free でもパブリックリポジトリであればブランチ保護ルールを設定できるが、SAML SSO は GitHub Enterprise Cloud 以上が必要" },
+      { "id": "B", "text": "GitHub Free でもパブリック／プライベートの両方のリポジトリでブランチ保護ルールを設定できるが、SAML SSO は GitHub Enterprise Cloud が必要である" },
       { "id": "C", "text": "プライベートリポジトリは Enterprise プランでしか作成できない" },
       { "id": "D", "text": "GitHub Actions は Team プラン以上でのみ利用できる" }
     ],
     "correctChoiceIds": ["B"],
-    "explanation": "GitHub Free でもパブリックリポジトリに対してブランチ保護ルールを設定できます。プライベートリポジトリへのブランチ保護は GitHub Pro / Team 以上が必要です。SAML SSO（シングルサインオン）は GitHub Enterprise Cloud 以上の機能です。GitHub Actions はすべてのプランで利用でき、月間の無料利用枠がプランによって異なります。",
+    "explanation": "正解は B です。ブランチ保護ルールは GitHub Free を含むすべてのプランで利用でき、パブリックおよびプライベートの両方のリポジトリで設定可能です。一方、SAML シングルサインオン（SAML SSO）は GitHub Enterprise Cloud で提供される機能です。なお、GitHub Actions はすべてのプランで利用可能で、無料の利用枠や分単価などはプランにより異なります。選択肢 A と D は機能の提供範囲を誤って限定しており、C はプライベートリポジトリが Free でも作成可能である点で誤りです。",
     "references": [
       {
         "title": "GitHub のプランの製品",

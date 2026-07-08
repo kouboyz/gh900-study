@@ -518,13 +518,13 @@
     "difficulty": "standard",
     "question": "プロジェクトをチーム外へ見せるか制限するかを判断するとき、GitHub Projectsの可視性とアクセス管理について最も適切な説明はどれですか？",
     "choices": [
-      { "id": "A", "text": "Projectsの可視性をPublicにすると、含まれるIssueのタイトルは誰でも閲覧できるが、PrivateリポジトリのコードやファイルはPrivateのまま" },
+      { "id": "A", "text": "ProjectsをPublicにしても、Privateリポジトリ由来のIssueやPull Requestの詳細は、当該リポジトリへのアクセス権がないユーザーには表示されない" },
       { "id": "B", "text": "ProjectsはOrganizationかリポジトリに紐づき、可視性（Public/Private）と誰がアクセスできるかをオーナーが管理できる" },
-      { "id": "C", "text": "ProjectsはPublicかPrivateの2種類の可視性があり、Private ProjectはOrg/リポジトリ権限に基づいてアクセス制御される" },
+      { "id": "C", "text": "ProjectsはPublicかPrivateの可視性を設定でき、組織プロジェクトはOrganizationメンバー限定・Public・Privateから選択可能。Privateプロジェクトのアクセスはメンバー設定とロールで管理される" },
       { "id": "D", "text": "Projectsの可視性はリポジトリの可視性に自動的に同期されるため、個別に設定する必要はない" }
     ],
     "correctChoiceIds": ["C"],
-    "explanation": "ProjectsはユーザーまたはOrganizationレベルで作業を計画・追跡する柔軟なツールです。公開・非公開やアクセス範囲を考慮し、チームやOrganizationの運用に合わせて共有します。",
+    "explanation": "Projectsはユーザー、組織、リポジトリの各スコープで作成でき、可視性とアクセス管理はスコープにより異なります。組織プロジェクトはPublic／Private／組織メンバー向けのいずれかを選択でき、ユーザープロジェクトはPublic／Privateを選択できます。リポジトリプロジェクトはリポジトリの権限に従います。Privateなプロジェクトでは、プロジェクトのメンバーとロールでアクセスを制御できます。さらに、プロジェクトに追加されたIssueやPull Requestの閲覧は、元のリポジトリの権限に従って制限され、公開プロジェクトであってもPrivateリポジトリ由来のアイテムは権限のないユーザーには表示されません。",
     "references": [
       {
         "title": "Projects について",
