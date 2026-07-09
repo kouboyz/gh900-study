@@ -293,7 +293,7 @@
       { "id": "D", "text": "<h2>見出し</h2>" }
     ],
     "correctChoiceIds": ["A"],
-    "explanation": "GitHub Flavored Markdown (GFM) では、H2 見出しは ATX 形式の「## 見出し」で記述できます。また、GitHub では Markdown 内で一部の生HTMLが解釈されるため、<h2>…</h2> も見出しとして有効です。一方、B は太字の構文で見出しではありません。C の「== 見出し ==」はMarkdownの見出し構文ではなく、GFMでは見出しとして扱われません。",
+    "explanation": "GitHub Flavored Markdown (GFM) では、H2 見出しは ATX 形式の「## 見出し」で記述します。これが Markdown の見出し構文です。D の「<h2>見出し</h2>」は HTML 要素であり、GitHub 上でレンダリングされる場合はありますが、Markdown の見出し構文ではありません。B は太字の構文であり見出しではなく、C の「== 見出し ==」も GFM では見出し構文として認識されません。",
     "references": [
       {
         "title": "基本的な書き込みと書式設定の構文",

@@ -520,11 +520,11 @@
     "choices": [
       { "id": "A", "text": "ProjectsをPublicにしても、Privateリポジトリ由来のIssueやPull Requestの詳細は、当該リポジトリへのアクセス権がないユーザーには表示されない" },
       { "id": "B", "text": "ProjectsはOrganizationかリポジトリに紐づき、可視性（Public/Private）と誰がアクセスできるかをオーナーが管理できる" },
-      { "id": "C", "text": "ProjectsはPublicかPrivateの可視性を設定でき、組織プロジェクトはOrganizationメンバー限定・Public・Privateから選択可能。Privateプロジェクトのアクセスはメンバー設定とロールで管理される" },
+      { "id": "C", "text": "ProjectsはPublicかPrivateの可視性を設定でき、Privateプロジェクトのアクセスはユーザー／チームへの個別付与とロールで管理される" },
       { "id": "D", "text": "Projectsの可視性はリポジトリの可視性に自動的に同期されるため、個別に設定する必要はない" }
     ],
     "correctChoiceIds": ["C"],
-    "explanation": "Projectsはユーザー、組織、リポジトリの各スコープで作成でき、可視性とアクセス管理はスコープにより異なります。組織プロジェクトはPublic／Private／組織メンバー向けのいずれかを選択でき、ユーザープロジェクトはPublic／Privateを選択できます。リポジトリプロジェクトはリポジトリの権限に従います。Privateなプロジェクトでは、プロジェクトのメンバーとロールでアクセスを制御できます。さらに、プロジェクトに追加されたIssueやPull Requestの閲覧は、元のリポジトリの権限に従って制限され、公開プロジェクトであってもPrivateリポジトリ由来のアイテムは権限のないユーザーには表示されません。",
+    "explanation": "Projectsの可視性はPublicとPrivateの2択です。ユーザープロジェクト・組織プロジェクトともにPublic／Privateを選択でき、リポジトリプロジェクトはリポジトリの権限に従います。Privateプロジェクトでは、ユーザーやチームを個別に追加してロールでアクセスを制御します。さらに、プロジェクトに追加されたIssueやPull Requestの閲覧は元のリポジトリの権限に従って制限され、公開プロジェクトであってもPrivateリポジトリ由来のアイテムは権限のないユーザーには表示されません。",
     "references": [
       {
         "title": "Projects について",

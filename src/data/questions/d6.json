@@ -825,12 +825,12 @@
     "question": "あなたは組織の管理者です。GitHub のプラン（Free・Team・Enterprise）による機能の違いを確認しています。次の記述のうち正しいものはどれですか？",
     "choices": [
       { "id": "A", "text": "ブランチ保護ルールは Team 以上でのみ使用できる" },
-      { "id": "B", "text": "GitHub Free でもパブリック／プライベートの両方のリポジトリでブランチ保護ルールを設定できるが、SAML SSO は GitHub Enterprise Cloud が必要である" },
+      { "id": "B", "text": "GitHub Free ではパブリックリポジトリのみブランチ保護ルールを設定でき、プライベートリポジトリのブランチ保護は Team プラン以上が必要である。また SAML SSO は GitHub Enterprise Cloud が必要である" },
       { "id": "C", "text": "プライベートリポジトリは Enterprise プランでしか作成できない" },
       { "id": "D", "text": "GitHub Actions は Team プラン以上でのみ利用できる" }
     ],
     "correctChoiceIds": ["B"],
-    "explanation": "正解は B です。ブランチ保護ルールは GitHub Free を含むすべてのプランで利用でき、パブリックおよびプライベートの両方のリポジトリで設定可能です。一方、SAML シングルサインオン（SAML SSO）は GitHub Enterprise Cloud で提供される機能です。なお、GitHub Actions はすべてのプランで利用可能で、無料の利用枠や分単価などはプランにより異なります。選択肢 A と D は機能の提供範囲を誤って限定しており、C はプライベートリポジトリが Free でも作成可能である点で誤りです。",
+    "explanation": "正解は B です。GitHub Free ではパブリックリポジトリにのみブランチ保護ルールを設定でき、プライベートリポジトリにブランチ保護を適用するには Team プラン以上が必要です。SAML シングルサインオン（SAML SSO）は GitHub Enterprise Cloud で提供される機能です。なお、GitHub Actions はすべてのプランで利用可能で、無料の利用枠や分単価などはプランにより異なります。選択肢 A と D は機能の提供範囲を誤って限定しており、C はプライベートリポジトリが Free でも作成可能である点で誤りです。",
     "references": [
       {
         "title": "GitHub のプランの製品",
