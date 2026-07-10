@@ -293,7 +293,7 @@
       { "id": "D", "text": "<h2>見出し</h2>" }
     ],
     "correctChoiceIds": ["A"],
-    "explanation": "Markdownでは行頭に # を付けることで見出しを表現します。# の数がレベルに対応し、## がH2、### がH3です。GitHub上では最大H6まで対応しています。",
+    "explanation": "GitHub Flavored Markdown (GFM) では、H2 見出しは ATX 形式の「## 見出し」で記述します。これが Markdown の見出し構文です。D の「<h2>見出し</h2>」は HTML 要素であり、GitHub 上でレンダリングされる場合はありますが、Markdown の見出し構文ではありません。B は太字の構文であり見出しではなく、C の「== 見出し ==」も GFM では見出し構文として認識されません。",
     "references": [
       {
         "title": "基本的な書き込みと書式設定の構文",
@@ -887,13 +887,13 @@
     "difficulty": "standard",
     "question": "GitHub Flowで短く分かりやすいブランチ名を付ける理由として最も適切なものはどれですか？",
     "choices": [
-      { "id": "A", "text": "GitHub Actionsがブランチ名を元にCIを自動設定するため" },
+      { "id": "A", "text": "GitHub Actionsがブランチ名だけを基準にCIワークフローを自動作成・自動設定するため" },
       { "id": "B", "text": "チームメンバーが作業内容をブランチ名から素早く理解できるため" },
       { "id": "C", "text": "Gitのブランチ名はリモートに送信されないため、名前は関係ない" },
       { "id": "D", "text": "短いブランチ名だとマージ時のコンフリクトが発生しにくくなるため" }
     ],
-    "correctChoiceIds": ["A"],
-    "explanation": "正解は「コラボレーターが進行中の作業内容を把握しやすくするため」です。GitHub Flowでは作業内容が分かる短いブランチ名が推奨されます。他の選択肢は、別のGit/GitHub機能や該当しない操作を述べているため誤りです。",
+    "correctChoiceIds": ["B"],
+    "explanation": "正解はBです。GitHub Flowでは、進行中の作業を簡潔に表す分かりやすいブランチ名を付けることで、コラボレーターがブランチの目的や作業内容を素早く把握できることが推奨されています。Aは誤りで、GitHub Actionsのワークフローはリポジトリ内のYAMLで定義しイベント等でトリガーできますが、ブランチ名だけに基づいて自動作成・自動設定されることはありません。Cは誤りで、ブランチ名（リファレンス）はプッシュ時にリモートへ送信・共有されます。Dは誤りで、マージコンフリクトは変更内容の競合に起因し、ブランチ名の長さとは無関係です。",
     "references": [
       {
         "title": "GitHub フロー",
@@ -965,10 +965,10 @@
       { "id": "A", "text": "GitHubのSLAや障害対応ポリシーを確認するため" },
       { "id": "B", "text": "GitHub Actionsの無料利用枠やプライベートリポジトリの機能範囲など、利用できる機能・制限・コストをプロジェクトの要件に合わせて選択するため" },
       { "id": "C", "text": "FreeプランでもEnterpriseと同等の機能が使えることを確認するため" },
-      { "id": "D", "text": "プランを変更するとリポジトリのデータが移行されることを理解するため" }
+      { "id": "D", "text": "請求サイクルや支払い方法などの請求処理のみを確認するため" }
     ],
-    "correctChoiceIds": ["D"],
-    "explanation": "正解は「利用できる機能、対象アカウント、サポートや管理機能の違いを判断するため」です。GitHubのプランは無料・有料の機能差や個人/組織/Enterprise向けの違いを判断するために重要です。他の選択肢は、別のGit/GitHub機能や該当しない操作を述べているため誤りです。",
+    "correctChoiceIds": ["B"],
+    "explanation": "正解はBです。GitHubの各プラン（Free/Team/Enterprise）は、利用できる機能や上限（例：Actionsの無料分、セキュリティ機能、管理機能）、およびコストが異なるため、要件に合ったプランを選択する目的で理解することが重要です。Aは限定的な観点にとどまり、プラン理解の主目的を十分に表していません。Cは誤りで、FreeはEnterpriseと同等の機能を提供しません。Dは請求関連のみの確認に偏っており、プランを理解する主要な目的（機能・制限・コストの違いを把握して選定すること）を捉えていません。",
     "references": [
       {
         "title": "GitHubのプラン",
@@ -988,12 +988,12 @@
     "question": "Enterpriseアカウントで複数Organizationをまとめて扱う利点として最も適切なものはどれですか？",
     "choices": [
       { "id": "A", "text": "各OrganizationのリポジトリをすべてPublicに統一できる" },
-      { "id": "B", "text": "複数OrganizationのポリシーIssue・請求・セキュリティ設定を一元管理できる" },
+      { "id": "B", "text": "複数Organizationのポリシー、請求、セキュリティ設定を一元管理できる" },
       { "id": "C", "text": "Enterprise配下の全リポジトリを1つのリポジトリに自動統合できる" },
       { "id": "D", "text": "EnterpriseアカウントはOrganizationを1つしか持てないため管理が単純になる" }
     ],
-    "correctChoiceIds": ["A"],
-    "explanation": "正解は「企業全体のポリシーや請求などをOrganization横断で管理しやすい」です。Enterpriseは複数Organizationの管理単位です。他の選択肢はEnterpriseアカウントの目的や機能を表していません。",
+    "correctChoiceIds": ["B"],
+    "explanation": "正解はBです。Enterpriseアカウントは、複数のOrganizationにまたがるポリシーやセキュリティ/コンプライアンス設定の適用、メンバーおよび請求の一元管理を可能にします。AのようにすべてのリポジトリをPublicに強制する機能や、Cのようなリポジトリの自動統合機能はありません。Dも誤りで、Enterpriseアカウントは複数のOrganizationを包含して管理するために用いられます。",
     "references": [
       {
         "title": "GitHub アカウントの種類",
@@ -1212,13 +1212,13 @@
     "difficulty": "advanced",
     "question": "SSHでGitHubへ接続する方法をHTTPSと比較した説明として最も適切なものはどれですか？",
     "choices": [
-      { "id": "A", "text": "SSHはHTTPSよりも接続が遅いが、暗号化強度が高い" },
+      { "id": "A", "text": "SSHではGit操作のたびに秘密鍵のパスフレーズ入力が必須で、省略できない" },
       { "id": "B", "text": "SSHはHTTPSと異なり、GitHubへのpushにのみ使用できる" },
       { "id": "C", "text": "SSH鍵を登録すれば、認証後はパスワードやトークンの入力なしに操作できる" },
       { "id": "D", "text": "SSHはGitHub EnterpriseでのみサポートされるプロトコルでGitHub.comでは使えない" }
     ],
-    "correctChoiceIds": ["A"],
-    "explanation": "正解は「SSHキーを使って認証し、リモートリポジトリとの安全な通信に利用できる」です。SSHはキーに基づく認証でGitHubのリモート操作に利用されます。他の選択肢は、別のGit/GitHub機能や該当しない操作を述べているため誤りです。",
+    "correctChoiceIds": ["C"],
+    "explanation": "正解はCです。SSHキー（公開鍵）をGitHubアカウントに登録し、ローカルでSSHを構成すると、毎回ユーザ名やパスワード／個人用アクセス トークンを入力せずに認証してGit操作（clone、fetch、pull、push）を行えます。Aは誤りで、SSHキーにパスフレーズを設定している場合でも ssh-agent に鍵を追加してパスフレーズをキャッシュでき、毎回の入力は不要です。Bは誤りで、SSHはpush専用ではなく、一般的なGit操作すべてに使用できます。Dは誤りで、SSHはGitHub.comとGitHub Enterpriseの両方でサポートされています。",
     "references": [
       {
         "title": "GitHubへの接続",
@@ -1323,8 +1323,8 @@
       { "id": "C", "text": "GitHub Actionsのワークフローを自動生成してくれる" },
       { "id": "D", "text": "受講すると自動的にGitHub Proプランが付与される" }
     ],
-    "correctChoiceIds": ["A"],
-    "explanation": "正解は「GitHub FlowやMarkdownなどを実際に操作しながら学ぶ」です。ハンズオン形式の学習は、GitHubの基本操作を実際に試しながら身につける目的に適しています。他の選択肢は、別のGit/GitHub機能や該当しない操作を述べているため誤りです。",
+    "correctChoiceIds": ["B"],
+    "explanation": "正解はBです。ハンズオン形式の学習（例: GitHub Skills）は、演習用のリポジトリでブランチ、コミット、Pull Request、Markdown などを実際に操作しながら、GitHubの基本（GitHub Flowや基本的な書き方）を体験的に学ぶことを目的としています。Aのように認定資格を付与するものではなく、Cのように利用者のワークフローを自動生成するサービスでもなく、Dのように有料プランが自動付与されることもありません。",
     "references": [
       {
         "title": "GitHub フロー",
