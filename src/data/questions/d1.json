@@ -29,15 +29,15 @@
     "domainId": "D1",
     "questionType": "single-choice",
     "difficulty": "basic",
-    "question": "ブランチ（branch）の主な目的として最も適切なものはどれですか？",
+    "question": "Gitの「ブランチ」の説明として最も適切なものはどれですか？",
     "choices": [
-      { "id": "A", "text": "リポジトリを外部に公開するため" },
-      { "id": "B", "text": "メインのコードに影響を与えずに独立した作業を並行して進めるため" },
-      { "id": "C", "text": "Organizationのメンバーを管理するため" },
-      { "id": "D", "text": "GitHub Pagesのカスタムドメインを設定するため" }
+      { "id": "A", "text": "プロジェクトの特定のリリースバージョン" },
+      { "id": "B", "text": "別のサーバー上にあるリポジトリ全体のコピー" },
+      { "id": "C", "text": "特定の機能やタスクに関するコミットを独立して管理するタイムライン" },
+      { "id": "D", "text": "リポジトリへのコントリビューターの一覧" }
     ],
-    "correctChoiceIds": ["B"],
-    "explanation": "ブランチはコミット履歴のポインタであり、メインブランチ（main / master）から分岐して独立した作業空間を作ります。機能開発やバグ修正をブランチ上で進め、レビュー後にマージすることで安全なリリースが可能になります。",
+    "correctChoiceIds": ["C"],
+    "explanation": "Gitにおけるブランチは、コミットの独立したタイムラインです。特定の機能開発やバグ修正などを main ブランチとは切り離した作業ラインで進めることができ、完成後にマージして統合します。",
     "references": [
       {
         "title": "ブランチの概要",
@@ -47,7 +47,7 @@
       }
     ],
     "tags": ["git", "branch"],
-    "updatedAt": "2026-05-31"
+    "updatedAt": "2026-07-13"
   },
   {
     "id": "D1-003",
@@ -131,12 +131,12 @@
     "difficulty": "basic",
     "question": "Git と GitHub の違いとして最も適切な説明はどれですか？",
     "choices": [
-      { "id": "A", "text": "Git はクラウドサービスで、GitHub はローカルで動くバージョン管理ツールである" },
-      { "id": "B", "text": "Git はバージョン管理システムそのもので、GitHub は Git リポジトリをホスティングするクラウドプラットフォームである" },
-      { "id": "C", "text": "Git と GitHub は同じ製品の異なる名称である" },
-      { "id": "D", "text": "Git は GitHub が開発したツールで、GitHub 以外では使えない" }
+      { "id": "A", "text": "Git はローカルで実行される分散バージョン管理システム（DVCS）で、GitHub は共有リモートを提供するインターフェイス層である" },
+      { "id": "B", "text": "Git は 1 人の作業者向けで、GitHub は複数人の共同作業向けのバージョン管理である" },
+      { "id": "C", "text": "Git と GitHub は同じものである" },
+      { "id": "D", "text": "Git はローカル専用のバージョン管理で、GitHub はリモート専用のバージョン管理である" }
     ],
-    "correctChoiceIds": ["B"],
+    "correctChoiceIds": ["A"],
     "explanation": "Git は Linus Torvalds が開発したオープンソースの分散型バージョン管理システムです。GitHub は Git リポジトリをクラウド上でホスティングし、Pull Request・Issues・Actions などのコラボレーション機能を提供するプラットフォームです。Git は GitHub なしでも使えますが、GitHub は Git を前提として成り立っています。",
     "references": [
       {
@@ -147,7 +147,7 @@
       }
     ],
     "tags": ["git", "github"],
-    "updatedAt": "2026-05-31"
+    "updatedAt": "2026-07-13"
   },
   {
     "id": "D1-007",
@@ -435,15 +435,15 @@
     "domainId": "D1",
     "questionType": "single-choice",
     "difficulty": "standard",
-    "question": "GitHub上の「リモート」リポジトリをローカルリポジトリと区別する説明として最も適切なものはどれですか？",
+    "question": "Git の用語で「リモート（remote）」とは何ですか？",
     "choices": [
-      { "id": "A", "text": "作業ツリーにある未追跡ファイルの一覧" },
-      { "id": "B", "text": "コンピューターではなく GitHub に保存され、共有や同期の対象になるリポジトリ" },
-      { "id": "C", "text": "コミット前に変更を一時的に置く領域" },
-      { "id": "D", "text": "ローカルでのみ参照できる一時ブランチ" }
+      { "id": "A", "text": "コンピューターに保存されているリポジトリのローカルコピー" },
+      { "id": "B", "text": "実験的なコードで使用する別のブランチ" },
+      { "id": "C", "text": "安全な場所に保存されているリポジトリのバックアップ" },
+      { "id": "D", "text": "同じプロジェクトを追跡しているが、別の場所に存在するリポジトリ" }
     ],
-    "correctChoiceIds": ["B"],
-    "explanation": "正解は「コンピューターではなく GitHub に保存され、共有や同期の対象になるリポジトリ」です。リモートはGitHubなどコンピューター外に保存されたリポジトリです。他の選択肢は、別のGit/GitHub機能や該当しない操作を述べているため誤りです。",
+    "correctChoiceIds": ["D"],
+    "explanation": "リモートとは、コラボレーションや同期のために参照する別の場所に存在するリポジトリです。通常 GitHub.com 上に置かれ、git push / git pull でやり取りします。",
     "references": [
       {
         "title": "リポジトリについて",
@@ -453,7 +453,7 @@
       }
     ],
     "tags": ["repository", "remote"],
-    "updatedAt": "2026-05-31"
+    "updatedAt": "2026-07-13"
   },
   {
     "id": "D1-021",
@@ -510,15 +510,15 @@
     "domainId": "D1",
     "questionType": "single-choice",
     "difficulty": "basic",
-    "question": ".gitignore ファイルの主な用途として最も適切なものはどれですか？",
+    "question": ".secrets という名前のフォルダーに保存されたシークレットが誤ってリポジトリにコミットされないようにしたいです。このポリシーの適用に最も役立つファイルはどれですか？",
     "choices": [
-      { "id": "A", "text": "コミット時に無視するファイルやディレクトリをGitに指示する" },
-      { "id": "B", "text": "すべてのブランチを読み取り専用にする" },
-      { "id": "C", "text": "リモートリポジトリのURLを暗号化する" },
-      { "id": "D", "text": "GitHubアカウントのパスワードを保存する" }
+      { "id": "A", "text": "SECURITY.md" },
+      { "id": "B", "text": ".gitignore" },
+      { "id": "C", "text": "CONTRIBUTING.md" },
+      { "id": "D", "text": "README.md" }
     ],
-    "correctChoiceIds": ["A"],
-    "explanation": "正解は「コミット時に無視するファイルやディレクトリをGitに指示する」です。.gitignoreはコミットしたくない生成物や環境固有ファイルなどを無視するルールです。他の選択肢は、別のGit/GitHub機能や該当しない操作を述べているため誤りです。",
+    "correctChoiceIds": ["B"],
+    "explanation": ".gitignore に .secrets/ を追加すると、そのフォルダー内のファイルは Git に追跡されずコミットに含まれません。ただしこのポリシーはクライアント側での適用であり、意図的な違反を完全に防ぐことはできません。",
     "references": [
       {
         "title": "ファイルを無視する",
@@ -527,8 +527,8 @@
         "checkedAt": "2026-05-31"
       }
     ],
-    "tags": ["gitignore", "repository"],
-    "updatedAt": "2026-05-31"
+    "tags": ["gitignore", "security", "repository"],
+    "updatedAt": "2026-07-13"
   },
   {
     "id": "D1-024",
@@ -1142,7 +1142,10 @@
       { "id": "C", "text": "<script> タグでJavaScriptを実行できる" },
       { "id": "D", "text": "%%数式%% 記法で数学的表現を記述できる" }
     ],
-    "correctChoiceIds": ["A", "B"],
+    "correctChoiceIds": [
+      "A",
+      "B"
+    ],
     "explanation": "GitHub Flavored Markdown では、- [ ] でタスクリスト（チェックボックス付き）を作成でき、:smile: のようなショートコードで絵文字を挿入できます。セキュリティ上 <script> などのHTMLスクリプトはサニタイズされ実行されません。数式は $$ 記法（LaTeX）が使えます。",
     "references": [
       {
@@ -1416,5 +1419,30 @@
     ],
     "tags": ["fork", "clone", "git"],
     "updatedAt": "2026-06-02"
+  },
+  {
+    "id": "D1-063",
+    "domainId": "D1",
+    "questionType": "single-choice",
+    "difficulty": "basic",
+    "question": "Git の使い方に関する情報を表示する Git コマンドはどれですか？",
+    "choices": [
+      { "id": "A", "text": "git init" },
+      { "id": "B", "text": "git status" },
+      { "id": "C", "text": "git help" },
+      { "id": "D", "text": "git info" }
+    ],
+    "correctChoiceIds": ["C"],
+    "explanation": "git help はコマンドの使い方や利用可能なオプションを表示します。「git help <コマンド名>」と入力するとそのコマンドの詳細なドキュメントを確認できます。git status は現在の変更状態の確認、git init は新規リポジトリの初期化に使います。git info は存在しないコマンドです。",
+    "references": [
+      {
+        "title": "Git コマンドリファレンス",
+        "url": "https://docs.github.com/ja/get-started/using-git/about-git",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-07-13"
+      }
+    ],
+    "tags": ["git", "help"],
+    "updatedAt": "2026-07-13"
   }
 ]

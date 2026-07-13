@@ -4,15 +4,15 @@
     "domainId": "D7",
     "questionType": "single-choice",
     "difficulty": "standard",
-    "question": "GitHubのFork（フォーク）の主な目的として最も適切なものはどれですか？",
+    "question": "リポジトリをフォークする目的は何ですか？",
     "choices": [
-      { "id": "A", "text": "他のユーザーのリポジトリを自分のアカウントにコピーし、独立して変更を加えるため" },
-      { "id": "B", "text": "リポジトリを完全に削除するため" },
-      { "id": "C", "text": "リポジトリの可視性をプライベートに変更するため" },
-      { "id": "D", "text": "GitHubのサブスクリプションをアップグレードするため" }
+      { "id": "A", "text": "アップストリームリポジトリのコピーを作成し、元のリポジトリに直接変更を加えられるようにする" },
+      { "id": "B", "text": "元のリポジトリを改善する方法を確認できるイシューが自動的に作成される" },
+      { "id": "C", "text": "元のリポジトリに影響を与えずにプロジェクトの変更を行う" },
+      { "id": "D", "text": "変更内容をチームに共有するためのプルリクエストが作成される" }
     ],
-    "correctChoiceIds": ["A"],
-    "explanation": "Forkは他ユーザーのリポジトリのコピーを自分のGitHubアカウント上に作成する機能です。Forkしたリポジトリで自由に変更を加え、元のリポジトリにPull Requestを送ることでOSSへの貢献が可能になります。",
+    "correctChoiceIds": ["C"],
+    "explanation": "リポジトリをフォークすると、元のリポジトリに影響を与えずに自分のコピーで変更を加えられます。フォーク後はアップストリームから更新を取得しながら、プルリクエストを使って元のリポジトリへの変更を提案できます。",
     "references": [
       {
         "title": "リポジトリをフォークする",
@@ -22,22 +22,22 @@
       }
     ],
     "tags": ["fork", "open-source"],
-    "updatedAt": "2026-05-31"
+    "updatedAt": "2026-07-13"
   },
   {
     "id": "D7-002",
     "domainId": "D7",
-    "questionType": "multiple-choice",
+    "questionType": "single-choice",
     "difficulty": "standard",
-    "question": "InnerSource の説明として正しいものを2つ選んでください。",
+    "question": "オープンソースプログラムと InnerSource プログラムの関係を最もよく表しているものはどれですか？",
     "choices": [
-      { "id": "A", "text": "企業内部のプロジェクトに OSS の開発手法（Pull Request・Issues・透明な貢献）を適用する実践" },
-      { "id": "B", "text": "GitHub が提供する有料のエンタープライズ専用機能の名称" },
-      { "id": "C", "text": "組織横断的なコードの再利用と貢献文化を育てることを目的とする" },
-      { "id": "D", "text": "社内コードを全て GitHub.com のパブリックリポジトリとして公開することを必須とする" }
+      { "id": "A", "text": "オープンソースは誰でも貢献できますが、InnerSource はリポジトリを所有するチームのメンバーからの貢献のみを受け入れます" },
+      { "id": "B", "text": "InnerSource はオープンソースをフォークして組織内だけで使用・管理するために作られます" },
+      { "id": "C", "text": "InnerSource は基本的にオープンソースと同じですが、アクセスできるのは組織内のユーザーに限られます" },
+      { "id": "D", "text": "InnerSource は誰でも利用でき、プロジェクトを自由に閲覧・変更・配布できます" }
     ],
-    "correctChoiceIds": ["A", "C"],
-    "explanation": "InnerSource は OSS の開発慣行（Pull Request レビュー・Issues によるトラッキング・オープンなコントリビューション）を企業内プロジェクトに取り入れる手法です。GitHub の特定機能の名称ではなく、組織横断の協働と知識共有を促進するアプローチです。コードは社外公開せず、Enterprise の Internal リポジトリ等で管理します。",
+    "correctChoiceIds": ["C"],
+    "explanation": "InnerSource とオープンソースはどちらも、リポジトリを所有するチーム外からの貢献を受け入れる仕組みです。ただし InnerSource はアクセスが組織内に限定されており、オープンソースのように世界中に公開されているわけではありません。",
     "references": [
       {
         "title": "An introduction to innersource",
@@ -47,7 +47,7 @@
       }
     ],
     "tags": ["innersource", "open-source", "collaboration"],
-    "updatedAt": "2026-06-02"
+    "updatedAt": "2026-07-13"
   },
   {
     "id": "D7-003",
@@ -185,15 +185,15 @@
     "domainId": "D7",
     "questionType": "single-choice",
     "difficulty": "basic",
-    "question": "GitHub で他のユーザーをフォローすると何が起きますか？",
+    "question": "GitHub プラットフォームで、あるユーザーのパブリックな活動を常に把握して通知を受け取るにはどうすればよいですか？",
     "choices": [
-      { "id": "A", "text": "そのユーザーのリポジトリがすべて自動でフォークされる" },
-      { "id": "B", "text": "フォローしたユーザーの公開アクティビティ（Star・フォーク・コントリビューションなど）がダッシュボードに表示される" },
-      { "id": "C", "text": "フォローしたユーザーに自分のリポジトリへのアクセス権が付与される" },
-      { "id": "D", "text": "フォローしたユーザーの Issue に自動的にアサインされる" }
+      { "id": "A", "text": "Organization をフォローする" },
+      { "id": "B", "text": "そのユーザーをフォローする" },
+      { "id": "C", "text": "ユーザーのフィードをサブスクライブする" },
+      { "id": "D", "text": "Organization のフィードをサブスクライブする" }
     ],
     "correctChoiceIds": ["B"],
-    "explanation": "GitHub でユーザーをフォローすると、そのユーザーの公開アクティビティ（リポジトリへの Star・新規リポジトリ作成・コントリビューションなど）が自分のダッシュボードフィードに表示されます。OSS コミュニティの動向を把握するのに役立ちます。",
+    "explanation": "各ユーザーには作業内容を公開できるプロフィールがあります。他のユーザーをフォローすることで、そのユーザーのパブリックな活動（スター・フォーク・コントリビューションなど）がフィードに表示され、最新の動向を把握できます。",
     "references": [
       {
         "title": "人をフォローする",
@@ -203,7 +203,7 @@
       }
     ],
     "tags": ["follow", "community"],
-    "updatedAt": "2026-05-31"
+    "updatedAt": "2026-07-13"
   },
   {
     "id": "D7-010",
@@ -410,15 +410,15 @@
     "domainId": "D7",
     "questionType": "single-choice",
     "difficulty": "standard",
-    "question": "GitHub Marketplace を利用する場面として最も適切なものはどれですか？",
+    "question": "GitHub Marketplace とは何ですか？",
     "choices": [
-      { "id": "A", "text": "リポジトリの履歴からすべてのコミットを削除したいとき" },
-      { "id": "B", "text": "GitHub アカウント名を予約して他人が使えないようにしたいとき" },
-      { "id": "C", "text": "オープンソースライセンスの法的効力を無効化したいとき" },
-      { "id": "D", "text": "GitHub と連携するアプリや、ワークフローで使える GitHub Actions を探して導入したいとき" }
+      { "id": "A", "text": "組織の GitHub シートを追加購入できる場所" },
+      { "id": "B", "text": "GitHub プランをアップグレードする場所" },
+      { "id": "C", "text": "プロジェクトのスポンサーを募ることができる場所" },
+      { "id": "D", "text": "GitHub の追加機能を探してインストールできる場所" }
     ],
     "correctChoiceIds": ["D"],
-    "explanation": "GitHub Marketplace は、GitHub と連携するアプリや Actions を見つけるための場所です。CI/CD、レビュー、セキュリティ、プロジェクト管理などの機能を追加したい場合に利用します。",
+    "explanation": "GitHub Marketplace では、アプリケーション・アクション・拡張機能など、コミュニティが開発したさまざまなリソースを探してインストールできます。CI/CD ツール・コードレビューツール・プロジェクト管理ツールなど多様なカテゴリがあります。",
     "references": [
       {
         "title": "試験 GH-900 の学習ガイド: GitHub Foundations",
@@ -428,7 +428,7 @@
       }
     ],
     "tags": ["marketplace", "github-apps", "actions"],
-    "updatedAt": "2026-05-31"
+    "updatedAt": "2026-07-13"
   },
   {
     "id": "D7-019",
@@ -541,5 +541,30 @@
     ],
     "tags": ["community-forum", "github-stars", "events"],
     "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D7-023",
+    "domainId": "D7",
+    "questionType": "single-choice",
+    "difficulty": "standard",
+    "question": "InnerSource プログラムの公開から 3 か月が経ちました。次のうち、プログラムがうまく機能し改善されていることを示すメトリクスはどれですか？",
+    "choices": [
+      { "id": "A", "text": "ソフトウェアのバグに対処するプルリクエストの大幅な増加" },
+      { "id": "B", "text": "再現できないとしてすぐにクローズされるバグレポートの増加" },
+      { "id": "C", "text": "新しいイシューの継続的な減少" },
+      { "id": "D", "text": "イシューが open になっている平均時間の増加" }
+    ],
+    "correctChoiceIds": ["A"],
+    "explanation": "バグ修正のプルリクエストが増えることは、より多くのコントリビューターがプログラムに参加してソフトウェア品質の向上に貢献していることを示します。ただし単一のメトリクスだけで判断しないよう注意が必要です。",
+    "references": [
+      {
+        "title": "InnerSource について",
+        "url": "https://docs.github.com/ja/get-started/exploring-projects-on-github/contributing-to-a-project",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-07-13"
+      }
+    ],
+    "tags": ["innersource", "metrics"],
+    "updatedAt": "2026-07-13"
   }
 ]
