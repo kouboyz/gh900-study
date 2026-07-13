@@ -354,12 +354,12 @@
     "domainId": "D4",
     "questionType": "single-choice",
     "difficulty": "standard",
-    "question": "GitHub ホステッドランナーを使う主な利点はどれですか？",
+    "question": "GitHub ホステッドランナーを使う目的として最も適切なものはどれですか？",
     "choices": [
       { "id": "A", "text": "組織のオンプレミスネットワーク内で必ず実行される" },
       { "id": "B", "text": "GitHub が管理する仮想マシンで、メンテナンスや更新を自動的に任せられる" },
-      { "id": "C", "text": "利用者が OS パッチ適用をすべて手動で行う必要がある" },
-      { "id": "D", "text": "ワークフローを YAML ではなく JSON で書けるようになる" }
+      { "id": "C", "text": "独自ハードウェアや社内ネットワークへのアクセス権をランナーに持たせたいとき" },
+      { "id": "D", "text": "ランナーのソフトウェア環境をすべてカスタマイズして自社で管理したいとき" }
     ],
     "correctChoiceIds": ["B"],
     "explanation": "GitHub ホステッドランナーは GitHub が提供・管理する実行環境で、Ubuntu、Windows、macOS などを選択できます。社内ネットワークや特殊なハードウェアを使う必要がある場合はセルフホステッドランナーが適しています。",
@@ -741,12 +741,12 @@
     "domainId": "D4",
     "questionType": "single-choice",
     "difficulty": "standard",
-    "question": "GitHub Actions のシークレットを Organization レベルで設定する主な利点はどれですか？",
+    "question": "GitHub Actions のシークレットをリポジトリレベルではなく Organization レベルで設定するのはなぜですか？",
     "choices": [
-      { "id": "A", "text": "シークレットがワークフローのログに平文で表示されるようになる" },
+      { "id": "A", "text": "Organization シークレットはリポジトリシークレットより優先されるため、同名のシークレットが両方あっても Organization 側が必ず使われる" },
       { "id": "B", "text": "同一 Organization 内の複数リポジトリで同じシークレットを共有でき、各リポジトリに個別に設定する手間を省ける" },
-      { "id": "C", "text": "Organization シークレットは GitHub 上のすべてのユーザーが参照・変更できる" },
-      { "id": "D", "text": "Organization シークレットはリポジトリレベルのシークレットより優先度が低いため、リポジトリで上書きできない" }
+      { "id": "C", "text": "Organization シークレットは GitHub Enterprise Cloud のみで利用可能なため、複数プランを併用する環境でも確実に使える" },
+      { "id": "D", "text": "Organization シークレットはすべてのリポジトリへ自動適用されるため、アクセス許可するリポジトリを個別に指定する必要がない" }
     ],
     "correctChoiceIds": ["B"],
     "explanation": "GitHub Actions のシークレットにはリポジトリ・Environment・Organization の3つのスコープがあります。Organization シークレットは同一 Organization 内の複数リポジトリで共有でき、アクセスできるリポジトリの範囲（全リポジトリ・パブリックのみ・特定リポジトリ）も設定できます。リポジトリ固有のシークレットを同じ名前で設定すると Organization シークレットより優先されます。",
