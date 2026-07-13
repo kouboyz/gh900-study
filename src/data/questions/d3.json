@@ -4,15 +4,15 @@
     "domainId": "D3",
     "questionType": "single-choice",
     "difficulty": "basic",
-    "question": "Pull Requestの主な目的として最も適切なものはどれですか？",
+    "question": "GitHub の「プルリクエスト（Pull Request）」とは何ですか？",
     "choices": [
-      { "id": "A", "text": "リポジトリの請求情報を管理するため" },
-      { "id": "B", "text": "変更を提案し、レビューと議論を経てマージするため" },
-      { "id": "C", "text": "GitHub Pagesの独自ドメインを購入するため" },
-      { "id": "D", "text": "Organizationの所有者を自動変更するため" }
+      { "id": "A", "text": "リポジトリを完全に削除する要求" },
+      { "id": "B", "text": "あるブランチから別のブランチに変更をマージする要求" },
+      { "id": "C", "text": "新しい開発者をプロジェクトに追加する要求" },
+      { "id": "D", "text": "リポジトリの最新バージョンをダウンロードする要求" }
     ],
     "correctChoiceIds": ["B"],
-    "explanation": "Pull Requestは、プロジェクトに変更を取り込む前に変更内容を議論しレビューするためのGitHubの中心的な協働機能です。コードレビュー・コメント・承認フローを通じてチームで安全に変更をマージでき、変更の意図を記録として残すことができます。",
+    "explanation": "プルリクエスト（PR）は、あるブランチ（通常は機能ブランチ）での変更を別のブランチ（通常は main ブランチ）にマージするためにレビューを依頼するプロセスです。チームメンバーがコードをレビューしてフィードバックを提供し、承認後にマージされます。",
     "references": [
       {
         "title": "pull requests について",
@@ -22,7 +22,7 @@
       }
     ],
     "tags": ["pull-request", "collaboration"],
-    "updatedAt": "2026-05-31"
+    "updatedAt": "2026-07-13"
   },
   {
     "id": "D3-002",
@@ -154,15 +154,15 @@
     "domainId": "D3",
     "questionType": "single-choice",
     "difficulty": "basic",
-    "question": "GitHub Wiki の主な用途として最も適切なものはどれですか？",
+    "question": "GitHub Wiki ページの主な目的は何ですか？",
     "choices": [
-      { "id": "A", "text": "リポジトリのソースコードをドキュメント形式に自動変換する" },
-      { "id": "B", "text": "リポジトリに関するドキュメント（設計・手順・仕様など）をページ形式で管理・共有する" },
-      { "id": "C", "text": "チームメンバーのタスクを Kanban ボードで管理する" },
-      { "id": "D", "text": "外部 Web サイトのコンテンツをリポジトリに取り込む" }
+      { "id": "A", "text": "大きなバイナリファイルの保存と管理" },
+      { "id": "B", "text": "リポジトリ内のイシューやバグの追跡" },
+      { "id": "C", "text": "プロジェクトの共同ドキュメントスペースをホストする" },
+      { "id": "D", "text": "パブリックに公開するコードスニペットや例の掲載" }
     ],
-    "correctChoiceIds": ["B"],
-    "explanation": "Wiki はリポジトリに紐づいたドキュメントを複数ページで管理できる機能です。設計書・FAQ・操作マニュアルなど README に収まらないドキュメントに適しています。Markdown で記述でき、独自の Git リポジトリとして管理されます。",
+    "correctChoiceIds": ["C"],
+    "explanation": "GitHub Wiki は、バージョン管理されたリポジトリのコンテンツとは別に、共同作業用のドキュメントをオープンに作成・共有できるスペースです。ガイドの作成やコミュニティへの情報共有に活用できます。",
     "references": [
       {
         "title": "ウィキについて",
@@ -172,7 +172,7 @@
       }
     ],
     "tags": ["wiki"],
-    "updatedAt": "2026-05-31"
+    "updatedAt": "2026-07-13"
   },
   {
     "id": "D3-010",
@@ -304,15 +304,15 @@
     "domainId": "D3",
     "questionType": "single-choice",
     "difficulty": "basic",
-    "question": "Pull Request を作成するとき、ベースブランチ（base）とコンペアブランチ（compare）の関係として正しいものはどれですか？",
+    "question": "GitHub のプルリクエストで「base」ブランチと「compare」ブランチを比較する目的は何ですか？",
     "choices": [
-      { "id": "A", "text": "ベースブランチが変更元、コンペアブランチがマージ先" },
-      { "id": "B", "text": "コンペアブランチが変更元、ベースブランチがマージ先" },
-      { "id": "C", "text": "両方のブランチに同じ変更が適用される" },
-      { "id": "D", "text": "ベースとコンペアは同一ブランチでなければならない" }
+      { "id": "A", "text": "2 つのブランチを自動的にマージするために使います" },
+      { "id": "B", "text": "どちらかのブランチを「勝者」として選択できます" },
+      { "id": "C", "text": "2 つのブランチ間のコードの差分を確認します" },
+      { "id": "D", "text": "\"base\" と \"compare\" を組み合わせた新しいブランチが生成されます" }
     ],
-    "correctChoiceIds": ["B"],
-    "explanation": "Pull Request は「コンペアブランチ（自分の変更を加えたブランチ）をベースブランチ（main など）にマージしてほしい」という提案です。コンペアがマージ元、ベースがマージ先になります。",
+    "correctChoiceIds": ["C"],
+    "explanation": "「base」ブランチはマージ先（通常 main）で、「compare」ブランチはマージしようとしている変更を含むブランチです。この比較により、レビュアーは何が変更されたかを差分として確認できます。",
     "references": [
       {
         "title": "pull request の作成",
@@ -322,22 +322,22 @@
       }
     ],
     "tags": ["pull-request"],
-    "updatedAt": "2026-05-31"
+    "updatedAt": "2026-07-13"
   },
   {
     "id": "D3-016",
     "domainId": "D3",
     "questionType": "single-choice",
     "difficulty": "standard",
-    "question": "Issue テンプレートをリポジトリに設定する主な目的はどれですか？",
+    "question": "チームが受け取るバグレポートの品質が低く、適切な診断ができない状況です。この問題に対処する最善の方法はどれですか？",
     "choices": [
-      { "id": "A", "text": "Issue を自動でクローズするルールを定義するため" },
-      { "id": "B", "text": "Issue 作成時に報告者が記入すべき情報（再現手順・環境・期待値など）を統一するため" },
-      { "id": "C", "text": "Issue の担当者を自動アサインするため" },
-      { "id": "D", "text": "Issue にラベルを自動付与するため" }
+      { "id": "A", "text": "説明が 200 文字未満のイシューをすべて自動的に却下するワークフローを追加する" },
+      { "id": "B", "text": "再現手順・システム情報・重要なログの収集手順などのフィールドを含む ISSUE_TEMPLATE.md ファイルを追加する" },
+      { "id": "C", "text": "バグレポートに必要な内容を説明した CONTRIBUTING.md ファイルを追加する" },
+      { "id": "D", "text": "バグレポートに必要な内容を説明した issues.md ファイルを追加する" }
     ],
     "correctChoiceIds": ["B"],
-    "explanation": "Issue テンプレートを `.github/ISSUE_TEMPLATE/` に配置すると、Issue 作成時に選択できるテンプレートが表示されます。バグ報告・機能要望など種類ごとに記入項目を定義することで、情報不足の Issue を減らせます。",
+    "explanation": "ISSUE_TEMPLATE.md を使うとイシュー作成時に必要なフィールドが自動的に表示され、再現手順・システム情報・ログなど診断に必要な情報を構造化して収集できます。文字数制限（A）は長さは確保できても内容の質を保証しません。",
     "references": [
       {
         "title": "リポジトリの Issue テンプレートを設定する",
@@ -347,7 +347,7 @@
       }
     ],
     "tags": ["issues", "template"],
-    "updatedAt": "2026-05-31"
+    "updatedAt": "2026-07-13"
   },
   {
     "id": "D3-017",
@@ -404,15 +404,15 @@
     "domainId": "D3",
     "questionType": "single-choice",
     "difficulty": "standard",
-    "question": "GitHub Pages で公開できるサイトの種類として正しいものはどれですか？",
+    "question": "GitHub Pages についての正しい説明はどれですか？",
     "choices": [
-      { "id": "A", "text": "PHPやPythonで動作するサーバーサイドアプリケーション" },
-      { "id": "B", "text": "HTML・CSS・JavaScript で構成された静的サイト" },
-      { "id": "C", "text": "MySQLデータベースと連携したWebアプリ" },
-      { "id": "D", "text": "Docker コンテナで動作するマイクロサービス" }
+      { "id": "A", "text": "GitHub Enterprise ユーザーのみが利用できる機能です" },
+      { "id": "B", "text": "GitHub Pages は動的なサーバーサイドスクリプトとデータベースをサポートしています" },
+      { "id": "C", "text": "GitHub Pages を使うと、GitHub リポジトリから直接静的な Web サイトをホストして公開できます" },
+      { "id": "D", "text": "GitHub Pages ではあらゆる種類の Web アプリを無制限に無料でホストできます" }
     ],
-    "correctChoiceIds": ["B"],
-    "explanation": "GitHub Pages はサーバーサイド処理のない静的サイトのみホスティングできます。HTML・CSS・JavaScript のファイルを配信するため、PHP・Ruby・Python などは実行できません。Jekyll などの静的サイトジェネレーターとの組み合わせは可能です。",
+    "correctChoiceIds": ["C"],
+    "explanation": "GitHub Pages はすべてのユーザーが GitHub リポジトリから直接静的な Web サイトを作成・ホストできるサービスです。動的なサーバーサイド処理やデータベースはサポートされていません。",
     "references": [
       {
         "title": "GitHub Pages とは",
@@ -422,22 +422,22 @@
       }
     ],
     "tags": ["github-pages"],
-    "updatedAt": "2026-05-31"
+    "updatedAt": "2026-07-13"
   },
   {
     "id": "D3-020",
     "domainId": "D3",
     "questionType": "single-choice",
     "difficulty": "advanced",
-    "question": "Pull Request の「Request changes（変更要求）」レビューの説明として最も適切なものはどれですか？",
+    "question": "プルリクエストのレビューを依頼されました。確認すると軽微なコーディングエラーやタイプミスがいくつかあります。どのようにレビューすればよいですか？",
     "choices": [
-      { "id": "A", "text": "レビュアーが変更を拒否し、PR を永久にクローズする" },
-      { "id": "B", "text": "レビュアーが指摘事項を記録し、修正が完了するまでマージを保留させるシグナルを送る" },
-      { "id": "C", "text": "PR の担当者を別のメンバーに自動で変更する" },
-      { "id": "D", "text": "PR ブランチの最新コミットを自動で取り消す" }
+      { "id": "A", "text": "レビューを開始し、明らかなタイプミスはインラインで修正します。さらなる検討や説明が必要な箇所にはコメントを追加します。「変更を要求」でレビューを完了します" },
+      { "id": "B", "text": "見つかった問題ごとに 1 件コメントを残しますが、コードは変更しません。タイプミスには正しいスペルを参考として示し、提案の実装を作者に任せられると判断した場合は承認します" },
+      { "id": "C", "text": "プルリクエストを拒否します。バグが重要なブランチに誤ってマージされるリスクを避けるためです" },
+      { "id": "D", "text": "レビューを完了せずにプルリクエストを閉じます。後でより良い状態になったら再度オープンします" }
     ],
-    "correctChoiceIds": ["B"],
-    "explanation": "「Request changes」を選択すると、そのレビュアーの変更要求が解除されるまでブランチ保護ルールでマージがブロックされます（設定による）。作者は指摘に対処して再度レビューを依頼することで、レビュアーが Approve に変えることができます。",
+    "correctChoiceIds": ["A"],
+    "explanation": "明らかなタイプミスはインラインで修正し、議論が必要な箇所にはコメントを追加して「変更を要求」で完了するのがベストプラクティスです。コントリビューターはレビュアーが積極的に関与してくれることを歓迎します。説明なしに拒否するだけでは今後の貢献意欲を損ないます。",
     "references": [
       {
         "title": "プルリクエストのレビューについて",
@@ -447,7 +447,7 @@
       }
     ],
     "tags": ["pull-request", "review"],
-    "updatedAt": "2026-05-31"
+    "updatedAt": "2026-07-13"
   },
   {
     "id": "D3-021",
@@ -829,14 +829,14 @@
     "domainId": "D3",
     "questionType": "single-choice",
     "difficulty": "standard",
-    "question": "GitHub の Issue・Pull Request・Discussions それぞれの主な用途の組み合わせとして正しいものはどれですか？",
+    "question": "GitHub のイシュー・ディスカッション・プルリクエストの違いは何ですか？",
     "choices": [
-      { "id": "A", "text": "Issue=コードの変更提案、Pull Request=バグ報告、Discussions=リリース管理" },
-      { "id": "B", "text": "Issue=タスク・バグ・要望の追跡管理、Pull Request=コード変更のレビューとマージ、Discussions=Q&A・アイデア・オープンな会話" },
-      { "id": "C", "text": "3つの機能は互換性があり、どれを使っても同じ結果になる" },
-      { "id": "D", "text": "Issue=ドキュメント管理、Pull Request=Issue のクローズ専用、Discussions=コードレビュー" }
+      { "id": "A", "text": "3 つの用語はすべて GitHub で同じ意味を持ちます" },
+      { "id": "B", "text": "イシューはコードの変更を説明するもので、ディスカッションはプロジェクト機能に関するもの、プルリクエストはバグ報告に使います" },
+      { "id": "C", "text": "イシューは変更の提案・バグ報告・タスク管理に使い、ディスカッションはプロジェクト全般のトピックに、プルリクエストはコードレビューとマージに使います" },
+      { "id": "D", "text": "イシューはコードレビュー用、ディスカッションはバグ報告用、プルリクエストは一般的なプロジェクトトピック用です" }
     ],
-    "correctChoiceIds": ["B"],
+    "correctChoiceIds": ["C"],
     "explanation": "Issue はタスク・バグ・機能要望などを記録・追跡するための機能です。Pull Request はブランチの変更をレビューしてベースブランチにマージするプロセスで、コード変更の持ち込み口です。Discussions は Q&A・アイデア出し・雑談などオープンな会話を行う場で、解決すべき具体的なタスクがなくても使えます。Issue と Discussions は特に混同されやすく、「追跡が必要な具体的なタスク → Issue」「オープンな議論 → Discussions」と使い分けるのが基本です。",
     "references": [
       {
@@ -847,6 +847,56 @@
       }
     ],
     "tags": ["issue", "pull-request", "discussions", "collaboration"],
-    "updatedAt": "2026-06-02"
+    "updatedAt": "2026-07-13"
+  },
+  {
+    "id": "D3-039",
+    "domainId": "D3",
+    "questionType": "single-choice",
+    "difficulty": "basic",
+    "question": "プルリクエスト（PR）を GitHub イシューにリンクするにはどうすればよいですか？",
+    "choices": [
+      { "id": "A", "text": "イシューの説明に PR 番号を記載します" },
+      { "id": "B", "text": "イシューの会話スレッドに PR のリンクを含むコメントを追加します" },
+      { "id": "C", "text": "[Development] セクションで関連する PR を選択します" },
+      { "id": "D", "text": "上記のすべて" }
+    ],
+    "correctChoiceIds": ["A"],
+    "explanation": "イシューとプルリクエストの番号は、説明やコメントに「#番号」の形式で記載することでリンクできます。また PR の説明に「Closes #番号」などのキーワードを含めると PR マージ時にイシューを自動クローズすることもできます。",
+    "references": [
+      {
+        "title": "プルリクエストをイシューにリンクする",
+        "url": "https://docs.github.com/ja/issues/tracking-your-work-with-issues/using-issues/linking-a-pull-request-to-an-issue",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-07-13"
+      }
+    ],
+    "tags": ["pull-request", "issue", "link"],
+    "updatedAt": "2026-07-13"
+  },
+  {
+    "id": "D3-040",
+    "domainId": "D3",
+    "questionType": "single-choice",
+    "difficulty": "standard",
+    "question": "アクティビティをプルリクエストにリンクする目的は何ですか？",
+    "choices": [
+      { "id": "A", "text": "リンクすることで自動的なコード提案が生成されます" },
+      { "id": "B", "text": "リンクすることでプルリクエストが外部リポジトリに接続されます" },
+      { "id": "C", "text": "リンクするとコードレビューが複雑になり混乱を招きます" },
+      { "id": "D", "text": "プルリクエストのディスカッション・イシュー・その他の関連エンティティ間のつながりが生まれます" }
+    ],
+    "correctChoiceIds": ["D"],
+    "explanation": "関連するディスカッション・イシュー・プルリクエストなどをリンクすることで、レビュアーに十分なコンテキストを提供できます。例えば「このPRはイシュー #42 を修正するために作成された」という関連が明確になります。",
+    "references": [
+      {
+        "title": "プルリクエストをイシューにリンクする",
+        "url": "https://docs.github.com/ja/issues/tracking-your-work-with-issues/using-issues/linking-a-pull-request-to-an-issue",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-07-13"
+      }
+    ],
+    "tags": ["pull-request", "issue", "link"],
+    "updatedAt": "2026-07-13"
   }
 ]

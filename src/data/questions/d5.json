@@ -29,15 +29,15 @@
     "domainId": "D5",
     "questionType": "single-choice",
     "difficulty": "standard",
-    "question": "v2.0 リリースに向けて修正すべきバグのIssueをグループ化し、残件数と期限をひと目で把握したい場合、最も適した機能はどれですか？",
+    "question": "GitHub でプロジェクトの進捗を追跡するためのマイルストーンを作成するにはどうすればよいですか？",
     "choices": [
-      { "id": "A", "text": "リポジトリのTopics" },
-      { "id": "B", "text": "マイルストーン（Milestone）" },
-      { "id": "C", "text": "GitHub Actionsのmatrix戦略" },
-      { "id": "D", "text": "Organization のteam設定" }
+      { "id": "A", "text": "新しいブランチを作成してマイルストーンラベルを追加します" },
+      { "id": "B", "text": "プルリクエストに紐付けられているリリースラベルを承認します" },
+      { "id": "C", "text": "プロジェクトの新しいリリースを作成します" },
+      { "id": "D", "text": "[Issues] タブを開き、[Milestones] を選択して [New milestone] をクリックします" }
     ],
-    "correctChoiceIds": ["B"],
-    "explanation": "マイルストーンはIssueやPull Requestをリリースやスプリントなど期限付きの目標に向けてグルーピングする機能です。クローズ済み件数・残件数・期限・進捗率を一覧できます。GitHub Projects（v2）とは独立した機能ですが、合わせて使うことでより詳細な計画管理が可能です。",
+    "correctChoiceIds": ["D"],
+    "explanation": "マイルストーンを作成するには、リポジトリの [Issues] タブから [Milestones] → [New milestone] をクリックします。タイトル・説明・期日を設定し、イシューやプルリクエストをマイルストーンに関連付けて進捗を追跡できます。",
     "references": [
       {
         "title": "マイルストーンについて",
@@ -47,7 +47,7 @@
       }
     ],
     "tags": ["milestones", "issues", "project-management"],
-    "updatedAt": "2026-06-02"
+    "updatedAt": "2026-07-13"
   },
   {
     "id": "D5-003",
@@ -535,5 +535,105 @@
     ],
     "tags": ["projects", "visibility", "access-management"],
     "updatedAt": "2026-06-02"
+  },
+  {
+    "id": "D5-023",
+    "domainId": "D5",
+    "questionType": "single-choice",
+    "difficulty": "standard",
+    "question": "GitHub Projects のイテレーションフィールドはプロジェクトで何に役立ちますか？",
+    "choices": [
+      { "id": "A", "text": "イシューやプルリクエストに加えられた変更の履歴を追跡できる" },
+      { "id": "B", "text": "プロジェクトに加えた変更を元に戻せる" },
+      { "id": "C", "text": "プロジェクトの順序立てたフェーズを作成し、そのフェーズごとにイシューやプルリクエストをグループ化できる" },
+      { "id": "D", "text": "イシューやプルリクエストに変更があった際にプロジェクトを自動的に更新できる" }
+    ],
+    "correctChoiceIds": ["C"],
+    "explanation": "イテレーションフィールドを使うとスプリントのような時間ブロックを定義し、イシューやプルリクエストをそのフェーズ（イテレーション）に割り当ててグループ化できます。これにより各スプリントの作業範囲を管理しやすくなります。",
+    "references": [
+      {
+        "title": "イテレーションフィールドについて",
+        "url": "https://docs.github.com/ja/issues/planning-and-tracking-with-projects/understanding-fields/about-iteration-fields",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-07-13"
+      }
+    ],
+    "tags": ["projects", "iteration"],
+    "updatedAt": "2026-07-13"
+  },
+  {
+    "id": "D5-024",
+    "domainId": "D5",
+    "questionType": "single-choice",
+    "difficulty": "basic",
+    "question": "GitHub Projects で優先度グループ（高・中・低など）を作成するには、どのフィールドタイプを使えばよいですか？",
+    "choices": [
+      { "id": "A", "text": "日付" },
+      { "id": "B", "text": "単一選択" },
+      { "id": "C", "text": "イテレーションフィールド" },
+      { "id": "D", "text": "テキスト" }
+    ],
+    "correctChoiceIds": ["B"],
+    "explanation": "単一選択フィールドを使うと、あらかじめ定義した選択肢（例：高・中・低）の中から 1 つを選ぶフィールドを作成できます。これによりプロジェクトアイテムを優先度でグループ化・フィルタリングできます。",
+    "references": [
+      {
+        "title": "単一選択フィールドについて",
+        "url": "https://docs.github.com/ja/issues/planning-and-tracking-with-projects/understanding-fields/about-single-select-fields",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-07-13"
+      }
+    ],
+    "tags": ["projects", "field", "single-select"],
+    "updatedAt": "2026-07-13"
+  },
+  {
+    "id": "D5-025",
+    "domainId": "D5",
+    "questionType": "single-choice",
+    "difficulty": "basic",
+    "question": "GitHub Projects に自動化を追加する最も簡単な方法はどれですか？",
+    "choices": [
+      { "id": "A", "text": "GraphQL API" },
+      { "id": "B", "text": "組み込みの自動化" },
+      { "id": "C", "text": "GitHub Actions" },
+      { "id": "D", "text": "GitHub Copilot" }
+    ],
+    "correctChoiceIds": ["B"],
+    "explanation": "GitHub Projects には、イシューの追加やステータスの更新といった一般的なタスクを簡単に設定できる組み込みの自動化機能があります。GraphQL API や GitHub Actions でより高度な自動化も可能ですが、最も手軽なのは組み込みの自動化です。",
+    "references": [
+      {
+        "title": "プロジェクトの自動化について",
+        "url": "https://docs.github.com/ja/issues/planning-and-tracking-with-projects/automating-your-project/using-the-built-in-automations",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-07-13"
+      }
+    ],
+    "tags": ["projects", "automation"],
+    "updatedAt": "2026-07-13"
+  },
+  {
+    "id": "D5-026",
+    "domainId": "D5",
+    "questionType": "single-choice",
+    "difficulty": "basic",
+    "question": "GitHub Projects でプロジェクトの表示設定変更・削除・クローズを行う設定セクションの名前は何ですか？",
+    "choices": [
+      { "id": "A", "text": "赤いゾーン" },
+      { "id": "B", "text": "可視性とアクセス" },
+      { "id": "C", "text": "危険ゾーン" },
+      { "id": "D", "text": "その他のオプション" }
+    ],
+    "correctChoiceIds": ["C"],
+    "explanation": "各プロジェクトには「危険ゾーン（Danger zone）」と呼ばれる設定セクション（通常は赤で表示）があり、プロジェクトの公開範囲の変更・クローズ・削除などの重要な操作が行えます。",
+    "references": [
+      {
+        "title": "プロジェクトの管理",
+        "url": "https://docs.github.com/ja/issues/planning-and-tracking-with-projects/managing-your-project/managing-project-settings",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-07-13"
+      }
+    ],
+    "tags": ["projects", "settings"],
+    "updatedAt": "2026-07-13"
   }
 ]

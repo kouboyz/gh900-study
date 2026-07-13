@@ -104,15 +104,15 @@
     "domainId": "D4",
     "questionType": "single-choice",
     "difficulty": "basic",
-    "question": "GitHub Actions の主な用途として最も適切なものはどれですか？",
+    "question": "GitHub Actions の主な機能として正しいものはどれですか？",
     "choices": [
-      { "id": "A", "text": "GitHub のユーザー認証を管理するサービス" },
-      { "id": "B", "text": "リポジトリでのイベント（push・PR など）をトリガーにビルド・テスト・デプロイを自動化するCI/CDプラットフォーム" },
-      { "id": "C", "text": "リポジトリの Issue を自動でトリアージするAIツール" },
-      { "id": "D", "text": "コードのバグを自動修正してコミットするサービス" }
+      { "id": "A", "text": "ソフトウェア開発タスクを自動化する" },
+      { "id": "B", "text": "継続的インテグレーション／継続的デリバリー（CI/CD）を実現する" },
+      { "id": "C", "text": "インフラのコード化（Infrastructure as Code）をプロジェクトに統合する" },
+      { "id": "D", "text": "上記のすべて" }
     ],
-    "correctChoiceIds": ["B"],
-    "explanation": "GitHub Actions は push・Pull Request・スケジュールなどのイベントをトリガーにワークフローを自動実行するCI/CDプラットフォームです。テスト実行・ビルド・デプロイ・リリース作成など様々な自動化が可能です。",
+    "correctChoiceIds": ["D"],
+    "explanation": "GitHub Actions はソフトウェア開発タスクの自動化・CI/CD の実現・インフラのコード化など、幅広いユースケースに対応したワークフロー自動化プラットフォームです。カスタムワークフローや共有アクションを作成して多様なタスクを自動化できます。",
     "references": [
       {
         "title": "GitHub Actions について",
@@ -122,7 +122,7 @@
       }
     ],
     "tags": ["actions", "ci-cd"],
-    "updatedAt": "2026-05-31"
+    "updatedAt": "2026-07-13"
   },
   {
     "id": "D4-007",
@@ -660,15 +660,15 @@
     "domainId": "D4",
     "questionType": "single-choice",
     "difficulty": "standard",
-    "question": "GitHub Copilot の機能の説明として最も適切なものはどれですか？",
+    "question": "GitHub Copilot とは何ですか？",
     "choices": [
-      { "id": "A", "text": "コード補完、Copilot Chat、agent mode などにより、コード作成・理解・複数ステップ作業を支援する" },
-      { "id": "B", "text": "Organization の 2FA を無効化し、すべての権限管理を代行する" },
-      { "id": "C", "text": "GitHub Actions のランナーを物理的に配送する" },
-      { "id": "D", "text": "GitHub Copilot は Issue のラベル付けだけに使う機能である" }
+      { "id": "A", "text": "IDE でコードを書く際にリアルタイムでコード提案を得られる AI ペアプログラマ" },
+      { "id": "B", "text": "OpenAI が作成した AI システム「OpenAI Codex」そのもの" },
+      { "id": "C", "text": "JavaScript の公開リポジトリで、最もサポートされている言語の 1 つ" },
+      { "id": "D", "text": "コメントでロジックを説明するとそのソリューションを実装するコードを提案するだけのツール" }
     ],
     "correctChoiceIds": ["A"],
-    "explanation": "GitHub Copilot はエディターでのコード補完、自然言語で質問できる Copilot Chat、複数ステップの作業を支援する agent mode などを通じて、開発者の生産性向上を支援します。",
+    "explanation": "GitHub Copilot はインラインコード補完・コードの説明・プロンプトベースのコード編集を提供する AI ペアプログラマです。IDE でコードを書く際にリアルタイムで提案を受け取ることができます。",
     "references": [
       {
         "title": "GitHub Copilot の概要",
@@ -684,7 +684,7 @@
       }
     ],
     "tags": ["copilot", "chat", "code-completion", "agent-mode"],
-    "updatedAt": "2026-05-31"
+    "updatedAt": "2026-07-13"
   },
   {
     "id": "D4-032",
@@ -760,5 +760,105 @@
     ],
     "tags": ["actions", "secrets", "organization", "scope"],
     "updatedAt": "2026-06-02"
+  },
+  {
+    "id": "D4-035",
+    "domainId": "D4",
+    "questionType": "single-choice",
+    "difficulty": "basic",
+    "question": "GitHub Copilot がサポートしている統合開発環境（IDE）の正しい組み合わせはどれですか？",
+    "choices": [
+      { "id": "A", "text": "Visual Studio Code と Visual Studio のみ" },
+      { "id": "B", "text": "Visual Studio Code、Visual Studio、Xcode、JetBrains、Neovim" },
+      { "id": "C", "text": "Visual Studio Code、Visual Studio、Spyder、Eclipse" },
+      { "id": "D", "text": "Visual Studio Code、Visual Studio、Jupyter、NetBeans、Notepad++" }
+    ],
+    "correctChoiceIds": ["B"],
+    "explanation": "GitHub Copilot は VS Code・Visual Studio・Xcode・JetBrains IDE（IntelliJ IDEA など）・Neovim をサポートしています。その他のインターフェース向けのビルドサポート SDK も提供されています。なお MS Learn の模擬試験では C（Spyder、Eclipse）が正解とされていますが、公式ドキュメントおよび解説文の記述と矛盾しているため、正しくは B です。",
+    "references": [
+      {
+        "title": "GitHub Copilot について",
+        "url": "https://docs.github.com/ja/copilot/about-github-copilot/what-is-github-copilot",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-07-13"
+      }
+    ],
+    "tags": ["copilot", "ide"],
+    "updatedAt": "2026-07-13"
+  },
+  {
+    "id": "D4-036",
+    "domainId": "D4",
+    "questionType": "single-choice",
+    "difficulty": "basic",
+    "question": "IDE で GitHub Copilot にコード提案を求める有効な方法はどれですか？",
+    "choices": [
+      { "id": "A", "text": "コードファイルやマークダウンファイルにコメントやテキストを入力し、提案が表示されるまで待って Tab キーで受け入れます" },
+      { "id": "B", "text": "github.com にアクセスして [Copilot Chat] ウィンドウを開き、質問を入力します" },
+      { "id": "C", "text": "マウスでコードを選択してコマンドパレットを開き、[GitHub Copilot] を選んでチャットにプロンプトを入力します" },
+      { "id": "D", "text": "Copilot に提案を求めることはできません。提案は自動的に表示されます" }
+    ],
+    "correctChoiceIds": ["A"],
+    "explanation": "Copilot はコードの編集中に自動的に提案を表示します。コメントやテキストを入力して一時停止すると提案が現れ、Tab キーで受け入れることができます。インラインチャットやサイドパネルのチャットも利用できます。",
+    "references": [
+      {
+        "title": "GitHub Copilot でのコード候補について",
+        "url": "https://docs.github.com/ja/copilot/using-github-copilot/using-github-copilot-code-suggestions-in-your-editor",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-07-13"
+      }
+    ],
+    "tags": ["copilot", "code-suggestion"],
+    "updatedAt": "2026-07-13"
+  },
+  {
+    "id": "D4-037",
+    "domainId": "D4",
+    "questionType": "single-choice",
+    "difficulty": "basic",
+    "question": "リポジトリまたはブランチごとに作成できる Codespace の最大数はいくつですか？",
+    "choices": [
+      { "id": "A", "text": "作成できる Codespace は 2 個だけです" },
+      { "id": "B", "text": "合計 10 個まで作成できます" },
+      { "id": "C", "text": "合計 30 個まで作成できます" },
+      { "id": "D", "text": "作成できる Codespace の数に上限はありません" }
+    ],
+    "correctChoiceIds": ["D"],
+    "explanation": "利用可能なストレージがある限り、リポジトリやブランチごとに無制限の数の Codespace を作成できます。ただしアカウントプランによってストレージや実行時間の上限があります。",
+    "references": [
+      {
+        "title": "GitHub Codespaces について",
+        "url": "https://docs.github.com/ja/codespaces/overview",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-07-13"
+      }
+    ],
+    "tags": ["codespaces"],
+    "updatedAt": "2026-07-13"
+  },
+  {
+    "id": "D4-038",
+    "domainId": "D4",
+    "questionType": "single-choice",
+    "difficulty": "standard",
+    "question": "GitHub Codespace のライフサイクルはどのように決まりますか？",
+    "choices": [
+      { "id": "A", "text": "完全に手動で管理します。Codespace は作成したときに開始し、削除したときに終了します" },
+      { "id": "B", "text": "自動で管理され、Codespace 設定ファイルが存在する限りリポジトリと同じ期間維持されます" },
+      { "id": "C", "text": "すべての新しいリポジトリにはデフォルトの Codespace が付属しており、30 日間使用しなければ自動的に削除されます" },
+      { "id": "D", "text": "Codespace のライフサイクルはプルリクエストの作成・クローズに連動しています" }
+    ],
+    "correctChoiceIds": ["A"],
+    "explanation": "Codespace の設定はリポジトリの .devcontainer フォルダー内で定義しますが、Codespace の起動はユーザーが手動で行います。ユーザーまたはポリシー設定によって明示的に削除されるまで維持されます（非アクティブ時は自動停止しますが削除はされません）。",
+    "references": [
+      {
+        "title": "Codespace のライフサイクルについて",
+        "url": "https://docs.github.com/ja/codespaces/getting-started/the-codespace-lifecycle",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-07-13"
+      }
+    ],
+    "tags": ["codespaces", "lifecycle"],
+    "updatedAt": "2026-07-13"
   }
 ]

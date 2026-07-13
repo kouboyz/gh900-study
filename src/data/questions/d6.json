@@ -54,15 +54,15 @@
     "domainId": "D6",
     "questionType": "single-choice",
     "difficulty": "standard",
-    "question": "Enterprise Managed Users（EMU）の説明として最も適切なものはどれですか？",
+    "question": "GitHub Enterprise Managed Users（EMU）とは何ですか？",
     "choices": [
-      { "id": "A", "text": "GitHub.comの全ユーザーに適用されるデフォルトの認証方式" },
-      { "id": "B", "text": "企業のIDプロバイダー（IdP）でGitHubユーザーのライフサイクルを一元管理するEnterpriseアカウント機能" },
-      { "id": "C", "text": "Organizationの全リポジトリをバックアップする有料サービス" },
-      { "id": "D", "text": "GitHub Actionsのセルフホストランナーを管理する機能" }
+      { "id": "A", "text": "GitHub Enterprise サーバーの管理を担当するユーザー" },
+      { "id": "B", "text": "GitHub のパブリックリポジトリにアクセスできる個人" },
+      { "id": "C", "text": "SSO（シングルサインオン）によって管理され、アクセスが制限されているユーザー" },
+      { "id": "D", "text": "個人プロジェクトにのみ GitHub を使用する開発者" }
     ],
-    "correctChoiceIds": ["B"],
-    "explanation": "EMUはEnterpriseアカウントにおいて、IDプロバイダー（OktaやAzure ADなど）とSCIMを使ってGitHubユーザーのプロビジョニング・デプロビジョニングを自動化する機能です。ユーザーはIdP経由のSSO経由でのみGitHubにアクセスでき、企業外のリポジトリへのアクセスが制限されます。",
+    "correctChoiceIds": ["C"],
+    "explanation": "GitHub Enterprise Managed Users は GitHub Enterprise でホストされている内部リポジトリにアクセスでき、パブリックアクセスが制限されています。IdP（ID プロバイダー）を通じた SSO で一元管理され、管理者がコラボレーションと権限を制御します。",
     "references": [
       {
         "title": "Enterprise Managed Users について",
@@ -72,7 +72,7 @@
       }
     ],
     "tags": ["emu", "enterprise", "security"],
-    "updatedAt": "2026-05-31"
+    "updatedAt": "2026-07-13"
   },
   {
     "id": "D6-004",
@@ -129,15 +129,15 @@
     "domainId": "D6",
     "questionType": "single-choice",
     "difficulty": "standard",
-    "question": "GitHub の Secret scanning（シークレットスキャン）の主な目的はどれですか？",
+    "question": "誰かが誤って機密性の高い API キーをコミットし、アラートが発生しました。そのアラートはどこで確認できますか？",
     "choices": [
-      { "id": "A", "text": "依存パッケージの脆弱性を検出して更新PRを自動作成する（Dependabotの役割）" },
-      { "id": "B", "text": "コードに誤ってコミットされたAPIキーや認証情報などのシークレットを検出・通知する" },
-      { "id": "C", "text": "コードの潜在的なセキュリティ脆弱性（SQLインジェクション等）をCodeQLで静的解析する（Code scanningの役割）" },
-      { "id": "D", "text": "リポジトリへの不正アクセスを監視してアラートを送信する" }
+      { "id": "A", "text": "github.com 上のファイルと行番号の横に赤い感嘆符が表示されます" },
+      { "id": "B", "text": "リポジトリページ上部の [Security] タブを開きます" },
+      { "id": "C", "text": "アラートはリポジトリ所有者にのみメールで送られます。セキュリティ上の理由から他の場所には表示されません" },
+      { "id": "D", "text": "リポジトリページ上部に表示される [Open security alerts] バナーを選択します" }
     ],
     "correctChoiceIds": ["B"],
-    "explanation": "Secret scanning はコードやコミット履歴に含まれる APIキー・トークン・資格情報などのシークレットを自動検出する機能です。検出された場合はアラートを発し、サービスプロバイダーへの自動通知（partner pattern）も行います。誤コミットによる認証情報漏洩を防ぎます。",
+    "explanation": "適切な権限を持つユーザーはリポジトリの [Security] タブにアクセスできます。このタブにはすべての既知のアラートと影響を受けるコードへの参照が表示されます。検出時にはタイムリーな通知のためにメールも送られます。",
     "references": [
       {
         "title": "シークレット スキャンについて",
@@ -147,7 +147,7 @@
       }
     ],
     "tags": ["secret-scanning", "security"],
-    "updatedAt": "2026-06-02"
+    "updatedAt": "2026-07-13"
   },
   {
     "id": "D6-008",
@@ -429,15 +429,15 @@
     "domainId": "D6",
     "questionType": "single-choice",
     "difficulty": "standard",
-    "question": "Organization のチームを使って権限を管理する利点として正しいものはどれですか？",
+    "question": "GitHub のチームの目的として最も適切なものはどれですか？",
     "choices": [
-      { "id": "A", "text": "外部コラボレーターをチームに追加して Organization メンバーに変換せず管理できる" },
-      { "id": "B", "text": "チームにリポジトリアクセスを付与し、グループ単位で読み取り・書き込み・管理権限を管理できる" },
-      { "id": "C", "text": "チームを作成するとすべてのリポジトリが自動的に Public になる" },
-      { "id": "D", "text": "チームを使うと SAML SSO が不要になる" }
+      { "id": "A", "text": "チームによって Organization アカウントを管理できます" },
+      { "id": "B", "text": "チームによって企業の権限レベルを制御できます" },
+      { "id": "C", "text": "チームでは、1 人のユーザーが異なる資格情報でサインインできます" },
+      { "id": "D", "text": "会社やグループの組織構造を反映し、カスケード式の権限を付与して、メンションでチームメンバー全員に通知するために使います" }
     ],
-    "correctChoiceIds": ["B"],
-    "explanation": "チームは Organization メンバーのグループで、リポジトリへのアクセスやメンションをグループ単位で管理できます。外部コラボレーターはチームに参加できない点も重要です。",
+    "correctChoiceIds": ["D"],
+    "explanation": "チームは会社またはプロジェクトの組織構造を反映することを目的としています。チームに権限を設定するとその権限がメンバーにカスケードされ、@チーム名のメンションで全メンバーへ一括通知できます。",
     "references": [
       {
         "title": "Organization のチームについて",
@@ -447,7 +447,7 @@
       }
     ],
     "tags": ["teams", "permissions", "organization"],
-    "updatedAt": "2026-05-31"
+    "updatedAt": "2026-07-13"
   },
   {
     "id": "D6-020",
@@ -479,15 +479,15 @@
     "domainId": "D6",
     "questionType": "single-choice",
     "difficulty": "standard",
-    "question": "SAML SSO を Organization で有効化する主な目的はどれですか？",
+    "question": "既知の ID プロバイダーに対してユーザーの ID を検証するために使われる認証方式はどれですか？",
     "choices": [
-      { "id": "A", "text": "GitHub のすべてのリポジトリを自動的にオープンソース化するため" },
-      { "id": "B", "text": "依存関係のバージョン更新 Pull Request を自動生成するため" },
-      { "id": "C", "text": "IdP による認証を通じて Organization リソースへのアクセスを集中管理・保護するため" },
-      { "id": "D", "text": "コミットメッセージの形式を統一するため" }
+      { "id": "A", "text": "2 要素認証（2FA）" },
+      { "id": "B", "text": "時間ベースのワンタイムパスワード（TOTP）" },
+      { "id": "C", "text": "SAML シングルサインオン（SAML SSO）" },
+      { "id": "D", "text": "ショートメッセージサービス（SMS）" }
     ],
     "correctChoiceIds": ["C"],
-    "explanation": "SAML SSO は IdP と連携して Organization リソースへのアクセスを認証・制御します。通常の GitHub サインインの上に、Organization リソースへのアクセス時に IdP 認証を要求できます。",
+    "explanation": "SAML SSO は、既知の ID プロバイダー（IdP）に対してユーザーの ID と資格情報を検証するための業界標準の認証プロセスです。GitHub Enterprise で組織全体の認証に利用できます。",
     "references": [
       {
         "title": "SAML シングルサインオンを使うアイデンティティおよびアクセス管理について",
@@ -497,7 +497,7 @@
       }
     ],
     "tags": ["saml-sso", "identity", "organization"],
-    "updatedAt": "2026-05-31"
+    "updatedAt": "2026-07-13"
   },
   {
     "id": "D6-022",
@@ -554,15 +554,15 @@
     "domainId": "D6",
     "questionType": "single-choice",
     "difficulty": "standard",
-    "question": "Dependabot の説明として正しいものはどれですか？",
+    "question": "プロジェクトの依存関係に最も安全なバージョンを確実に使用する良い方法はどれですか？",
     "choices": [
-      { "id": "A", "text": "依存パッケージに既知の脆弱性が見つかると alerts で通知し、security updates と version updates によって修正・更新の PR を自動作成する" },
-      { "id": "B", "text": "Code scanning と同じ機能で、コードの静的解析によってセキュリティ脆弱性（SQLインジェクション等）を検出する" },
-      { "id": "C", "text": "Secret scanning と同じ機能で、コードに誤ってコミットされた API キーなどの認証情報を検出する" },
-      { "id": "D", "text": "リポジトリへの不正アクセスを検知してリポジトリを自動的に Private に変更する" }
+      { "id": "A", "text": "常に最新バージョンの依存関係を使用するようにパッケージファイルを設定する" },
+      { "id": "B", "text": "依存関係を追加する前に複数のアドバイザリサイトでそのバージョンの安全性を確認する" },
+      { "id": "C", "text": "リポジトリで Dependabot を有効にする" },
+      { "id": "D", "text": "リポジトリの依存関係グラフアラートを有効にする" }
     ],
-    "correctChoiceIds": ["A"],
-    "explanation": "Dependabot は依存関係のセキュリティと最新化を担う機能です。alerts は依存パッケージの既知脆弱性（CVE等）を通知し、security updates は脆弱性を修正するバージョンへの更新 PR を、version updates は定期的に最新バージョンへの更新 PR を自動作成します。Code scanning はコード自体の脆弱性を静的解析で検出する別機能、Secret scanning はコードに含まれるシークレットを検出する別機能です。",
+    "correctChoiceIds": ["C"],
+    "explanation": "Dependabot はリポジトリの依存関係マニフェストをスキャンし、使用中のバージョンや上流の依存関係に脆弱性が検出されるとアラートとプルリクエストで通知します。手動確認（B）より自動化された Dependabot の方が確実です。",
     "references": [
       {
         "title": "Dependabot アラートについて",
@@ -572,7 +572,7 @@
       }
     ],
     "tags": ["dependabot", "supply-chain", "security"],
-    "updatedAt": "2026-06-02"
+    "updatedAt": "2026-07-13"
   },
   {
     "id": "D6-025",
@@ -841,5 +841,80 @@
     ],
     "tags": ["plans", "free", "team", "enterprise", "branch-protection", "saml-sso"],
     "updatedAt": "2026-06-02"
+  },
+  {
+    "id": "D6-035",
+    "domainId": "D6",
+    "questionType": "single-choice",
+    "difficulty": "standard",
+    "question": "SAML シングルサインオンを有効にした後、ユーザーの認証はどこで行われますか？",
+    "choices": [
+      { "id": "A", "text": "GitHub のログインで行われます" },
+      { "id": "B", "text": "組織の資格情報でログインします" },
+      { "id": "C", "text": "ID プロバイダー（IdP）で行われます" },
+      { "id": "D", "text": "個人のログインで行われます" }
+    ],
+    "correctChoiceIds": ["C"],
+    "explanation": "メンバーが SAML SSO を使用する組織のリソースにアクセスしようとすると、GitHub はメンバーを IdP にリダイレクトして認証を行います。認証が成功すると GitHub へのアクセスが許可されます。",
+    "references": [
+      {
+        "title": "SAML シングルサインオンについて",
+        "url": "https://docs.github.com/ja/enterprise-cloud@latest/authentication/authenticating-with-saml-single-sign-on/about-authentication-with-saml-single-sign-on",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-07-13"
+      }
+    ],
+    "tags": ["saml-sso", "authentication", "idp"],
+    "updatedAt": "2026-07-13"
+  },
+  {
+    "id": "D6-036",
+    "domainId": "D6",
+    "questionType": "single-choice",
+    "difficulty": "advanced",
+    "question": "組織のチーム同期を有効にしたいと思っています。Azure AD でチーム同期を設定するために必要なインストール権限はどれですか？",
+    "choices": [
+      { "id": "A", "text": "テナント URL を指定する" },
+      { "id": "B", "text": "すべてのユーザーの完全なプロファイルの読み取り" },
+      { "id": "C", "text": "有効な SSWS（Single Sign-on for Web Systems）トークンを生成する" },
+      { "id": "D", "text": "SAML シングルサインオン（SSO）を有効にする" }
+    ],
+    "correctChoiceIds": ["B"],
+    "explanation": "Azure AD のチーム同期を有効にするには、「すべてのユーザーの完全なプロファイルの読み取り」「サインインとユーザープロファイルの読み取り」「ディレクトリデータの読み取り」の権限が必要です。",
+    "references": [
+      {
+        "title": "Organization の Team 同期を管理する",
+        "url": "https://docs.github.com/ja/enterprise-cloud@latest/organizations/managing-saml-single-sign-on-for-your-organization/managing-team-synchronization-for-your-organization",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-07-13"
+      }
+    ],
+    "tags": ["team-sync", "azure-ad", "saml-sso"],
+    "updatedAt": "2026-07-13"
+  },
+  {
+    "id": "D6-037",
+    "domainId": "D6",
+    "questionType": "single-choice",
+    "difficulty": "basic",
+    "question": "チームへの組織メンバーの追加・削除権限をユーザーに付与したい場合、どの権限を付与すればよいですか？",
+    "choices": [
+      { "id": "A", "text": "関連するすべてのリポジトリへの Admin 権限" },
+      { "id": "B", "text": "少なくとも 1 つの関連リポジトリへの Maintain 権限" },
+      { "id": "C", "text": "組織の Billing Manager（請求管理者）" },
+      { "id": "D", "text": "Team Maintainer（チームメンテナー）" }
+    ],
+    "correctChoiceIds": ["D"],
+    "explanation": "Team Maintainer 権限を持つユーザーは、そのチームへの組織メンバーの追加・削除ができます。リポジトリ管理権限や請求管理者権限とは別に、チーム管理に特化した権限です。",
+    "references": [
+      {
+        "title": "Organizationのチームメンテナロールについて",
+        "url": "https://docs.github.com/ja/organizations/organizing-members-into-teams/about-teams",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-07-13"
+      }
+    ],
+    "tags": ["team", "permissions", "team-maintainer"],
+    "updatedAt": "2026-07-13"
   }
 ]
