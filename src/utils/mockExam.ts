@@ -2,33 +2,30 @@ import { Question } from '../types/quiz'
 import { DOMAINS } from '../data/domains'
 import { shuffle } from './shuffle'
 
-/**
- * 模擬試験（50問）を生成する
- * ドメインごとの出題比率に基づいて問題を抽出する
- */
+// Official GH-900 exam: 75 questions, passing score 700/1000 (≈70%)
+// Study guide ratios: D1 25-30%, D2-D4,D6 10-15%, D5,D7 5-10%
+// domains.ts stores midpoints: D1=28, D2-D4,D6=13, D5,D7=8 (all within official ranges)
+const EXAM_TOTAL = 50
+
 export function buildMockExam(questions: Question[]): Question[] {
-  const TOTAL_QUESTIONS = 50
-  const result: Question[] = []
+  const totalRatio = DOMAINS.reduce((sum, d) => sum + d.ratio, 0)
 
-  DOMAINS.forEach(domain => {
-    const domainQuestions = questions.filter(q => q.domainId === domain.id)
-    const count = Math.round((domain.ratio / 100) * TOTAL_QUESTIONS)
-    
-    // ドメイン内の問題をシャッフルして必要な数だけ抽出
-    const selected = shuffle([...domainQuestions]).slice(0, count)
-    result.push(...selected)
+  // Largest-remainder method: allocate floors first, then distribute rounding remainder
+  const withRemainders = DOMAINS.map(d => {
+    const raw = (d.ratio / totalRatio) * EXAM_TOTAL
+    return { id: d.id, floor: Math.floor(raw), remainder: raw - Math.floor(raw) }
   })
+  const totalFloor = withRemainders.reduce((sum, d) => sum + d.floor, 0)
+  const extra = EXAM_TOTAL - totalFloor
 
-  // 合計が50問にならない場合の調整（端数処理の関係）
-  if (result.length < TOTAL_QUESTIONS) {
-    const remainingCount = TOTAL_QUESTIONS - result.length
-    const currentIds = new Set(result.map(q => q.id))
-    const available = questions.filter(q => !currentIds.has(q.id))
-    result.push(...shuffle(available).slice(0, remainingCount))
-  } else if (result.length > TOTAL_QUESTIONS) {
-    // 50問を超える場合はランダムに削る
-    return shuffle(result).slice(0, TOTAL_QUESTIONS)
+  const sorted = [...withRemainders].sort((a, b) => b.remainder - a.remainder)
+  const counts: Record<string, number> = {}
+  sorted.forEach((d, i) => { counts[d.id] = d.floor + (i < extra ? 1 : 0) })
+
+  const result: Question[] = []
+  for (const domain of DOMAINS) {
+    const pool = shuffle(questions.filter(q => q.domainId === domain.id))
+    result.push(...pool.slice(0, counts[domain.id]))
   }
-
   return shuffle(result)
 }

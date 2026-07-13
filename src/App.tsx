@@ -54,6 +54,7 @@ export function App() {
     if (orderedQs.length === 0) return
     setLastPool(orderedQs)
     setLastDomainId(savedSession.domainId)
+    setLastIsMockExam(savedSession.isMockExam ?? false)
     resume(orderedQs, savedSession.index, savedSession.answers)
     setScreen('quiz')
     window.scrollTo({ top: 0 })
@@ -95,6 +96,7 @@ export function App() {
     const wrongQs = QUESTIONS.filter(q => wrongIds.includes(q.id))
     setLastPool(wrongQs)
     setLastDomainId(null)
+    setLastIsMockExam(false)
     start(shuffle(wrongQs))
     setScreen('quiz')
     window.scrollTo({ top: 0 })
@@ -111,7 +113,7 @@ export function App() {
       isMockExam: lastIsMockExam,
       savedAt: new Date().toISOString(),
     })
-  }, [screen, quiz, lastDomainId])
+  }, [screen, quiz, lastDomainId, lastIsMockExam])
 
   const quizInfo = screen === 'quiz' && currentQuestion
     ? `${quiz.index + 1} / ${quiz.questions.length}`
