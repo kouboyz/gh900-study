@@ -830,7 +830,7 @@
       { "id": "D", "text": "GitHub Actions は Team プラン以上で利用可能で、Free プランでは GitHub Pages など静的なホスティング機能のみ使える" }
     ],
     "correctChoiceIds": ["B"],
-    "explanation": "正解は B です。GitHub Free ではパブリックリポジトリにのみブランチ保護ルールを設定でき、プライベートリポジトリにブランチ保護を適用するには Team プラン以上が必要です。SAML シングルサインオン（SAML SSO）は GitHub Enterprise Cloud で提供される機能です。なお、GitHub Actions はすべてのプランで利用可能で、無料の利用枠や分単価などはプランにより異なります。選択肢 A と D は機能の提供範囲を誤って限定しており、C はプライベートリポジトリが Free でも作成可能である点で誤りです。",
+    "explanation": "正解は B です。GitHub Free ではパブリックリポジトリにのみブランチ保護ルールを設定でき、プライベートリポジトリにブランチ保護を適用するには Team プラン以上が必要です。SAML シングルサインオン（SAML SSO）は GitHub Enterprise Cloud で提供される機能です。なお、GitHub Actions はすべてのプランで利用可能で、無料の利用枠や分単価などはプランにより異なります。選択肢 A は Free プランでプライベートリポジトリへのブランチ保護や SAML SSO までも無料で利用できると誤って主張しており、D は GitHub Actions が Team 以上でのみ利用可能であると機能範囲を誤って限定しています。C はプライベートリポジトリが Free でも作成可能である点で誤りです。",
     "references": [
       {
         "title": "GitHub のプランの製品",
