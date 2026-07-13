@@ -9,12 +9,13 @@ import { ShareButtons } from '../components/ShareButtons'
 
 type Props = {
   history: AnswerHistory
-  onStartDomain: (domainId: string | null) => void
+  onStartDomain: (domainId: string) => void
+  onStartMockExam: () => void
   savedSession: QuizSession | null
   onResumeSession: () => void
 }
 
-export function HomeScreen({ history, onStartDomain, savedSession, onResumeSession }: Props) {
+export function HomeScreen({ history, onStartDomain, onStartMockExam, savedSession, onResumeSession }: Props) {
   const totalQ = QUESTIONS.length
   const answered = Object.keys(history).length
   const correct = Object.values(history).filter(h => h.lastCorrect).length
@@ -42,7 +43,7 @@ export function HomeScreen({ history, onStartDomain, savedSession, onResumeSessi
             <p className="text-xs text-gray-400 mb-0.5">前回の続きがあります</p>
             <p className="text-sm text-gray-700">
               {savedSession.index + 1} / {savedSession.questionIds.length} 問目
-              {savedSession.domainId ? `（${savedSession.domainId}）` : '（全ドメイン）'}
+              {savedSession.isMockExam ? '（模擬試験）' : savedSession.domainId ? `（${savedSession.domainId}）` : '（全ドメイン）'}
             </p>
           </div>
           <button
@@ -89,10 +90,10 @@ export function HomeScreen({ history, onStartDomain, savedSession, onResumeSessi
 
       <div className="pt-6 mb-12">
         <button
-          onClick={() => onStartDomain(null)}
-          className="w-full py-3 text-sm border border-gray-200 rounded hover:bg-gray-50 transition-colors text-gray-700 cursor-pointer"
+          onClick={onStartMockExam}
+          className="w-full py-3 text-sm bg-gray-900 text-white rounded hover:bg-gray-700 transition-colors cursor-pointer"
         >
-          全ドメインをランダムに解く
+          模擬試験を受ける（50問・本番比率）
         </button>
       </div>
 

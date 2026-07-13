@@ -7,6 +7,7 @@ export interface QuizSession {
   index: number
   answers: QuizAnswer[]
   domainId: string | null
+  isMockExam?: boolean
   savedAt: string
 }
 

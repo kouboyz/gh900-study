@@ -3,8 +3,11 @@ import { DOMAINS } from '../data/domains'
 import { ProgressBar } from '../components/ProgressBar'
 import { ShareButtons } from '../components/ShareButtons'
 
+const PASS_THRESHOLD = 70
+
 type Props = {
   answers: QuizAnswer[]
+  isMockExam: boolean
   onRetry: () => void
   onReviewWrong: () => void
   onHome: () => void
@@ -19,12 +22,15 @@ function buildShareText(pct: number, correct: number, total: number, domainIds: 
   return `GH-900 Study 全${domainIds.length}ドメインを ${score} で完了！`
 }
 
-export function SummaryScreen({ answers, onRetry, onReviewWrong, onHome }: Props) {
+export function SummaryScreen({ answers, isMockExam, onRetry, onReviewWrong, onHome }: Props) {
   const total = answers.length
   const correct = answers.filter(a => a.isCorrect).length
   const pct = total > 0 ? Math.round((correct / total) * 100) : 0
+  const passed = pct >= PASS_THRESHOLD
 
   const usedDomainIds = [...new Set(answers.map(a => a.domainId))]
+  // D1-D7 の定義順を維持
+  const orderedDomainIds = DOMAINS.map(d => d.id).filter(id => usedDomainIds.includes(id))
   const hasWrong = answers.some(a => !a.isCorrect)
 
   return (
@@ -35,17 +41,22 @@ export function SummaryScreen({ answers, onRetry, onReviewWrong, onHome }: Props
       </div>
 
       {/* Score */}
-      <div className="mb-10 text-center py-10 border border-gray-100 rounded">
-        <p className="text-6xl font-light mb-1">{pct}%</p>
+      <div className={`mb-10 text-center py-10 border rounded ${isMockExam ? (passed ? 'border-green-200 bg-green-50' : 'border-red-100 bg-red-50') : 'border-gray-100'}`}>
+        <p className={`text-6xl font-light mb-1 ${isMockExam ? (passed ? 'text-green-700' : 'text-red-600') : ''}`}>{pct}%</p>
         <p className="text-sm text-gray-400">正答率</p>
         <p className="text-xs text-gray-400 mt-1">{correct} / {total} 問正解</p>
+        {isMockExam && (
+          <p className={`mt-4 text-sm font-medium ${passed ? 'text-green-700' : 'text-red-600'}`}>
+            {passed ? '合格ライン（70%）達成' : `合格ライン（70%）まで あと ${PASS_THRESHOLD - pct}%`}
+          </p>
+        )}
       </div>
 
       {/* Domain breakdown */}
       <div className="mb-8">
         <p className="text-xs tracking-widest uppercase text-gray-400 mb-5">ドメイン別結果</p>
         <div className="space-y-4">
-          {usedDomainIds.map(domainId => {
+          {orderedDomainIds.map(domainId => {
             const d = DOMAINS.find(d => d.id === domainId)
             const ans = answers.filter(a => a.domainId === domainId)
             const c = ans.filter(a => a.isCorrect).length

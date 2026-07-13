@@ -9,6 +9,7 @@ import { readSession, saveSession, clearSession } from './hooks/useQuizSession'
 import type { QuizSession } from './hooks/useQuizSession'
 import { QUESTIONS } from './data/loader'
 import { shuffle } from './utils/shuffle'
+import { buildMockExam } from './utils/mockExam'
 import type { Question } from './types/quiz'
 
 type Screen = 'home' | 'quiz' | 'summary'
@@ -20,15 +21,26 @@ export function App() {
 
   const [lastPool, setLastPool] = useState<Question[]>([])
   const [lastDomainId, setLastDomainId] = useState<string | null>(null)
+  const [lastIsMockExam, setLastIsMockExam] = useState(false)
   const [savedSession, setSavedSession] = useState<QuizSession | null>(() => readSession())
 
-  const startQuiz = useCallback((domainId: string | null) => {
+  const startQuiz = useCallback((domainId: string) => {
     clearSession()
-    const pool = domainId
-      ? QUESTIONS.filter(q => q.domainId === domainId)
-      : [...QUESTIONS]
+    const pool = QUESTIONS.filter(q => q.domainId === domainId)
     setLastPool(pool)
     setLastDomainId(domainId)
+    setLastIsMockExam(false)
+    start(pool)
+    setScreen('quiz')
+    window.scrollTo({ top: 0 })
+  }, [start])
+
+  const startMockExam = useCallback(() => {
+    clearSession()
+    const pool = buildMockExam(QUESTIONS)
+    setLastPool(pool)
+    setLastDomainId(null)
+    setLastIsMockExam(true)
     start(pool)
     setScreen('quiz')
     window.scrollTo({ top: 0 })
@@ -42,6 +54,7 @@ export function App() {
     if (orderedQs.length === 0) return
     setLastPool(orderedQs)
     setLastDomainId(savedSession.domainId)
+    setLastIsMockExam(savedSession.isMockExam ?? false)
     resume(orderedQs, savedSession.index, savedSession.answers)
     setScreen('quiz')
     window.scrollTo({ top: 0 })
@@ -70,10 +83,12 @@ export function App() {
 
   const handleRetry = useCallback(() => {
     clearSession()
-    start(lastPool)
+    const pool = lastIsMockExam ? buildMockExam(QUESTIONS) : shuffle([...lastPool])
+    setLastPool(pool)
+    start(pool)
     setScreen('quiz')
     window.scrollTo({ top: 0 })
-  }, [start, lastPool])
+  }, [start, lastPool, lastIsMockExam])
 
   const handleReviewWrong = useCallback(() => {
     clearSession()
@@ -81,6 +96,7 @@ export function App() {
     const wrongQs = QUESTIONS.filter(q => wrongIds.includes(q.id))
     setLastPool(wrongQs)
     setLastDomainId(null)
+    setLastIsMockExam(false)
     start(shuffle(wrongQs))
     setScreen('quiz')
     window.scrollTo({ top: 0 })
@@ -94,9 +110,10 @@ export function App() {
       index: quiz.index,
       answers: quiz.answers,
       domainId: lastDomainId,
+      isMockExam: lastIsMockExam,
       savedAt: new Date().toISOString(),
     })
-  }, [screen, quiz, lastDomainId])
+  }, [screen, quiz, lastDomainId, lastIsMockExam])
 
   const quizInfo = screen === 'quiz' && currentQuestion
     ? `${quiz.index + 1} / ${quiz.questions.length}`
@@ -117,6 +134,7 @@ export function App() {
           <HomeScreen
             history={history}
             onStartDomain={startQuiz}
+            onStartMockExam={startMockExam}
             savedSession={savedSession}
             onResumeSession={handleResumeSession}
           />
@@ -135,6 +153,7 @@ export function App() {
         {screen === 'summary' && (
           <SummaryScreen
             answers={quiz.answers}
+            isMockExam={lastIsMockExam}
             onRetry={handleRetry}
             onReviewWrong={handleReviewWrong}
             onHome={handleHome}
