@@ -379,11 +379,11 @@
     "domainId": "D2",
     "questionType": "single-choice",
     "difficulty": "basic",
-    "question": "リポジトリにトピックを追加する主な利点はどれですか？",
+    "question": "リポジトリにトピックを追加する目的として最も適切なものはどれですか？",
     "choices": [
-      { "id": "A", "text": "コミット履歴を暗号化し、管理者以外から見えないようにする" },
+      { "id": "A", "text": "アクセス制限のない公開リポジトリを Organization 外のユーザーから自動的に非表示にする" },
       { "id": "B", "text": "リポジトリの既定ブランチを自動で保護する" },
-      { "id": "C", "text": "Git LFS のストレージ使用量をゼロにする" },
+      { "id": "C", "text": "リポジトリの説明（Description）が未入力のときに自動補完する" },
       { "id": "D", "text": "リポジトリを検索・発見しやすくし、目的や技術領域で分類できる" }
     ],
     "correctChoiceIds": ["D"],
