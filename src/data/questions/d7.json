@@ -28,8 +28,8 @@
     "id": "D7-002",
     "domainId": "D7",
     "questionType": "single-choice",
-    "difficulty": "standard",
-    "question": "オープンソースプログラムと InnerSource プログラムの関係を最もよく表しているものはどれですか？",
+    "difficulty": "exam",
+    "question": "インナーソース（InnerSource）について最もよく説明しているものはどれですか？",
     "choices": [
       { "id": "A", "text": "オープンソースは誰でも貢献できますが、InnerSource はリポジトリを所有するチームのメンバーからの貢献のみを受け入れます" },
       { "id": "B", "text": "InnerSource はオープンソースをフォークして組織内だけで使用・管理するために作られます" },
@@ -566,5 +566,30 @@
     ],
     "tags": ["innersource", "metrics"],
     "updatedAt": "2026-07-13"
+  },
+  {
+    "id": "D7-024",
+    "domainId": "D7",
+    "questionType": "single-choice",
+    "difficulty": "exam",
+    "question": "GitHub Sponsors を受け取るために必要な準備として正しいものはどれですか？",
+    "choices": [
+      { "id": "A", "text": "GitHub Enterprise プランに加入する" },
+      { "id": "B", "text": "Sponsored Developer Profile（スポンサード開発者プロフィール）を作成する" },
+      { "id": "C", "text": "PayPal アカウントを GitHub に連携する" },
+      { "id": "D", "text": "Organization の Owner 権限を取得する" }
+    ],
+    "correctChoiceIds": ["B"],
+    "explanation": "GitHub Sponsors でスポンサーを受け取るには、Sponsored Developer Profile（スポンサード開発者プロフィール）を作成する必要があります。また、支払いを受け取るための在住国の要件（サポート対象地域）と税務情報の設定も必要です。Enterprise プランや PayPal 連携は不要です。",
+    "references": [
+      {
+        "title": "個人アカウントのGitHubスポンサーを設定する",
+        "url": "https://docs.github.com/ja/sponsors/receiving-sponsorships-through-github-sponsors/setting-up-github-sponsors-for-your-user-account",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-07-15"
+      }
+    ],
+    "tags": ["sponsors", "setup", "open-source"],
+    "updatedAt": "2026-07-15"
   }
 ]

@@ -128,16 +128,16 @@
     "id": "D6-007",
     "domainId": "D6",
     "questionType": "single-choice",
-    "difficulty": "standard",
-    "question": "誰かが誤って機密性の高い API キーをコミットし、アラートが発生しました。そのアラートはどこで確認できますか？",
+    "difficulty": "exam",
+    "question": "リポジトリのセキュリティタブで見つけることができるものは何ですか？",
     "choices": [
-      { "id": "A", "text": "github.com 上のファイルと行番号の横に赤い感嘆符が表示されます" },
-      { "id": "B", "text": "リポジトリページ上部の [Security] タブを開きます" },
-      { "id": "C", "text": "アラートはリポジトリ所有者にのみメールで送られます。セキュリティ上の理由から他の場所には表示されません" },
-      { "id": "D", "text": "リポジトリページ上部に表示される [Open security alerts] バナーを選択します" }
+      { "id": "A", "text": "すべてのコントリビューターのプロフィール情報とコミット数" },
+      { "id": "B", "text": "シークレットスキャンや Dependabot などのセキュリティアラート" },
+      { "id": "C", "text": "GitHub Actions のワークフロー実行ログ" },
+      { "id": "D", "text": "リポジトリの課金情報と使用量" }
     ],
     "correctChoiceIds": ["B"],
-    "explanation": "適切な権限を持つユーザーはリポジトリの [Security] タブにアクセスできます。このタブにはすべての既知のアラートと影響を受けるコードへの参照が表示されます。検出時にはタイムリーな通知のためにメールも送られます。",
+    "explanation": "リポジトリの Security タブでは、シークレットスキャンのアラート、Dependabot のアラート、コードスキャンのアラート、セキュリティポリシー（SECURITY.md）などのセキュリティ関連情報を確認できます。コントリビューター情報は Insights タブ、Actions ログは Actions タブで確認します。",
     "references": [
       {
         "title": "シークレット スキャンについて",
@@ -427,23 +427,23 @@
   {
     "id": "D6-019",
     "domainId": "D6",
-    "questionType": "single-choice",
-    "difficulty": "standard",
-    "question": "GitHub のチームの目的として最も適切なものはどれですか？",
+    "questionType": "multiple-choice",
+    "difficulty": "exam",
+    "question": "GitHub チームに関する説明として正しいものを2つ選んでください。",
     "choices": [
-      { "id": "A", "text": "チームによって Organization アカウントを管理できます" },
-      { "id": "B", "text": "チームによって企業の権限レベルを制御できます" },
-      { "id": "C", "text": "チームでは、1 人のユーザーが異なる資格情報でサインインできます" },
-      { "id": "D", "text": "会社やグループの組織構造を反映し、カスケード式の権限を付与して、メンションでチームメンバー全員に通知するために使います" }
+      { "id": "A", "text": "チームは表示（Visible）または非表示（Secret）を選択できる" },
+      { "id": "B", "text": "チームは階層構造（親チーム・子チーム）にできる" },
+      { "id": "C", "text": "チームは Organization を横断して複数の Organization に所属できる" },
+      { "id": "D", "text": "チームに設定したリポジトリ権限は、そのチームメンバー全員に自動的に適用されず個別設定が必要" }
     ],
-    "correctChoiceIds": ["D"],
-    "explanation": "チームは会社またはプロジェクトの組織構造を反映することを目的としています。チームに権限を設定するとその権限がメンバーにカスケードされ、@チーム名のメンションで全メンバーへ一括通知できます。",
+    "correctChoiceIds": ["A", "B"],
+    "explanation": "GitHub チームは Visible（全メンバーが閲覧可能）または Secret（チームメンバーと Organization オーナーのみ閲覧可能）を選択でき（A）、親チーム・子チームの階層構造を作ることができます（B）。チームに設定した権限はメンバーに自動的にカスケードされます（Dは誤り）。チームは単一の Organization 内に所属します（Cは誤り）。",
     "references": [
       {
         "title": "Organization のチームについて",
         "url": "https://docs.github.com/ja/organizations/organizing-members-into-teams/about-teams",
         "source": "GitHub Docs",
-        "checkedAt": "2026-05-31"
+        "checkedAt": "2026-07-15"
       }
     ],
     "tags": ["teams", "permissions", "organization"],
@@ -553,16 +553,16 @@
     "id": "D6-024",
     "domainId": "D6",
     "questionType": "single-choice",
-    "difficulty": "standard",
-    "question": "プロジェクトの依存関係に最も安全なバージョンを確実に使用する良い方法はどれですか？",
+    "difficulty": "exam",
+    "question": "Dependabot はどのような方法で脆弱性を通知しますか？",
     "choices": [
-      { "id": "A", "text": "常に最新バージョンの依存関係を使用するようにパッケージファイルを設定する" },
-      { "id": "B", "text": "依存関係を追加する前に複数のアドバイザリサイトでそのバージョンの安全性を確認する" },
-      { "id": "C", "text": "リポジトリで Dependabot を有効にする" },
-      { "id": "D", "text": "リポジトリの依存関係グラフアラートを有効にする" }
+      { "id": "A", "text": "メールのみで通知する" },
+      { "id": "B", "text": "Pull Request を作成して通知する" },
+      { "id": "C", "text": "GitHub Actions のログに警告を出力する" },
+      { "id": "D", "text": "Issues を自動作成して通知する" }
     ],
-    "correctChoiceIds": ["C"],
-    "explanation": "Dependabot はリポジトリの依存関係マニフェストをスキャンし、使用中のバージョンや上流の依存関係に脆弱性が検出されるとアラートとプルリクエストで通知します。手動確認（B）より自動化された Dependabot の方が確実です。",
+    "correctChoiceIds": ["B"],
+    "explanation": "Dependabot は脆弱性のある依存関係を検出すると、修正バージョンへのアップデートを含む Pull Request を自動作成して通知します。Dependabot アラートとしてセキュリティタブでも確認でき、メール通知も送られますが、通知の主な方法は Pull Request（PR）の作成です。",
     "references": [
       {
         "title": "Dependabot アラートについて",
@@ -916,5 +916,55 @@
     ],
     "tags": ["team", "permissions", "team-maintainer"],
     "updatedAt": "2026-07-13"
+  },
+  {
+    "id": "D6-038",
+    "domainId": "D6",
+    "questionType": "single-choice",
+    "difficulty": "exam",
+    "question": "リポジトリで Security Policy（セキュリティポリシー）を設定する主な目的は次のうちどれですか？",
+    "choices": [
+      { "id": "A", "text": "リポジトリへのアクセス権限を定義し、外部ユーザーのアクセスを遮断するため" },
+      { "id": "B", "text": "セキュリティ脆弱性を発見した際の報告手順を公開し、責任ある開示を促すため" },
+      { "id": "C", "text": "GitHub Advanced Security のすべての機能を自動的に有効にするため" },
+      { "id": "D", "text": "Dependabot のスキャンスケジュールを設定するため" }
+    ],
+    "correctChoiceIds": ["B"],
+    "explanation": "SECURITY.md（セキュリティポリシー）は、脆弱性を発見した人に対して報告先・報告方法・プロセスを案内するファイルです。これにより責任ある開示（Responsible Disclosure）が促進され、公開前に修正する時間を確保できます。アクセス制御（A）や Advanced Security の有効化（C）、Dependabot 設定（D）とは別の機能です。",
+    "references": [
+      {
+        "title": "リポジトリへのセキュリティ ポリシーの追加",
+        "url": "https://docs.github.com/ja/code-security/getting-started/adding-a-security-policy-to-your-repository",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-07-15"
+      }
+    ],
+    "tags": ["security-policy", "security-md", "responsible-disclosure"],
+    "updatedAt": "2026-07-15"
+  },
+  {
+    "id": "D6-039",
+    "domainId": "D6",
+    "questionType": "single-choice",
+    "difficulty": "exam",
+    "question": "リポジトリへの貢献（コントリビューション）を行うために必要な権限はどれですか？",
+    "choices": [
+      { "id": "A", "text": "Maintain 権限が必要である" },
+      { "id": "B", "text": "Write（書き込み）権限が必要である" },
+      { "id": "C", "text": "Read（読み取り）権限があれば貢献できる" },
+      { "id": "D", "text": "Triage 権限が必要である" }
+    ],
+    "correctChoiceIds": ["B"],
+    "explanation": "リポジトリに直接コードを貢献（ブランチへのプッシュや PR 作成）するには Write 権限が必要です。Read はコードの閲覧のみ、Triage は Issue/PR の管理のみ、Maintain はリリース作成などの運用作業に使います。なお、パブリックリポジトリはフォークして PR を送ることで権限なしでも貢献できます。",
+    "references": [
+      {
+        "title": "プロジェクトに貢献する",
+        "url": "https://docs.github.com/ja/get-started/exploring-projects-on-github/contributing-to-a-project",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-07-15"
+      }
+    ],
+    "tags": ["permissions", "fork", "contribution"],
+    "updatedAt": "2026-07-15"
   }
 ]

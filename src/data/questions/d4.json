@@ -53,8 +53,8 @@
     "id": "D4-004",
     "domainId": "D4",
     "questionType": "multiple-choice",
-    "difficulty": "standard",
-    "question": "GitHub Copilot のプランに関する説明として正しいものを2つ選んでください。",
+    "difficulty": "exam",
+    "question": "GitHub Copilot Individual と GitHub Copilot Business で出来ることの違いは次のうちどれですか（正しいものを2つ選んでください）。",
     "choices": [
       { "id": "A", "text": "Copilot Free は月間の補完・チャット利用回数に上限があり、無料で使用できる" },
       { "id": "B", "text": "Copilot Business はOrganization管理者がメンバーへの割り当てやポリシーを一元管理できる" },
@@ -860,5 +860,55 @@
     ],
     "tags": ["codespaces", "lifecycle"],
     "updatedAt": "2026-07-13"
+  },
+  {
+    "id": "D4-039",
+    "domainId": "D4",
+    "questionType": "single-choice",
+    "difficulty": "exam",
+    "question": "github.com 上でキーボードの何を押すと Codespaces が起動できますか？",
+    "choices": [
+      { "id": "A", "text": ".(ピリオド)" },
+      { "id": "B", "text": ",(カンマ)" },
+      { "id": "C", "text": "Ctrl+Shift+K" },
+      { "id": "D", "text": "Ctrl+K" }
+    ],
+    "correctChoiceIds": ["B"],
+    "explanation": "github.com 上でリポジトリを表示中に「,（カンマ）」キーを押すと、そのリポジトリの GitHub Codespaces が起動します。「.（ピリオド）」キーは github.dev の軽量エディタを開きます。この2つは混同しやすいため注意が必要です。",
+    "references": [
+      {
+        "title": "GitHub Codespaces とは",
+        "url": "https://docs.github.com/ja/codespaces/overview",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-07-15"
+      }
+    ],
+    "tags": ["codespaces", "keyboard-shortcut"],
+    "updatedAt": "2026-07-15"
+  },
+  {
+    "id": "D4-040",
+    "domainId": "D4",
+    "questionType": "multiple-choice",
+    "difficulty": "exam",
+    "question": "GitHub Mobile でできることを正しいものすべて選んでください。",
+    "choices": [
+      { "id": "A", "text": "通知の管理・Issue や Pull Request へのコメント返信" },
+      { "id": "B", "text": "Pull Request のマージ" },
+      { "id": "C", "text": "通知を受け取らない時間帯（Quiet Hours）を時間指定できる" },
+      { "id": "D", "text": "Pull Request のファイル差分を編集してコミットできる" }
+    ],
+    "correctChoiceIds": ["A", "B", "C"],
+    "explanation": "GitHub Mobile では通知の管理・コメント返信（A）、Pull Request のマージ（B）、通知をまとめて受け取るスケジュール設定 Quiet Hours（C）が可能です。Pull Request のコード差分を直接編集してコミットする（D）はサポートされていません。",
+    "references": [
+      {
+        "title": "GitHub Mobile について",
+        "url": "https://docs.github.com/ja/get-started/using-github/github-mobile",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-07-15"
+      }
+    ],
+    "tags": ["github-mobile", "notifications"],
+    "updatedAt": "2026-07-15"
   }
 ]

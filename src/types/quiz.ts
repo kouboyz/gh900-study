@@ -1,4 +1,4 @@
-export type Difficulty = 'basic' | 'standard' | 'advanced'
+export type Difficulty = 'basic' | 'standard' | 'advanced' | 'exam'
 
 export type QuestionType = 'single-choice' | 'multiple-choice'
 

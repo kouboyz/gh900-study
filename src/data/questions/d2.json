@@ -741,5 +741,30 @@
     ],
     "tags": ["archive", "transfer", "delete", "fork"],
     "updatedAt": "2026-05-31"
+  },
+  {
+    "id": "D2-031",
+    "domainId": "D2",
+    "questionType": "single-choice",
+    "difficulty": "exam",
+    "question": "github.com のリポジトリトップページで優先して表示される README.md の場所はどれですか？",
+    "choices": [
+      { "id": "A", "text": "リポジトリのルート（root）" },
+      { "id": "B", "text": ".github ディレクトリ" },
+      { "id": "C", "text": "src ディレクトリ" },
+      { "id": "D", "text": "docs ディレクトリ" }
+    ],
+    "correctChoiceIds": ["B"],
+    "explanation": "GitHub がリポジトリページに表示する README.md の優先順位は「.github ディレクトリ → ルート → docs ディレクトリ」の順です。.github に README.md があればそれが最優先で表示されます。src ディレクトリは優先対象外です。",
+    "references": [
+      {
+        "title": "リポジトリの README ファイルについて",
+        "url": "https://docs.github.com/ja/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-07-15"
+      }
+    ],
+    "tags": ["readme", "repository"],
+    "updatedAt": "2026-07-15"
   }
 ]
