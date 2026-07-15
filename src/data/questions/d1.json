@@ -154,7 +154,7 @@
     "domainId": "D1",
     "questionType": "single-choice",
     "difficulty": "exam",
-    "question": "次のうち、git と github を最もよく説明しているのはどれですか？",
+    "question": "次のうち、Git と GitHub を最もよく説明しているのはどれですか？",
     "choices": [
       { "id": "A", "text": "Git はローカルで実行される分散バージョン管理システム（DVCS）で、GitHub は共有リモートを提供するインターフェイス層である" },
       { "id": "B", "text": "Git は 1 人の作業者向けで、GitHub は複数人の共同作業向けのバージョン管理である" },
