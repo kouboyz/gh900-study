@@ -24,7 +24,7 @@
       },
       "difficulty": {
         "type": "string",
-        "enum": ["basic", "standard", "advanced"]
+        "enum": ["basic", "standard", "advanced", "exam"]
       },
       "question": {
         "type": "string",
@@ -33,7 +33,7 @@
       "choices": {
         "type": "array",
         "minItems": 4,
-        "maxItems": 4,
+        "maxItems": 6,
         "items": {
           "type": "object",
           "required": ["id", "text"],
@@ -41,7 +41,7 @@
           "properties": {
             "id": {
               "type": "string",
-              "enum": ["A", "B", "C", "D"]
+              "enum": ["A", "B", "C", "D", "E", "F"]
             },
             "text": {
               "type": "string",
@@ -53,10 +53,10 @@
       "correctChoiceIds": {
         "type": "array",
         "minItems": 1,
-        "maxItems": 4,
+        "maxItems": 6,
         "items": {
           "type": "string",
-          "enum": ["A", "B", "C", "D"]
+          "enum": ["A", "B", "C", "D", "E", "F"]
         }
       },
       "explanation": {

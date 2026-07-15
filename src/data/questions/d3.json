@@ -203,16 +203,16 @@
     "id": "D3-011",
     "domainId": "D3",
     "questionType": "single-choice",
-    "difficulty": "standard",
-    "question": "Pull Request の Draft（ドラフト）状態の説明として最も適切なものはどれですか？",
+    "difficulty": "exam",
+    "question": "ドラフトプルリクエストについて、次のうち正しい組み合わせはどれですか？",
     "choices": [
-      { "id": "A", "text": "マージが完了した Pull Request のアーカイブ状態" },
-      { "id": "B", "text": "まだレビュー準備が整っていないことを示す状態で、マージボタンが無効になる" },
-      { "id": "C", "text": "レビュアーが変更を要求した後の Pull Request の状態" },
-      { "id": "D", "text": "コンフリクトが発生している Pull Request の状態" }
+      { "id": "A", "text": "マージできない・コードレビューのリクエストを送ることができない" },
+      { "id": "B", "text": "マージできる・コードレビューのリクエストを送ることができない" },
+      { "id": "C", "text": "マージできない・コードレビューのリクエストを送ることができる" },
+      { "id": "D", "text": "マージできる・コードレビューのリクエストを送ることができる" }
     ],
-    "correctChoiceIds": ["B"],
-    "explanation": "Draft Pull Request は作業中であることをチームに知らせる状態です。マージできない状態になり、CODEOWNERS への自動レビューリクエストも送られません。作業が完了したら「Ready for review」に変更してレビューを依頼します。",
+    "correctChoiceIds": ["C"],
+    "explanation": "ドラフト Pull Request はマージできない状態ですが、コメントの追加やレビュー（フィードバック）を受けることは可能です。CODEOWNERS への自動レビューリクエストは送られませんが、レビュアーが任意でコメントや提案を行うことは制限されていません。「Ready for review」に変更するとマージが可能になります。",
     "references": [
       {
         "title": "pull requests について",
@@ -553,8 +553,8 @@
     "id": "D3-027",
     "domainId": "D3",
     "questionType": "single-choice",
-    "difficulty": "standard",
-    "question": "PR の説明に「Fixes #42」と書いた場合、リンクされた Issue が自動クローズされる条件として正しいものはどれですか？",
+    "difficulty": "exam",
+    "question": "プルリクエストに Issue をリンクしたときの挙動として正しいものはどれですか？",
     "choices": [
       { "id": "A", "text": "PR が作成された時点で、リンクされた Issue はただちにクローズされる" },
       { "id": "B", "text": "PR にレビューコメントが1件付くと、リンクされた Issue はクローズされる" },

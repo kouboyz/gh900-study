@@ -3,16 +3,16 @@
     "id": "D1-001",
     "domainId": "D1",
     "questionType": "single-choice",
-    "difficulty": "basic",
-    "question": "Gitにおける「コミット（commit）」の説明として最も適切なものはどれですか？",
+    "difficulty": "exam",
+    "question": "git commit とは何ですか？",
     "choices": [
-      { "id": "A", "text": "ブランチを削除する操作" },
-      { "id": "B", "text": "その時点のファイル変更のスナップショットをリポジトリに記録する操作" },
-      { "id": "C", "text": "リモートリポジトリからローカルへ変更を取り込む操作" },
-      { "id": "D", "text": "Pull Requestをマージする操作" }
+      { "id": "A", "text": "コミットは、特定の時点におけるリポジトリのスナップショットです" },
+      { "id": "B", "text": "コミットは、リポジトリ内の新しいファイルまたは更新されたファイルを指します" },
+      { "id": "C", "text": "コミットは、Pull Request内で行われたリポジトリへのコード変更を指します" },
+      { "id": "D", "text": "コミットは、リポジトリに加えられた変更を説明する人間が読めるテキストを指します" }
     ],
-    "correctChoiceIds": ["B"],
-    "explanation": "コミットはリポジトリの変更履歴の最小単位であり、「誰が・いつ・どんな変更をしたか」を記録したスナップショットです。各コミットにはユニークなSHA-1ハッシュが付与され、履歴をさかのぼったり特定の状態に戻すことができます。",
+    "correctChoiceIds": ["A"],
+    "explanation": "コミットは特定の時点におけるリポジトリのスナップショットです。各コミットには一意のSHAハッシュが付与され、「誰が・いつ・どのような変更をしたか」が記録されます。ファイルそのものではなく（B）、PRのコード変更だけではなく（C）、テキストメッセージ（コミットメッセージ）でもありません（D）。",
     "references": [
       {
         "title": "コミットについて",
@@ -48,6 +48,31 @@
     ],
     "tags": ["git", "branch"],
     "updatedAt": "2026-07-13"
+  },
+  {
+    "id": "D1-064",
+    "domainId": "D1",
+    "questionType": "single-choice",
+    "difficulty": "exam",
+    "question": "GitHub Flow で最初にすることは何ですか？",
+    "choices": [
+      { "id": "A", "text": "ブランチを作成する" },
+      { "id": "B", "text": "Pull Requestを開く" },
+      { "id": "C", "text": "コミットする" },
+      { "id": "D", "text": "mainブランチにマージする" }
+    ],
+    "correctChoiceIds": ["A"],
+    "explanation": "GitHub Flow では「ブランチを切る → コミット → Pull Request → レビュー → mainにマージ」の順で進みます。最初のステップはブランチの作成です。mainブランチは常にデプロイ可能な状態を保ち、新機能や修正はブランチ上で行います。",
+    "references": [
+      {
+        "title": "GitHub フロー",
+        "url": "https://docs.github.com/ja/get-started/using-github/github-flow",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-07-15"
+      }
+    ],
+    "tags": ["github-flow", "workflow"],
+    "updatedAt": "2026-07-15"
   },
   {
     "id": "D1-003",
@@ -128,8 +153,8 @@
     "id": "D1-006",
     "domainId": "D1",
     "questionType": "single-choice",
-    "difficulty": "basic",
-    "question": "Git と GitHub の違いとして最も適切な説明はどれですか？",
+    "difficulty": "exam",
+    "question": "次のうち、Git と GitHub を最もよく説明しているのはどれですか？",
     "choices": [
       { "id": "A", "text": "Git はローカルで実行される分散バージョン管理システム（DVCS）で、GitHub は共有リモートを提供するインターフェイス層である" },
       { "id": "B", "text": "Git は 1 人の作業者向けで、GitHub は複数人の共同作業向けのバージョン管理である" },
@@ -178,7 +203,32 @@
     "id": "D1-008",
     "domainId": "D1",
     "questionType": "single-choice",
-    "difficulty": "basic",
+    "difficulty": "exam",
+    "question": "GitHub Desktop とは何ですか？",
+    "choices": [
+      { "id": "A", "text": "コンピュータ上でGitとGitHubを操作するためのGUIアプリケーションです" },
+      { "id": "B", "text": "ブラウザ上で動作するGitHubのWebエディタです" },
+      { "id": "C", "text": "スマートフォン向けのGitHub通知アプリです" },
+      { "id": "D", "text": "GitHub ActionsのワークフローをローカルでテストするCLIツールです" }
+    ],
+    "correctChoiceIds": ["A"],
+    "explanation": "GitHub Desktop はデスクトップ（Windows/Mac）で動作するGUIアプリケーションで、コマンドラインを使わずにGitのコミット・プッシュ・プル・ブランチ操作などを視覚的に行えます。ブラウザエディタはgithub.dev、モバイル通知はGitHub Mobileが担当します。",
+    "references": [
+      {
+        "title": "GitHub Desktop について",
+        "url": "https://docs.github.com/ja/desktop/overview/about-github-desktop",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-07-15"
+      }
+    ],
+    "tags": ["github-desktop", "gui", "tools"],
+    "updatedAt": "2026-07-15"
+  },
+  {
+    "id": "D1-065",
+    "domainId": "D1",
+    "questionType": "single-choice",
+    "difficulty": "standard",
     "question": "GitHub Desktop と GitHub Mobile の主な用途の違いとして最も適切なものはどれですか？",
     "choices": [
       { "id": "A", "text": "GitHub Desktop はデスクトップで GUI を使った Git 操作（コミット・プッシュ・PR 作成など）を行うためのアプリで、GitHub Mobile はスマートフォンから Issue・PR・通知を確認・操作するためのアプリである" },
@@ -558,17 +608,19 @@
   {
     "id": "D1-025",
     "domainId": "D1",
-    "questionType": "single-choice",
-    "difficulty": "basic",
-    "question": "git status コマンドで確認できる内容として最も適切なものはどれですか？",
+    "questionType": "multiple-choice",
+    "difficulty": "exam",
+    "question": "git status で確認できる状態として正しいものをすべて選んでください。",
     "choices": [
-      { "id": "A", "text": "GitHubの請求プランと利用料金" },
-      { "id": "B", "text": "すべてのリリースアセットのダウンロード数" },
-      { "id": "C", "text": "現在のブランチや、変更済み・ステージ済み・未追跡ファイルの状態" },
-      { "id": "D", "text": "Organization内の監査ログ" }
+      { "id": "A", "text": "uncommitted" },
+      { "id": "B", "text": "committed" },
+      { "id": "C", "text": "staged" },
+      { "id": "D", "text": "tracked" },
+      { "id": "E", "text": "modified" },
+      { "id": "F", "text": "untracked" }
     ],
-    "correctChoiceIds": ["C"],
-    "explanation": "正解は「現在のブランチや、変更済み・ステージ済み・未追跡ファイルの状態」です。git statusは作業ツリーとステージングの状態、現在のブランチなどを確認する基本コマンドです。他の選択肢は、別のGit/GitHub機能や該当しない操作を述べているため誤りです。",
+    "correctChoiceIds": ["C", "E", "F"],
+    "explanation": "git status では「staged（Changes to be committed）」「modified（Changes not staged for commit）」「untracked（Untracked files）」の3つが直接表示されます。uncommitted は Git の公式用語ではなく（A）、committed は git log で確認します（B）。tracked は概念として存在しますが status の出力ラベルとしては使われません（D）。",
     "references": [
       {
         "title": "変更内容のリポジトリへの記録",
@@ -1419,6 +1471,81 @@
     ],
     "tags": ["fork", "clone", "git"],
     "updatedAt": "2026-06-02"
+  },
+  {
+    "id": "D1-066",
+    "domainId": "D1",
+    "questionType": "single-choice",
+    "difficulty": "exam",
+    "question": "次のうち、GitHub を最もよく説明しているものはどれですか？",
+    "choices": [
+      { "id": "A", "text": "GitHub は Git をコア技術として使用し、コラボレーションとコード管理を容易にする機能を追加したプラットフォームです" },
+      { "id": "B", "text": "GitHub は、プロジェクトの共同作業を容易にする機能を備えた分散型バージョン管理システムです" },
+      { "id": "C", "text": "GitHub は、集中型バージョン管理を使用してプロジェクトの共同作業を容易にする機能を備えたファイル共有プラットフォームです" },
+      { "id": "D", "text": "GitHub は、迅速な製品開発を促進する機能を備えた最新の CI/CD プラットフォームです" }
+    ],
+    "correctChoiceIds": ["A"],
+    "explanation": "GitHub は Git をコア技術として使用し、Pull Request・Issues・Actions・Codespaces などのコラボレーション機能を追加したプラットフォームです。GitHub 自体は分散型バージョン管理システム（B）ではなく、集中型（C）でもありません。CI/CD（D）は機能の一部ですが、GitHub を最もよく説明する表現ではありません。",
+    "references": [
+      {
+        "title": "GitHub と Git について",
+        "url": "https://docs.github.com/ja/get-started/start-your-journey/about-github-and-git",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-07-15"
+      }
+    ],
+    "tags": ["git", "github"],
+    "updatedAt": "2026-07-15"
+  },
+  {
+    "id": "D1-068",
+    "domainId": "D1",
+    "questionType": "single-choice",
+    "difficulty": "exam",
+    "question": "GitHub Command Palette を開くショートカットは次のうちどれですか？",
+    "choices": [
+      { "id": "A", "text": "Ctrl+K（Windows/Linux）/ Cmd+K（Mac）" },
+      { "id": "B", "text": "Ctrl+Shift+P / Cmd+Shift+P" },
+      { "id": "C", "text": "Ctrl+P / Cmd+P" },
+      { "id": "D", "text": "Ctrl+Shift+K / Cmd+Shift+K" }
+    ],
+    "correctChoiceIds": ["A"],
+    "explanation": "GitHub Command Palette は Ctrl+K（Windows/Linux）または Cmd+K（Mac）で開きます。コマンドモードにするには Ctrl+Alt+K（Windows/Linux）または Cmd+Option+K（Mac）を使います。Command Palette からリポジトリ検索・Issues・PR・設定画面への素早いナビゲーションが可能です。",
+    "references": [
+      {
+        "title": "GitHub コマンドパレット",
+        "url": "https://docs.github.com/ja/get-started/accessibility/github-command-palette",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-07-15"
+      }
+    ],
+    "tags": ["command-palette", "keyboard-shortcut", "accessibility"],
+    "updatedAt": "2026-07-15"
+  },
+  {
+    "id": "D1-067",
+    "domainId": "D1",
+    "questionType": "single-choice",
+    "difficulty": "exam",
+    "question": "GitHub の Issue および Pull Request にコメントを書く際に使用される言語は何ですか？",
+    "choices": [
+      { "id": "A", "text": "HTML" },
+      { "id": "B", "text": "Markdown" },
+      { "id": "C", "text": "AsciiDoc" },
+      { "id": "D", "text": "YAML" }
+    ],
+    "correctChoiceIds": ["B"],
+    "explanation": "GitHub の Issue・Pull Request・コメント・README などには Markdown（GitHub Flavored Markdown）が使用されます。見出し・太字・リスト・コードブロック・リンクなどを記述でき、GitHub が自動的に HTML としてレンダリングします。",
+    "references": [
+      {
+        "title": "基本的な書き込みと書式設定の構文",
+        "url": "https://docs.github.com/ja/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax",
+        "source": "GitHub Docs",
+        "checkedAt": "2026-07-15"
+      }
+    ],
+    "tags": ["markdown", "issues", "pull-request"],
+    "updatedAt": "2026-07-15"
   },
   {
     "id": "D1-063",
