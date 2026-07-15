@@ -18,6 +18,12 @@ export const APP_CONFIG = {
   // ホーム画面の説明文
   description: 'GitHub Foundations 認定試験（GH-900）の学習アプリです。7つのドメインから問題を選んで学習できます。学習履歴はブラウザに保存されます。',
 
+  // 対応するスタディガイドの改定バージョン（表示用）
+  studyGuideVersion: '2026年1月改定版',
+
+  // 問題の最終更新日（YYYY-MM-DD 形式）
+  lastUpdated: '2026-07-16',
+
   // LocalStorage キー（アプリを変更した場合は必ず変更すること）
   storageKey: 'gh900-history-v1',
 

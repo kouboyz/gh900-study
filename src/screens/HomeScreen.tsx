@@ -29,10 +29,13 @@ export function HomeScreen({ history, onStartDomain, onStartMockExam, savedSessi
       <div className="mb-12">
         <p className="text-xs tracking-widest uppercase text-gray-400 mb-2">{APP_CONFIG.examLabel}</p>
         <h1 className="text-2xl font-light tracking-tight mb-3">
-          {APP_CONFIG.appName} <span className="text-sm text-gray-400 font-normal">β</span>
+          {APP_CONFIG.appName}
         </h1>
         <p className="text-sm text-gray-500 leading-relaxed">
           {APP_CONFIG.description}
+        </p>
+        <p className="text-xs text-gray-400 mt-2">
+          {APP_CONFIG.studyGuideVersion}対応 / 最終更新: {APP_CONFIG.lastUpdated}
         </p>
       </div>
 
