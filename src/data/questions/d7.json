@@ -185,7 +185,7 @@
     "domainId": "D7",
     "questionType": "single-choice",
     "difficulty": "basic",
-    "question": "GitHub プラットフォームで、あるユーザーのパブリックな活動を常に把握して通知を受け取るにはどうすればよいですか？",
+    "question": "GitHub プラットフォームで、あるユーザーのパブリックな活動を継続的に把握するにはどうすればよいですか？",
     "choices": [
       { "id": "A", "text": "そのユーザーのリポジトリに Star を付ける" },
       { "id": "B", "text": "そのユーザーをフォローする" },
