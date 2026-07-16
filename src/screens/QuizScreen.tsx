@@ -32,7 +32,7 @@ export function QuizScreen({ questions, index, answers, onAnswer, onNext, onFini
   const [shuffledChoices] = useState(() => shuffle(q.choices))
   const [pendingIds, setPendingIds] = useState<string[]>([])
 
-  const DIFFICULTY_LABEL: Record<string, string> = { basic: '基礎', standard: '標準', advanced: '応用' }
+  const DIFFICULTY_LABEL: Record<string, string> = { basic: '基礎', standard: '標準', advanced: '応用', exam: '過去問' }
 
   function togglePending(id: string) {
     setPendingIds(prev =>
