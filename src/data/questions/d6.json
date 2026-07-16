@@ -6,13 +6,13 @@
     "difficulty": "basic",
     "question": "2要素認証（2FA）を有効にする主な目的はどれですか？",
     "choices": [
-      { "id": "A", "text": "リポジトリのストレージ容量を増やすため" },
+      { "id": "A", "text": "パスワードを不要にしてパスキーだけでログインできるようにするため" },
       { "id": "B", "text": "パスワードだけでは不正アクセスできないように追加の認証を要求するため" },
-      { "id": "C", "text": "Pull Requestのマージを自動化するため" },
-      { "id": "D", "text": "GitHub Copilotを有効化するため" }
+      { "id": "C", "text": "SAML SSO によって IdP でユーザーを一元管理するため" },
+      { "id": "D", "text": "Personal Access Token の代わりにブラウザログインで API 認証を行うため" }
     ],
     "correctChoiceIds": ["B"],
-    "explanation": "2FAはパスワードに加えて認証アプリのワンタイムコードやセキュリティキーなど第二の認証要素を要求します。パスワードが漏洩しても、第二要素がなければアカウントにアクセスできないため、アカウント保護に効果的です。",
+    "explanation": "2FA はパスワードに加えて認証アプリのワンタイムコードやセキュリティキーなど第二の認証要素を要求します。パスワードを不要にするのはパスキー（A）、IdP による一元管理は SAML SSO（C）、API 認証には PAT や OAuth が使われます（D）。",
     "references": [
       {
         "title": "2 要素認証について",
@@ -307,12 +307,12 @@
     "question": "GitHub の SSH キーを定期的にレビューする理由として最も適切なものはどれですか？",
     "choices": [
       { "id": "A", "text": "不要または侵害された可能性のあるキーを削除し、リポジトリへの不正アクセスを防ぐため" },
-      { "id": "B", "text": "GitHub Pages の公開 URL を変更するため" },
-      { "id": "C", "text": "Pull Request のレビュー担当者を自動選択するため" },
-      { "id": "D", "text": "Dependabot の更新頻度を変更するため" }
+      { "id": "B", "text": "期限切れの Personal Access Token を自動更新するため" },
+      { "id": "C", "text": "SSH キーの有効期限を延長してログイン不能を防ぐため" },
+      { "id": "D", "text": "未使用の SSH キーを Dependabot の設定として再利用するため" }
     ],
     "correctChoiceIds": ["A"],
-    "explanation": "SSH キーやデプロイキーは認証情報です。利用していないキーや見覚えのないキーを放置すると、第三者がリポジトリへアクセスできる可能性があるため、定期的な監査と削除が重要です。",
+    "explanation": "SSH キーは認証情報です。利用していないキーや見覚えのないキーを放置すると第三者がリポジトリへアクセスできる可能性があるため、定期的な監査と削除が重要です。SSH キーには標準的な有効期限の仕組みはなく（C）、PAT の更新とは別の操作です（B）。",
     "references": [
       {
         "title": "SSH キーをレビューする",
@@ -507,12 +507,12 @@
     "question": "Enterprise Managed Users で SCIM プロビジョニングを使う主な利点はどれですか？",
     "choices": [
       { "id": "A", "text": "IdP からユーザーアカウントの作成、管理、無効化などライフサイクルを管理できる" },
-      { "id": "B", "text": "すべての Pull Request を自動でマージできる" },
-      { "id": "C", "text": "GitHub Pages の独自ドメインを自動で取得できる" },
-      { "id": "D", "text": "リポジトリ内の依存関係をすべて削除できる" }
+      { "id": "B", "text": "SAML SSO と組み合わせることで、IdP の認証情報だけで GitHub にサインインできる" },
+      { "id": "C", "text": "Organization の全メンバーに自動的に 2FA を強制できる" },
+      { "id": "D", "text": "Enterprise 内のすべてのリポジトリに同一のブランチ保護ルールを一括適用できる" }
     ],
     "correctChoiceIds": ["A"],
-    "explanation": "SCIM は IdP と GitHub 間でユーザー ID を管理する仕様です。Enterprise Managed Users では、ユーザーの作成、更新、無効化などを IdP 側から一元管理しやすくなります。",
+    "explanation": "SCIM は IdP と GitHub 間でユーザー ID ライフサイクルを管理する仕様で、ユーザーの作成・更新・無効化を IdP 側から一元管理できます。SAML SSO による IdP 認証（B）は SCIM と組み合わせて使いますが SCIM 単体の目的ではありません。2FA の強制（C）や一括ブランチ保護（D）は SCIM とは別の機能です。",
     "references": [
       {
         "title": "エンタープライズ マネージド ユーザーを管理するための SCIM プロビジョニングの構成",
@@ -532,12 +532,12 @@
     "question": "Organization の audit log（監査ログ）で確認できる内容として最も適切なものはどれですか？",
     "choices": [
       { "id": "A", "text": "メンバーによる Organization に影響する操作について、誰がいつ何を行ったかの記録" },
-      { "id": "B", "text": "GitHub Actions のビルド成果物そのもの" },
-      { "id": "C", "text": "リポジトリ内すべてのソースコードの暗号化キー" },
-      { "id": "D", "text": "GitHub Copilot が生成したすべての候補一覧" }
+      { "id": "B", "text": "リポジトリの各ブランチへのコミット数と差分の一覧" },
+      { "id": "C", "text": "Organization 内の全 Pull Request のレビューコメント一覧" },
+      { "id": "D", "text": "Dependabot が検出した脆弱性とその修正 PR の一覧" }
     ],
     "correctChoiceIds": ["A"],
-    "explanation": "監査ログは Organization の管理者が、Organization に影響するイベントや操作を確認するためのログです。セキュリティ調査や設定変更の追跡に役立ちます。",
+    "explanation": "監査ログは Organization の管理者が、メンバー招待・権限変更・リポジトリ作成・設定変更など Organization に影響するイベントを確認するためのログです。ブランチのコミット数は Insights（B）、PR のレビューは各 PR の Conversation タブ（C）、Dependabot アラートは Security タブ（D）で確認します。",
     "references": [
       {
         "title": "あなたの組織の監査ログを確認する",
@@ -606,13 +606,13 @@
     "difficulty": "standard",
     "question": "Code scanning（CodeQL を含む）の主な目的はどれですか？",
     "choices": [
-      { "id": "A", "text": "GitHub の請求先住所を検証すること" },
+      { "id": "A", "text": "コミットにコミットされたシークレット（API キーなど）を検出してアラートを出すこと" },
       { "id": "B", "text": "リポジトリのコードを分析して、セキュリティ脆弱性やコーディングエラーを見つけること" },
-      { "id": "C", "text": "Organization メンバーのプロフィール画像を統一すること" },
-      { "id": "D", "text": "すべてのブランチ名を main に変更すること" }
+      { "id": "C", "text": "依存パッケージの脆弱性を検出して修正 PR を自動作成すること" },
+      { "id": "D", "text": "リポジトリへの不審なアクセスを検知してセッションを自動無効化すること" }
     ],
     "correctChoiceIds": ["B"],
-    "explanation": "Code scanning はコードを分析し、脆弱性やエラーのアラートをリポジトリに表示します。CodeQL やサードパーティツールを使って、プッシュ時やスケジュール実行で検出できます。",
+    "explanation": "Code scanning はコードを静的解析して、セキュリティ脆弱性やバグをアラートとして表示します。シークレットの検出は Secret scanning（A）、依存パッケージの脆弱性修正は Dependabot（C）が担います。これらはいずれも GitHub Advanced Security の機能群に含まれますが、それぞれ役割が異なります。",
     "references": [
       {
         "title": "コード スキャンについて",
@@ -719,12 +719,12 @@
     "question": "リポジトリの ruleset と branch protection ルールの目的として最も適切なものはどれですか？",
     "choices": [
       { "id": "A", "text": "特定のブランチやタグに対して、レビュー必須、ステータスチェック必須、削除制限などのルールを適用する" },
-      { "id": "B", "text": "すべての Issue を匿名化して公開する" },
-      { "id": "C", "text": "リポジトリのスター数を非公開にする" },
-      { "id": "D", "text": "GitHub Actions のログを削除する" }
+      { "id": "B", "text": "CODEOWNERS に定義されたオーナーへのレビューを自動リクエストする" },
+      { "id": "C", "text": "ブランチ名のパターンを統一してリポジトリの見通しを良くする" },
+      { "id": "D", "text": "特定のユーザーがどのファイルを閲覧できるかをパスで制御する" }
     ],
     "correctChoiceIds": ["A"],
-    "explanation": "Ruleset や branch protection は、重要なブランチやタグを保護するために使います。たとえば pull request レビュー、必須ステータスチェック、強制プッシュや削除の制限などを設定できます。",
+    "explanation": "Ruleset や branch protection は重要なブランチ・タグへの PR レビュー必須・ステータスチェック必須・強制プッシュ禁止などのルールを適用します。レビューの自動リクエストは CODEOWNERS が担い（B）、ファイルレベルのアクセス制御は GitHub では直接サポートされていません（D）。",
     "references": [
       {
         "title": "ルールセットについて",

@@ -6,13 +6,13 @@
     "difficulty": "basic",
     "question": "GitHub Projects の主な用途として最も適切なものはどれですか？",
     "choices": [
-      { "id": "A", "text": "GitHubへのSSH接続を設定する" },
+      { "id": "A", "text": "リポジトリのブランチやタグにアクセス制限ルールを設定する" },
       { "id": "B", "text": "IssueやPull Requestをカンバンボードやテーブルで可視化・管理する" },
-      { "id": "C", "text": "リポジトリのバックアップを自動作成する" },
-      { "id": "D", "text": "GitHub Copilotのモデルを選択する" }
+      { "id": "C", "text": "コードの変更を自動テストして CI パイプラインを実行する" },
+      { "id": "D", "text": "複数リポジトリの依存関係と脆弱性を一元管理する" }
     ],
     "correctChoiceIds": ["B"],
-    "explanation": "GitHub Projectsは、IssueやPull Requestをカンバンボード・テーブル・ロードマップビューで整理・管理するプロジェクト管理機能です。カスタムフィールド・フィルタリング・自動化（Automation）を組み合わせて、チームのワークフローを柔軟に構築できます。",
+    "explanation": "GitHub Projects は Issue や Pull Request をカンバンボード・テーブル・ロードマップビューで整理・管理するプロジェクト管理機能です。ブランチのアクセス制限はブランチ保護ルール（A）、CI パイプラインは GitHub Actions（C）、脆弱性の一元管理は Dependabot や Security タブ（D）が担います。",
     "references": [
       {
         "title": "Projects について",
@@ -132,12 +132,12 @@
     "question": "多数のIssueを一覧し、優先度や見積もりなど複数のフィールドをまとめて確認・編集したい場合、GitHub Projectsで最も適したビューはどれですか？",
     "choices": [
       { "id": "A", "text": "テーブルビュー" },
-      { "id": "B", "text": "コードビュー" },
-      { "id": "C", "text": "ネットワークビュー" },
-      { "id": "D", "text": "セキュリティアラートビュー" }
+      { "id": "B", "text": "ボードビュー" },
+      { "id": "C", "text": "ロードマップビュー" },
+      { "id": "D", "text": "Insightsビュー" }
     ],
     "correctChoiceIds": ["A"],
-    "explanation": "テーブルビューは、Issue、Pull Request、ドラフトIssue、カスタムフィールドをスプレッドシートのように表示し、フィールドの表示・非表示、フィルター、ソート、グループ化に向いています。",
+    "explanation": "テーブルビューは Issue・PR・カスタムフィールドをスプレッドシートのように一覧表示し、複数フィールドの確認・編集・ソート・グループ化に適しています。ボードビューはステータス別の列管理（B）、ロードマップビューは時系列での追跡（C）、Insights はグラフによる進捗可視化（D）に向いています。",
     "references": [
       {
         "title": "ビューのレイアウトを変更する",
@@ -181,13 +181,13 @@
     "difficulty": "standard",
     "question": "開始日や目標日、Iterationを使って作業を時系列で追跡したい場合、GitHub Projectsで選ぶべきビューはどれですか？",
     "choices": [
-      { "id": "A", "text": "Wikiビュー" },
-      { "id": "B", "text": "監査ログビュー" },
+      { "id": "A", "text": "テーブルビュー" },
+      { "id": "B", "text": "ボードビュー" },
       { "id": "C", "text": "ロードマップビュー" },
-      { "id": "D", "text": "通知ビュー" }
+      { "id": "D", "text": "Insightsビュー" }
     ],
     "correctChoiceIds": ["C"],
-    "explanation": "ロードマップレイアウトは、カスタム日付フィールドやIterationフィールドを使ってIssue、Pull Request、ドラフトIssueをタイムラインに配置し、作業を経時的に追跡するために使います。",
+    "explanation": "ロードマップビューはカスタム日付フィールドや Iteration フィールドを使って Issue・PR をタイムラインに配置し、作業を経時的に追跡するために使います。テーブルビューはフィールドの一覧管理（A）、ボードビューはステータス列間の管理（B）、Insights はバーンアップなどのグラフ（D）に適しています。",
     "references": [
       {
         "title": "ビューのレイアウトを変更する",
@@ -281,13 +281,13 @@
     "difficulty": "standard",
     "question": "スプリントごとの作業量の偏りを確認するため、ProjectsでIteration別に項目をまとめて表示したい場合に使う機能として最も適切なものはどれですか？",
     "choices": [
-      { "id": "A", "text": "リポジトリをフォークする" },
-      { "id": "B", "text": "Codespacesを停止する" },
-      { "id": "C", "text": "Issueをロックする" },
+      { "id": "A", "text": "ステータスフィールドでグループ化する" },
+      { "id": "B", "text": "担当者（Assignee）フィールドでグループ化する" },
+      { "id": "C", "text": "ラベルでフィルタリングする" },
       { "id": "D", "text": "Iterationフィールドでグループ化する" }
     ],
     "correctChoiceIds": ["D"],
-    "explanation": "Iterationフィールドでは、Iterationごとに項目をグループ化して今後の作業バランスを視覚化でき、特定のIterationへのフィルターやIteration順のソートにも利用できます。",
+    "explanation": "Iteration フィールドでグループ化すると、スプリントごとに項目をまとめて作業量のバランスを視覚化できます。ステータスでのグループ化（A）は進捗状況の把握に、担当者でのグループ化（B）は個人の作業量確認に、ラベルフィルタリング（C）は種類による絞り込みに適しています。",
     "references": [
       {
         "title": "繰り返しフィールドについて",
@@ -307,12 +307,12 @@
     "question": "Projectsの状態更新をより細かく自動化し、スクリプトやGitHub Actionsからプロジェクト項目を読み書きしたい場合に使うAPIとして最も適切なものはどれですか？",
     "choices": [
       { "id": "A", "text": "GitHub GraphQL API" },
-      { "id": "B", "text": "DNSゾーン転送" },
-      { "id": "C", "text": "SMTP API" },
-      { "id": "D", "text": "WebAuthn登録API" }
+      { "id": "B", "text": "GitHub REST API" },
+      { "id": "C", "text": "組み込みワークフロー（Built-in automations）" },
+      { "id": "D", "text": "GitHub Actions の workflow_dispatch イベント" }
     ],
     "correctChoiceIds": ["A"],
-    "explanation": "ProjectsはGraphQL APIで管理できます。プロジェクトIDを取得したり、項目やフィールド値を更新したりして、GitHub Actionsなどから高度な自動化を実装できます。",
+    "explanation": "Projects のカスタム自動化には GitHub GraphQL API が必要です。REST API（B）は Projects の読み書きに対応していない部分があります。組み込みワークフロー（C）はノーコードで設定できる反面、細かい制御には限界があります。workflow_dispatch（D）はワークフローの手動トリガーであり Projects の項目操作とは別です。",
     "references": [
       {
         "title": "API を使用して管理する Projects",
@@ -331,13 +331,13 @@
     "difficulty": "standard",
     "question": "IssueがクローズされたらProjectsのStatusをDoneにする、といったルールを設定したい場合に使う機能はどれですか？",
     "choices": [
-      { "id": "A", "text": "リポジトリのTopics" },
+      { "id": "A", "text": "Projects のカスタムフィールド（Custom fields）" },
       { "id": "B", "text": "組み込みワークフロー（Built-in automations）" },
-      { "id": "C", "text": "Git LFS" },
-      { "id": "D", "text": "ブランチ保護ルール" }
+      { "id": "C", "text": "Projects のフィルター機能" },
+      { "id": "D", "text": "Projects の Insights（バーンアップチャート）" }
     ],
     "correctChoiceIds": ["B"],
-    "explanation": "Projectsの組み込みワークフローでは、項目が追加・変更されたときやIssue/PRがクローズ・マージされたときにStatusを自動更新するなどの自動化を構成できます。",
+    "explanation": "Projects の組み込みワークフローでは、Issue がクローズ・PR がマージされたときに Status を自動更新するなどのルールをノーコードで設定できます。カスタムフィールド（A）はメタデータの追加、フィルター（C）は絞り込み表示、Insights（D）は進捗グラフの機能です。",
     "references": [
       {
         "title": "組み込みの自動化機能を使用する",
@@ -356,13 +356,13 @@
     "difficulty": "advanced",
     "question": "ProjectsのInsightsでバーンアップチャートを使う主な目的はどれですか？",
     "choices": [
-      { "id": "A", "text": "依存関係の脆弱性を自動修正するため" },
-      { "id": "B", "text": "ブランチのマージ競合を解決するため" },
+      { "id": "A", "text": "Issue・PR のステータスを列間でドラッグして更新するため" },
+      { "id": "B", "text": "スプリントの開始日・終了日をタイムライン上に配置するため" },
       { "id": "C", "text": "時間の経過に伴う完了済み作業と残作業を可視化し、進捗やボトルネックを把握するため" },
-      { "id": "D", "text": "Secret scanningの検出結果を非表示にするため" }
+      { "id": "D", "text": "複数フィールドをスプレッドシート形式で一括編集するため" }
     ],
     "correctChoiceIds": ["C"],
-    "explanation": "Insightsでは現在のグラフや履歴グラフを作成できます。既定のバーンアップチャートは、時間の経過に伴うIssueの進行状況、完了した作業、残っている作業を可視化します。",
+    "explanation": "バーンアップチャートは時間経過とともに完了した作業量と残作業を可視化し、進捗やボトルネックを把握するグラフです。列間ドラッグはボードビュー（A）、タイムライン配置はロードマップビュー（B）、一括フィールド編集はテーブルビュー（D）の機能です。",
     "references": [
       {
         "title": "Projects の分析情報について",
@@ -382,12 +382,12 @@
     "question": "Issue本文のタスクリストで、さらに追跡や議論が必要になった個別タスクに対して行える操作として正しいものはどれですか？",
     "choices": [
       { "id": "A", "text": "タスクをIssueに変換する" },
-      { "id": "B", "text": "タスクをSSHキーに変換する" },
-      { "id": "C", "text": "タスクをGitHub Actionsランナーに変換する" },
-      { "id": "D", "text": "タスクをリポジトリのライセンスに変換する" }
+      { "id": "B", "text": "タスクをPull Requestに変換する" },
+      { "id": "C", "text": "タスクをマイルストーンに変換する" },
+      { "id": "D", "text": "タスクをDiscussionに変換する" }
     ],
     "correctChoiceIds": ["A"],
-    "explanation": "タスクリストの項目はチェックボックスで進捗を追跡できます。追加の追跡や議論が必要な場合、タスク項目から新しいIssueへ変換できます。",
+    "explanation": "タスクリストの項目はチェックボックスで進捗を追跡できます。追加の追跡や議論が必要になった場合、タスク項目から新しい Issue へ変換できます。PR・マイルストーン・Discussion への直接変換はサポートされていません。",
     "references": [
       {
         "title": "タスクリストについて",
@@ -406,13 +406,13 @@
     "difficulty": "standard",
     "question": "IssueフォームとIssueの種類を組み合わせて使う主な利点はどれですか？",
     "choices": [
-      { "id": "A", "text": "Pull Requestを自動的にマージし、ブランチ保護を無効にする" },
+      { "id": "A", "text": "Issue を作成するとブランチが自動的に作成され、コードの変更がすぐに始められる" },
       { "id": "B", "text": "コントリビューターが新しいIssueを開くときに必要情報を入力しやすくし、バグやタスクなどの種類で分類しやすくする" },
-      { "id": "C", "text": "リポジトリを非公開に変更し、すべてのIssueを削除する" },
-      { "id": "D", "text": "GitHub Actionsの課金を停止し、ワークフローを無効にする" }
+      { "id": "C", "text": "Issue を作成すると自動的に担当者（Assignee）がアサインされる" },
+      { "id": "D", "text": "Issue フォームへの入力内容が自動的に Pull Request の本文になる" }
     ],
     "correctChoiceIds": ["B"],
-    "explanation": "IssueテンプレートやIssueフォームを設定すると必要な情報を入力してもらいやすくなります。Issueの種類と組み合わせることで、バグ、タスク、機能要求などを分類し、トリアージしやすくなります。",
+    "explanation": "Issue フォームと Issue の種類を組み合わせると、必要情報の収集と種類による分類が容易になります。ブランチの自動作成（A）は Issue からブランチを手動で作成する機能であり自動ではなく、担当者の自動アサイン（C）は Issue テンプレートの設定で可能ですがフォーム単体の機能ではありません。Issue フォームの内容が PR 本文になる機能（D）はありません。",
     "references": [
       {
         "title": "リポジトリ用に Issue テンプレートを設定する",

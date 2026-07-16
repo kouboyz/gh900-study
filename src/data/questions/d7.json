@@ -187,13 +187,13 @@
     "difficulty": "basic",
     "question": "GitHub プラットフォームで、あるユーザーのパブリックな活動を常に把握して通知を受け取るにはどうすればよいですか？",
     "choices": [
-      { "id": "A", "text": "Organization をフォローする" },
+      { "id": "A", "text": "そのユーザーのリポジトリに Star を付ける" },
       { "id": "B", "text": "そのユーザーをフォローする" },
-      { "id": "C", "text": "ユーザーのフィードをサブスクライブする" },
-      { "id": "D", "text": "Organization のフィードをサブスクライブする" }
+      { "id": "C", "text": "そのユーザーのリポジトリを Watch する" },
+      { "id": "D", "text": "そのユーザーを Issue にメンションする" }
     ],
     "correctChoiceIds": ["B"],
-    "explanation": "各ユーザーには作業内容を公開できるプロフィールがあります。他のユーザーをフォローすることで、そのユーザーのパブリックな活動（スター・フォーク・コントリビューションなど）がフィードに表示され、最新の動向を把握できます。",
+    "explanation": "ユーザーをフォローするとそのユーザーのパブリックな活動（スター・フォーク・コントリビューションなど）がダッシュボードフィードに表示されます。Star はブックマーク目的（A）、Watch は特定リポジトリの通知（C）、メンションは会話への呼びかけ（D）であり、いずれもユーザー全体の活動追跡ではありません。",
     "references": [
       {
         "title": "人をフォローする",
@@ -237,13 +237,13 @@
     "difficulty": "basic",
     "question": "初めてオープンソースに貢献する候補を探すとき、GitHub の `good first issue` ラベルを使う主な理由はどれですか？",
     "choices": [
-      { "id": "A", "text": "メンテナーだけが閲覧できる非公開 Issue を表示するため" },
+      { "id": "A", "text": "メンテナーが最優先で対応すべき緊急バグを示すラベルだから" },
       { "id": "B", "text": "初心者や新規コントリビューターが取り組みやすい Issue を見つけるため" },
-      { "id": "C", "text": "Issue を自動的に Pull Request に変換するため" },
-      { "id": "D", "text": "リポジトリのライセンスを自動的に変更するため" }
+      { "id": "C", "text": "このラベルが付いた Issue は自動的に担当者にアサインされるから" },
+      { "id": "D", "text": "help wanted ラベルよりも報酬が高い Issue を示すラベルだから" }
     ],
     "correctChoiceIds": ["B"],
-    "explanation": "`good first issue` や `help wanted` は、プロジェクトが新しい貢献者を受け入れている課題を探す手がかりになります。Issue を選んだ後は、通常 fork、clone、branch 作成、変更、Pull Request の流れで貢献します。",
+    "explanation": "`good first issue` はプロジェクトが新規コントリビューターに向けて「取り組みやすい」と示したラベルです。緊急バグや自動アサイン、報酬とは無関係です。`help wanted` と組み合わせて使われることが多く、貢献先を探す入口として活用されます。",
     "references": [
       {
         "title": "GitHubのopen sourceに貢献する方法を見つける",
@@ -387,13 +387,13 @@
     "difficulty": "basic",
     "question": "GitHub Explore、Trending、Topics を利用する目的として最も適切なものはどれですか？",
     "choices": [
-      { "id": "A", "text": "ローカル PC の Git 設定を初期化するため" },
+      { "id": "A", "text": "フォローしているユーザーの最新コントリビューション活動をフィードで確認するため" },
       { "id": "B", "text": "関心分野、人気の動向、トピックに基づいてリポジトリや貢献先を発見するため" },
-      { "id": "C", "text": "Organization の支払い方法を変更するため" },
-      { "id": "D", "text": "GitHub Enterprise Server を自動アップグレードするため" }
+      { "id": "C", "text": "Watch しているリポジトリの Issue・PR 通知をまとめて管理するため" },
+      { "id": "D", "text": "自分がスターを付けたリポジトリをカテゴリ別に整理するため" }
     ],
     "correctChoiceIds": ["B"],
-    "explanation": "Explore、Trending、Topics は、人気のあるリポジトリ、関心分野に関連するプロジェクト、貢献しやすい課題などを見つけるために役立ちます。新しい OSS や学習対象の発見に使えます。",
+    "explanation": "Explore・Trending・Topics は人気リポジトリや関心分野のプロジェクト・貢献しやすい課題を発見するための機能です。フォローユーザーの活動はダッシュボードフィード（A）、通知管理は Notifications ページ（C）、スターの整理は Star リスト機能（D）で行います。",
     "references": [
       {
         "title": "GitHubのopen sourceに貢献する方法を見つける",
@@ -462,13 +462,13 @@
     "difficulty": "basic",
     "question": "GitHub Education や GitHub Foundations の学習リソースの説明として最も適切なものはどれですか？",
     "choices": [
-      { "id": "A", "text": "すべての学生アカウントを自動的に Enterprise 管理ユーザーに変換する" },
-      { "id": "B", "text": "GitHub Marketplace の全有料アプリを永久に無料化する" },
-      { "id": "C", "text": "GitHub の公開リポジトリを教育機関だけが閲覧できるように制限する" },
+      { "id": "A", "text": "GitHub Skills はハンズオン形式で実際のリポジトリを操作しながら GitHub を学ぶ公式学習サービス" },
+      { "id": "B", "text": "GitHub Docs は GitHub の機能・操作方法を解説する公式ドキュメント" },
+      { "id": "C", "text": "Microsoft Learn の GitHub Foundations ラーニングパスは試験範囲を体系的にカバーする無料学習コース" },
       { "id": "D", "text": "学生や学習者が GitHub の機能を学び、開発者ツールや学習コンテンツにアクセスするための支援を提供する" }
     ],
     "correctChoiceIds": ["D"],
-    "explanation": "GitHub Education は学生向けの開発者ツールや学習機会を提供し、Microsoft Learn の GitHub Foundations ラーニングパスは GitHub の基礎を体系的に学ぶための教材です。",
+    "explanation": "GitHub Education は学生・教育者向けに開発者ツールや学習コンテンツへのアクセス支援を提供します。GitHub Skills（A）・GitHub Docs（B）・Microsoft Learn（C）はいずれも正しい説明ですが、「GitHub Education や GitHub Foundations の学習リソース全体」の説明として最も包括的なのは D です。",
     "references": [
       {
         "title": "学生向け GitHub Education",
