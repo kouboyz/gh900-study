@@ -80,7 +80,7 @@ export function QuizScreen({ questions, index, answers, onAnswer, onNext, onFini
       {/* Question */}
       <div className="mb-8">
         <div className="flex items-center gap-2 mb-4">
-          <span className="inline-block text-xs text-gray-400 border border-gray-200 rounded px-2 py-0.5">
+          <span className={`inline-block text-xs rounded px-2 py-0.5 ${q.difficulty === 'exam' ? 'text-red-600 border border-red-300 bg-red-50' : 'text-gray-400 border border-gray-200'}`}>
             {DIFFICULTY_LABEL[q.difficulty] ?? q.difficulty}
           </span>
           {isMultiple && (
